@@ -7,7 +7,7 @@
 
 // ---------- DADOS ----------
 
-const SITE = 'https://wscodev.com/lillianwhitaker/';
+const SITE = 'https://wscodev.vercel.app/lillianwhitaker/site/';
 const EMAIL = 'whitaker.lillian12@gmail.com';
 const TIKTOK = 'https://www.tiktok.com/@lillaymae';
 const INSTAGRAM = 'https://www.instagram.com/lillaymae/';

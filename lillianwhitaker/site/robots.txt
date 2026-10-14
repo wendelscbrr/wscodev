@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://wscodev.com/lillianwhitaker/sitemap.xml
+Sitemap: https://wscodev.vercel.app/lillianwhitaker/site/sitemap.xml
