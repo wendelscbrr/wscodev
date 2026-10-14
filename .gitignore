@@ -1,0 +1,8 @@
+*.mp4
+.agents/
+.claude/
+.impeccable/
+skills-lock.json
+node_modules/
+.DS_Store
+Thumbs.db
