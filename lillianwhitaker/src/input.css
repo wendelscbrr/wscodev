@@ -1,0 +1,197 @@
+@import "./fonts.css";
+@import "./aos.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ==========================================================
+   Lillian Whitaker Music — estilos complementares (mesma base do site da Banda OÁZ) ao Tailwind
+   ========================================================== */
+
+:root {
+  --ink: #0a0a0b;
+  --panel: #121214;
+  --bone: #ece8e1;
+  --flame: #fc8618;
+  --flame-deep: #c45f00;
+}
+
+html { scroll-behavior: smooth; scroll-padding-top: 84px; }
+/* Itens de grid/flex podem encolher: nenhum conteúdo longo empurra a coluna para fora da tela */
+.grid > * { min-width: 0; }
+body { background: var(--ink); color: var(--bone); -webkit-font-smoothing: antialiased; }
+::selection { background: var(--flame); color: #fff; }
+
+/* Grão de filme: textura estática no fundo da página (sem camada fixa por cima — não pesa na pintura) */
+.grain { background-image: url("../img/grain.webp"); background-size: 96px; }
+/* Fotos em P&B que ganham cor no hover */
+.duo { filter: grayscale(1) contrast(1.12) brightness(.92); transition: filter .7s ease, transform .9s cubic-bezier(.2,.7,.2,1); }
+.group:hover .duo { filter: grayscale(0) contrast(1.05) brightness(1); transform: scale(1.04); }
+
+/* Título fantasma vazado atrás dos títulos de seção */
+.ghost {
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(236, 232, 225, .09);
+  letter-spacing: .02em;
+  line-height: .8;
+  user-select: none;
+}
+
+/* Fita de isolamento (marquee) */
+.tape { box-shadow: 0 18px 40px -10px rgba(0,0,0,.8); }
+.marquee { display: flex; width: max-content; animation: marquee 38s linear infinite; }
+.marquee.reverse { animation-direction: reverse; animation-duration: 46s; }
+@keyframes marquee { to { transform: translateX(-50%); } }
+
+/* Navegação */
+.nav-link { position: relative; }
+.nav-link::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: -8px; height: 2px;
+  background: var(--flame); transform: scaleX(0); transform-origin: left; transition: transform .35s ease;
+}
+.nav-link:hover::after, .nav-link.is-active::after { transform: scaleX(1); }
+.nav-link.is-active { color: #fff; }
+
+
+/* Indicador de scroll */
+.scroll-dot { animation: scrolldot 1.8s ease-in-out infinite; }
+@keyframes scrolldot { 0% { transform: translateY(0); opacity: 1; } 70% { transform: translateY(12px); opacity: 0; } 100% { opacity: 0; } }
+
+/* Ponto "ao vivo" pulsando */
+.pulse-dot { position: relative; }
+.pulse-dot::after { content: ""; position: absolute; inset: 0; border-radius: 9999px; background: var(--flame); animation: pulse 1.8s ease-out infinite; }
+@keyframes pulse { 0% { transform: scale(1); opacity: .7; } 70%, 100% { transform: scale(3); opacity: 0; } }
+
+/* Slider da agenda */
+.snap-row { scroll-snap-type: x mandatory; scrollbar-width: none; }
+.snap-row::-webkit-scrollbar { display: none; }
+.snap-row > * { scroll-snap-align: start; }
+
+/* Disco de vinil saindo da capa */
+.vinyl {
+  background:
+    radial-gradient(circle, var(--flame) 0 13%, #111 13.5% 15%, transparent 15.5%),
+    repeating-radial-gradient(circle, #0d0d0d 0 2px, #1b1b1b 2.5px 3px);
+  transition: transform .7s cubic-bezier(.2,.7,.2,1);
+}
+.group:hover .vinyl { transform: translateX(34%) rotate(90deg); }
+.spin { animation: spin 6s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* Equalizador decorativo */
+.eq span { display: inline-block; width: 3px; height: 14px; background: var(--flame); margin-right: 2px; transform-origin: bottom; animation: eq 1s ease-in-out infinite; }
+.eq span:nth-child(2) { animation-delay: .2s; }
+.eq span:nth-child(3) { animation-delay: .4s; }
+.eq span:nth-child(4) { animation-delay: .1s; }
+@keyframes eq { 0%, 100% { transform: scaleY(.3); } 50% { transform: scaleY(1); } }
+
+/* Campos do formulário */
+.field {
+  width: 100%; background: rgba(255,255,255,.03); border: 1px solid rgba(255,255,255,.1);
+  border-radius: .5rem; padding: .8rem 1rem; color: var(--bone); font-size: .9rem; outline: none;
+  transition: border-color .2s, background .2s;
+}
+.field::placeholder { color: rgba(236,232,225,.55); }
+.field:focus { border-color: var(--flame); background: rgba(252,134,24,.06); }
+.field option { background: var(--panel); }
+input[type="date"].field::-webkit-calendar-picker-indicator { filter: invert(.85); }
+
+/* Modais (vídeo e galeria) */
+.modal { opacity: 0; visibility: hidden; pointer-events: none; transition: opacity .3s ease, visibility 0s linear .3s; }
+.modal.is-open { opacity: 1; visibility: visible; pointer-events: auto; transition: opacity .3s ease; }
+.modal:not(.is-open) { content-visibility: hidden; } /* fechado: nem entra no layout */
+
+/* Frame animation (flipbook): sprite vertical com --n quadros tirados dos vídeos ao vivo.
+   O sprite só é baixado na primeira intenção de hover (ver main.js); enquanto o mouse estiver
+   em cima, os quadros correm em vai-e-vem (alternate) — no toque, toca quando o card está na tela. */
+.flip {
+  position: absolute; inset: 0; z-index: 1; pointer-events: none;
+  background-repeat: no-repeat; background-size: 100% calc(var(--n) * 100%); background-position: 50% 0;
+  opacity: 0; transition: opacity .25s ease;
+}
+.group:hover .flip.is-ready, .flip.is-ready.is-playing {
+  opacity: 1;
+  animation: flip calc(var(--n) * var(--ms, 95ms)) steps(var(--n), jump-none) infinite alternate;
+}
+@keyframes flip { from { background-position: 50% 0; } to { background-position: 50% 100%; } }
+.flip-badge { opacity: 0; transform: translateY(6px); transition: opacity .3s, transform .3s; }
+.group:hover .flip-badge, .is-playing ~ .flip-badge { opacity: 1; transform: none; }
+
+/* Setlist de papel colado no palco */
+.paper {
+  background: #f3eee4; color: #16130f;
+  box-shadow: 0 30px 60px -20px rgba(0,0,0,.9), inset 0 0 60px rgba(120,90,40,.12);
+}
+.tape-strip { position: absolute; height: 28px; width: 110px; background: rgba(240,230,200,.55); backdrop-filter: blur(1px); box-shadow: 0 2px 4px rgba(0,0,0,.15); }
+/* pauta alinhada com as linhas do texto (line-height 34px) */
+.setlist { background-image: repeating-linear-gradient(transparent 0 33px, rgba(22,19,15,.1) 33px 34px); }
+.setlist li { counter-increment: song; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.setlist li::before { content: counter(song, decimal-leading-zero); font-family: "Space Mono", monospace; font-size: 11px; opacity: .45; margin-right: .75rem; }
+.circled { position: relative; }
+.circled::after {
+  content: ""; position: absolute; inset: -4px -10px; border: 2px solid var(--flame); border-radius: 9999px;
+}
+
+/* Chat estilo WhatsApp (Perguntas frequentes) */
+.faq-q[aria-pressed="true"] { border-color: var(--flame); background-color: rgba(252,134,24,.1); }
+.faq-q[aria-pressed="true"] svg { color: var(--flame); }
+.chat-in, .chat-out { position: relative; max-width: 85%; width: fit-content; padding: .45rem .65rem 1.1rem; border-radius: .6rem; font-size: 14px; line-height: 1.4; color: #e9edef; animation: chatpop .25s ease-out; }
+.chat-in { background: #202c33; border-top-left-radius: 0; }
+.chat-out { background: #005c4b; border-top-right-radius: 0; margin-left: auto; }
+.chat-in::after, .chat-out::after { position: absolute; right: .55rem; bottom: .2rem; font-size: 10px; color: rgba(233,237,239,.6); content: attr(data-time); }
+.chat-out::after { content: attr(data-time) " ✓✓"; color: #53bdeb; }
+.chat-typing { display: inline-flex; gap: 4px; padding: .75rem .9rem; }
+.chat-typing span { width: 6px; height: 6px; border-radius: 9999px; background: #8696a0; animation: typing 1s infinite ease-in-out; }
+.chat-typing span:nth-child(2) { animation-delay: .15s; }
+.chat-typing span:nth-child(3) { animation-delay: .3s; }
+@keyframes typing { 0%, 60%, 100% { transform: translateY(0); opacity: .5; } 30% { transform: translateY(-4px); opacity: 1; } }
+@keyframes chatpop { from { opacity: 0; transform: translateY(6px) scale(.98); } to { opacity: 1; transform: none; } }
+
+/* Formatos (Work with me): microfones vintage de estúdio no lugar dos pedais da OÁZ.
+   Mesma textura de pintura dos cards; com o scroll (--kp vem do main.js) o VU enche e, no fim, acende o ON AIR,
+   o microfone brilha e "canta" (is-live). No hover acontece o mesmo. */
+.mic {
+  position: relative; isolation: isolate;
+  background-color: #1b1b1e;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.55'/%3E%3C/svg%3E"), url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='s'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.012 .09' numOctaves='2' seed='7'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23s)' opacity='.35'/%3E%3C/svg%3E"), radial-gradient(120% 80% at 30% 0%, rgba(255,255,255,.09), transparent 60%), linear-gradient(180deg, #26262a, #121214);
+  background-blend-mode: overlay, soft-light, normal, normal;
+  box-shadow: inset 0 2px 0 rgba(255,255,255,.12), inset 0 -4px 0 rgba(0,0,0,.45), inset 0 0 0 1px rgba(255,255,255,.05), 0 25px 40px -20px rgba(0,0,0,.9);
+}
+.mic-orange {
+  background-color: #f28a1e;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.55'/%3E%3C/svg%3E"), url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='s'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.012 .09' numOctaves='2' seed='7'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23s)' opacity='.35'/%3E%3C/svg%3E"), radial-gradient(120% 80% at 30% 0%, rgba(255,255,255,.28), transparent 60%), linear-gradient(180deg, #fd9a3e, #dc6c08);
+  box-shadow: inset 0 2px 0 rgba(255,255,255,.35), inset 0 -4px 0 rgba(120,50,0,.45), inset 0 0 0 1px rgba(255,255,255,.12), 0 25px 40px -20px rgba(0,0,0,.9);
+}
+.mic-glow { position: absolute; left: 50%; top: 45%; width: 70%; aspect-ratio: 1; transform: translate(-50%, -50%); border-radius: 9999px;
+  background: radial-gradient(closest-side, rgba(252,134,24,.45), transparent); opacity: 0; transition: opacity .5s ease; pointer-events: none; }
+.mic-orange .mic-glow { background: radial-gradient(closest-side, rgba(255,255,255,.6), transparent); }
+.mic.is-live .mic-glow, .group:hover .mic-glow { opacity: 1; }
+.mic-svg { filter: drop-shadow(0 14px 14px rgba(0,0,0,.45)); transform-origin: 50% 100%; }
+.mic.is-live .mic-svg, .group:hover .mic-svg { animation: sing 1.4s ease-in-out infinite; }
+.mic-svg:nth-child(3) { animation-delay: .25s !important; }
+.mic-svg:nth-child(4) { animation-delay: .5s !important; }
+@keyframes sing { 0%, 100% { transform: translateY(0) rotate(var(--r, 0deg)); } 50% { transform: translateY(-4px) rotate(var(--r, 0deg)); } }
+.on-air { border: 1px solid currentColor; opacity: .45; transition: all .3s ease; }
+.mic.is-live .on-air, .group:hover .on-air { opacity: 1; background: #e11d48; border-color: #e11d48; color: #fff; box-shadow: 0 0 16px 2px rgba(225,29,72,.75); }
+/* VU meter: gradiente verde → amarelo → vermelho fixo na largura toda; uma capa escura recua conforme --kp */
+.vu { position: relative; height: 10px; overflow: hidden; border-radius: 3px; background: linear-gradient(90deg, #22c55e 0 60%, #facc15 60% 82%, #ef4444 82%); }
+.vu::after { content: ""; position: absolute; inset: 0; background: repeating-linear-gradient(90deg, transparent 0 7px, rgba(0,0,0,.55) 7px 9px); }
+.vu-cover { position: absolute; inset: 0 0 0 auto; width: calc((1 - var(--kp, 0)) * 100%); background: #0d0d0f; transition: width .15s linear; }
+.group:hover .vu-cover { width: 0; }
+
+/* Shows e eventos: título do palco "aceso" da esquerda para a direita conforme o scroll (--p vem do main.js) */
+.stage-fill {
+  color: transparent; -webkit-text-stroke: 1px rgba(236,232,225,.38);
+  background: linear-gradient(90deg, var(--fillc, var(--bone)) var(--p, 100%), transparent var(--p, 100%));
+  -webkit-background-clip: text; background-clip: text;
+}
+.group:hover .stage-fill { --fillc: var(--flame); -webkit-text-stroke-color: var(--flame); }
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee, .scroll-dot, .pulse-dot::after, .spin, .eq span, .flip, .mic-svg, .chat-in, .chat-out, .chat-typing span { animation: none !important; }
+  html { scroll-behavior: auto; }
+}
+
+/* Formulário de contato: campo-armadilha anti-spam (honeypot) — fora da tela para pessoas, visível para robôs */
+.hp { position: absolute !important; left: -9999px !important; width: 1px; height: 1px; overflow: hidden; }
