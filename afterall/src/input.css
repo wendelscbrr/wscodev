@@ -1,0 +1,138 @@
+@import "./fonts.css";
+@import "./aos.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ==========================================================
+   AFTERAll — estilos complementares ao Tailwind (mesma base do site de Lillian Whitaker / Banda OÁZ)
+   ========================================================== */
+
+:root {
+  --ink: #0a0a0b;
+  --panel: #121214;
+  --bone: #ece8e1;
+  --flame: #f7b32b;      /* dourado das luzes de palco */
+  --flame-rgb: 247, 179, 43;
+  --flame-deep: #a8730a;
+  --ember: #e2342d;      /* vermelho dos shows (detalhes) */
+}
+
+html { scroll-behavior: smooth; scroll-padding-top: 84px; }
+/* Itens de grid/flex podem encolher: nenhum conteúdo longo empurra a coluna para fora da tela */
+.grid > * { min-width: 0; }
+body { background: var(--ink); color: var(--bone); -webkit-font-smoothing: antialiased; }
+::selection { background: var(--flame); color: var(--ink); }
+:focus-visible { outline: 2px solid var(--flame); outline-offset: 3px; }
+
+/* Grão de filme: textura estática no fundo da página */
+.grain { background-image: url("../img/grain.webp"); background-size: 96px; }
+/* Fotos em P&B que ganham cor no hover */
+.duo { filter: grayscale(1) contrast(1.12) brightness(.92); transition: filter .7s ease, transform .9s cubic-bezier(.2,.7,.2,1); }
+.group:hover .duo, .group:focus-visible .duo { filter: grayscale(0) contrast(1.05) brightness(1); transform: scale(1.04); }
+
+/* Título fantasma vazado atrás dos títulos de seção */
+.ghost {
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(236, 232, 225, .09);
+  letter-spacing: .02em;
+  line-height: .8;
+  user-select: none;
+}
+
+/* Hero: vídeo do show em loop atrás do título; o brilho dourado acompanha o ritmo */
+.hero-title { text-shadow: 0 10px 60px rgba(0,0,0,.6); }
+.hero-glow { background: radial-gradient(closest-side, rgba(var(--flame-rgb), .22), transparent); animation: breathe 4.8s ease-in-out infinite; }
+@keyframes breathe { 0%, 100% { opacity: .55; transform: scale(1); } 50% { opacity: 1; transform: scale(1.08); } }
+
+/* Fita (marquee) */
+.tape { box-shadow: 0 18px 40px -10px rgba(0,0,0,.8); }
+.marquee { display: flex; width: max-content; animation: marquee 38s linear infinite; }
+.marquee.reverse { animation-direction: reverse; animation-duration: 46s; }
+@keyframes marquee { to { transform: translateX(-50%); } }
+
+/* Navegação */
+.nav-link { position: relative; }
+.nav-link::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: -8px; height: 2px;
+  background: var(--flame); transform: scaleX(0); transform-origin: left; transition: transform .35s ease;
+}
+.nav-link:hover::after, .nav-link.is-active::after { transform: scaleX(1); }
+.nav-link.is-active { color: #fff; }
+
+/* Indicador de scroll */
+.scroll-dot { animation: scrolldot 1.8s ease-in-out infinite; }
+@keyframes scrolldot { 0% { transform: translateY(0); opacity: 1; } 70% { transform: translateY(12px); opacity: 0; } 100% { opacity: 0; } }
+
+/* Ponto "ao vivo" pulsando */
+.pulse-dot { position: relative; }
+.pulse-dot::after { content: ""; position: absolute; inset: 0; border-radius: 9999px; background: currentColor; animation: pulse 1.8s ease-out infinite; }
+@keyframes pulse { 0% { transform: scale(1); opacity: .7; } 70%, 100% { transform: scale(3); opacity: 0; } }
+
+/* Disco de vinil saindo da capa */
+.vinyl {
+  background:
+    radial-gradient(circle, var(--flame) 0 13%, #111 13.5% 15%, transparent 15.5%),
+    repeating-radial-gradient(circle, #0d0d0d 0 2px, #1b1b1b 2.5px 3px);
+  transition: transform .7s cubic-bezier(.2,.7,.2,1);
+}
+.group:hover .vinyl, .group:focus-visible .vinyl { transform: translateX(34%) rotate(90deg); }
+.spin { animation: spin 6s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* Equalizador decorativo */
+.eq span { display: inline-block; width: 3px; height: 14px; background: var(--flame); margin-right: 2px; transform-origin: bottom; animation: eq 1s ease-in-out infinite; }
+.eq span:nth-child(2) { animation-delay: .2s; }
+.eq span:nth-child(3) { animation-delay: .4s; }
+.eq span:nth-child(4) { animation-delay: .1s; }
+@keyframes eq { 0%, 100% { transform: scaleY(.3); } 50% { transform: scaleY(1); } }
+
+/* Filtros do catálogo (Music / Videos) */
+.chip[aria-pressed="true"] { background: var(--flame); border-color: var(--flame); color: var(--ink); }
+
+/* Campos do formulário */
+.field {
+  width: 100%; background: rgba(255,255,255,.03); border: 1px solid rgba(255,255,255,.1);
+  border-radius: .5rem; padding: .8rem 1rem; color: var(--bone); font-size: .9rem; outline: none;
+  transition: border-color .2s, background .2s;
+}
+.field::placeholder { color: rgba(236,232,225,.55); }
+.field:focus { border-color: var(--flame); background: rgba(var(--flame-rgb), .06); }
+.field option { background: var(--panel); }
+input[type="date"].field::-webkit-calendar-picker-indicator { filter: invert(.85); }
+
+/* Modais (vídeo e galeria) */
+.modal { opacity: 0; visibility: hidden; pointer-events: none; transition: opacity .3s ease, visibility 0s linear .3s; }
+.modal.is-open { opacity: 1; visibility: visible; pointer-events: auto; transition: opacity .3s ease; }
+.modal:not(.is-open) { content-visibility: hidden; } /* fechado: nem entra no layout */
+
+/* Agenda: nome da cidade "aceso" da esquerda para a direita conforme o scroll (--p vem do main.js) */
+.stage-fill {
+  color: transparent; -webkit-text-stroke: 1px rgba(236,232,225,.38);
+  background: linear-gradient(90deg, var(--fillc, var(--bone)) var(--p, 100%), transparent var(--p, 100%));
+  -webkit-background-clip: text; background-clip: text;
+}
+.group:hover .stage-fill { --fillc: var(--flame); -webkit-text-stroke-color: var(--flame); }
+
+/* Ingresso do próximo show: picote entre o canhoto e o corpo */
+.ticket { position: relative; }
+.ticket::before, .ticket::after {
+  content: ""; position: absolute; width: 28px; height: 28px; border-radius: 9999px; background: var(--ink);
+  left: var(--cut, 70%); transform: translateX(-50%);
+}
+.ticket::before { top: -14px; }
+.ticket::after { bottom: -14px; }
+.ticket-cut { position: absolute; top: 14px; bottom: 14px; left: var(--cut, 70%); border-left: 2px dashed rgba(10,10,11,.35); }
+
+/* Sessions: player estilo app de streaming (barra avança com o scroll) */
+.session-bars span { flex: 1; background: rgba(236,232,225,.18); border-radius: 2px; transition: background .3s; }
+.session-bars span.on { background: var(--flame); }
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee, .scroll-dot, .pulse-dot::after, .spin, .eq span, .hero-glow { animation: none !important; }
+  html { scroll-behavior: auto; }
+}
+
+/* Formulário de contato: campo-armadilha anti-spam (honeypot) — fora da tela para pessoas, visível para robôs */
+.hp { position: absolute !important; left: -9999px !important; width: 1px; height: 1px; overflow: hidden; }

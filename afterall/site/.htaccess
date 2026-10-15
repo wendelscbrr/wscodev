@@ -1,0 +1,31 @@
+# AFTERAll Music — compressão e cache dos arquivos estáticos (Apache / cPanel)
+# Não usa RewriteEngine aqui, então as regras de reescrita da pasta pai continuam valendo.
+
+AddType font/woff2 .woff2
+AddType image/webp .webp
+AddType application/manifest+json .webmanifest
+AddType video/mp4 .mp4
+
+# Compressão gzip para texto (HTML, CSS, JS, SVG, JSON)
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css text/plain text/javascript application/javascript application/json application/xml application/manifest+json image/svg+xml
+</IfModule>
+
+# Cache longo para imagens, fontes, CSS e JS.
+# O JS é referenciado com ?v=N no index.html — ao alterá-lo, aumente o número.
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresDefault "access plus 1 year"
+  ExpiresByType text/html "access plus 0 seconds"
+</IfModule>
+<IfModule mod_headers.c>
+  # Os players incorporados (Instagram e Spotify) precisam do Referer da página
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set X-Content-Type-Options "nosniff"
+  <FilesMatch "\.(webp|svg|png|jpg|ico|mp4|woff2|css|js)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+  <FilesMatch "\.html$">
+    Header set Cache-Control "no-cache"
+  </FilesMatch>
+</IfModule>
