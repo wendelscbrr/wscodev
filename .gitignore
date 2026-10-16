@@ -9,3 +9,6 @@ Thumbs.db
 
 # Vídeos do site The Ambassadors (hero e reels hospedados no próprio site)
 !theambassadors/site/assets/video/*.mp4
+
+# Vídeo do hero do site Forró em Milão (hospedado no próprio site)
+!forroemmilao/site/assets/video/*.mp4
