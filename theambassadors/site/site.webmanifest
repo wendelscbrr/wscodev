@@ -1,0 +1,14 @@
+{
+  "name": "The Ambassadors Live Show",
+  "short_name": "The Ambassadors",
+  "description": "Live Music. Unforgettable Moments. Official website of The Ambassadors Live Show.",
+  "lang": "en",
+  "start_url": "./",
+  "display": "browser",
+  "background_color": "#121110",
+  "theme_color": "#121110",
+  "icons": [
+    { "src": "assets/img/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "assets/img/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}

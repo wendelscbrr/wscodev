@@ -6,3 +6,6 @@ skills-lock.json
 node_modules/
 .DS_Store
 Thumbs.db
+
+# Vídeos do site The Ambassadors (hero e reels hospedados no próprio site)
+!theambassadors/site/assets/video/*.mp4
