@@ -13,8 +13,10 @@ module.exports = {
         mute: '#777777',
       },
       fontFamily: {
-        serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+        display: ['Anton', 'Impact', 'sans-serif'],
         sans: ['Inter', 'system-ui', 'sans-serif'],
+        mono: ['"Space Mono"', 'monospace'],
+        marker: ['"Permanent Marker"', 'cursive'],
       },
       letterSpacing: { mega: '.35em' },
     },

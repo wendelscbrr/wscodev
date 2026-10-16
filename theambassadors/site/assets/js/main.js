@@ -64,7 +64,7 @@ const ACTS = [
 // Locais citados nas legendas e destaques do Instagram · img (opcional): foto mostrada no hover
 const VENUES = [
   { name: 'Villa Erba', place: 'Lake Como' },
-  { name: 'Villa Serbelloni', place: 'Bellagio · Lake Como' },
+  { name: 'Villa Serbelloni', place: 'Bellagio' },
   { name: 'Villa Arconati', place: 'Milan', img: 'birthday-villa-arconati' },
   { name: 'Casa Giardino', place: 'Milan', img: 'casa-giardino' },
   { name: 'Villa Aurelia', place: 'Lecco' },
@@ -128,7 +128,6 @@ const icon = (id, cls = 'h-4 w-4') => `<svg class="${cls}"><use href="#${id}"/><
 const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 const reel = (id) => REELS.find((r) => r.id === id);
 const igUrl = (id) => `https://www.instagram.com/${reel(id)?.owner ? `${reel(id).owner}/` : ''}reel/${id}/`;
-const roman = (n) => ['i', 'ii', 'iii', 'iv', 'v', 'vi', 'vii', 'viii', 'ix', 'x'][n] || n + 1;
 const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 // Fotos responsivas: 480 px e versão maior (até 1200 px)
@@ -189,11 +188,11 @@ whenNear('#liveGrid', () => REELS.filter((r) => r.live).map((r, i) => `
   <button type="button" data-video="${r.id}" class="group relative block aspect-[9/16] overflow-hidden rounded-xl border border-white/10 text-left" data-aos="fade-up" data-aos-delay="${(i % 4) * 80}">
     <img src="${IMG}reels/${r.id}.webp" width="480" height="854" alt="${esc(`The Ambassadors — ${r.title}${r.artist ? ` (${r.artist})` : ''}`)}" class="duo absolute inset-0 h-full w-full object-cover" loading="lazy" decoding="async">
     <span class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></span>
-    <span class="absolute left-3 top-3 max-w-[70%] truncate rounded-full bg-gold px-2.5 py-1 text-[9px] font-bold uppercase tracking-widest text-ink">${esc(r.tag)}</span>
+    <span class="absolute left-3 top-3 max-w-[70%] truncate rounded-full bg-gold px-2.5 py-1 text-[9px] font-bold uppercase tracking-widest text-ink font-mono">${esc(r.tag)}</span>
     <span class="absolute right-3 top-3 grid h-10 w-10 place-items-center rounded-full border border-white/30 bg-black/60 transition duration-300 group-hover:scale-110 group-hover:border-gold group-hover:bg-gold group-hover:text-ink">${icon('h-play', 'ml-0.5 h-4 w-4')}</span>
     <span class="absolute bottom-3 left-3 right-3">
-      <span class="block font-serif text-xl leading-tight sm:text-2xl">${esc(r.title)}</span>
-      ${r.artist ? `<span class="mt-1 block text-[10px] uppercase tracking-[.25em] text-gold-light">${esc(r.artist)}</span>` : ''}
+      <span class="block font-display text-xl leading-tight sm:text-2xl uppercase">${esc(r.title)}</span>
+      ${r.artist ? `<span class="mt-1 block text-[10px] uppercase tracking-[.25em] text-gold-light font-mono">${esc(r.artist)}</span>` : ''}
     </span>
   </button>`).join(''));
 
@@ -208,16 +207,16 @@ whenNear('#formatGrid', () => FORMATS.map((f, i) => `
       <span class="spot-cone"></span>
       <span class="absolute inset-0 z-[2] bg-gradient-to-t from-ink via-ink/20 to-transparent"></span>
       <span class="absolute left-4 right-4 top-4 z-[3] flex items-center justify-between">
-        <span class="rounded-full bg-black/50 px-2.5 py-1 text-[9px] uppercase tracking-widest backdrop-blur">${esc(f.tag)}</span>
-        <span class="on-stage rounded px-2 py-0.5 text-[9px] font-bold uppercase tracking-widest">On stage</span>
+        <span class="rounded-full bg-black/50 px-2.5 py-1 text-[9px] uppercase tracking-widest backdrop-blur font-mono">${esc(f.tag)}</span>
+        <span class="on-stage rounded px-2 py-0.5 text-[9px] font-bold uppercase tracking-widest font-mono">On stage</span>
       </span>
     </div>
     <div class="relative z-[3] -mt-10 p-6 pt-0">
-      <p class="font-serif text-xs italic text-gold">${roman(i)}.</p>
-      <h3 class="font-serif text-3xl">${esc(f.title)}</h3>
+      <p class="font-mono text-xs text-gold">${pad(i + 1)}</p>
+      <h3 class="font-display text-3xl uppercase">${esc(f.title)}</h3>
       <p class="mt-2 text-sm leading-relaxed text-ivory/65">${esc(f.text)}</p>
       <div class="mt-5 flex items-center justify-between gap-4 border-t border-white/10 pt-4">
-        ${f.musicians ? `<span class="lights" aria-label="${f.musicians} musicians on stage">${'<i></i>'.repeat(f.musicians)}</span>` : '<span class="text-[10px] uppercase tracking-[.25em] text-ivory/45">Add to inquiry</span>'}
+        ${f.musicians ? `<span class="lights" aria-label="${f.musicians} musicians on stage">${'<i></i>'.repeat(f.musicians)}</span>` : '<span class="text-[10px] uppercase tracking-[.25em] text-ivory/45 font-mono">Add to inquiry</span>'}
         <span class="text-ivory/40 transition group-hover:rotate-45 group-hover:text-gold">${icon('h-arrow-up-right', 'h-5 w-5')}</span>
       </div>
     </div>
@@ -238,11 +237,11 @@ whenNear('#acts', () => ACTS.map((a, i) => `
       ${photo(a.img, '(min-width: 768px) 30vw, 92vw', '', 'absolute inset-0 h-full w-full object-cover grayscale transition duration-700 group-hover:scale-105', { style: `object-position:${a.pos}` })}
       <span class="absolute inset-0 bg-gradient-to-br from-gold via-gold-deep/70 to-ink mix-blend-multiply"></span>
       <span class="absolute inset-0 bg-gradient-to-t from-ink/90 via-transparent to-transparent"></span>
-      <span class="absolute left-4 top-4 rounded-full bg-black/50 px-2.5 py-1 text-[9px] uppercase tracking-widest backdrop-blur">${esc(a.tag)}</span>
+      <span class="absolute left-4 top-4 rounded-full bg-black/50 px-2.5 py-1 text-[9px] uppercase tracking-widest backdrop-blur font-mono">${esc(a.tag)}</span>
       <span class="absolute bottom-4 right-4 grid h-12 w-12 translate-y-2 place-items-center rounded-full bg-gold text-ink opacity-0 shadow-[0_10px_25px_-5px_rgba(183,154,106,.7)] transition duration-300 group-hover:translate-y-0 group-hover:opacity-100">${icon('h-play', 'ml-0.5 h-5 w-5')}</span>
     </button>
     <div class="px-1 pt-4">
-      <h4 class="font-serif text-3xl leading-tight">${esc(a.title)}</h4>
+      <h4 class="font-display text-3xl leading-tight uppercase">${esc(a.title)}</h4>
       <p class="mt-1 text-sm text-ivory/55">${esc(a.text)}</p>
       <ol class="mt-4 border-t border-white/10 pt-2">
         ${a.songs.map((id, n) => { const s = reel(id); return `<li><button type="button" data-video="${id}" class="flex w-full items-center gap-3 py-1.5 text-left transition hover:text-gold"><span class="w-4 text-[10px] text-ivory/40">${n + 1}</span><span class="min-w-0 flex-1 truncate text-sm">${esc(s.title)}</span><span class="shrink-0 text-xs text-ivory/45">${esc(s.artist || '')}</span></button></li>`; }).join('')}
@@ -258,15 +257,15 @@ whenNear('#acts', () => ACTS.map((a, i) => `
 // ---------- LOCAIS ----------
 whenNear('#venueList', () => VENUES.map((v, i) => `
   <li class="group relative flex items-baseline gap-4 border-b border-white/10 py-3.5">
-    <span class="w-7 shrink-0 font-serif text-sm italic text-gold">${pad(i + 1)}</span>
-    <span class="min-w-0 flex-1 font-serif text-xl transition group-hover:translate-x-1 group-hover:text-gold-light sm:text-2xl">${esc(v.name)}</span>
-    <span class="shrink-0 text-right text-[10px] uppercase tracking-[.2em] text-ivory/50">${esc(v.place)}</span>
+    <span class="w-7 shrink-0 font-mono text-xs text-gold">${pad(i + 1)}</span>
+    <span class="min-w-0 flex-1 font-display text-xl transition group-hover:translate-x-1 group-hover:text-gold-light sm:text-2xl uppercase">${esc(v.name)}</span>
+    <span class="shrink-0 text-right text-[10px] uppercase tracking-[.2em] text-ivory/50 font-mono">${esc(v.place)}</span>
     ${v.img ? `<img src="${IMG}photos/${v.img}-480.webp" width="480" height="640" alt="" class="ev-photo pointer-events-none absolute top-1/2 z-10 hidden h-32 w-24 rounded-md object-cover shadow-2xl shadow-black lg:block" loading="lazy">` : ''}
   </li>`).join(''));
 whenNear('#abroadList', () => ABROAD.map((v) => `
   <div class="flex items-center gap-4 rounded-xl border border-white/10 bg-ink/60 p-4">
     <span class="grid h-11 w-11 shrink-0 place-items-center rounded-full border border-gold/40 text-xs font-semibold tracking-widest text-gold">${esc(v.code)}</span>
-    <span class="min-w-0"><span class="block font-serif text-2xl leading-tight">${esc(v.name)}</span><span class="block text-[10px] uppercase tracking-[.2em] text-ivory/50">${esc(v.place)} · ${esc(v.note)}</span></span>
+    <span class="min-w-0"><span class="block font-display text-2xl leading-tight uppercase">${esc(v.name)}</span><span class="block text-[10px] uppercase tracking-[.2em] text-ivory/50 font-mono">${esc(v.place)} · ${esc(v.note)}</span></span>
   </div>`).join(''));
 
 // ---------- GALERIA ----------
@@ -274,7 +273,7 @@ whenNear('#galleryGrid', () => GALLERY.map((g, i) => `
   <button type="button" data-lb-index="${i}" class="group relative overflow-hidden rounded-xl ${g.span}" data-aos="fade-up" data-aos-delay="${(i % 4) * 60}">
     ${photo(g.img, g.span.includes('col-span-2') ? '(min-width: 1280px) 600px, (min-width: 768px) 48vw, 92vw' : '(min-width: 1280px) 300px, (min-width: 768px) 24vw, 46vw', `The Ambassadors — ${g.cap}`, 'duo h-full w-full object-cover', { w: g.w, h: g.h, style: g.pos ? `object-position:${g.pos}` : '' })}
     <span class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 transition group-hover:opacity-100"></span>
-    <span class="absolute bottom-3 left-3 right-3 translate-y-2 text-left text-[10px] uppercase tracking-[.2em] opacity-0 transition group-hover:translate-y-0 group-hover:opacity-100">${esc(g.cap)}</span>
+    <span class="absolute bottom-3 left-3 right-3 translate-y-2 text-left text-[10px] uppercase tracking-[.2em] opacity-0 transition group-hover:translate-y-0 group-hover:opacity-100 font-mono">${esc(g.cap)}</span>
   </button>`).join(''));
 
 // ---------- INSTAGRAM ----------
@@ -331,8 +330,8 @@ const igNotice = (id, text, showPlay) => `
     <span class="grid h-14 w-14 place-items-center rounded-full bg-ivory text-ink">${icon('b-instagram', 'h-7 w-7')}</span>
     <p class="max-w-md text-sm text-ivory/70">${text}</p>
     <div class="flex w-full max-w-xs flex-col justify-center gap-2">
-      ${showPlay ? `<button type="button" data-ig-once="${id}" class="w-full rounded-full bg-gold px-5 py-2.5 text-xs font-semibold uppercase tracking-[.2em] text-ink">Watch here</button>` : ''}
-      <a href="${igUrl(id)}" target="_blank" rel="noopener" class="w-full rounded-full border border-white/15 px-5 py-2.5 text-center text-xs font-semibold uppercase tracking-[.2em]">Open on Instagram</a>
+      ${showPlay ? `<button type="button" data-ig-once="${id}" class="w-full rounded-full bg-gold px-5 py-2.5 text-xs uppercase tracking-[.2em] text-ink font-display">Watch here</button>` : ''}
+      <a href="${igUrl(id)}" target="_blank" rel="noopener" class="w-full rounded-full border border-white/15 px-5 py-2.5 text-center text-xs uppercase tracking-[.2em] font-display">Open on Instagram</a>
     </div>
   </div>`;
 function playVideo(id) {

@@ -137,7 +137,7 @@ input[type="date"].field::-webkit-calendar-picker-indicator { filter: invert(.85
 .lights i { width: 8px; height: 8px; border-radius: 9999px; background: rgba(245,240,232,.18); transition: background .3s, box-shadow .3s; }
 .lights i.on { background: var(--gold-light); box-shadow: 0 0 10px 1px rgba(216,194,154,.8); }
 
-/* Setlist: cartão de menu de casamento (marfim, serifada) */
+/* Setlist: cartão de menu de casamento (marfim, escrito à mão) */
 .menu-card {
   background: #f5f0e8; color: #1d1a16;
   box-shadow: 0 30px 60px -20px rgba(0,0,0,.9), inset 0 0 70px rgba(140,115,72,.14);
@@ -145,7 +145,7 @@ input[type="date"].field::-webkit-calendar-picker-indicator { filter: invert(.85
 .menu-card::before { content: ""; position: absolute; inset: 12px; border: 1px solid rgba(140,115,72,.55); pointer-events: none; }
 .menu-card::after { content: ""; position: absolute; inset: 17px; border: 1px solid rgba(140,115,72,.25); pointer-events: none; }
 .setlist li { counter-increment: song; }
-.setlist li::before { content: counter(song, upper-roman) "."; font-family: "Cormorant Garamond", serif; font-style: italic; font-size: 13px; color: #8c7348; display: inline-block; min-width: 2.2rem; }
+.setlist li::before { content: counter(song, decimal-leading-zero); font-family: "Space Mono", monospace; font-size: 11px; color: #8c7348; opacity: .7; display: inline-block; min-width: 2rem; }
 
 /* Chat estilo app de mensagens (Perguntas frequentes) */
 .faq-q[aria-pressed="true"] { border-color: var(--gold); background-color: rgba(183,154,106,.1); }
