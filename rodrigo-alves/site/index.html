@@ -1,0 +1,558 @@
+<!doctype html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="utf-8">
+  <!-- Garante a barra final (/pasta → /pasta/) para os caminhos relativos funcionarem -->
+  <script>
+    if (!/\/$|\.html$/.test(location.pathname)) location.replace(location.pathname + '/' + location.search + location.hash);
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rodrigo Alves | Guitarrista, Compositor e Produtor Musical</title>
+  <meta name="description" content="Conheça Rodrigo Alves, guitarrista, compositor e produtor musical brasileiro. Explore sua trajetória, discografia, projetos colaborativos e vídeos.">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="author" content="Rodrigo Alves">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="theme-color" content="#0a0a0b">
+  <meta name="format-detection" content="telephone=no">
+  <!-- URL: prévia em wscodev.vercel.app/rodrigo-alves/. Ao mover para o domínio do artista, troque o endereço aqui,
+       nos dados estruturados, no robots.txt e no sitemap.xml -->
+  <link rel="canonical" href="https://wscodev.vercel.app/rodrigo-alves/">
+
+  <!-- Compartilhamento (WhatsApp, Facebook, Instagram, LinkedIn, X) -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Rodrigo Alves">
+  <meta property="og:url" content="https://wscodev.vercel.app/rodrigo-alves/">
+  <meta property="og:title" content="Rodrigo Alves | Guitarrista, Compositor e Produtor Musical">
+  <meta property="og:description" content="Música, expressão e trajetória. Discografia, Covers &amp; Collabs, vídeos e contato profissional.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Rodrigo Alves | Guitarrista, Compositor e Produtor Musical">
+  <meta name="twitter:description" content="Música, expressão e trajetória. Discografia, Covers &amp; Collabs, vídeos e contato profissional.">
+
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="site.webmanifest">
+
+  <!-- Dados estruturados (schema.org): somente fatos do briefing -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "url": "https://wscodev.vercel.app/rodrigo-alves/",
+        "name": "Rodrigo Alves",
+        "inLanguage": "pt-BR"
+      },
+      {
+        "@type": "Person",
+        "url": "https://wscodev.vercel.app/rodrigo-alves/",
+        "name": "Rodrigo Alves",
+        "jobTitle": "Guitarrista, compositor e produtor musical",
+        "birthDate": "1971-09-11",
+        "birthPlace": { "@type": "Place", "name": "Santos, São Paulo, Brasil" },
+        "description": "Guitarrista, violonista, compositor e produtor musical brasileiro, com atuação profissional desde 1990.",
+        "genre": ["Rock", "Heavy metal", "Smooth jazz", "Música instrumental"],
+        "sameAs": [
+          "https://www.instagram.com/rodrigoalves_music",
+          "https://www.facebook.com/rodrigoalvesmusic",
+          "https://www.youtube.com/rodrigoalvesmusic",
+          "https://music.apple.com/br/artist/rodrigo-alves/1553481499",
+          "https://soundcloud.com/rodrigoalves-com"
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <link rel="preload" href="assets/fonts/anton-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/inter-400-700-latin.woff2" as="font" type="font/woff2" crossorigin>
+
+  <!-- TailwindCSS compilado e inline (fonte em ../src/input.css — rode "npm run build") -->
+  <style id="site-css">@font-face{font-family:Anton;font-style:normal;font-weight:400;font-display:swap;src:url(assets/fonts/anton-400-latin.woff2) format("woff2");unicode-range:u+00??,u+0131,u+0152-0153,u+02bb-02bc,u+02c6,u+02da,u+02dc,u+0304,u+0308,u+0329,u+2000-206f,u+20ac,u+2122,u+2191,u+2193,u+2212,u+2215,u+feff,u+fffd}@font-face{font-family:Inter;font-style:normal;font-weight:400 700;font-display:swap;src:url(assets/fonts/inter-400-700-latin.woff2) format("woff2");unicode-range:u+00??,u+0131,u+0152-0153,u+02bb-02bc,u+02c6,u+02da,u+02dc,u+0304,u+0308,u+0329,u+2000-206f,u+20ac,u+2122,u+2191,u+2193,u+2212,u+2215,u+feff,u+fffd}@font-face{font-family:Space Mono;font-style:normal;font-weight:400;font-display:swap;src:url(assets/fonts/space-mono-400-latin.woff2) format("woff2");unicode-range:u+00??,u+0131,u+0152-0153,u+02bb-02bc,u+02c6,u+02da,u+02dc,u+0304,u+0308,u+0329,u+2000-206f,u+20ac,u+2122,u+2191,u+2193,u+2212,u+2215,u+feff,u+fffd}@font-face{font-family:Space Mono;font-style:normal;font-weight:700;font-display:swap;src:url(assets/fonts/space-mono-700-latin.woff2) format("woff2");unicode-range:u+00??,u+0131,u+0152-0153,u+02bb-02bc,u+02c6,u+02da,u+02dc,u+0304,u+0308,u+0329,u+2000-206f,u+20ac,u+2122,u+2191,u+2193,u+2212,u+2215,u+feff,u+fffd}body[data-aos-duration="900"] [data-aos]{transition-duration:.9s}body[data-aos-easing=ease-out-cubic] [data-aos]{transition-timing-function:cubic-bezier(.215,.61,.355,1)}[data-aos^=fade],[data-aos^=zoom]{opacity:0;transition-property:opacity,transform}[data-aos^=fade].aos-animate,[data-aos^=zoom].aos-animate{opacity:1;transform:translateZ(0) scale(1)}[data-aos=fade-up]{transform:translate3d(0,60px,0)}[data-aos=fade-down]{transform:translate3d(0,-60px,0)}[data-aos=fade-right]{transform:translate3d(-60px,0,0)}[data-aos=fade-left]{transform:translate3d(60px,0,0)}[data-aos=zoom-in]{transform:scale(.6)}[data-aos][data-aos-delay="20"].aos-animate,body[data-aos-delay] [data-aos][data-aos-delay="20"].aos-animate{transition-delay:20ms}[data-aos][data-aos-delay="40"].aos-animate,body[data-aos-delay] [data-aos][data-aos-delay="40"].aos-animate{transition-delay:40ms}[data-aos][data-aos-delay="60"].aos-animate,body[data-aos-delay] [data-aos][data-aos-delay="60"].aos-animate{transition-delay:60ms}[data-aos][data-aos-delay="80"].aos-animate,body[data-aos-delay] [data-aos][data-aos-delay="80"].aos-animate{transition-delay:80ms}[data-aos][data-aos-delay="100"].aos-animate,body[data-aos-delay] [data-aos][data-aos-delay="100"].aos-animate{transition-delay:.1s}[data-aos][data-aos-delay="120"].aos-animate,body[data-aos-delay] [data-aos][data-aos-delay="120"].aos-animate{transition-delay:.12s}[data-aos][data-aos-delay="140"].aos-animate,body[data-aos-delay] [data-aos][data-aos-delay="140"].aos-animate{transition-delay:.14s}[data-aos][data-aos-delay="160"].aos-animate,body[data-aos-delay] [data-aos][data-aos-delay="160"].aos-animate{transition-delay:.16s}[data-aos][data-aos-delay="180"].aos-animate,body[data-aos-delay] [data-aos][data-aos-delay="180"].aos-animate{transition-delay:.18s}[data-aos][data-aos-delay="200"].aos-animate,body[data-aos-delay] [data-aos][data-aos-delay="200"].aos-animate{transition-delay:.2s}[data-aos][data-aos-delay="220"].aos-animate,body[data-aos-delay] [data-aos][data-aos-delay="220"].aos-animate{transition-delay:.22s}[data-aos][data-aos-delay="240"].aos-animate,body[data-aos-delay] [data-aos][data-aos-delay="240"].aos-animate{transition-delay:.24s}[data-aos][data-aos-delay="260"].aos-animate,body[data-aos-delay] [data-aos][data-aos-delay="260"].aos-animate{transition-delay:.26s}[data-aos][data-aos-delay="280"].aos-animate,body[data-aos-delay] [data-aos][data-aos-delay="280"].aos-animate{transition-delay:.28s}[data-aos][data-aos-delay="300"].aos-animate,body[data-aos-delay] [data-aos][data-aos-delay="300"].aos-animate{transition-delay:.3s}[data-aos][data-aos-delay="320"].aos-animate,body[data-aos-delay] [data-aos][data-aos-delay="320"].aos-animate{transition-delay:.32s}[data-aos][data-aos-delay="340"].aos-animate,body[data-aos-delay] [data-aos][data-aos-delay="340"].aos-animate{transition-delay:.34s}[data-aos][data-aos-delay="360"].aos-animate,body[data-aos-delay] [data-aos][data-aos-delay="360"].aos-animate{transition-delay:.36s}[data-aos][data-aos-delay="380"].aos-animate,body[data-aos-delay] [data-aos][data-aos-delay="380"].aos-animate{transition-delay:.38s}[data-aos][data-aos-delay="400"].aos-animate,body[data-aos-delay] [data-aos][data-aos-delay="400"].aos-animate{transition-delay:.4s}*,:after,:before{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }
+
+/*! tailwindcss v3.4.16 | MIT License | https://tailwindcss.com*/*,:after,:before{box-sizing:border-box;border:0 solid #e5e7eb}:after,:before{--tw-content:""}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;-o-tab-size:4;tab-size:4;font-family:Inter,system-ui,sans-serif;font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:Space Mono,monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0}fieldset,legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::-moz-placeholder,textarea::-moz-placeholder{opacity:1;color:#9ca3af}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border-width:0}.pointer-events-none{pointer-events:none}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.inset-0{inset:0}.inset-\[4\%\]{inset:4%}.inset-x-0{left:0;right:0}.-bottom-20{bottom:-5rem}.-bottom-6{bottom:-1.5rem}.-left-2{left:-.5rem}.-left-40{left:-10rem}.-left-60{left:-15rem}.-right-3{right:-.75rem}.-right-4{right:-1rem}.-right-60{right:-15rem}.-top-2{top:-.5rem}.-top-3{top:-.75rem}.-top-6{top:-1.5rem}.bottom-0{bottom:0}.bottom-4{bottom:1rem}.bottom-5{bottom:1.25rem}.bottom-6{bottom:1.5rem}.left-1{left:.25rem}.left-1\/2{left:50%}.left-2{left:.5rem}.left-3{left:.75rem}.left-4{left:1rem}.left-5{left:1.25rem}.left-\[-5\%\]{left:-5%}.right-3{right:.75rem}.right-4{right:1rem}.right-5{right:1.25rem}.right-6{right:1.5rem}.top-0{top:0}.top-1{top:.25rem}.top-1\/2{top:50%}.top-1\/3{top:33.333333%}.top-14{top:3.5rem}.top-16{top:4rem}.top-2{top:.5rem}.top-3{top:.75rem}.top-4{top:1rem}.z-10{z-index:10}.z-20{z-index:20}.z-40{z-index:40}.z-50{z-index:50}.z-\[70\]{z-index:70}.z-\[80\]{z-index:80}.mx-auto{margin-left:auto;margin-right:auto}.-mt-6{margin-top:-1.5rem}.mb-1{margin-bottom:.25rem}.mb-1\.5{margin-bottom:.375rem}.mb-10{margin-bottom:2.5rem}.mb-12{margin-bottom:3rem}.mb-14{margin-bottom:3.5rem}.mb-16{margin-bottom:4rem}.mb-5{margin-bottom:1.25rem}.mb-6{margin-bottom:1.5rem}.mb-8{margin-bottom:2rem}.ml-0{margin-left:0}.ml-0\.5{margin-left:.125rem}.ml-1{margin-left:.25rem}.mt-0{margin-top:0}.mt-0\.5{margin-top:.125rem}.mt-1{margin-top:.25rem}.mt-10{margin-top:2.5rem}.mt-12{margin-top:3rem}.mt-16{margin-top:4rem}.mt-2{margin-top:.5rem}.mt-24{margin-top:6rem}.mt-3{margin-top:.75rem}.mt-4{margin-top:1rem}.mt-5{margin-top:1.25rem}.mt-6{margin-top:1.5rem}.mt-7{margin-top:1.75rem}.mt-8{margin-top:2rem}.block{display:block}.inline{display:inline}.flex{display:flex}.inline-flex{display:inline-flex}.table{display:table}.grid{display:grid}.hidden{display:none}.aspect-\[4\/5\]{aspect-ratio:4/5}.aspect-square{aspect-ratio:1/1}.aspect-video{aspect-ratio:16/9}.h-1{height:.25rem}.h-1\.5{height:.375rem}.h-10{height:2.5rem}.h-11{height:2.75rem}.h-14{height:3.5rem}.h-2{height:.5rem}.h-20{height:5rem}.h-3{height:.75rem}.h-3\.5{height:.875rem}.h-4{height:1rem}.h-40{height:10rem}.h-48{height:12rem}.h-5{height:1.25rem}.h-7{height:1.75rem}.h-9{height:2.25rem}.h-\[60\%\]{height:60%}.h-\[600px\]{height:600px}.h-\[620px\]{height:620px}.h-\[700px\]{height:700px}.h-full{height:100%}.h-px{height:1px}.min-h-\[100svh\]{min-height:100svh}.w-1{width:.25rem}.w-1\.5{width:.375rem}.w-10{width:2.5rem}.w-11{width:2.75rem}.w-14{width:3.5rem}.w-2{width:.5rem}.w-3{width:.75rem}.w-4{width:1rem}.w-5{width:1.25rem}.w-7{width:1.75rem}.w-8{width:2rem}.w-9{width:2.25rem}.w-\[110\%\]{width:110%}.w-\[600px\]{width:600px}.w-\[620px\]{width:620px}.w-\[700px\]{width:700px}.w-full{width:100%}.min-w-0{min-width:0}.max-w-2xl{max-width:42rem}.max-w-4xl{max-width:56rem}.max-w-5xl{max-width:64rem}.max-w-7xl{max-width:80rem}.max-w-lg{max-width:32rem}.max-w-md{max-width:28rem}.max-w-sm{max-width:24rem}.max-w-xl{max-width:36rem}.max-w-xs{max-width:20rem}.flex-1{flex:1 1 0%}.shrink-0{flex-shrink:0}.-translate-x-1{--tw-translate-x:-0.25rem}.-translate-x-1,.-translate-x-1\/2{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.-translate-x-1\/2{--tw-translate-x:-50%}.-translate-y-1{--tw-translate-y:-0.25rem}.-translate-y-1,.-translate-y-1\/2{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.-translate-y-1\/2{--tw-translate-y:-50%}.translate-y-4{--tw-translate-y:1rem}.-rotate-6,.translate-y-4{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.-rotate-6{--tw-rotate:-6deg}.-rotate-\[2deg\]{--tw-rotate:-2deg}.-rotate-\[2deg\],.rotate-\[1\.5deg\]{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.rotate-\[1\.5deg\]{--tw-rotate:1.5deg}.transform{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.resize-none{resize:none}.resize{resize:both}.list-disc{list-style-type:disc}.grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.place-items-center{place-items:center}.items-start{align-items:flex-start}.items-end{align-items:flex-end}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-10{gap:2.5rem}.gap-12{gap:3rem}.gap-14{gap:3.5rem}.gap-2{gap:.5rem}.gap-2\.5{gap:.625rem}.gap-3{gap:.75rem}.gap-4{gap:1rem}.gap-5{gap:1.25rem}.gap-6{gap:1.5rem}.gap-7{gap:1.75rem}.gap-x-16{-moz-column-gap:4rem;column-gap:4rem}.gap-x-5{-moz-column-gap:1.25rem;column-gap:1.25rem}.gap-y-10{row-gap:2.5rem}.gap-y-2{row-gap:.5rem}.gap-y-2\.5{row-gap:.625rem}.space-y-10>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(2.5rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(2.5rem*var(--tw-space-y-reverse))}.space-y-2>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(.5rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(.5rem*var(--tw-space-y-reverse))}.space-y-3>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(.75rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(.75rem*var(--tw-space-y-reverse))}.space-y-4>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem*var(--tw-space-y-reverse))}.space-y-7>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.75rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.75rem*var(--tw-space-y-reverse))}.overflow-hidden{overflow:hidden}.overflow-x-hidden{overflow-x:hidden}.scroll-smooth{scroll-behavior:smooth}.truncate{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.break-all{word-break:break-all}.rounded-2xl{border-radius:1rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:.5rem}.rounded-md{border-radius:.375rem}.rounded-xl{border-radius:.75rem}.border{border-width:1px}.border-y{border-top-width:1px}.border-b,.border-y{border-bottom-width:1px}.border-t{border-top-width:1px}.border-current{border-color:currentColor}.border-gold{--tw-border-opacity:1;border-color:rgb(247 179 43/var(--tw-border-opacity,1))}.border-gold\/40{border-color:rgba(247,179,43,.4)}.border-gold\/60{border-color:rgba(247,179,43,.6)}.border-white{--tw-border-opacity:1;border-color:rgb(255 255 255/var(--tw-border-opacity,1))}.border-white\/10{border-color:hsla(0,0%,100%,.1)}.border-white\/15{border-color:hsla(0,0%,100%,.15)}.border-white\/20{border-color:hsla(0,0%,100%,.2)}.border-white\/25{border-color:hsla(0,0%,100%,.25)}.border-white\/30{border-color:hsla(0,0%,100%,.3)}.border-white\/5{border-color:hsla(0,0%,100%,.05)}.bg-black{--tw-bg-opacity:1;background-color:rgb(0 0 0/var(--tw-bg-opacity,1))}.bg-black\/30{background-color:rgba(0,0,0,.3)}.bg-black\/40{background-color:rgba(0,0,0,.4)}.bg-black\/60{background-color:rgba(0,0,0,.6)}.bg-black\/70{background-color:rgba(0,0,0,.7)}.bg-black\/90{background-color:rgba(0,0,0,.9)}.bg-bone{--tw-bg-opacity:1;background-color:rgb(236 232 225/var(--tw-bg-opacity,1))}.bg-bone\/30{background-color:hsla(38,22%,90%,.3)}.bg-current{background-color:currentColor}.bg-gold{--tw-bg-opacity:1;background-color:rgb(247 179 43/var(--tw-bg-opacity,1))}.bg-gold\/15{background-color:rgba(247,179,43,.15)}.bg-gold\/\[\.06\]{background-color:rgba(247,179,43,.06)}.bg-ink{--tw-bg-opacity:1;background-color:rgb(10 10 11/var(--tw-bg-opacity,1))}.bg-ink\/60{background-color:rgba(10,10,11,.6)}.bg-ink\/85{background-color:rgba(10,10,11,.85)}.bg-ink\/90{background-color:rgba(10,10,11,.9)}.bg-ink\/95{background-color:rgba(10,10,11,.95)}.bg-panel{--tw-bg-opacity:1;background-color:rgb(18 18 20/var(--tw-bg-opacity,1))}.bg-panel\/40{background-color:rgba(18,18,20,.4)}.bg-panel\/60{background-color:rgba(18,18,20,.6)}.bg-panel\/70{background-color:rgba(18,18,20,.7)}.bg-panel\/80{background-color:rgba(18,18,20,.8)}.bg-panel\/90{background-color:rgba(18,18,20,.9)}.bg-\[radial-gradient\(closest-side\2c rgba\(226\2c 52\2c 45\2c \.14\)\2c transparent\)\]{background-image:radial-gradient(closest-side,rgba(226,52,45,.14),transparent)}.bg-\[radial-gradient\(ellipse_at_center\2c \#262626_0\%\2c \#0a0a0b_70\%\)\]{background-image:radial-gradient(ellipse at center,#262626 0,#0a0a0b 70%)}.bg-gradient-to-b{background-image:linear-gradient(to bottom,var(--tw-gradient-stops))}.bg-gradient-to-t{background-image:linear-gradient(to top,var(--tw-gradient-stops))}.from-black{--tw-gradient-from:#000 var(--tw-gradient-from-position);--tw-gradient-to:transparent var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.from-black\/60{--tw-gradient-from:rgba(0,0,0,.6) var(--tw-gradient-from-position);--tw-gradient-to:transparent var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.from-black\/85{--tw-gradient-from:rgba(0,0,0,.85) var(--tw-gradient-from-position);--tw-gradient-to:transparent var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.from-ink{--tw-gradient-from:#0a0a0b var(--tw-gradient-from-position);--tw-gradient-to:rgba(10,10,11,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.via-black{--tw-gradient-to:transparent var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),#000 var(--tw-gradient-via-position),var(--tw-gradient-to)}.via-black\/20{--tw-gradient-to:transparent var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),rgba(0,0,0,.2) var(--tw-gradient-via-position),var(--tw-gradient-to)}.via-graphite{--tw-gradient-to:rgba(26,26,28,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),#1a1a1c var(--tw-gradient-via-position),var(--tw-gradient-to)}.via-graphite\/30{--tw-gradient-to:rgba(26,26,28,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),rgba(26,26,28,.3) var(--tw-gradient-via-position),var(--tw-gradient-to)}.to-ink{--tw-gradient-to:#0a0a0b var(--tw-gradient-to-position)}.to-transparent{--tw-gradient-to:transparent var(--tw-gradient-to-position)}.object-cover{-o-object-fit:cover;object-fit:cover}.p-4{padding:1rem}.p-5{padding:1.25rem}.p-6{padding:1.5rem}.p-7{padding:1.75rem}.p-8{padding:2rem}.px-1{padding-left:.25rem;padding-right:.25rem}.px-2{padding-left:.5rem;padding-right:.5rem}.px-2\.5{padding-left:.625rem;padding-right:.625rem}.px-3{padding-left:.75rem;padding-right:.75rem}.px-4{padding-left:1rem;padding-right:1rem}.px-5{padding-left:1.25rem;padding-right:1.25rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.px-7{padding-left:1.75rem;padding-right:1.75rem}.px-8{padding-left:2rem;padding-right:2rem}.py-1{padding-top:.25rem;padding-bottom:.25rem}.py-1\.5{padding-top:.375rem;padding-bottom:.375rem}.py-16{padding-top:4rem;padding-bottom:4rem}.py-2{padding-top:.5rem;padding-bottom:.5rem}.py-2\.5{padding-top:.625rem;padding-bottom:.625rem}.py-20{padding-top:5rem;padding-bottom:5rem}.py-24{padding-top:6rem;padding-bottom:6rem}.py-3{padding-top:.75rem;padding-bottom:.75rem}.py-3\.5{padding-top:.875rem;padding-bottom:.875rem}.py-8{padding-top:2rem;padding-bottom:2rem}.pb-10{padding-bottom:2.5rem}.pl-10{padding-left:2.5rem}.pl-5{padding-left:1.25rem}.pt-1{padding-top:.25rem}.pt-1\.5{padding-top:.375rem}.pt-20{padding-top:5rem}.pt-3{padding-top:.75rem}.pt-5{padding-top:1.25rem}.text-left{text-align:left}.text-center{text-align:center}.font-display{font-family:Anton,Impact,sans-serif}.font-mono{font-family:Space Mono,monospace}.font-sans{font-family:Inter,system-ui,sans-serif}.text-2xl{font-size:1.5rem;line-height:2rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-4xl{font-size:2.25rem;line-height:2.5rem}.text-5xl{font-size:3rem;line-height:1}.text-\[10px\]{font-size:10px}.text-\[11px\]{font-size:11px}.text-\[120px\]{font-size:120px}.text-\[13px\]{font-size:13px}.text-\[16vw\]{font-size:16vw}.text-\[18vw\]{font-size:18vw}.text-\[19vw\]{font-size:19vw}.text-\[20vw\]{font-size:20vw}.text-\[8px\]{font-size:8px}.text-\[9px\]{font-size:9px}.text-\[9rem\]{font-size:9rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:.75rem;line-height:1rem}.font-bold{font-weight:700}.font-semibold{font-weight:600}.uppercase{text-transform:uppercase}.leading-\[\.85\]{line-height:.85}.leading-\[\.95\]{line-height:.95}.leading-none{line-height:1}.leading-relaxed{line-height:1.625}.leading-snug{line-height:1.375}.leading-tight{line-height:1.25}.tracking-\[\.18em\]{letter-spacing:.18em}.tracking-\[\.25em\]{letter-spacing:.25em}.tracking-\[\.2em\]{letter-spacing:.2em}.tracking-\[\.3em\]{letter-spacing:.3em}.tracking-mega{letter-spacing:.35em}.tracking-wide{letter-spacing:.025em}.tracking-widest{letter-spacing:.1em}.text-bone{--tw-text-opacity:1;color:rgb(236 232 225/var(--tw-text-opacity,1))}.text-bone\/10{color:hsla(38,22%,90%,.1)}.text-bone\/30{color:hsla(38,22%,90%,.3)}.text-bone\/45{color:hsla(38,22%,90%,.45)}.text-bone\/55{color:hsla(38,22%,90%,.55)}.text-bone\/60{color:hsla(38,22%,90%,.6)}.text-bone\/65{color:hsla(38,22%,90%,.65)}.text-bone\/70{color:hsla(38,22%,90%,.7)}.text-bone\/75{color:hsla(38,22%,90%,.75)}.text-bone\/80{color:hsla(38,22%,90%,.8)}.text-bone\/\[\.45\]{color:hsla(38,22%,90%,.45)}.text-gold{color:rgb(247 179 43/var(--tw-text-opacity,1))}.text-gold,.text-ink{--tw-text-opacity:1}.text-ink{color:rgb(10 10 11/var(--tw-text-opacity,1))}.underline{text-decoration-line:underline}.accent-\[\#f7b32b\]{accent-color:#f7b32b}.opacity-0{opacity:0}.opacity-50{opacity:.5}.opacity-80{opacity:.8}.shadow-2xl{--tw-shadow:0 25px 50px -12px rgba(0,0,0,.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color)}.shadow-2xl,.shadow-xl{box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-xl{--tw-shadow:0 20px 25px -5px rgba(0,0,0,.1),0 8px 10px -6px rgba(0,0,0,.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color),0 8px 10px -6px var(--tw-shadow-color)}.shadow-black{--tw-shadow-color:#000;--tw-shadow:var(--tw-shadow-colored)}.shadow-black\/70{--tw-shadow-color:rgba(0,0,0,.7);--tw-shadow:var(--tw-shadow-colored)}.outline{outline-style:solid}.filter{filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.backdrop-blur{--tw-backdrop-blur:blur(8px)}.backdrop-blur,.backdrop-blur-lg{-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.backdrop-blur-lg{--tw-backdrop-blur:blur(16px)}.backdrop-blur-xl{--tw-backdrop-blur:blur(24px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.transition{transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,-webkit-backdrop-filter;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter,-webkit-backdrop-filter;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.duration-300{transition-duration:.3s}.duration-500{transition-duration:.5s}.ease-in-out{transition-timing-function:cubic-bezier(.4,0,.2,1)}.ease-out{transition-timing-function:cubic-bezier(0,0,.2,1)}:root{--ink:#0a0a0b;--panel:#121214;--graphite:#1a1a1c;--bone:#ece8e1;--gold:#f7b32b;--gold-rgb:247,179,43;--gold-deep:#a8730a}html{scroll-behavior:smooth;scroll-padding-top:84px}.grid>*{min-width:0}.grain{background-image:url(assets/img/grain.webp);background-size:96px}body{background:var(--ink);color:var(--bone);-webkit-font-smoothing:antialiased}::-moz-selection{background:var(--gold);color:var(--ink)}::selection{background:var(--gold);color:var(--ink)}:focus-visible{outline:2px solid var(--gold);outline-offset:3px}.ghost{color:transparent;-webkit-text-stroke:1px hsla(38,22%,90%,.08);letter-spacing:.02em;line-height:.8;-webkit-user-select:none;-moz-user-select:none;user-select:none}.hero-title{text-shadow:0 10px 60px rgba(0,0,0,.6)}.hero-glow{background:radial-gradient(closest-side,rgba(var(--gold-rgb),.2),transparent);animation:breathe 5.2s ease-in-out infinite}@keyframes breathe{0%,to{opacity:.55;transform:scale(1)}50%{opacity:1;transform:scale(1.08)}}.string{stroke:rgba(var(--gold-rgb),.5);fill:none;transform-box:fill-box;transform-origin:center;animation:vibrate 3.6s ease-in-out infinite}.string:nth-child(2){animation-delay:-.6s;stroke:hsla(38,22%,90%,.22)}.string:nth-child(3){animation-delay:-1.3s}.string:nth-child(4){animation-delay:-1.9s;stroke:hsla(38,22%,90%,.22)}.string:nth-child(5){animation-delay:-2.4s}.string:nth-child(6){animation-delay:-3s;stroke:hsla(38,22%,90%,.22)}@keyframes vibrate{0%,to{transform:scaleY(1)}25%{transform:scaleY(.35)}50%{transform:scaleY(-1)}75%{transform:scaleY(-.35)}}.tape{box-shadow:0 18px 40px -10px rgba(0,0,0,.8)}.marquee{display:flex;width:-moz-max-content;width:max-content;animation:marquee 42s linear infinite}.marquee.reverse{animation-direction:reverse;animation-duration:50s}@keyframes marquee{to{transform:translateX(-50%)}}.nav-link{position:relative}.nav-link:after{content:"";position:absolute;left:0;right:0;bottom:-8px;height:2px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .35s ease}.nav-link.is-active:after,.nav-link:hover:after{transform:scaleX(1)}.nav-link.is-active{color:#fff}.scroll-dot{animation:scrolldot 1.8s ease-in-out infinite}@keyframes scrolldot{0%{transform:translateY(0);opacity:1}70%{transform:translateY(12px);opacity:0}to{opacity:0}}.pulse-dot{position:relative}.pulse-dot:after{content:"";position:absolute;inset:0;border-radius:9999px;background:currentColor;animation:pulse 1.8s ease-out infinite}@keyframes pulse{0%{transform:scale(1);opacity:.7}70%,to{transform:scale(3);opacity:0}}.vinyl{background:radial-gradient(circle,var(--gold) 0 13%,#111 13.5% 15%,transparent 15.5%),repeating-radial-gradient(circle,#0d0d0d 0 2px,#1b1b1b 2.5px 3px);transition:transform .7s cubic-bezier(.2,.7,.2,1)}.group:focus-visible .vinyl,.group:hover .vinyl{transform:translateX(34%) rotate(90deg)}.eq span{display:inline-block;width:3px;height:14px;background:var(--gold);margin-right:2px;transform-origin:bottom;animation:eq 1s ease-in-out infinite}.eq span:nth-child(2){animation-delay:.2s}.eq span:nth-child(3){animation-delay:.4s}.eq span:nth-child(4){animation-delay:.1s}@keyframes eq{0%,to{transform:scaleY(.3)}50%{transform:scaleY(1)}}.cover-ph{background:radial-gradient(120% 90% at 85% 8%,hsl(var(--h,30) 38% 34%/.85),transparent 60%),linear-gradient(160deg,hsl(var(--h,30) 14% 17%),#121212)}.cover-ph:before{content:"";position:absolute;inset:0;opacity:.55;background:repeating-linear-gradient(90deg,transparent 0 22px,hsla(0,0%,100%,.035) 22px 23px)}.chip[aria-pressed=true]{background:var(--gold);border-color:var(--gold);color:var(--ink)}.tl{position:relative}.tl:before{left:7px;top:.5rem;bottom:.5rem;width:1px;background:linear-gradient(to bottom,var(--gold),rgba(247,179,43,.1))}.tl li:before,.tl:before{content:"";position:absolute}.tl li:before{left:3px;top:.55rem;width:9px;height:9px;border-radius:9999px;background:var(--ink);border:2px solid var(--gold)}.field{width:100%;background:hsla(0,0%,100%,.03);border:1px solid hsla(0,0%,100%,.12);border-radius:.5rem;padding:.8rem 1rem;color:var(--bone);font-size:.9rem;outline:none;transition:border-color .2s,background .2s}.field::-moz-placeholder{color:hsla(38,22%,90%,.55)}.field::placeholder{color:hsla(38,22%,90%,.55)}.field:focus{border-color:var(--gold);background:rgba(var(--gold-rgb),.06)}.field option{background:var(--panel)}.modal{opacity:0;visibility:hidden;pointer-events:none;transition:opacity .3s ease,visibility 0s linear .3s}.modal.is-open{opacity:1;visibility:visible;pointer-events:auto;transition:opacity .3s ease}.modal:not(.is-open){content-visibility:hidden}@media (prefers-reduced-motion:reduce){.eq span,.hero-glow,.marquee,.pulse-dot:after,.scroll-dot,.string{animation:none!important}html{scroll-behavior:auto}}.hp{position:absolute!important;left:-9999px!important;width:1px;height:1px;overflow:hidden}.hover\:-translate-y-1:hover{--tw-translate-y:-0.25rem;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.hover\:border-gold:hover{--tw-border-opacity:1;border-color:rgb(247 179 43/var(--tw-border-opacity,1))}.hover\:border-gold\/50:hover{border-color:rgba(247,179,43,.5)}.hover\:bg-gold:hover{--tw-bg-opacity:1;background-color:rgb(247 179 43/var(--tw-bg-opacity,1))}.hover\:bg-white:hover{--tw-bg-opacity:1;background-color:rgb(255 255 255/var(--tw-bg-opacity,1))}.hover\:text-bone:hover{--tw-text-opacity:1;color:rgb(236 232 225/var(--tw-text-opacity,1))}.hover\:text-gold:hover{--tw-text-opacity:1;color:rgb(247 179 43/var(--tw-text-opacity,1))}.hover\:text-ink:hover{--tw-text-opacity:1;color:rgb(10 10 11/var(--tw-text-opacity,1))}.hover\:text-white:hover{--tw-text-opacity:1;color:rgb(255 255 255/var(--tw-text-opacity,1))}.group:hover .group-hover\:scale-110{--tw-scale-x:1.1;--tw-scale-y:1.1;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.group:hover .group-hover\:border-gold{--tw-border-opacity:1;border-color:rgb(247 179 43/var(--tw-border-opacity,1))}.group:hover .group-hover\:bg-gold{--tw-bg-opacity:1;background-color:rgb(247 179 43/var(--tw-bg-opacity,1))}.group:hover .group-hover\:text-gold{--tw-text-opacity:1;color:rgb(247 179 43/var(--tw-text-opacity,1))}.group:hover .group-hover\:text-ink{--tw-text-opacity:1;color:rgb(10 10 11/var(--tw-text-opacity,1))}.group:hover .group-hover\:opacity-100{opacity:1}.group:focus-visible .group-focus-visible\:opacity-100{opacity:1}@media (min-width:640px){.sm\:-left-6{left:-1.5rem}.sm\:col-span-2{grid-column:span 2/span 2}.sm\:block{display:block}.sm\:grid{display:grid}.sm\:w-16{width:4rem}.sm\:w-auto{width:auto}.sm\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.sm\:grid-cols-4{grid-template-columns:repeat(4,minmax(0,1fr))}.sm\:flex-row{flex-direction:row}.sm\:flex-wrap{flex-wrap:wrap}.sm\:gap-5{gap:1.25rem}.sm\:gap-x-8{-moz-column-gap:2rem;column-gap:2rem}.sm\:p-10{padding:2.5rem}.sm\:p-6{padding:1.5rem}.sm\:p-8{padding:2rem}.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}.sm\:py-20{padding-top:5rem;padding-bottom:5rem}.sm\:py-28{padding-top:7rem;padding-bottom:7rem}.sm\:text-2xl{font-size:1.5rem;line-height:2rem}.sm\:text-3xl{font-size:1.875rem;line-height:2.25rem}.sm\:text-4xl{font-size:2.25rem;line-height:2.5rem}.sm\:text-5xl{font-size:3rem;line-height:1}.sm\:text-6xl{font-size:3.75rem;line-height:1}.sm\:text-\[130px\]{font-size:130px}.sm\:text-\[150px\]{font-size:150px}.sm\:text-base{font-size:1rem;line-height:1.5rem}.sm\:tracking-\[\.3em\]{letter-spacing:.3em}}@media (min-width:768px){.md\:flex{display:flex}.md\:inline-flex{display:inline-flex}.md\:w-auto{width:auto}.md\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}.md\:flex-row{flex-direction:row}.md\:items-end{align-items:flex-end}.md\:justify-between{justify-content:space-between}}@media (min-width:1024px){.lg\:col-span-2{grid-column:span 2/span 2}.lg\:col-span-3{grid-column:span 3/span 3}.lg\:flex{display:flex}.lg\:hidden{display:none}.lg\:max-w-none{max-width:none}.lg\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}.lg\:grid-cols-4{grid-template-columns:repeat(4,minmax(0,1fr))}.lg\:grid-cols-5{grid-template-columns:repeat(5,minmax(0,1fr))}.lg\:px-8{padding-left:2rem;padding-right:2rem}.lg\:text-\[170px\]{font-size:170px}}@media (min-width:1280px){.xl\:gap-9{gap:2.25rem}}.\[\&_a\]\:text-gold a{--tw-text-opacity:1;color:rgb(247 179 43/var(--tw-text-opacity,1))}.\[\&_a\]\:underline a{text-decoration-line:underline}.\[\&_h2\]\:font-display h2{font-family:Anton,Impact,sans-serif}.\[\&_h2\]\:text-2xl h2{font-size:1.5rem;line-height:2rem}.\[\&_h2\]\:uppercase h2{text-transform:uppercase}.\[\&_h2\]\:text-bone h2{--tw-text-opacity:1;color:rgb(236 232 225/var(--tw-text-opacity,1))}.\[\&_li\]\:mt-2 li{margin-top:.5rem}.\[\&_strong\]\:text-bone strong{--tw-text-opacity:1;color:rgb(236 232 225/var(--tw-text-opacity,1))}.\[\&_ul\]\:mt-3 ul{margin-top:.75rem}.\[\&_ul\]\:list-disc ul{list-style-type:disc}.\[\&_ul\]\:pl-5 ul{padding-left:1.25rem}</style>
+</head>
+<body class="grain font-sans text-bone bg-ink overflow-x-hidden">
+
+  <a href="#main" class="sr-only">Ir para o conteúdo</a>
+
+  <!-- ==================== SPRITE DE ÍCONES ==================== -->
+  <!-- Heroicons (outline 24) + ícones de marca (Simple Icons) -->
+  <svg xmlns="http://www.w3.org/2000/svg" class="hidden">
+    <defs>
+      <symbol id="h-play" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z"/></symbol>
+      <symbol id="h-envelope" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"/></symbol>
+      <symbol id="h-arrow-up-right" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25"/></symbol>
+      <symbol id="h-arrow-up" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M4.5 10.5 12 3m0 0 7.5 7.5M12 3v18"/></symbol>
+      <symbol id="h-x-mark" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"/></symbol>
+      <symbol id="h-bars" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/></symbol>
+      <symbol id="h-note" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="m9 9 10.5-3m0 6.553v3.75a2.25 2.25 0 0 1-1.632 2.163l-1.32.377a1.803 1.803 0 1 1-.99-3.467l2.31-.66a2.25 2.25 0 0 0 1.632-2.163Zm0 0V2.25L9 5.25v10.303m0 0v3.75a2.25 2.25 0 0 1-1.632 2.163l-1.32.377a1.803 1.803 0 0 1-.99-3.467l2.31-.66A2.25 2.25 0 0 0 9 15.553Z"/></symbol>
+      <symbol id="h-copy" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M15.75 17.25v3.375c0 .621-.504 1.125-1.125 1.125h-9.75a1.125 1.125 0 0 1-1.125-1.125V7.875c0-.621.504-1.125 1.125-1.125H6.75a9.06 9.06 0 0 1 1.5.124m7.5 10.376h3.375c.621 0 1.125-.504 1.125-1.125V11.25c0-4.46-3.243-8.161-7.5-8.876a9.06 9.06 0 0 0-1.5-.124H9.375c-.621 0-1.125.504-1.125 1.125v3.5m7.5 10.375H9.375a1.125 1.125 0 0 1-1.125-1.125v-9.25m12 6.625v-1.875a3.375 3.375 0 0 0-3.375-3.375h-1.5a1.125 1.125 0 0 1-1.125-1.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25"/></symbol>
+      <symbol id="h-bolt" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="m3.75 13.5 10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75Z"/></symbol>
+      <symbol id="h-globe" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418"/></symbol>
+      <symbol id="h-sparkles" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09Z"/></symbol>
+      <symbol id="h-users" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 0 0 2.625.372 9.337 9.337 0 0 0 4.121-.952 4.125 4.125 0 0 0-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 0 1 8.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0 1 11.964-3.07M12 6.375a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0Zm8.25 2.25a2.625 2.625 0 1 1-5.25 0 2.625 2.625 0 0 1 5.25 0Z"/></symbol>
+      <symbol id="h-wave" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" d="M3 10v4M6.5 7v10M10 4v16M13.5 8v8M17 5.5v13M20.5 9.5v5"/></symbol>
+
+      <symbol id="b-instagram" viewBox="0 0 24 24"><path fill="currentColor" d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"/></symbol>
+      <symbol id="b-facebook" viewBox="0 0 24 24"><path fill="currentColor" d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"/></symbol>
+      <symbol id="b-youtube" viewBox="0 0 24 24"><path fill="currentColor" d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></symbol>
+    </defs>
+  </svg>
+
+  <!-- ==================== HEADER ==================== -->
+  <header id="header" class="fixed inset-x-0 top-0 z-50 transition-all duration-500">
+    <div class="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+      <a href="#inicio" class="font-display text-2xl uppercase leading-none tracking-wide" aria-label="Rodrigo Alves — início">
+        RODRIGO <span class="text-gold">ALVES</span>
+      </a>
+
+      <nav class="hidden items-center gap-7 lg:flex xl:gap-9" aria-label="Principal">
+        <a href="#inicio" class="nav-link font-display text-[13px] uppercase tracking-[.18em] text-bone/70 transition hover:text-white">Início</a>
+        <a href="#sobre" class="nav-link font-display text-[13px] uppercase tracking-[.18em] text-bone/70 transition hover:text-white">Sobre</a>
+        <a href="#discografia" class="nav-link font-display text-[13px] uppercase tracking-[.18em] text-bone/70 transition hover:text-white">Discografia</a>
+        <a href="#videos" class="nav-link font-display text-[13px] uppercase tracking-[.18em] text-bone/70 transition hover:text-white">Vídeos</a>
+        <a href="#projetos" class="nav-link font-display text-[13px] uppercase tracking-[.18em] text-bone/70 transition hover:text-white">Projetos</a>
+        <a href="#contato" class="nav-link font-display text-[13px] uppercase tracking-[.18em] text-bone/70 transition hover:text-white">Contato</a>
+      </nav>
+
+      <div class="flex items-center gap-2">
+        <a href="https://music.apple.com/br/artist/rodrigo-alves/1553481499" target="_blank" rel="noopener" aria-label="Rodrigo Alves no Apple Music" class="hidden h-9 w-9 place-items-center rounded-full border border-white/10 text-bone/70 transition hover:border-gold hover:text-white sm:grid"><svg class="h-4 w-4"><use href="#h-note"/></svg></a>
+        <a href="https://www.youtube.com/rodrigoalvesmusic" target="_blank" rel="noopener" aria-label="Rodrigo Alves no YouTube" class="hidden h-9 w-9 place-items-center rounded-full border border-white/10 text-bone/70 transition hover:border-gold hover:text-white sm:grid"><svg class="h-4 w-4"><use href="#b-youtube"/></svg></a>
+        <a href="https://www.instagram.com/rodrigoalves_music" target="_blank" rel="noopener" aria-label="Rodrigo Alves no Instagram" class="hidden h-9 w-9 place-items-center rounded-full border border-white/10 text-bone/70 transition hover:border-gold hover:text-white sm:grid"><svg class="h-4 w-4"><use href="#b-instagram"/></svg></a>
+        <a href="#contato" class="hidden items-center gap-2 rounded-full bg-gold px-5 py-2.5 font-display text-xs uppercase tracking-[.2em] text-ink transition hover:bg-white md:flex">Contato</a>
+        <button id="menuOpen" class="grid h-10 w-10 place-items-center rounded-full border border-white/15 lg:hidden" aria-label="Abrir menu"><svg class="h-5 w-5"><use href="#h-bars"/></svg></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Menu mobile -->
+  <div id="mobileMenu" class="modal fixed inset-0 z-[70] flex flex-col bg-ink/95 backdrop-blur-xl lg:hidden" role="dialog" aria-modal="true" aria-label="Menu">
+    <div class="flex h-20 items-center justify-between px-4">
+      <span class="font-display text-2xl uppercase tracking-wide">RODRIGO <span class="text-gold">ALVES</span></span>
+      <button id="menuClose" class="grid h-10 w-10 place-items-center rounded-full border border-white/15" aria-label="Fechar menu"><svg class="h-5 w-5"><use href="#h-x-mark"/></svg></button>
+    </div>
+    <nav class="flex flex-1 flex-col justify-center gap-4 px-8" aria-label="Menu mobile">
+      <a href="#inicio" class="font-display text-3xl uppercase tracking-wide hover:text-gold sm:text-4xl">Início</a>
+      <a href="#sobre" class="font-display text-3xl uppercase tracking-wide hover:text-gold sm:text-4xl">Sobre</a>
+      <a href="#discografia" class="font-display text-3xl uppercase tracking-wide hover:text-gold sm:text-4xl">Discografia</a>
+      <a href="#videos" class="font-display text-3xl uppercase tracking-wide hover:text-gold sm:text-4xl">Vídeos</a>
+      <a href="#projetos" class="font-display text-3xl uppercase tracking-wide hover:text-gold sm:text-4xl">Projetos</a>
+      <a href="#contato" class="font-display text-3xl uppercase tracking-wide text-gold sm:text-4xl">Contato</a>
+    </nav>
+    <div class="flex gap-3 px-8 pb-10">
+      <a href="https://music.apple.com/br/artist/rodrigo-alves/1553481499" target="_blank" rel="noopener" aria-label="Apple Music" class="grid h-11 w-11 place-items-center rounded-full border border-white/15"><svg class="h-5 w-5"><use href="#h-note"/></svg></a>
+      <a href="https://www.youtube.com/rodrigoalvesmusic" target="_blank" rel="noopener" aria-label="YouTube" class="grid h-11 w-11 place-items-center rounded-full border border-white/15"><svg class="h-5 w-5"><use href="#b-youtube"/></svg></a>
+      <a href="https://soundcloud.com/rodrigoalves-com" target="_blank" rel="noopener" aria-label="SoundCloud" class="grid h-11 w-11 place-items-center rounded-full border border-white/15"><svg class="h-5 w-5"><use href="#h-wave"/></svg></a>
+      <a href="https://www.instagram.com/rodrigoalves_music" target="_blank" rel="noopener" aria-label="Instagram" class="grid h-11 w-11 place-items-center rounded-full border border-white/15"><svg class="h-5 w-5"><use href="#b-instagram"/></svg></a>
+      <a href="https://www.facebook.com/rodrigoalvesmusic" target="_blank" rel="noopener" aria-label="Facebook" class="grid h-11 w-11 place-items-center rounded-full border border-white/15"><svg class="h-5 w-5"><use href="#b-facebook"/></svg></a>
+    </div>
+  </div>
+
+  <main id="main">
+    <!-- ==================== HERO ==================== -->
+    <!-- Sem fotografias oficiais ainda: a primeira dobra usa tipografia e as cordas do violão (SVG).
+         Quando houver foto/vídeo do artista, inclua-a como fundo aqui (ver o hero do projeto AFTERAll) -->
+    <section id="inicio" class="relative flex min-h-[100svh] items-center justify-center overflow-hidden pt-20">
+      <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,#262626_0%,#0a0a0b_70%)]"></div>
+      <svg class="pointer-events-none absolute inset-x-0 top-1/2 h-[60%] w-full -translate-y-1/2" viewBox="0 0 1200 360" preserveAspectRatio="none" aria-hidden="true">
+        <path class="string" stroke-width="1.6" d="M0 40 Q600 56 1200 40"/>
+        <path class="string" stroke-width="1.4" d="M0 100 Q600 114 1200 100"/>
+        <path class="string" stroke-width="1.2" d="M0 160 Q600 172 1200 160"/>
+        <path class="string" stroke-width="1" d="M0 220 Q600 230 1200 220"/>
+        <path class="string" stroke-width=".9" d="M0 280 Q600 288 1200 280"/>
+        <path class="string" stroke-width=".8" d="M0 340 Q600 346 1200 340"/>
+      </svg>
+      <div class="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-ink to-transparent"></div>
+      <div class="hero-glow pointer-events-none absolute left-1/2 top-1/2 h-[620px] w-[620px] -translate-x-1/2 -translate-y-1/2"></div>
+
+      <div class="relative z-10 mx-auto w-full max-w-5xl px-4 text-center">
+        <div class="mb-5 inline-flex items-center gap-2 rounded-full border border-white/15 bg-black/40 px-4 py-1.5">
+          <span class="eq flex h-3.5 items-end" aria-hidden="true"><span></span><span></span><span></span><span></span></span>
+          <span class="font-mono text-[10px] uppercase tracking-[.3em] text-bone/80">Site oficial</span>
+        </div>
+
+        <p class="mb-6 flex items-center justify-center gap-4 font-mono text-[11px] uppercase tracking-mega text-bone/65">
+          <span class="h-px w-8 bg-bone/30 sm:w-16"></span> Desde 1984 <span class="h-px w-8 bg-bone/30 sm:w-16"></span>
+        </p>
+
+        <h1 class="hero-title font-display uppercase leading-[.85]">
+          <span class="block text-[19vw] sm:text-[130px] lg:text-[170px]">Rodrigo</span>
+          <span class="block text-[19vw] text-gold sm:text-[130px] lg:text-[170px]">Alves</span>
+        </h1>
+
+        <p class="mt-7 font-display text-lg uppercase tracking-[.25em] text-bone sm:text-2xl sm:tracking-[.3em]">Guitarrista. <span class="text-gold">Compositor.</span> Produtor Musical.</p>
+        <p class="mx-auto mt-4 max-w-xl text-sm text-bone/75 sm:text-base">Uma trajetória dedicada à música, explorando diferentes sonoridades entre o rock, o heavy metal, o smooth jazz e a música instrumental.</p>
+
+        <div class="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
+          <a href="https://music.apple.com/br/artist/rodrigo-alves/1553481499" target="_blank" rel="noopener" data-track="ouvir-musicas" class="flex w-full items-center justify-center gap-2 rounded-full bg-gold px-7 py-3.5 font-display text-sm uppercase tracking-[.2em] text-ink shadow-[0_10px_30px_-10px_rgba(247, 179, 43,.8)] transition hover:bg-white sm:w-auto"><svg class="h-5 w-5"><use href="#h-note"/></svg> Ouça minhas músicas</a>
+          <a href="#sobre" class="flex w-full items-center justify-center gap-2 rounded-full border border-white/25 bg-black/30 px-7 py-3.5 font-display text-sm uppercase tracking-[.2em] transition hover:border-gold hover:text-gold sm:w-auto">Conheça minha trajetória</a>
+        </div>
+
+        <!-- Lançamento em destaque (dados em main.js › FEATURED) -->
+        <div class="mx-auto mt-10 flex max-w-2xl flex-col items-center gap-5 rounded-2xl border border-white/10 bg-black/60 p-5 text-left backdrop-blur md:flex-row md:justify-between">
+          <div class="flex min-w-0 items-center gap-4">
+            <span id="heroCover" class="cover-ph relative block h-14 w-14 shrink-0 overflow-hidden rounded-md" style="--h:22" aria-hidden="true"></span>
+            <div class="min-w-0">
+              <p class="flex items-center gap-2 font-mono text-[10px] uppercase tracking-[.3em] text-gold"><span class="pulse-dot h-2 w-2 rounded-full bg-gold text-gold"></span> Lançamento em destaque</p>
+              <p data-feat="title" class="mt-1 truncate font-display text-xl uppercase tracking-wide">Covers &amp; Collabs Vol. 3</p>
+              <p data-feat="meta" class="truncate text-xs uppercase tracking-widest text-bone/65">Heavy Metal · 2025</p>
+            </div>
+          </div>
+          <a data-feat-link href="https://music.apple.com/br/artist/rodrigo-alves/1553481499" target="_blank" rel="noopener" data-track="destaque-hero" class="flex w-full shrink-0 items-center justify-center gap-2 rounded-full border border-gold/60 px-5 py-2.5 font-display text-xs uppercase tracking-[.2em] text-bone transition hover:bg-gold hover:text-ink md:w-auto">
+            <svg class="h-4 w-4"><use href="#h-play"/></svg> Ouvir
+          </a>
+        </div>
+
+        <a href="#sobre" class="mt-10 hidden flex-col items-center gap-2 text-bone/65 hover:text-bone md:inline-flex" aria-label="Rolar para Sobre">
+          <span class="flex h-9 w-5 justify-center rounded-full border border-current pt-1.5"><span class="scroll-dot h-2 w-1 rounded-full bg-current"></span></span>
+          <span class="font-mono text-[9px] uppercase tracking-[.3em]">Role</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ==================== FITA / MARQUEE ==================== -->
+    <div class="relative z-20 -mt-6 h-40 overflow-hidden" aria-hidden="true">
+      <div class="tape absolute left-[-5%] top-14 w-[110%] -rotate-[2deg] border-y border-white/5 bg-panel py-3 opacity-80">
+        <div class="marquee reverse font-display text-2xl uppercase tracking-[.2em] text-bone/[.45]" data-marquee></div>
+      </div>
+      <div class="tape absolute left-[-5%] top-16 w-[110%] rotate-[1.5deg] bg-gold py-3">
+        <div class="marquee font-display text-2xl uppercase tracking-[.2em] text-ink" data-marquee></div>
+      </div>
+    </div>
+
+    <!-- ==================== SOBRE ==================== -->
+    <!-- Textos: biografia sugerida no briefing — sujeita à aprovação do artista antes de publicar -->
+    <section id="sobre" class="relative overflow-hidden py-24 sm:py-28">
+      <div class="pointer-events-none absolute -left-60 -bottom-20 h-[700px] w-[700px] bg-[radial-gradient(closest-side,rgba(247, 179, 43,.09),transparent)]"></div>
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <header class="relative mb-16 text-center" data-aos="fade-up">
+          <span class="ghost pointer-events-none absolute inset-x-0 -top-6 font-display text-[20vw] uppercase sm:text-[150px]" aria-hidden="true">Sobre</span>
+          <p class="relative font-mono text-[11px] uppercase tracking-mega text-gold">Trajetória</p>
+          <h2 class="relative mt-2 font-display text-5xl uppercase sm:text-6xl">Música, expressão e trajetória</h2>
+        </header>
+
+        <div class="grid items-start gap-14 lg:grid-cols-5">
+          <!-- Retrato: troque o bloco por <img> assim que houver a foto oficial (ver PHOTO em main.js) -->
+          <div class="relative mx-auto w-full max-w-sm lg:col-span-2 lg:max-w-none" data-aos="fade-right">
+            <div class="absolute -right-3 -top-3 hidden h-full w-full rounded-2xl border border-gold/40 sm:block"></div>
+            <figure id="portrait" class="cover-ph relative grid aspect-[4/5] place-items-center overflow-hidden rounded-2xl" style="--h:30">
+              <span class="relative font-display text-[9rem] leading-none text-bone/10" aria-hidden="true">RA</span>
+              <span class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></span>
+              <figcaption class="absolute bottom-5 left-5 right-5 font-mono text-[10px] uppercase tracking-[.3em] text-bone/70">Santos, SP · 11.09.1971</figcaption>
+            </figure>
+            <div class="absolute -bottom-6 -left-2 -rotate-6 rounded-md bg-gold px-4 py-2 shadow-xl sm:-left-6">
+              <p class="font-mono text-[9px] font-bold uppercase tracking-[.3em] text-ink">Profissional desde</p>
+              <p class="font-display text-3xl leading-none text-ink">1990</p>
+            </div>
+          </div>
+
+          <div class="lg:col-span-3" data-aos="fade-left" data-aos-delay="100">
+            <div class="space-y-4 leading-relaxed text-bone/70">
+              <p class="font-display text-2xl uppercase leading-snug text-bone">Rodrigo Alves é guitarrista, violonista, compositor e produtor musical brasileiro, com uma trajetória que começou em 1984 e se profissionalizou em 1990.</p>
+              <p>Seu trabalho transita entre o rock, o heavy metal, o rock progressivo, a música instrumental e o smooth jazz, reunindo composições autorais, releituras e colaborações com outros artistas.</p>
+              <p>Com experiência em bandas, estúdios e projetos solo, desenvolve uma identidade musical marcada pela versatilidade, pela expressividade instrumental e pela paixão pela criação.</p>
+            </div>
+
+            <div id="bioFull" class="mt-4 hidden space-y-4 leading-relaxed text-bone/70">
+              <p>Nascido em 11 de setembro de 1971, em Santos, São Paulo, Rodrigo começou sua trajetória com a música em 1984 e se profissionalizou em 1990, iniciando uma carreira construída entre apresentações, projetos musicais, composição e produção em estúdio.</p>
+              <p>Nos primeiros anos de atuação profissional, trabalhou como professor particular de música e integrou bandas do circuito de covers. Sua experiência como instrumentista inclui passagens por grupos de diferentes vertentes do rock, como Warkings, Merlin e Parallax, além de uma participação como guitarrista do Viper entre 1987 e 1988.</p>
+              <p>Em 1994, começou a desenvolver seu trabalho solo autoral, explorando a música instrumental por meio de uma combinação de influências do rock, da música brasileira, do new age e do smooth jazz. Essa proposta deu origem a trabalhos como <em>Suddenly</em>, <em>Retratos</em>, <em>Spiritua</em> e <em>Hours</em>, além do single instrumental <em>Smiley</em>.</p>
+              <p>Paralelamente à criação autoral, atua na produção musical desde 1999, com experiência nos estúdios Vila do Sossêgo e R.A.Studio, conciliando a visão artística do instrumentista com o conhecimento técnico do trabalho em estúdio.</p>
+              <p>Entre seus projetos mais recentes está a série <em>Covers &amp; Collabs</em>, concebida para revisitar clássicos de diferentes estilos com cantores e instrumentistas convidados, em três volumes: <em>Pop/Rock</em> (2022), <em>Smooth Jazz</em> (2023) e <em>Heavy Metal</em> (2025).</p>
+              <p class="text-bone">Mais do que tocar um instrumento, sua proposta é explorar diferentes possibilidades sonoras e compartilhar com o público a música construída ao longo de sua vida.</p>
+            </div>
+
+            <button type="button" id="bioToggle" aria-expanded="false" aria-controls="bioFull" class="mt-6 inline-flex items-center gap-2 rounded-full border border-white/15 px-5 py-2.5 font-display text-xs uppercase tracking-[.2em] transition hover:border-gold hover:text-gold"><span>Ler biografia completa</span></button>
+
+            <div class="mt-10 grid grid-cols-2 gap-3 sm:grid-cols-4">
+              <div class="rounded-xl border border-white/10 bg-panel/70 p-4 text-center"><p class="font-display text-3xl text-gold"><span data-count="1984">0</span></p><p class="mt-1 font-mono text-[9px] uppercase tracking-widest text-bone/60">Início na música</p></div>
+              <div class="rounded-xl border border-white/10 bg-panel/70 p-4 text-center"><p class="font-display text-3xl text-gold"><span data-count="1990">0</span></p><p class="mt-1 font-mono text-[9px] uppercase tracking-widest text-bone/60">Profissionalização</p></div>
+              <div class="rounded-xl border border-white/10 bg-panel/70 p-4 text-center"><p class="font-display text-3xl text-gold"><span data-count="1999">0</span></p><p class="mt-1 font-mono text-[9px] uppercase tracking-widest text-bone/60">Produção musical</p></div>
+              <div class="rounded-xl border border-white/10 bg-panel/70 p-4 text-center"><p class="font-display text-3xl text-gold"><span data-count="3">0</span></p><p class="mt-1 font-mono text-[9px] uppercase tracking-widest text-bone/60">Volumes Covers &amp; Collabs</p></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Essência artística (briefing, seção 2) -->
+        <ul class="mt-24 grid gap-4 sm:grid-cols-2 lg:grid-cols-4" data-aos="fade-up">
+          <li class="group rounded-2xl border border-white/10 bg-panel/60 p-6 transition hover:-translate-y-1 hover:border-gold/50">
+            <span class="grid h-11 w-11 place-items-center rounded-lg bg-gold/15 text-gold"><svg class="h-5 w-5"><use href="#h-bolt"/></svg></span>
+            <h3 class="mt-5 font-display text-2xl uppercase">Expressão instrumental</h3>
+            <p class="mt-2 text-sm leading-relaxed text-bone/60">Guitarra e violão como instrumentos centrais, explorando melodias, arranjos e atmosferas.</p>
+          </li>
+          <li class="group rounded-2xl border border-white/10 bg-panel/60 p-6 transition hover:-translate-y-1 hover:border-gold/50">
+            <span class="grid h-11 w-11 place-items-center rounded-lg bg-gold/15 text-gold"><svg class="h-5 w-5"><use href="#h-sparkles"/></svg></span>
+            <h3 class="mt-5 font-display text-2xl uppercase">Criação autoral</h3>
+            <p class="mt-2 text-sm leading-relaxed text-bone/60">Repertório próprio com influências de rock, música brasileira, new age e smooth jazz.</p>
+          </li>
+          <li class="group rounded-2xl border border-white/10 bg-panel/60 p-6 transition hover:-translate-y-1 hover:border-gold/50">
+            <span class="grid h-11 w-11 place-items-center rounded-lg bg-gold/15 text-gold"><svg class="h-5 w-5"><use href="#h-users"/></svg></span>
+            <h3 class="mt-5 font-display text-2xl uppercase">Colaborações</h3>
+            <p class="mt-2 text-sm leading-relaxed text-bone/60">Projetos que reúnem cantores, instrumentistas e interpretações diversas.</p>
+          </li>
+          <li class="group rounded-2xl border border-white/10 bg-panel/60 p-6 transition hover:-translate-y-1 hover:border-gold/50">
+            <span class="grid h-11 w-11 place-items-center rounded-lg bg-gold/15 text-gold"><svg class="h-5 w-5"><use href="#h-wave"/></svg></span>
+            <h3 class="mt-5 font-display text-2xl uppercase">Produção musical</h3>
+            <p class="mt-2 text-sm leading-relaxed text-bone/60">Experiência de estúdio desde 1999, aliada à visão artística do instrumentista.</p>
+          </li>
+        </ul>
+
+        <!-- Linha do tempo (dados em main.js › TIMELINE) -->
+        <div class="mt-24 grid gap-10 lg:grid-cols-5">
+          <div class="lg:col-span-2" data-aos="fade-up">
+            <p class="font-mono text-[11px] uppercase tracking-[.3em] text-gold">Carreira</p>
+            <h3 class="mt-2 font-display text-4xl uppercase">Linha do tempo</h3>
+            <p class="mt-4 max-w-sm text-bone/60">Quatro décadas entre bandas, palcos, estúdios e projetos solo.</p>
+          </div>
+          <ol id="timeline" class="tl space-y-7 lg:col-span-3"></ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== DISCOGRAFIA ==================== -->
+    <section id="discografia" class="relative overflow-hidden border-t border-white/5 bg-panel/40 py-24 sm:py-28">
+      <div class="pointer-events-none absolute -right-60 top-0 h-[700px] w-[700px] bg-[radial-gradient(closest-side,rgba(247, 179, 43,.1),transparent)]"></div>
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <header class="relative mb-16 text-center" data-aos="fade-up">
+          <span class="ghost pointer-events-none absolute inset-x-0 -top-6 font-display text-[16vw] uppercase sm:text-[150px]" aria-hidden="true">Discografia</span>
+          <p class="relative font-mono text-[11px] uppercase tracking-mega text-gold">Uma trajetória em diferentes sons</p>
+          <h2 class="relative mt-2 font-display text-5xl uppercase sm:text-6xl">Discografia</h2>
+          <p class="relative mx-auto mt-8 max-w-2xl text-bone/65">Explore a discografia de Rodrigo Alves, que reúne trabalhos autorais, música instrumental, releituras de clássicos e projetos desenvolvidos em parceria com outros músicos. Do rock ao smooth jazz, passando pelo heavy metal, cada lançamento representa uma nova possibilidade de expressão musical.</p>
+        </header>
+
+        <!-- Destaque: Covers & Collabs Vol. 3 -->
+        <div class="grid items-center gap-10 rounded-2xl border border-white/10 bg-ink/60 p-6 sm:p-10 lg:grid-cols-5" data-aos="fade-up">
+          <div class="lg:col-span-3">
+            <p data-feat="type" class="font-mono text-[11px] uppercase tracking-[.3em] text-gold">Lançamento em destaque</p>
+            <h3 class="mt-2 font-display text-4xl uppercase sm:text-5xl"><span data-feat="title">Covers &amp; Collabs Vol. 3</span></h3>
+            <p data-feat="artists" class="mt-1 font-mono text-xs uppercase tracking-[.2em] text-bone/60">Heavy Metal · 2025</p>
+            <p data-feat="text" class="mt-5 max-w-lg leading-relaxed text-bone/70"></p>
+            <div class="mt-7 flex flex-col gap-2 sm:flex-row sm:flex-wrap">
+              <a data-feat-link href="https://music.apple.com/br/artist/rodrigo-alves/1553481499" target="_blank" rel="noopener" data-track="destaque-apple" class="flex items-center justify-center gap-2 rounded-full bg-gold px-5 py-2.5 font-display text-xs uppercase tracking-[.2em] text-ink transition hover:bg-white"><svg class="h-4 w-4"><use href="#h-note"/></svg> Ouvir no Apple Music</a>
+              <a href="https://www.youtube.com/rodrigoalvesmusic" target="_blank" rel="noopener" class="flex items-center justify-center gap-2 rounded-full border border-white/15 px-5 py-2.5 font-display text-xs uppercase tracking-[.2em] transition hover:border-gold hover:text-gold">Ver no YouTube <svg class="h-4 w-4"><use href="#h-arrow-up-right"/></svg></a>
+            </div>
+          </div>
+          <div class="mx-auto w-full max-w-xs lg:col-span-2 lg:max-w-none">
+            <div id="featCover" class="cover-ph relative aspect-square overflow-hidden rounded-xl shadow-2xl shadow-black/70" style="--h:22" aria-hidden="true"></div>
+          </div>
+        </div>
+
+        <div class="mt-24">
+          <div class="mb-10 flex flex-col justify-between gap-5 md:flex-row md:items-end" data-aos="fade-up">
+            <div>
+              <p class="font-mono text-[11px] uppercase tracking-[.3em] text-gold">Catálogo</p>
+              <h3 class="mt-2 font-display text-4xl uppercase">Álbuns, singles e participações</h3>
+            </div>
+            <div class="flex flex-wrap gap-2" role="group" aria-label="Filtrar discografia" id="discFilters">
+              <button type="button" data-filter="all" aria-pressed="true" class="chip rounded-full border border-white/15 px-4 py-2 font-mono text-[10px] uppercase tracking-widest transition hover:border-gold">Tudo</button>
+              <button type="button" data-filter="autoral" aria-pressed="false" class="chip rounded-full border border-white/15 px-4 py-2 font-mono text-[10px] uppercase tracking-widest transition hover:border-gold">Autoral</button>
+              <button type="button" data-filter="collab" aria-pressed="false" class="chip rounded-full border border-white/15 px-4 py-2 font-mono text-[10px] uppercase tracking-widest transition hover:border-gold">Covers &amp; Collabs</button>
+              <button type="button" data-filter="single" aria-pressed="false" class="chip rounded-full border border-white/15 px-4 py-2 font-mono text-[10px] uppercase tracking-widest transition hover:border-gold">Singles</button>
+              <button type="button" data-filter="part" aria-pressed="false" class="chip rounded-full border border-white/15 px-4 py-2 font-mono text-[10px] uppercase tracking-widest transition hover:border-gold">Participações</button>
+            </div>
+          </div>
+          <div id="discGrid" class="grid grid-cols-2 gap-x-5 gap-y-10 sm:gap-x-8 md:grid-cols-3 lg:grid-cols-5"></div>
+          <p class="mt-12 text-center text-sm text-bone/60">Escolha um título, descubra as faixas e ouça nas plataformas digitais — <a href="https://music.apple.com/br/artist/rodrigo-alves/1553481499" target="_blank" rel="noopener" class="text-gold underline">Apple Music</a> · <a href="https://soundcloud.com/rodrigoalves-com" target="_blank" rel="noopener" class="text-gold underline">SoundCloud</a>.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== VÍDEOS ==================== -->
+    <section id="videos" class="relative py-24 sm:py-28">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <header class="relative mb-12 flex flex-col items-center text-center" data-aos="fade-up">
+          <span class="ghost pointer-events-none absolute inset-x-0 -top-6 font-display text-[20vw] uppercase sm:text-[150px]" aria-hidden="true">Vídeos</span>
+          <p class="relative font-mono text-[11px] uppercase tracking-mega text-gold">Assista, descubra e ouça</p>
+          <h2 class="relative mt-2 font-display text-5xl uppercase sm:text-6xl">Vídeos e performances</h2>
+          <p class="relative mt-8 max-w-2xl text-bone/70">A música ganha outra dimensão quando pode ser vista e ouvida em sua execução. Aqui estão performances de guitarra, trabalhos instrumentais, releituras de clássicos e projetos musicais de Rodrigo Alves.</p>
+        </header>
+
+        <div class="mb-8 flex flex-wrap justify-center gap-2" role="group" aria-label="Filtrar vídeos" id="videoFilters">
+          <button type="button" data-filter="all" aria-pressed="true" class="chip rounded-full border border-white/15 px-4 py-2 font-mono text-[10px] uppercase tracking-widest transition hover:border-gold">Todos</button>
+          <button type="button" data-filter="autoral" aria-pressed="false" class="chip rounded-full border border-white/15 px-4 py-2 font-mono text-[10px] uppercase tracking-widest transition hover:border-gold">Autoral</button>
+          <button type="button" data-filter="tributo" aria-pressed="false" class="chip rounded-full border border-white/15 px-4 py-2 font-mono text-[10px] uppercase tracking-widest transition hover:border-gold">Tributos &amp; covers</button>
+        </div>
+
+        <div id="videoGrid" class="grid gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3"></div>
+
+        <div class="mt-12 text-center" data-aos="fade-up">
+          <a href="https://www.youtube.com/rodrigoalvesmusic" target="_blank" rel="noopener" data-track="canal-youtube" class="inline-flex items-center justify-center gap-2 rounded-full bg-gold px-7 py-3.5 font-display text-sm uppercase tracking-[.2em] text-ink transition hover:bg-white"><svg class="h-5 w-5"><use href="#b-youtube"/></svg> Visitar o canal no YouTube</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== PROJETOS ==================== -->
+    <section id="projetos" class="relative overflow-hidden border-t border-white/5 bg-panel/40 py-24 sm:py-28">
+      <div class="pointer-events-none absolute -left-40 top-1/3 h-[600px] w-[600px] bg-[radial-gradient(closest-side,rgba(226,52,45,.14),transparent)]"></div>
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <header class="relative mb-16 text-center" data-aos="fade-up">
+          <span class="ghost pointer-events-none absolute inset-x-0 -top-6 font-display text-[18vw] uppercase sm:text-[150px]" aria-hidden="true">Projetos</span>
+          <p class="relative font-mono text-[11px] uppercase tracking-mega text-gold">Música também é encontro</p>
+          <h2 class="relative mt-2 font-display text-5xl uppercase sm:text-6xl">Projetos e colaborações</h2>
+          <p class="relative mx-auto mt-8 max-w-2xl text-bone/65">Projetos colaborativos são parte importante da trajetória de Rodrigo Alves. Em diferentes trabalhos, músicos e intérpretes se unem para revisitar repertórios, explorar novas interpretações e criar experiências musicais compartilhadas.</p>
+        </header>
+
+        <div id="projectsGrid" class="grid gap-5 lg:grid-cols-3"></div>
+
+        <!-- Urban Nature — texto sugerido no briefing; CONFIRMAR estágio, previsão e autorização do nome do colaborador antes de publicar -->
+        <div class="relative mt-8 overflow-hidden rounded-2xl border border-gold/40 bg-gold/[.06] p-8 sm:p-10" data-aos="fade-up">
+          <span class="ghost pointer-events-none absolute -right-4 -top-2 hidden font-display text-[120px] uppercase sm:block" aria-hidden="true">2026</span>
+          <p class="relative inline-flex items-center gap-2 rounded-full bg-ink px-3 py-1 font-mono text-[9px] font-bold uppercase tracking-widest text-gold"><span class="pulse-dot h-1.5 w-1.5 rounded-full bg-gold text-gold"></span> Em breve</p>
+          <h3 class="relative mt-4 font-display text-4xl uppercase sm:text-5xl">Urban Nature</h3>
+          <p class="relative mt-1 font-mono text-xs uppercase tracking-[.2em] text-gold">Uma nova etapa criativa</p>
+          <div class="relative mt-5 max-w-2xl space-y-3 leading-relaxed text-bone/75">
+            <p>Urban Nature é um projeto autoral anunciado por Rodrigo Alves em parceria com o vocalista Silvio Gollega Jr., com uma proposta musical inspirada no pop rock dos anos 1980 e 1990.</p>
+            <p>O projeto representa a possibilidade de explorar novas sonoridades, combinando a experiência instrumental de Rodrigo com uma abordagem vocal voltada à tradição do pop rock. Em breve, mais informações sobre o desenvolvimento do projeto, suas músicas e os próximos passos.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== OUÇA E ACOMPANHE ==================== -->
+    <section id="redes" class="relative border-b border-white/5 py-20">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="mb-10 flex flex-col justify-between gap-4 md:flex-row md:items-end" data-aos="fade-up">
+          <div>
+            <p class="font-mono text-[11px] uppercase tracking-[.3em] text-gold">Canais oficiais</p>
+            <h2 class="mt-2 font-display text-4xl uppercase sm:text-5xl">A música em primeiro lugar</h2>
+          </div>
+          <p class="max-w-md text-sm text-bone/60">Acompanhe os canais oficiais e descubra os lançamentos.</p>
+        </div>
+        <ul id="platforms" class="grid gap-3 sm:grid-cols-2 lg:grid-cols-5"></ul>
+      </div>
+    </section>
+
+    <!-- ==================== CONTATO ==================== -->
+    <section id="contato" class="relative overflow-hidden py-24 sm:py-28">
+      <div class="absolute inset-0 bg-gradient-to-b from-ink via-graphite/30 to-ink"></div>
+      <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <header class="relative mb-12 text-center" data-aos="fade-up">
+          <span class="ghost pointer-events-none absolute inset-x-0 -top-6 font-display text-[20vw] uppercase sm:text-[150px]" aria-hidden="true">Contato</span>
+          <p class="relative font-mono text-[11px] uppercase tracking-mega text-gold">Parcerias, produção e projetos</p>
+          <h2 class="relative mt-2 font-display text-5xl uppercase sm:text-6xl">Vamos conversar?</h2>
+          <p class="relative mx-auto mt-8 max-w-2xl text-bone/65">Para assuntos profissionais, parcerias musicais, produção, projetos colaborativos ou outras solicitações relacionadas ao trabalho de Rodrigo Alves, entre em contato. Será um prazer conhecer sua proposta.</p>
+        </header>
+
+        <!-- Tipos de solicitação: o clique pré-seleciona o formulário -->
+        <ul class="mb-14 grid gap-3 sm:grid-cols-2 lg:grid-cols-4" data-aos="fade-up">
+          <li><a href="#contatoForm" data-tipo="Produção musical" class="group flex h-full items-start gap-4 rounded-xl border border-white/10 bg-panel/80 p-5 transition hover:border-gold"><span class="font-display text-3xl text-gold">01</span><span><span class="block font-display text-xl uppercase">Produção musical</span><span class="mt-1 block text-sm text-bone/55">Gravação, arranjo e produção em estúdio.</span></span></a></li>
+          <li><a href="#contatoForm" data-tipo="Parceria / colaboração" class="group flex h-full items-start gap-4 rounded-xl border border-white/10 bg-panel/80 p-5 transition hover:border-gold"><span class="font-display text-3xl text-gold">02</span><span><span class="block font-display text-xl uppercase">Colaborações</span><span class="mt-1 block text-sm text-bone/55">Participações, projetos conjuntos e releituras.</span></span></a></li>
+          <li><a href="#contatoForm" data-tipo="Apresentação / show" class="group flex h-full items-start gap-4 rounded-xl border border-white/10 bg-panel/80 p-5 transition hover:border-gold"><span class="font-display text-3xl text-gold">03</span><span><span class="block font-display text-xl uppercase">Apresentações</span><span class="mt-1 block text-sm text-bone/55">Convites para shows, sessões e participações.</span></span></a></li>
+          <li><a href="#contatoForm" data-tipo="Imprensa / mídia" class="group flex h-full items-start gap-4 rounded-xl border border-white/10 bg-panel/80 p-5 transition hover:border-gold"><span class="font-display text-3xl text-gold">04</span><span><span class="block font-display text-xl uppercase">Imprensa</span><span class="mt-1 block text-sm text-bone/55">Entrevistas, divulgação e materiais.</span></span></a></li>
+        </ul>
+
+        <div class="grid gap-6 lg:grid-cols-5">
+          <div class="space-y-3 lg:col-span-2" data-aos="fade-right">
+            <a data-needs-email id="emailCard" href="#" data-track="email" class="group hidden items-center gap-4 rounded-xl border border-white/10 bg-panel/80 p-4 transition hover:border-gold">
+              <span class="grid h-11 w-11 shrink-0 place-items-center rounded-lg bg-gold/15 text-gold"><svg class="h-5 w-5"><use href="#h-envelope"/></svg></span>
+              <span class="min-w-0 flex-1"><span class="block font-mono text-[9px] uppercase tracking-widest text-bone/60">E-mail profissional</span><span id="emailText" class="block break-all text-sm font-semibold sm:text-base"></span></span>
+              <svg class="h-4 w-4 text-bone/30 transition group-hover:text-gold"><use href="#h-arrow-up-right"/></svg>
+            </a>
+            <a href="https://ig.me/m/rodrigoalves_music" target="_blank" rel="noopener" data-track="instagram-dm" class="group flex items-center gap-4 rounded-xl border border-white/10 bg-panel/80 p-4 transition hover:border-gold">
+              <span class="grid h-11 w-11 shrink-0 place-items-center rounded-lg bg-gold/15 text-gold"><svg class="h-5 w-5"><use href="#b-instagram"/></svg></span>
+              <span class="min-w-0 flex-1"><span class="block font-mono text-[9px] uppercase tracking-widest text-bone/60">Instagram (mensagem direta)</span><span class="block font-semibold">@rodrigoalves_music</span></span>
+              <svg class="h-4 w-4 text-bone/30 transition group-hover:text-gold"><use href="#h-arrow-up-right"/></svg>
+            </a>
+            <a href="https://www.facebook.com/rodrigoalvesmusic" target="_blank" rel="noopener" class="group flex items-center gap-4 rounded-xl border border-white/10 bg-panel/80 p-4 transition hover:border-gold">
+              <span class="grid h-11 w-11 shrink-0 place-items-center rounded-lg bg-gold/15 text-gold"><svg class="h-5 w-5"><use href="#b-facebook"/></svg></span>
+              <span class="min-w-0 flex-1"><span class="block font-mono text-[9px] uppercase tracking-widest text-bone/60">Facebook</span><span class="block font-semibold">/rodrigoalvesmusic</span></span>
+              <svg class="h-4 w-4 text-bone/30 transition group-hover:text-gold"><use href="#h-arrow-up-right"/></svg>
+            </a>
+            <p class="px-1 pt-3 font-display text-2xl uppercase text-bone/80">Música, expressão <span class="text-gold">e trajetória.</span></p>
+          </div>
+
+          <!-- Formulário: sem servidor — monta a mensagem e abre o app de e-mail (nada é guardado pelo site).
+               Anti-spam: campo-armadilha (honeypot) + tempo mínimo de preenchimento -->
+          <form id="contatoForm" class="relative rounded-2xl border border-white/10 bg-panel/90 p-6 sm:p-8 lg:col-span-3" data-aos="fade-left" data-aos-delay="100" novalidate>
+            <h3 class="font-display text-2xl uppercase">Entrar em contato</h3>
+            <p id="formLead" class="mt-1 text-sm text-bone/65">Preencha os dados — seu app de e-mail abre com a mensagem pronta para enviar.</p>
+            <div class="mt-6 grid gap-4 sm:grid-cols-2">
+              <label class="block"><span class="mb-1.5 block font-mono text-[10px] uppercase tracking-widest text-bone/65">Nome completo *</span><input name="nome" required autocomplete="name" class="field" placeholder="Seu nome"></label>
+              <label class="block"><span class="mb-1.5 block font-mono text-[10px] uppercase tracking-widest text-bone/65">Empresa / projeto</span><input name="empresa" autocomplete="organization" class="field" placeholder="Estúdio, banda, produtora…"></label>
+              <label class="block"><span class="mb-1.5 block font-mono text-[10px] uppercase tracking-widest text-bone/65">E-mail *</span><input name="email" required type="email" autocomplete="email" class="field" placeholder="voce@exemplo.com"></label>
+              <label class="block"><span class="mb-1.5 block font-mono text-[10px] uppercase tracking-widest text-bone/65">Assunto</span>
+                <select name="tipo" class="field"><option value="">Selecione…</option><option>Produção musical</option><option>Parceria / colaboração</option><option>Apresentação / show</option><option>Imprensa / mídia</option><option>Outro assunto</option></select>
+              </label>
+              <label class="block"><span class="mb-1.5 block font-mono text-[10px] uppercase tracking-widest text-bone/65">Cidade</span><input name="cidade" autocomplete="address-level2" class="field" placeholder="Santos"></label>
+              <label class="block"><span class="mb-1.5 block font-mono text-[10px] uppercase tracking-widest text-bone/65">Telefone / WhatsApp</span><input name="telefone" type="tel" autocomplete="tel" class="field" placeholder="(13) 90000-0000"></label>
+              <label class="block sm:col-span-2"><span class="mb-1.5 block font-mono text-[10px] uppercase tracking-widest text-bone/65">Mensagem *</span><textarea name="mensagem" required rows="4" class="field resize-none" placeholder="Conte sobre o projeto, prazos e o que você imagina para a parceria…"></textarea></label>
+              <label class="hp" aria-hidden="true">Website <input name="website" tabindex="-1" autocomplete="off"></label>
+            </div>
+            <label class="mt-5 flex items-start gap-3 text-xs leading-relaxed text-bone/65">
+              <input type="checkbox" name="lgpd" required class="mt-0.5 h-4 w-4 shrink-0 accent-[#f7b32b]">
+              <span>Li a <a href="privacy.html" target="_blank" class="text-gold underline">Política de Privacidade</a> e concordo que meus dados sejam usados apenas para responder a esta solicitação. *</span>
+            </label>
+            <p id="formMsg" class="mt-4 hidden text-sm text-gold" role="alert"></p>
+            <div class="mt-6 grid gap-3 sm:grid-cols-2">
+              <button type="submit" class="flex items-center justify-center gap-2 rounded-full bg-gold px-6 py-3.5 font-display text-sm uppercase tracking-[.2em] text-ink shadow-[0_10px_30px_-10px_rgba(247, 179, 43,.8)] transition hover:bg-white"><svg class="h-4 w-4"><use href="#h-envelope"/></svg> Enviar mensagem</button>
+              <button type="button" id="copyEmail" data-needs-email class="hidden items-center justify-center gap-2 rounded-full border border-white/15 px-6 py-3.5 font-display text-sm uppercase tracking-[.2em] transition hover:border-gold"><svg class="h-4 w-4"><use href="#h-copy"/></svg> <span>Copiar e-mail</span></button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== RODAPÉ ==================== -->
+  <footer class="relative border-t border-white/5 pt-20">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col gap-12 md:flex-row md:justify-between">
+        <div class="max-w-sm">
+          <p class="font-display text-5xl uppercase leading-none">Rodrigo <span class="text-gold">Alves</span></p>
+          <p class="mt-5 max-w-sm text-sm leading-relaxed text-bone/70">Guitarrista, Compositor e Produtor Musical. Música autoral, projetos colaborativos e produção musical. Acompanhe os canais oficiais e descubra os lançamentos.</p>
+          <div class="mt-6 flex flex-wrap gap-2">
+            <a href="https://music.apple.com/br/artist/rodrigo-alves/1553481499" target="_blank" rel="noopener" aria-label="Apple Music" class="grid h-10 w-10 place-items-center rounded-full border border-white/10 text-bone/70 transition hover:border-gold hover:text-white"><svg class="h-4 w-4"><use href="#h-note"/></svg></a>
+            <a href="https://www.youtube.com/rodrigoalvesmusic" target="_blank" rel="noopener" aria-label="YouTube" class="grid h-10 w-10 place-items-center rounded-full border border-white/10 text-bone/70 transition hover:border-gold hover:text-white"><svg class="h-4 w-4"><use href="#b-youtube"/></svg></a>
+            <a href="https://soundcloud.com/rodrigoalves-com" target="_blank" rel="noopener" aria-label="SoundCloud" class="grid h-10 w-10 place-items-center rounded-full border border-white/10 text-bone/70 transition hover:border-gold hover:text-white"><svg class="h-4 w-4"><use href="#h-wave"/></svg></a>
+            <a href="https://www.instagram.com/rodrigoalves_music" target="_blank" rel="noopener" aria-label="Instagram" class="grid h-10 w-10 place-items-center rounded-full border border-white/10 text-bone/70 transition hover:border-gold hover:text-white"><svg class="h-4 w-4"><use href="#b-instagram"/></svg></a>
+            <a href="https://www.facebook.com/rodrigoalvesmusic" target="_blank" rel="noopener" aria-label="Facebook" class="grid h-10 w-10 place-items-center rounded-full border border-white/10 text-bone/70 transition hover:border-gold hover:text-white"><svg class="h-4 w-4"><use href="#b-facebook"/></svg></a>
+          </div>
+        </div>
+
+        <div>
+          <p class="font-mono text-[11px] uppercase tracking-[.3em] text-gold">Navegação</p>
+          <ul class="mt-5 grid grid-cols-2 gap-x-16 gap-y-2.5 text-sm text-bone/60">
+            <li><a href="#inicio" class="hover:text-white">Início</a></li>
+            <li><a href="#sobre" class="hover:text-white">Sobre</a></li>
+            <li><a href="#discografia" class="hover:text-white">Discografia</a></li>
+            <li><a href="#videos" class="hover:text-white">Vídeos</a></li>
+            <li><a href="#projetos" class="hover:text-white">Projetos</a></li>
+            <li><a href="#contato" class="hover:text-white">Contato</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <p class="font-mono text-[11px] uppercase tracking-[.3em] text-gold">Contato</p>
+          <ul class="mt-5 space-y-3 text-sm text-bone/60">
+            <li data-needs-email class="hidden items-start gap-2.5"><svg class="mt-0.5 h-4 w-4 shrink-0 text-gold"><use href="#h-envelope"/></svg><a id="footerEmail" href="#" class="break-all hover:text-white"></a></li>
+            <li class="flex items-start gap-2.5"><svg class="mt-0.5 h-4 w-4 shrink-0 text-gold"><use href="#b-instagram"/></svg><a href="https://ig.me/m/rodrigoalves_music" target="_blank" rel="noopener" class="hover:text-white">@rodrigoalves_music</a></li>
+            <li class="flex items-start gap-2.5"><svg class="mt-0.5 h-4 w-4 shrink-0 text-gold"><use href="#b-facebook"/></svg><a href="https://www.facebook.com/rodrigoalvesmusic" target="_blank" rel="noopener" class="hover:text-white">/rodrigoalvesmusic</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mt-16 flex flex-col items-center justify-between gap-3 border-t border-white/5 py-8 text-xs text-bone/60 sm:flex-row">
+        <p>© <span id="year">2026</span> Rodrigo Alves Music. Todos os direitos reservados.</p>
+        <p><a href="privacy.html" class="transition hover:text-gold">Política de Privacidade</a></p>
+        <p>Site por <a href="https://wscodev.vercel.app/" target="_blank" rel="noopener" class="font-semibold text-bone/70 transition hover:text-gold">Wendel Silva</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Voltar ao topo -->
+  <a href="#inicio" id="toTop" class="fixed bottom-6 right-6 z-40 grid h-11 w-11 translate-y-4 place-items-center rounded-full border border-gold/60 bg-ink/90 text-gold opacity-0 transition hover:bg-gold hover:text-ink" aria-label="Voltar ao topo"><svg class="h-4 w-4"><use href="#h-arrow-up"/></svg></a>
+
+  <!-- Modal de vídeo: o player do YouTube (modo sem cookies) só é carregado quando a pessoa clica para assistir -->
+  <div id="videoModal" class="modal fixed inset-0 z-[80] grid place-items-center bg-black/90 p-4 backdrop-blur" role="dialog" aria-modal="true" aria-label="Player de vídeo">
+    <button data-close class="absolute right-4 top-4 z-10 grid h-11 w-11 place-items-center rounded-full border border-white/20 bg-black/60 hover:border-gold" aria-label="Fechar"><svg class="h-5 w-5"><use href="#h-x-mark"/></svg></button>
+    <div class="flex w-full max-w-4xl flex-col items-center">
+      <div id="videoFrame" class="aspect-video w-full overflow-hidden rounded-xl bg-black shadow-2xl"></div>
+      <p id="videoCaption" class="mt-4 text-center font-mono text-[11px] uppercase tracking-[.25em] text-bone/70"></p>
+    </div>
+  </div>
+
+  <script src="assets/vendor/aos.js" defer></script>
+  <script src="assets/js/main.js?v=3" defer></script>
+</body>
+</html>

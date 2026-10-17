@@ -1,0 +1,130 @@
+@import "./fonts.css";
+@import "./aos.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ==========================================================
+   Rodrigo Alves — estilos complementares ao Tailwind
+   Base técnica herdada do projeto AFTERAll; identidade visual do briefing
+   (preto carvão, grafite, off-white e dourado envelhecido)
+   ========================================================== */
+
+:root {
+  --ink: #0a0a0b;
+  --panel: #121214;
+  --graphite: #1a1a1c;
+  --bone: #ece8e1;
+  --gold: #f7b32b;      /* dourado das luzes de palco */
+  --gold-rgb: 247, 179, 43;
+  --gold-deep: #a8730a;  /* tom original do briefing */
+}
+
+html { scroll-behavior: smooth; scroll-padding-top: 84px; }
+.grid > * { min-width: 0; }
+.grain { background-image: url("../img/grain.webp"); background-size: 96px; }
+body { background: var(--ink); color: var(--bone); -webkit-font-smoothing: antialiased; }
+::selection { background: var(--gold); color: var(--ink); }
+:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+
+/* Título fantasma vazado atrás dos títulos de seção */
+.ghost {
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(236, 232, 225, .08);
+  letter-spacing: .02em;
+  line-height: .8;
+  user-select: none;
+}
+
+/* Hero: cordas de violão vibrando sob o nome */
+.hero-title { text-shadow: 0 10px 60px rgba(0,0,0,.6); }
+.hero-glow { background: radial-gradient(closest-side, rgba(var(--gold-rgb), .2), transparent); animation: breathe 5.2s ease-in-out infinite; }
+@keyframes breathe { 0%, 100% { opacity: .55; transform: scale(1); } 50% { opacity: 1; transform: scale(1.08); } }
+.string { stroke: rgba(var(--gold-rgb), .5); fill: none; transform-box: fill-box; transform-origin: center; animation: vibrate 3.6s ease-in-out infinite; }
+.string:nth-child(2) { animation-delay: -.6s; stroke: rgba(236, 232, 225,.22); }
+.string:nth-child(3) { animation-delay: -1.3s; }
+.string:nth-child(4) { animation-delay: -1.9s; stroke: rgba(236, 232, 225,.22); }
+.string:nth-child(5) { animation-delay: -2.4s; }
+.string:nth-child(6) { animation-delay: -3s; stroke: rgba(236, 232, 225,.22); }
+@keyframes vibrate { 0%, 100% { transform: scaleY(1); } 25% { transform: scaleY(.35); } 50% { transform: scaleY(-1); } 75% { transform: scaleY(-.35); } }
+
+/* Fita (marquee) */
+.tape { box-shadow: 0 18px 40px -10px rgba(0,0,0,.8); }
+.marquee { display: flex; width: max-content; animation: marquee 42s linear infinite; }
+.marquee.reverse { animation-direction: reverse; animation-duration: 50s; }
+@keyframes marquee { to { transform: translateX(-50%); } }
+
+/* Navegação */
+.nav-link { position: relative; }
+.nav-link::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: -8px; height: 2px;
+  background: var(--gold); transform: scaleX(0); transform-origin: left; transition: transform .35s ease;
+}
+.nav-link:hover::after, .nav-link.is-active::after { transform: scaleX(1); }
+.nav-link.is-active { color: #fff; }
+
+.scroll-dot { animation: scrolldot 1.8s ease-in-out infinite; }
+@keyframes scrolldot { 0% { transform: translateY(0); opacity: 1; } 70% { transform: translateY(12px); opacity: 0; } 100% { opacity: 0; } }
+
+.pulse-dot { position: relative; }
+.pulse-dot::after { content: ""; position: absolute; inset: 0; border-radius: 9999px; background: currentColor; animation: pulse 1.8s ease-out infinite; }
+@keyframes pulse { 0% { transform: scale(1); opacity: .7; } 70%, 100% { transform: scale(3); opacity: 0; } }
+
+/* Disco de vinil saindo da capa */
+.vinyl {
+  background:
+    radial-gradient(circle, var(--gold) 0 13%, #111 13.5% 15%, transparent 15.5%),
+    repeating-radial-gradient(circle, #0d0d0d 0 2px, #1b1b1b 2.5px 3px);
+  transition: transform .7s cubic-bezier(.2,.7,.2,1);
+}
+.group:hover .vinyl, .group:focus-visible .vinyl { transform: translateX(34%) rotate(90deg); }
+
+/* Equalizador decorativo */
+.eq span { display: inline-block; width: 3px; height: 14px; background: var(--gold); margin-right: 2px; transform-origin: bottom; animation: eq 1s ease-in-out infinite; }
+.eq span:nth-child(2) { animation-delay: .2s; }
+.eq span:nth-child(3) { animation-delay: .4s; }
+.eq span:nth-child(4) { animation-delay: .1s; }
+@keyframes eq { 0%, 100% { transform: scaleY(.3); } 50% { transform: scaleY(1); } }
+
+/* Capas provisórias: arte tipográfica gerada em CSS até as capas oficiais chegarem (assets/img/covers/<id>.webp) */
+.cover-ph {
+  background:
+    radial-gradient(120% 90% at 85% 8%, hsl(var(--h, 30) 38% 34% / .85), transparent 60%),
+    linear-gradient(160deg, hsl(var(--h, 30) 14% 17%), #121212);
+}
+.cover-ph::before {
+  content: ""; position: absolute; inset: 0; opacity: .55;
+  background: repeating-linear-gradient(90deg, transparent 0 22px, rgba(255,255,255,.035) 22px 23px);
+}
+
+/* Filtros */
+.chip[aria-pressed="true"] { background: var(--gold); border-color: var(--gold); color: var(--ink); }
+
+/* Linha do tempo */
+.tl { position: relative; }
+.tl::before { content: ""; position: absolute; left: 7px; top: .5rem; bottom: .5rem; width: 1px; background: linear-gradient(to bottom, var(--gold), rgba(247, 179, 43,.1)); }
+.tl li::before { content: ""; position: absolute; left: 3px; top: .55rem; width: 9px; height: 9px; border-radius: 9999px; background: var(--ink); border: 2px solid var(--gold); }
+
+/* Campos do formulário */
+.field {
+  width: 100%; background: rgba(255,255,255,.03); border: 1px solid rgba(255,255,255,.12);
+  border-radius: .5rem; padding: .8rem 1rem; color: var(--bone); font-size: .9rem; outline: none;
+  transition: border-color .2s, background .2s;
+}
+.field::placeholder { color: rgba(236, 232, 225,.55); }
+.field:focus { border-color: var(--gold); background: rgba(var(--gold-rgb), .06); }
+.field option { background: var(--panel); }
+
+/* Modais (menu e vídeo) */
+.modal { opacity: 0; visibility: hidden; pointer-events: none; transition: opacity .3s ease, visibility 0s linear .3s; }
+.modal.is-open { opacity: 1; visibility: visible; pointer-events: auto; transition: opacity .3s ease; }
+.modal:not(.is-open) { content-visibility: hidden; }
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee, .scroll-dot, .pulse-dot::after, .eq span, .hero-glow, .string { animation: none !important; }
+  html { scroll-behavior: auto; }
+}
+
+/* Formulário: campo-armadilha anti-spam (honeypot) */
+.hp { position: absolute !important; left: -9999px !important; width: 1px; height: 1px; overflow: hidden; }

@@ -1,0 +1,11 @@
+{
+  "name": "Rodrigo Alves — Site oficial",
+  "short_name": "Rodrigo Alves",
+  "description": "Guitarrista, compositor e produtor musical. Discografia, vídeos, projetos e contato.",
+  "lang": "pt-BR",
+  "start_url": "./",
+  "display": "browser",
+  "background_color": "#0a0a0b",
+  "theme_color": "#0a0a0b",
+  "icons": [ { "src": "assets/img/favicon.svg", "sizes": "any", "type": "image/svg+xml" } ]
+}
