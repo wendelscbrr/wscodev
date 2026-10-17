@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <!-- Garante a barra final (/guitar-lessons → /guitar-lessons/) para os caminhos relativos funcionarem -->
+  <script>
+    if (!/\/$|\.html$/.test(location.pathname)) location.replace(location.pathname + '/' + location.search + location.hash);
+    document.documentElement.classList.add('js'); // animações que dependem do main.js (título do hero)
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{title}}</title>
+  <meta name="description" content="{{description}}">
+  <meta name="robots" content="{{robots}}">
+  <meta name="author" content="Emiliano Bonanomi">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="theme-color" content="#0F1115">
+  <meta name="format-detection" content="telephone=no">
+  <!-- URL: prévia em wscodev.vercel.app/emisfearguitar/site/. Ao mover para o domínio do artista, troque SITE em scripts/build.mjs e no main.js -->
+  <link rel="canonical" href="{{url}}">
+
+  <!-- Compartilhamento (WhatsApp, Facebook, Instagram, LinkedIn, X) -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_GB">
+  <meta property="og:site_name" content="Emiliano Bonanomi — EmisFearGuitar">
+  <meta property="og:url" content="{{url}}">
+  <meta property="og:title" content="{{ogTitle}}">
+  <meta property="og:description" content="{{description}}">
+  <meta property="og:image" content="{{ogImage}}">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="{{ogAlt}}">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ogTitle}}">
+  <meta name="twitter:description" content="{{description}}">
+  <meta name="twitter:image" content="{{ogImage}}">
+
+  <!-- Ícones -->
+  <link rel="icon" href="{{root}}favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="{{root}}assets/img/icon-192.png" type="image/png" sizes="192x192">
+  <link rel="apple-touch-icon" href="{{root}}assets/img/apple-touch-icon.png">
+  <link rel="manifest" href="{{root}}site.webmanifest">
+
+  <!-- Dados estruturados (schema.org): Person + LocalBusiness/EducationalOrganization (+ FAQPage / Service por página) -->
+  <script type="application/ld+json">
+{{schema}}
+  </script>
+
+  <!-- Recursos críticos: fontes (Google Fonts servidas localmente) e foto principal (LCP) -->
+  <link rel="preload" href="{{root}}assets/fonts/plus-jakarta-500-800-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="{{root}}assets/fonts/inter-400-700-latin.woff2" as="font" type="font/woff2" crossorigin>
+  {{preload}}
+
+  <!-- TailwindCSS compilado e inline (fonte em src/input.css — rode "npm run build") -->
+  <style id="site-css">/*SITE-CSS*/</style>
+</head>
+<body class="grain font-sans text-bone bg-ink overflow-x-hidden" data-root="{{root}}" data-page="{{key}}">
+
+  <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-full focus:bg-amber focus:px-4 focus:py-2 focus:text-ink">Skip to content</a>
+
+<!--@icons-->
+
+  <!-- Progresso de leitura -->
+  <div id="progress" class="pointer-events-none fixed inset-x-0 top-0 z-[60] h-[2px] bg-gradient-to-r from-amber-deep via-amber to-[#ffd98a]" aria-hidden="true"></div>
+
+  <!-- ==================== HEADER ==================== -->
+  <header id="header" class="fixed inset-x-0 top-0 z-50 transition-all duration-500">
+    <div class="mx-auto flex h-20 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
+      <a href="{{root}}./" class="group flex items-center gap-3" aria-label="Emiliano Bonanomi — home">
+        <span class="grid h-10 w-10 shrink-0 place-items-center rounded-full border border-amber/60 font-display text-sm font-extrabold tracking-tight text-amber transition group-hover:bg-amber group-hover:text-ink">EB</span>
+        <span class="leading-none">
+          <span class="block font-display text-[15px] font-bold tracking-tight text-white sm:text-base">Emiliano Bonanomi</span>
+          <span class="mt-1 block font-mono text-[9px] uppercase tracking-[.28em] text-bone/55">EmisFearGuitar</span>
+        </span>
+      </a>
+
+      <nav class="hidden items-center gap-6 lg:flex xl:gap-7" aria-label="Main">
+        <a href="{{root}}./" data-nav="home" class="nav-link text-[13px] font-medium text-bone/70 transition hover:text-white">Home</a>
+        <a href="{{root}}guitar-lessons/" data-nav="lessons" class="nav-link text-[13px] font-medium text-bone/70 transition hover:text-white">Guitar Lessons</a>
+        <a href="{{root}}live-session/" data-nav="live" class="nav-link text-[13px] font-medium text-bone/70 transition hover:text-white">Live &amp; Session</a>
+        <a href="{{root}}guitar-tabs/" data-nav="tabs" class="nav-link text-[13px] font-medium text-bone/70 transition hover:text-white">Free Tabs</a>
+        <a href="{{root}}about/" data-nav="about" class="nav-link text-[13px] font-medium text-bone/70 transition hover:text-white">About</a>
+        <a href="{{root}}contact/" data-nav="contact" class="nav-link text-[13px] font-medium text-bone/70 transition hover:text-white">Contact</a>
+      </nav>
+
+      <div class="flex items-center gap-2">
+        <a href="{{root}}contact/?enquiry=taster" data-track="header-book" class="hidden items-center gap-2 rounded-full bg-amber px-5 py-2.5 text-xs font-bold uppercase tracking-[.14em] text-ink transition hover:bg-white sm:flex">Book a Lesson</a>
+        <button id="menuOpen" class="grid h-10 w-10 place-items-center rounded-full border border-white/15 lg:hidden" aria-label="Open menu"><svg class="h-5 w-5"><use href="#h-bars"/></svg></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Menu mobile -->
+  <div id="mobileMenu" class="modal fixed inset-0 z-[70] flex flex-col bg-ink/95 backdrop-blur-xl lg:hidden" role="dialog" aria-modal="true" aria-label="Menu">
+    <div class="flex h-20 items-center justify-between px-4">
+      <span class="font-display text-base font-bold">Emiliano Bonanomi</span>
+      <button id="menuClose" class="grid h-10 w-10 place-items-center rounded-full border border-white/15" aria-label="Close menu"><svg class="h-5 w-5"><use href="#h-x-mark"/></svg></button>
+    </div>
+    <nav class="flex flex-1 flex-col justify-center gap-3 px-8" aria-label="Mobile">
+      <a href="{{root}}./" data-nav="home" class="font-display text-3xl font-bold tracking-tight hover:text-amber aria-[current=page]:text-amber">Home</a>
+      <a href="{{root}}guitar-lessons/" data-nav="lessons" class="font-display text-3xl font-bold tracking-tight hover:text-amber aria-[current=page]:text-amber">Guitar Lessons</a>
+      <a href="{{root}}live-session/" data-nav="live" class="font-display text-3xl font-bold tracking-tight hover:text-amber aria-[current=page]:text-amber">Live &amp; Session</a>
+      <a href="{{root}}guitar-tabs/" data-nav="tabs" class="font-display text-3xl font-bold tracking-tight hover:text-amber aria-[current=page]:text-amber">Free Tabs</a>
+      <a href="{{root}}about/" data-nav="about" class="font-display text-3xl font-bold tracking-tight hover:text-amber aria-[current=page]:text-amber">About</a>
+      <a href="{{root}}contact/" data-nav="contact" class="font-display text-3xl font-bold tracking-tight hover:text-amber aria-[current=page]:text-amber">Contact</a>
+      <a href="{{root}}contact/?enquiry=taster" class="mt-6 flex items-center justify-center gap-2 rounded-full bg-amber px-6 py-4 text-sm font-bold uppercase tracking-[.14em] text-ink">Book a Taster Lesson</a>
+    </nav>
+    <div class="flex gap-3 px-8 pb-10">
+      <a href="https://wa.me/447565016969?text={{wa}}" target="_blank" rel="noopener" aria-label="WhatsApp" class="grid h-11 w-11 place-items-center rounded-full border border-white/15"><svg class="h-5 w-5"><use href="#b-whatsapp"/></svg></a>
+      <a href="https://www.instagram.com/emisfearguitar" target="_blank" rel="noopener" aria-label="Instagram" class="grid h-11 w-11 place-items-center rounded-full border border-white/15"><svg class="h-5 w-5"><use href="#b-instagram"/></svg></a>
+      <a href="https://www.youtube.com/@EmisFearGuitar" target="_blank" rel="noopener" aria-label="YouTube" class="grid h-11 w-11 place-items-center rounded-full border border-white/15"><svg class="h-5 w-5"><use href="#b-youtube"/></svg></a>
+      <a href="https://www.facebook.com/EmisFearGuitar/" target="_blank" rel="noopener" aria-label="Facebook" class="grid h-11 w-11 place-items-center rounded-full border border-white/15"><svg class="h-5 w-5"><use href="#b-facebook"/></svg></a>
+      <a href="mailto:emisfear@gmail.com" aria-label="Email" class="grid h-11 w-11 place-items-center rounded-full border border-white/15"><svg class="h-5 w-5"><use href="#h-envelope"/></svg></a>
+    </div>
+  </div>
+
+  <main id="main">
+{{content}}
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="relative border-t border-white/5 bg-ink pt-20">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="grid gap-12 md:grid-cols-12">
+        <div class="md:col-span-5">
+          <p class="font-display text-3xl font-extrabold tracking-tight">Emiliano Bonanomi</p>
+          <p class="mt-1 font-mono text-[10px] uppercase tracking-[.3em] text-amber">EmisFearGuitar</p>
+          <p class="mt-5 max-w-sm text-sm leading-relaxed text-bone/65">London session guitarist, musical theatre pit musician and Guildhall-qualified guitar educator. Lessons in Camden, Euston &amp; online.</p>
+          <div class="mt-6 flex flex-wrap gap-2">
+            <a href="https://www.youtube.com/@EmisFearGuitar" target="_blank" rel="noopener" aria-label="YouTube" class="grid h-10 w-10 place-items-center rounded-full border border-white/10 text-bone/70 transition hover:border-amber hover:text-white"><svg class="h-4 w-4"><use href="#b-youtube"/></svg></a>
+            <a href="https://www.instagram.com/emisfearguitar" target="_blank" rel="noopener" aria-label="Instagram" class="grid h-10 w-10 place-items-center rounded-full border border-white/10 text-bone/70 transition hover:border-amber hover:text-white"><svg class="h-4 w-4"><use href="#b-instagram"/></svg></a>
+            <a href="https://www.facebook.com/EmisFearGuitar/" target="_blank" rel="noopener" aria-label="Facebook" class="grid h-10 w-10 place-items-center rounded-full border border-white/10 text-bone/70 transition hover:border-amber hover:text-white"><svg class="h-4 w-4"><use href="#b-facebook"/></svg></a>
+            <a href="https://wa.me/447565016969?text={{wa}}" target="_blank" rel="noopener" aria-label="WhatsApp" class="grid h-10 w-10 place-items-center rounded-full border border-white/10 text-bone/70 transition hover:border-amber hover:text-white"><svg class="h-4 w-4"><use href="#b-whatsapp"/></svg></a>
+            <a href="mailto:emisfear@gmail.com" aria-label="Email" class="grid h-10 w-10 place-items-center rounded-full border border-white/10 text-bone/70 transition hover:border-amber hover:text-white"><svg class="h-4 w-4"><use href="#h-envelope"/></svg></a>
+          </div>
+        </div>
+
+        <div class="md:col-span-3">
+          <p class="font-mono text-[11px] uppercase tracking-[.3em] text-amber">Explore</p>
+          <ul class="mt-5 space-y-2.5 text-sm text-bone/65">
+            <li><a href="{{root}}guitar-lessons/" class="hover:text-white">Guitar Lessons</a></li>
+            <li><a href="{{root}}live-session/" class="hover:text-white">Live &amp; Session</a></li>
+            <li><a href="{{root}}guitar-tabs/" class="hover:text-white">Free Guitar Tabs</a></li>
+            <li><a href="{{root}}about/" class="hover:text-white">About</a></li>
+            <li><a href="{{root}}contact/" class="hover:text-white">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- NAP padronizado (SEO local): mesmo formato nos diretórios (MusicTeacher.com, Encore Musicians) -->
+        <div class="md:col-span-4">
+          <p class="font-mono text-[11px] uppercase tracking-[.3em] text-amber">Get in touch</p>
+          <ul class="mt-5 space-y-3 text-sm text-bone/65">
+            <li class="flex items-start gap-2.5"><svg class="mt-0.5 h-4 w-4 shrink-0 text-amber"><use href="#h-map-pin"/></svg><span>Euston / Camden, London NW1<br><span class="text-bone/45">&amp; online worldwide</span></span></li>
+            <li class="flex items-start gap-2.5"><svg class="mt-0.5 h-4 w-4 shrink-0 text-amber"><use href="#h-phone"/></svg><a href="tel:+447565016969" data-track="tel" class="hover:text-white">+44 7565 016969</a></li>
+            <li class="flex items-start gap-2.5"><svg class="mt-0.5 h-4 w-4 shrink-0 text-amber"><use href="#h-envelope"/></svg><a href="mailto:emisfear@gmail.com" data-track="email" class="break-all hover:text-white">emisfear@gmail.com</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mt-16 flex flex-col items-center justify-between gap-3 border-t border-white/5 py-8 text-xs text-bone/55 sm:flex-row">
+        <p>© <span id="year">2026</span> Emiliano Bonanomi — EmisFearGuitar. All rights reserved.</p>
+        <p class="flex items-center gap-4"><a href="{{root}}privacy/" class="transition hover:text-amber">Privacy Policy</a><button type="button" data-consent-open class="transition hover:text-amber">Cookie settings</button></p>
+        <p>Website by <a href="https://wscodev.vercel.app/" target="_blank" rel="noopener" class="font-semibold text-bone/70 transition hover:text-amber">Wendel Silva</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp (RF03): mensagem inicial pré-preenchida, número no formato internacional +44 -->
+  <a href="https://wa.me/447565016969?text={{wa}}" target="_blank" rel="noopener" data-track="whatsapp-float" class="fixed bottom-5 right-5 z-40 grid h-14 w-14 place-items-center rounded-full bg-[#25D366] text-white shadow-[0_12px_30px_-8px_rgba(37,211,102,.7)] transition hover:scale-105" aria-label="Chat on WhatsApp"><svg class="h-7 w-7"><use href="#b-whatsapp"/></svg></a>
+  <!-- Voltar ao topo -->
+  <a href="#main" id="toTop" class="fixed bottom-[5.5rem] right-[1.6rem] z-40 grid h-11 w-11 translate-y-4 place-items-center rounded-full border border-amber/60 bg-ink/90 text-amber opacity-0 transition hover:bg-amber hover:text-ink" aria-label="Back to top"><svg class="h-4 w-4"><use href="#h-arrow-up"/></svg></a>
+
+  <!-- Modal do player do YouTube -->
+  <div id="videoModal" class="modal fixed inset-0 z-[80] grid place-items-center bg-black/90 p-4 backdrop-blur" role="dialog" aria-modal="true" aria-label="Video player">
+    <button data-close class="absolute right-4 top-4 z-10 grid h-11 w-11 place-items-center rounded-full border border-white/20 bg-black/60 hover:border-amber" aria-label="Close"><svg class="h-5 w-5"><use href="#h-x-mark"/></svg></button>
+    <div class="w-full max-w-5xl">
+      <div id="videoFrame" class="aspect-video w-full overflow-hidden rounded-xl bg-black shadow-2xl"></div>
+      <p id="videoCaption" class="mt-4 text-center font-mono text-[11px] uppercase tracking-[.2em] text-bone/70"></p>
+    </div>
+  </div>
+
+  <!-- Lightbox da galeria -->
+  <div id="lightbox" class="modal fixed inset-0 z-[80] grid place-items-center bg-black/95 p-4" role="dialog" aria-modal="true" aria-label="Photo">
+    <button data-close class="absolute right-4 top-4 grid h-11 w-11 place-items-center rounded-full border border-white/20 hover:border-amber" aria-label="Close"><svg class="h-5 w-5"><use href="#h-x-mark"/></svg></button>
+    <button data-lb="prev" class="absolute left-3 top-1/2 grid h-11 w-11 -translate-y-1/2 place-items-center rounded-full border border-white/20 bg-black/50 hover:border-amber" aria-label="Previous"><svg class="h-5 w-5"><use href="#h-chevron-left"/></svg></button>
+    <img id="lbImg" alt="" class="max-h-[85vh] max-w-full rounded-lg object-contain">
+    <button data-lb="next" class="absolute right-3 top-1/2 grid h-11 w-11 -translate-y-1/2 place-items-center rounded-full border border-white/20 bg-black/50 hover:border-amber" aria-label="Next"><svg class="h-5 w-5"><use href="#h-chevron-right"/></svg></button>
+    <p id="lbCap" class="absolute bottom-5 left-0 right-0 text-center font-mono text-[11px] uppercase tracking-[.3em] text-bone/60"></p>
+  </div>
+
+  <!-- Aviso de cookies (UK GDPR / PECR): o site não usa cookies de rastreamento; o YouTube (terceiro)
+       só carrega quando a pessoa clica para assistir. A escolha fica salva no navegador. -->
+  <div id="consentBar" class="fixed inset-x-3 bottom-3 z-[90] hidden max-w-xl rounded-2xl border border-white/10 bg-panel/95 p-5 shadow-2xl shadow-black backdrop-blur sm:bottom-6 sm:left-6 sm:right-auto" role="dialog" aria-live="polite" aria-label="Cookies">
+    <p class="font-display text-lg font-bold">Your privacy</p>
+    <p class="mt-2 text-sm leading-relaxed text-bone/70">This website doesn't use tracking or advertising cookies. Videos are played by YouTube, which may set its own cookies — they only load when you click play. Learn more in the <a href="{{root}}privacy/" class="text-amber underline">Privacy Policy</a>.</p>
+    <div class="mt-4 flex flex-col gap-2 sm:flex-row sm:flex-wrap">
+      <button type="button" data-consent="all" class="w-full rounded-full bg-amber px-5 py-2.5 text-xs font-bold uppercase tracking-[.14em] text-ink transition hover:bg-white sm:w-auto">Allow YouTube videos</button>
+      <button type="button" data-consent="essential" class="w-full rounded-full border border-white/15 px-5 py-2.5 text-xs font-bold uppercase tracking-[.14em] transition hover:border-amber sm:w-auto">Essential only</button>
+    </div>
+  </div>
+
+  <script src="{{root}}assets/vendor/aos.js" defer></script>
+  <script src="{{root}}assets/js/main.js?v=2" defer></script>
+</body>
+</html>

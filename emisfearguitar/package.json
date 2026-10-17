@@ -1,0 +1,14 @@
+{
+  "name": "emisfearguitar",
+  "private": true,
+  "description": "Site oficial de Emiliano Bonanomi (EmisFearGuitar) — páginas, CSS (Tailwind) e utilitários de build",
+  "scripts": {
+    "dev": "node scripts/serve.mjs",
+    "build": "npm run build:css && node scripts/build.mjs",
+    "build:css": "tailwindcss -c tailwind.config.js -i src/input.css -o build/style.css --minify",
+    "watch:css": "tailwindcss -c tailwind.config.js -i src/input.css -o build/style.css --watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "3.4.16"
+  }
+}

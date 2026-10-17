@@ -1,0 +1,567 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <!-- Garante a barra final (/guitar-lessons → /guitar-lessons/) para os caminhos relativos funcionarem -->
+  <script>
+    if (!/\/$|\.html$/.test(location.pathname)) location.replace(location.pathname + '/' + location.search + location.hash);
+    document.documentElement.classList.add('js'); // animações que dependem do main.js (título do hero)
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Emiliano Bonanomi | Session Guitarist & Tutor in London NW1</title>
+  <meta name="description" content="London session guitarist, musical theatre pit musician & Guildhall-qualified guitar teacher in Camden & Euston (NW1). Book lessons or enquire for live gigs.">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="author" content="Emiliano Bonanomi">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="theme-color" content="#0F1115">
+  <meta name="format-detection" content="telephone=no">
+  <!-- URL: prévia em wscodev.vercel.app/emisfearguitar/site/. Ao mover para o domínio do artista, troque SITE em scripts/build.mjs e no main.js -->
+  <link rel="canonical" href="https://wscodev.vercel.app/emisfearguitar/site/">
+
+  <!-- Compartilhamento (WhatsApp, Facebook, Instagram, LinkedIn, X) -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_GB">
+  <meta property="og:site_name" content="Emiliano Bonanomi — EmisFearGuitar">
+  <meta property="og:url" content="https://wscodev.vercel.app/emisfearguitar/site/">
+  <meta property="og:title" content="Emiliano Bonanomi | Session Guitarist & Tutor in London NW1">
+  <meta property="og:description" content="London session guitarist, musical theatre pit musician & Guildhall-qualified guitar teacher in Camden & Euston (NW1). Book lessons or enquire for live gigs.">
+  <meta property="og:image" content="https://wscodev.vercel.app/emisfearguitar/site/assets/img/og-image.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Emiliano Bonanomi playing electric guitar on stage under blue and purple lights">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Emiliano Bonanomi | Session Guitarist & Tutor in London NW1">
+  <meta name="twitter:description" content="London session guitarist, musical theatre pit musician & Guildhall-qualified guitar teacher in Camden & Euston (NW1). Book lessons or enquire for live gigs.">
+  <meta name="twitter:image" content="https://wscodev.vercel.app/emisfearguitar/site/assets/img/og-image.jpg">
+
+  <!-- Ícones -->
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/img/icon-192.png" type="image/png" sizes="192x192">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+
+  <!-- Dados estruturados (schema.org): Person + LocalBusiness/EducationalOrganization (+ FAQPage / Service por página) -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://wscodev.vercel.app/emisfearguitar/site/#website",
+      "url": "https://wscodev.vercel.app/emisfearguitar/site/",
+      "name": "Emiliano Bonanomi — EmisFearGuitar",
+      "inLanguage": "en-GB",
+      "publisher": {
+        "@id": "https://wscodev.vercel.app/emisfearguitar/site/#person"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://wscodev.vercel.app/emisfearguitar/site/#person",
+      "name": "Emiliano Bonanomi",
+      "alternateName": "EmisFearGuitar",
+      "url": "https://wscodev.vercel.app/emisfearguitar/site/",
+      "image": "https://wscodev.vercel.app/emisfearguitar/site/assets/img/og-image.jpg",
+      "jobTitle": [
+        "Session Guitarist",
+        "Musical Theatre Pit Musician",
+        "Guitar Teacher"
+      ],
+      "description": "London session guitarist, musical theatre pit musician and Guildhall-qualified guitar educator based in Camden / Euston (NW1).",
+      "email": "mailto:emisfear@gmail.com",
+      "telephone": "+447565016969",
+      "knowsLanguage": [
+        "en",
+        "it",
+        "es"
+      ],
+      "alumniOf": [
+        {
+          "@type": "CollegeOrUniversity",
+          "name": "Guildhall School of Music & Drama"
+        },
+        {
+          "@type": "CollegeOrUniversity",
+          "name": "ICMP / University of East London"
+        },
+        {
+          "@type": "CollegeOrUniversity",
+          "name": "Conservatorio G. Donizetti, Bergamo"
+        }
+      ],
+      "memberOf": {
+        "@type": "Organization",
+        "name": "Musicians' Union"
+      },
+      "sameAs": [
+        "https://www.youtube.com/@EmisFearGuitar",
+        "https://www.instagram.com/emisfearguitar",
+        "https://www.facebook.com/EmisFearGuitar/"
+      ]
+    },
+    {
+      "@type": [
+        "LocalBusiness",
+        "EducationalOrganization"
+      ],
+      "@id": "https://wscodev.vercel.app/emisfearguitar/site/#business",
+      "name": "Emiliano Bonanomi — EmisFearGuitar",
+      "url": "https://wscodev.vercel.app/emisfearguitar/site/",
+      "image": "https://wscodev.vercel.app/emisfearguitar/site/assets/img/og-image.jpg",
+      "email": "emisfear@gmail.com",
+      "telephone": "+447565016969",
+      "priceRange": "£20–£550",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "London",
+        "addressRegion": "Camden / Euston",
+        "postalCode": "NW1",
+        "addressCountry": "GB"
+      },
+      "areaServed": [
+        {
+          "@type": "Place",
+          "name": "Camden, London"
+        },
+        {
+          "@type": "Place",
+          "name": "Euston, London"
+        },
+        {
+          "@type": "Place",
+          "name": "King's Cross, London"
+        },
+        "Online"
+      ],
+      "founder": {
+        "@id": "https://wscodev.vercel.app/emisfearguitar/site/#person"
+      }
+    }
+  ]
+}
+  </script>
+
+  <!-- Recursos críticos: fontes (Google Fonts servidas localmente) e foto principal (LCP) -->
+  <link rel="preload" href="assets/fonts/plus-jakarta-500-800-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/inter-400-700-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" as="image" href="assets/img/photos/live-blue.webp" fetchpriority="high">
+
+  <!-- TailwindCSS compilado e inline (fonte em src/input.css — rode "npm run build") -->
+  <style id="site-css">@font-face{font-family:Plus Jakarta Sans;font-style:normal;font-weight:500 800;font-display:swap;src:url(assets/fonts/plus-jakarta-500-800-latin.woff2) format("woff2");unicode-range:u+00??,u+0131,u+0152-0153,u+02bb-02bc,u+02c6,u+02da,u+02dc,u+0304,u+0308,u+0329,u+2000-206f,u+20ac,u+2122,u+2191,u+2193,u+2212,u+2215,u+feff,u+fffd}@font-face{font-family:Inter;font-style:normal;font-weight:400 700;font-display:swap;src:url(assets/fonts/inter-400-700-latin.woff2) format("woff2");unicode-range:u+00??,u+0131,u+0152-0153,u+02bb-02bc,u+02c6,u+02da,u+02dc,u+0304,u+0308,u+0329,u+2000-206f,u+20ac,u+2122,u+2191,u+2193,u+2212,u+2215,u+feff,u+fffd}@font-face{font-family:Space Mono;font-style:normal;font-weight:400;font-display:swap;src:url(assets/fonts/space-mono-400-latin.woff2) format("woff2");unicode-range:u+00??,u+0131,u+0152-0153,u+02bb-02bc,u+02c6,u+02da,u+02dc,u+0304,u+0308,u+0329,u+2000-206f,u+20ac,u+2122,u+2191,u+2193,u+2212,u+2215,u+feff,u+fffd}body[data-aos-duration="900"] [data-aos]{transition-duration:.9s}body[data-aos-easing=ease-out-cubic] [data-aos]{transition-timing-function:cubic-bezier(.215,.61,.355,1)}[data-aos^=fade],[data-aos^=zoom]{opacity:0;transition-property:opacity,transform}[data-aos^=fade].aos-animate,[data-aos^=zoom].aos-animate{opacity:1;transform:translateZ(0) scale(1)}[data-aos=fade-up]{transform:translate3d(0,60px,0)}[data-aos=fade-down]{transform:translate3d(0,-60px,0)}[data-aos=fade-right]{transform:translate3d(-60px,0,0)}[data-aos=fade-left]{transform:translate3d(60px,0,0)}[data-aos=zoom-in]{transform:scale(.6)}[data-aos][data-aos-delay="20"].aos-animate,body[data-aos-delay] [data-aos][data-aos-delay="20"].aos-animate{transition-delay:20ms}[data-aos][data-aos-delay="40"].aos-animate,body[data-aos-delay] [data-aos][data-aos-delay="40"].aos-animate{transition-delay:40ms}[data-aos][data-aos-delay="60"].aos-animate,body[data-aos-delay] [data-aos][data-aos-delay="60"].aos-animate{transition-delay:60ms}[data-aos][data-aos-delay="80"].aos-animate,body[data-aos-delay] [data-aos][data-aos-delay="80"].aos-animate{transition-delay:80ms}[data-aos][data-aos-delay="100"].aos-animate,body[data-aos-delay] [data-aos][data-aos-delay="100"].aos-animate{transition-delay:.1s}[data-aos][data-aos-delay="120"].aos-animate,body[data-aos-delay] [data-aos][data-aos-delay="120"].aos-animate{transition-delay:.12s}[data-aos][data-aos-delay="140"].aos-animate,body[data-aos-delay] [data-aos][data-aos-delay="140"].aos-animate{transition-delay:.14s}[data-aos][data-aos-delay="160"].aos-animate,body[data-aos-delay] [data-aos][data-aos-delay="160"].aos-animate{transition-delay:.16s}[data-aos][data-aos-delay="180"].aos-animate,body[data-aos-delay] [data-aos][data-aos-delay="180"].aos-animate{transition-delay:.18s}[data-aos][data-aos-delay="200"].aos-animate,body[data-aos-delay] [data-aos][data-aos-delay="200"].aos-animate{transition-delay:.2s}[data-aos][data-aos-delay="220"].aos-animate,body[data-aos-delay] [data-aos][data-aos-delay="220"].aos-animate{transition-delay:.22s}[data-aos][data-aos-delay="240"].aos-animate,body[data-aos-delay] [data-aos][data-aos-delay="240"].aos-animate{transition-delay:.24s}[data-aos][data-aos-delay="260"].aos-animate,body[data-aos-delay] [data-aos][data-aos-delay="260"].aos-animate{transition-delay:.26s}[data-aos][data-aos-delay="280"].aos-animate,body[data-aos-delay] [data-aos][data-aos-delay="280"].aos-animate{transition-delay:.28s}[data-aos][data-aos-delay="300"].aos-animate,body[data-aos-delay] [data-aos][data-aos-delay="300"].aos-animate{transition-delay:.3s}[data-aos][data-aos-delay="320"].aos-animate,body[data-aos-delay] [data-aos][data-aos-delay="320"].aos-animate{transition-delay:.32s}[data-aos][data-aos-delay="340"].aos-animate,body[data-aos-delay] [data-aos][data-aos-delay="340"].aos-animate{transition-delay:.34s}[data-aos][data-aos-delay="360"].aos-animate,body[data-aos-delay] [data-aos][data-aos-delay="360"].aos-animate{transition-delay:.36s}[data-aos][data-aos-delay="380"].aos-animate,body[data-aos-delay] [data-aos][data-aos-delay="380"].aos-animate{transition-delay:.38s}[data-aos][data-aos-delay="400"].aos-animate,body[data-aos-delay] [data-aos][data-aos-delay="400"].aos-animate{transition-delay:.4s}*,:after,:before{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }
+
+/*! tailwindcss v3.4.16 | MIT License | https://tailwindcss.com*/*,:after,:before{box-sizing:border-box;border:0 solid #e5e7eb}:after,:before{--tw-content:""}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;-o-tab-size:4;tab-size:4;font-family:Inter,system-ui,sans-serif;font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:Space Mono,monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0}fieldset,legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::-moz-placeholder,textarea::-moz-placeholder{opacity:1;color:#9ca3af}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border-width:0}.pointer-events-none{pointer-events:none}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.-inset-10{inset:-2.5rem}.-inset-8{inset:-2rem}.inset-0{inset:0}.inset-x-0{left:0;right:0}.inset-x-3{left:.75rem;right:.75rem}.-bottom-5{bottom:-1.25rem}.-bottom-6{bottom:-1.5rem}.-left-2{left:-.5rem}.-left-3{left:-.75rem}.-left-40{left:-10rem}.-left-\[39px\]{left:-39px}.-left-\[41px\]{left:-41px}.-right-24{right:-6rem}.-right-3{right:-.75rem}.-right-40{right:-10rem}.-right-6{right:-1.5rem}.-right-60{right:-15rem}.-top-24{top:-6rem}.-top-3{top:-.75rem}.-top-3\.5{top:-.875rem}.-top-8{top:-2rem}.bottom-0{bottom:0}.bottom-3{bottom:.75rem}.bottom-4{bottom:1rem}.bottom-5{bottom:1.25rem}.bottom-8{bottom:2rem}.bottom-\[5\.5rem\]{bottom:5.5rem}.left-0{left:0}.left-3{left:.75rem}.left-4{left:1rem}.left-8{left:2rem}.right-0{right:0}.right-3{right:.75rem}.right-4{right:1rem}.right-5{right:1.25rem}.right-6{right:1.5rem}.right-\[1\.6rem\]{right:1.6rem}.top-0{top:0}.top-1\.5{top:.375rem}.top-1\/2{top:50%}.top-1\/3{top:33.333333%}.top-10{top:2.5rem}.top-2{top:.5rem}.top-20{top:5rem}.top-3{top:.75rem}.top-4{top:1rem}.z-10{z-index:10}.z-20{z-index:20}.z-40{z-index:40}.z-50{z-index:50}.z-\[60\]{z-index:60}.z-\[70\]{z-index:70}.z-\[80\]{z-index:80}.z-\[90\]{z-index:90}.col-span-2{grid-column:span 2/span 2}.row-span-2{grid-row:span 2/span 2}.mx-auto{margin-left:auto;margin-right:auto}.mb-1\.5{margin-bottom:.375rem}.mb-10{margin-bottom:2.5rem}.mb-12{margin-bottom:3rem}.mb-14{margin-bottom:3.5rem}.mb-8{margin-bottom:2rem}.ml-1{margin-left:.25rem}.mt-0\.5{margin-top:.125rem}.mt-1{margin-top:.25rem}.mt-10{margin-top:2.5rem}.mt-12{margin-top:3rem}.mt-14{margin-top:3.5rem}.mt-16{margin-top:4rem}.mt-2{margin-top:.5rem}.mt-20{margin-top:5rem}.mt-24{margin-top:6rem}.mt-3{margin-top:.75rem}.mt-4{margin-top:1rem}.mt-5{margin-top:1.25rem}.mt-6{margin-top:1.5rem}.mt-7{margin-top:1.75rem}.mt-8{margin-top:2rem}.mt-9{margin-top:2.25rem}.block{display:block}.inline{display:inline}.flex{display:flex}.inline-flex{display:inline-flex}.grid{display:grid}.hidden{display:none}.aspect-\[16\/10\]{aspect-ratio:16/10}.aspect-\[4\/3\]{aspect-ratio:4/3}.aspect-\[4\/5\]{aspect-ratio:4/5}.aspect-square{aspect-ratio:1/1}.aspect-video{aspect-ratio:16/9}.h-1\.5{height:.375rem}.h-10{height:2.5rem}.h-11{height:2.75rem}.h-12{height:3rem}.h-14{height:3.5rem}.h-16{height:4rem}.h-2{height:.5rem}.h-20{height:5rem}.h-24{height:6rem}.h-3\.5{height:.875rem}.h-32{height:8rem}.h-4{height:1rem}.h-40{height:10rem}.h-44{height:11rem}.h-5{height:1.25rem}.h-6{height:1.5rem}.h-7{height:1.75rem}.h-8{height:2rem}.h-\[2px\]{height:2px}.h-\[420px\]{height:420px}.h-\[520px\]{height:520px}.h-\[640px\]{height:640px}.h-full{height:100%}.max-h-\[85vh\]{max-height:85vh}.min-h-\[88svh\]{min-height:88svh}.w-1\.5{width:.375rem}.w-10{width:2.5rem}.w-11{width:2.75rem}.w-12{width:3rem}.w-14{width:3.5rem}.w-2{width:.5rem}.w-3\.5{width:.875rem}.w-32{width:8rem}.w-4{width:1rem}.w-5{width:1.25rem}.w-6{width:1.5rem}.w-7{width:1.75rem}.w-8{width:2rem}.w-\[420px\]{width:420px}.w-\[520px\]{width:520px}.w-\[640px\]{width:640px}.w-auto{width:auto}.w-full{width:100%}.min-w-0{min-width:0}.max-w-2xl{max-width:42rem}.max-w-3xl{max-width:48rem}.max-w-5xl{max-width:64rem}.max-w-7xl{max-width:80rem}.max-w-full{max-width:100%}.max-w-md{max-width:28rem}.max-w-sm{max-width:24rem}.max-w-xl{max-width:36rem}.max-w-xs{max-width:20rem}.flex-1{flex:1 1 0%}.shrink-0{flex-shrink:0}.-translate-y-1\/2{--tw-translate-y:-50%}.-translate-y-1\/2,.translate-x-4{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.translate-x-4{--tw-translate-x:1rem}.translate-y-2{--tw-translate-y:0.5rem}.translate-y-2,.translate-y-4{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.translate-y-4{--tw-translate-y:1rem}.-rotate-2{--tw-rotate:-2deg}.-rotate-2,.-rotate-3{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.-rotate-3{--tw-rotate:-3deg}.resize-none{resize:none}.resize{resize:both}.scroll-mt-20{scroll-margin-top:5rem}.scroll-mt-28{scroll-margin-top:7rem}.grid-flow-row-dense{grid-auto-flow:row dense}.auto-rows-\[150px\]{grid-auto-rows:150px}.grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.place-items-center{place-items:center}.items-start{align-items:flex-start}.items-end{align-items:flex-end}.items-center{align-items:center}.items-stretch{align-items:stretch}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-0\.5{gap:.125rem}.gap-1{gap:.25rem}.gap-1\.5{gap:.375rem}.gap-10{gap:2.5rem}.gap-12{gap:3rem}.gap-14{gap:3.5rem}.gap-2{gap:.5rem}.gap-2\.5{gap:.625rem}.gap-3{gap:.75rem}.gap-4{gap:1rem}.gap-5{gap:1.25rem}.gap-6{gap:1.5rem}.gap-8{gap:2rem}.gap-x-5{-moz-column-gap:1.25rem;column-gap:1.25rem}.gap-y-2{row-gap:.5rem}.space-y-10>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(2.5rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(2.5rem*var(--tw-space-y-reverse))}.space-y-2>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(.5rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(.5rem*var(--tw-space-y-reverse))}.space-y-2\.5>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(.625rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(.625rem*var(--tw-space-y-reverse))}.space-y-24>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(6rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(6rem*var(--tw-space-y-reverse))}.space-y-3>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(.75rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(.75rem*var(--tw-space-y-reverse))}.space-y-4>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem*var(--tw-space-y-reverse))}.space-y-5>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.25rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.25rem*var(--tw-space-y-reverse))}.space-y-6>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.5rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.5rem*var(--tw-space-y-reverse))}.space-y-\[11px\]>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(11px*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(11px*var(--tw-space-y-reverse))}.divide-y>:not([hidden])~:not([hidden]){--tw-divide-y-reverse:0;border-top-width:calc(1px*(1 - var(--tw-divide-y-reverse)));border-bottom-width:calc(1px*var(--tw-divide-y-reverse))}.divide-ink\/10>:not([hidden])~:not([hidden]){border-color:rgba(15,17,21,.1)}.divide-white\/5>:not([hidden])~:not([hidden]){border-color:hsla(0,0%,100%,.05)}.self-center{align-self:center}.overflow-hidden{overflow:hidden}.overflow-x-hidden{overflow-x:hidden}.break-all{word-break:break-all}.rounded-2xl{border-radius:1rem}.rounded-3xl{border-radius:1.5rem}.rounded-\[2rem\]{border-radius:2rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:.5rem}.rounded-md{border-radius:.375rem}.rounded-xl{border-radius:.75rem}.border{border-width:1px}.border-2{border-width:2px}.border-y{border-top-width:1px}.border-b,.border-y{border-bottom-width:1px}.border-l-2{border-left-width:2px}.border-t{border-top-width:1px}.border-amber{--tw-border-opacity:1;border-color:rgb(229 169 60/var(--tw-border-opacity,1))}.border-amber\/30{border-color:rgba(229,169,60,.3)}.border-amber\/40{border-color:rgba(229,169,60,.4)}.border-amber\/60{border-color:rgba(229,169,60,.6)}.border-crimson\/50{border-color:rgba(200,30,58,.5)}.border-ink\/10{border-color:rgba(15,17,21,.1)}.border-ink\/15{border-color:rgba(15,17,21,.15)}.border-ink\/20{border-color:rgba(15,17,21,.2)}.border-ink\/30{border-color:rgba(15,17,21,.3)}.border-ink\/5{border-color:rgba(15,17,21,.05)}.border-white\/10{border-color:hsla(0,0%,100%,.1)}.border-white\/15{border-color:hsla(0,0%,100%,.15)}.border-white\/20{border-color:hsla(0,0%,100%,.2)}.border-white\/5{border-color:hsla(0,0%,100%,.05)}.bg-\[\#25D366\]{--tw-bg-opacity:1;background-color:rgb(37 211 102/var(--tw-bg-opacity,1))}.bg-\[\#25D366\]\/15{background-color:rgba(37,211,102,.15)}.bg-\[\#FF0000\]{--tw-bg-opacity:1;background-color:rgb(255 0 0/var(--tw-bg-opacity,1))}.bg-amber{--tw-bg-opacity:1;background-color:rgb(229 169 60/var(--tw-bg-opacity,1))}.bg-amber\/15{background-color:rgba(229,169,60,.15)}.bg-amber\/20{background-color:rgba(229,169,60,.2)}.bg-amber\/30{background-color:rgba(229,169,60,.3)}.bg-black{--tw-bg-opacity:1;background-color:rgb(0 0 0/var(--tw-bg-opacity,1))}.bg-black\/30{background-color:rgba(0,0,0,.3)}.bg-black\/40{background-color:rgba(0,0,0,.4)}.bg-black\/50{background-color:rgba(0,0,0,.5)}.bg-black\/60{background-color:rgba(0,0,0,.6)}.bg-black\/65{background-color:rgba(0,0,0,.65)}.bg-black\/70{background-color:rgba(0,0,0,.7)}.bg-black\/90{background-color:rgba(0,0,0,.9)}.bg-black\/95{background-color:rgba(0,0,0,.95)}.bg-crimson{--tw-bg-opacity:1;background-color:rgb(200 30 58/var(--tw-bg-opacity,1))}.bg-ink{--tw-bg-opacity:1;background-color:rgb(15 17 21/var(--tw-bg-opacity,1))}.bg-ink\/60{background-color:rgba(15,17,21,.6)}.bg-ink\/85{background-color:rgba(15,17,21,.85)}.bg-ink\/90{background-color:rgba(15,17,21,.9)}.bg-ink\/95{background-color:rgba(15,17,21,.95)}.bg-panel{--tw-bg-opacity:1;background-color:rgb(28 32 38/var(--tw-bg-opacity,1))}.bg-panel\/40{background-color:rgba(28,32,38,.4)}.bg-panel\/60{background-color:rgba(28,32,38,.6)}.bg-panel\/70{background-color:rgba(28,32,38,.7)}.bg-panel\/80{background-color:rgba(28,32,38,.8)}.bg-panel\/90{background-color:rgba(28,32,38,.9)}.bg-panel\/95{background-color:rgba(28,32,38,.95)}.bg-paper{--tw-bg-opacity:1;background-color:rgb(248 249 250/var(--tw-bg-opacity,1))}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255/var(--tw-bg-opacity,1))}.bg-white\/5{background-color:hsla(0,0%,100%,.05)}.bg-white\/70{background-color:hsla(0,0%,100%,.7)}.bg-white\/\[\.03\]{background-color:hsla(0,0%,100%,.03)}.bg-\[radial-gradient\(closest-side\2c rgba\(200\2c 30\2c 58\2c \.12\)\2c transparent\)\]{background-image:radial-gradient(closest-side,rgba(200,30,58,.12),transparent)}.bg-\[radial-gradient\(closest-side\2c rgba\(229\2c 169\2c 60\2c \.1\)\2c transparent\)\]{background-image:radial-gradient(closest-side,rgba(229,169,60,.1),transparent)}.bg-\[radial-gradient\(closest-side\2c rgba\(229\2c 169\2c 60\2c \.14\)\2c transparent\)\]{background-image:radial-gradient(closest-side,rgba(229,169,60,.14),transparent)}.bg-\[radial-gradient\(closest-side\2c rgba\(229\2c 169\2c 60\2c \.18\)\2c transparent\)\]{background-image:radial-gradient(closest-side,rgba(229,169,60,.18),transparent)}.bg-gradient-to-b{background-image:linear-gradient(to bottom,var(--tw-gradient-stops))}.bg-gradient-to-br{background-image:linear-gradient(to bottom right,var(--tw-gradient-stops))}.bg-gradient-to-r{background-image:linear-gradient(to right,var(--tw-gradient-stops))}.bg-gradient-to-t{background-image:linear-gradient(to top,var(--tw-gradient-stops))}.from-amber-deep{--tw-gradient-from:#8f5e0e var(--tw-gradient-from-position);--tw-gradient-to:rgba(143,94,14,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.from-black\/70{--tw-gradient-from:rgba(0,0,0,.7) var(--tw-gradient-from-position);--tw-gradient-to:transparent var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.from-black\/80{--tw-gradient-from:rgba(0,0,0,.8) var(--tw-gradient-from-position);--tw-gradient-to:transparent var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.from-ink{--tw-gradient-from:#0f1115 var(--tw-gradient-from-position);--tw-gradient-to:rgba(15,17,21,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.from-ink\/80{--tw-gradient-from:rgba(15,17,21,.8) var(--tw-gradient-from-position);--tw-gradient-to:rgba(15,17,21,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.from-panel{--tw-gradient-from:#1c2026 var(--tw-gradient-from-position);--tw-gradient-to:rgba(28,32,38,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.via-amber{--tw-gradient-to:rgba(229,169,60,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),#e5a93c var(--tw-gradient-via-position),var(--tw-gradient-to)}.via-black\/10{--tw-gradient-to:transparent var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),rgba(0,0,0,.1) var(--tw-gradient-via-position),var(--tw-gradient-to)}.via-ink{--tw-gradient-to:rgba(15,17,21,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),#0f1115 var(--tw-gradient-via-position),var(--tw-gradient-to)}.via-ink\/70{--tw-gradient-to:rgba(15,17,21,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),rgba(15,17,21,.7) var(--tw-gradient-via-position),var(--tw-gradient-to)}.via-ink\/85{--tw-gradient-to:rgba(15,17,21,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),rgba(15,17,21,.85) var(--tw-gradient-via-position),var(--tw-gradient-to)}.via-transparent{--tw-gradient-to:transparent var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),transparent var(--tw-gradient-via-position),var(--tw-gradient-to)}.to-\[\#ffd98a\]{--tw-gradient-to:#ffd98a var(--tw-gradient-to-position)}.to-ink{--tw-gradient-to:#0f1115 var(--tw-gradient-to-position)}.to-ink\/10{--tw-gradient-to:rgba(15,17,21,.1) var(--tw-gradient-to-position)}.to-panel{--tw-gradient-to:#1c2026 var(--tw-gradient-to-position)}.to-transparent{--tw-gradient-to:transparent var(--tw-gradient-to-position)}.object-contain{-o-object-fit:contain;object-fit:contain}.object-cover{-o-object-fit:cover;object-fit:cover}.object-\[35\%_35\%\]{-o-object-position:35% 35%;object-position:35% 35%}.object-\[35\%_50\%\]{-o-object-position:35% 50%;object-position:35% 50%}.object-\[40\%_40\%\]{-o-object-position:40% 40%;object-position:40% 40%}.object-\[50\%_25\%\]{-o-object-position:50% 25%;object-position:50% 25%}.object-\[50\%_30\%\]{-o-object-position:50% 30%;object-position:50% 30%}.object-\[50\%_35\%\]{-o-object-position:50% 35%;object-position:50% 35%}.object-\[50\%_55\%\]{-o-object-position:50% 55%;object-position:50% 55%}.object-\[50\%_60\%\]{-o-object-position:50% 60%;object-position:50% 60%}.object-top{-o-object-position:top;object-position:top}.p-3{padding:.75rem}.p-4{padding:1rem}.p-5{padding:1.25rem}.p-6{padding:1.5rem}.p-7{padding:1.75rem}.p-8{padding:2rem}.px-1\.5{padding-left:.375rem;padding-right:.375rem}.px-2{padding-left:.5rem;padding-right:.5rem}.px-2\.5{padding-left:.625rem;padding-right:.625rem}.px-3{padding-left:.75rem;padding-right:.75rem}.px-4{padding-left:1rem;padding-right:1rem}.px-5{padding-left:1.25rem;padding-right:1.25rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.px-7{padding-left:1.75rem;padding-right:1.75rem}.px-8{padding-left:2rem;padding-right:2rem}.py-0\.5{padding-top:.125rem;padding-bottom:.125rem}.py-1{padding-top:.25rem;padding-bottom:.25rem}.py-1\.5{padding-top:.375rem;padding-bottom:.375rem}.py-16{padding-top:4rem;padding-bottom:4rem}.py-2{padding-top:.5rem;padding-bottom:.5rem}.py-2\.5{padding-top:.625rem;padding-bottom:.625rem}.py-20{padding-top:5rem;padding-bottom:5rem}.py-24{padding-top:6rem;padding-bottom:6rem}.py-3{padding-top:.75rem;padding-bottom:.75rem}.py-3\.5{padding-top:.875rem;padding-bottom:.875rem}.py-4{padding-top:1rem;padding-bottom:1rem}.py-5{padding-top:1.25rem;padding-bottom:1.25rem}.py-8{padding-top:2rem;padding-bottom:2rem}.pb-1{padding-bottom:.25rem}.pb-10{padding-bottom:2.5rem}.pb-16{padding-bottom:4rem}.pb-20{padding-bottom:5rem}.pb-24{padding-bottom:6rem}.pb-5{padding-bottom:1.25rem}.pl-6{padding-left:1.5rem}.pl-8{padding-left:2rem}.pr-10{padding-right:2.5rem}.pt-20{padding-top:5rem}.pt-28{padding-top:7rem}.pt-4{padding-top:1rem}.text-left{text-align:left}.text-center{text-align:center}.align-middle{vertical-align:middle}.font-display{font-family:Plus Jakarta Sans,Inter,system-ui,sans-serif}.font-mono{font-family:Space Mono,monospace}.font-sans{font-family:Inter,system-ui,sans-serif}.text-2xl{font-size:1.5rem;line-height:2rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-4xl{font-size:2.25rem;line-height:2.5rem}.text-6xl{font-size:3.75rem;line-height:1}.text-8xl{font-size:6rem;line-height:1}.text-\[10px\]{font-size:10px}.text-\[11px\]{font-size:11px}.text-\[13px\]{font-size:13px}.text-\[15px\]{font-size:15px}.text-\[17px\]{font-size:17px}.text-\[18vw\]{font-size:18vw}.text-\[2\.5rem\]{font-size:2.5rem}.text-\[2\.6rem\]{font-size:2.6rem}.text-\[9px\]{font-size:9px}.text-base{font-size:1rem;line-height:1.5rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:.75rem;line-height:1rem}.font-bold{font-weight:700}.font-extrabold{font-weight:800}.font-medium{font-weight:500}.font-normal{font-weight:400}.font-semibold{font-weight:600}.uppercase{text-transform:uppercase}.leading-\[1\.02\]{line-height:1.02}.leading-\[1\.04\]{line-height:1.04}.leading-none{line-height:1}.leading-relaxed{line-height:1.625}.leading-snug{line-height:1.375}.leading-tight{line-height:1.25}.tracking-\[\.12em\]{letter-spacing:.12em}.tracking-\[\.14em\]{letter-spacing:.14em}.tracking-\[\.24em\]{letter-spacing:.24em}.tracking-\[\.25em\]{letter-spacing:.25em}.tracking-\[\.28em\]{letter-spacing:.28em}.tracking-\[\.2em\]{letter-spacing:.2em}.tracking-\[\.3em\]{letter-spacing:.3em}.tracking-mega{letter-spacing:.32em}.tracking-tight{letter-spacing:-.025em}.tracking-widest{letter-spacing:.1em}.text-\[\#25D366\]{--tw-text-opacity:1;color:rgb(37 211 102/var(--tw-text-opacity,1))}.text-\[\#FF0000\]{--tw-text-opacity:1;color:rgb(255 0 0/var(--tw-text-opacity,1))}.text-amber{--tw-text-opacity:1;color:rgb(229 169 60/var(--tw-text-opacity,1))}.text-amber-deep{--tw-text-opacity:1;color:rgb(143 94 14/var(--tw-text-opacity,1))}.text-amber\/25{color:rgba(229,169,60,.25)}.text-bone{--tw-text-opacity:1;color:rgb(236 237 239/var(--tw-text-opacity,1))}.text-bone\/30{color:hsla(220,9%,93%,.3)}.text-bone\/45{color:hsla(220,9%,93%,.45)}.text-bone\/50{color:hsla(220,9%,93%,.5)}.text-bone\/55{color:hsla(220,9%,93%,.55)}.text-bone\/60{color:hsla(220,9%,93%,.6)}.text-bone\/65{color:hsla(220,9%,93%,.65)}.text-bone\/70{color:hsla(220,9%,93%,.7)}.text-bone\/75{color:hsla(220,9%,93%,.75)}.text-bone\/80{color:hsla(220,9%,93%,.8)}.text-crimson{--tw-text-opacity:1;color:rgb(200 30 58/var(--tw-text-opacity,1))}.text-ink{--tw-text-opacity:1;color:rgb(15 17 21/var(--tw-text-opacity,1))}.text-paper{--tw-text-opacity:1;color:rgb(248 249 250/var(--tw-text-opacity,1))}.text-slate{--tw-text-opacity:1;color:rgb(75 85 99/var(--tw-text-opacity,1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255/var(--tw-text-opacity,1))}.text-white\/\[\.04\]{color:hsla(0,0%,100%,.04)}.underline{text-decoration-line:underline}.decoration-amber{text-decoration-color:#e5a93c}.decoration-2{text-decoration-thickness:2px}.underline-offset-4{text-underline-offset:4px}.accent-\[\#E5A93C\]{accent-color:#e5a93c}.opacity-0{opacity:0}.opacity-60{opacity:.6}.opacity-\[\.12\]{opacity:.12}.shadow-2xl{--tw-shadow:0 25px 50px -12px rgba(0,0,0,.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color)}.shadow-2xl,.shadow-\[0_10px_30px_-10px_rgba\(229\2c 169\2c 60\2c \.8\)\]{box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-\[0_10px_30px_-10px_rgba\(229\2c 169\2c 60\2c \.8\)\]{--tw-shadow:0 10px 30px -10px rgba(229,169,60,.8);--tw-shadow-colored:0 10px 30px -10px var(--tw-shadow-color)}.shadow-\[0_10px_30px_-5px_rgba\(229\2c 169\2c 60\2c \.7\)\]{--tw-shadow:0 10px 30px -5px rgba(229,169,60,.7);--tw-shadow-colored:0 10px 30px -5px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-\[0_12px_30px_-8px_rgba\(37\2c 211\2c 102\2c \.7\)\]{--tw-shadow:0 12px 30px -8px rgba(37,211,102,.7);--tw-shadow-colored:0 12px 30px -8px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-\[0_20px_50px_-30px_rgba\(15\2c 17\2c 21\2c \.35\)\]{--tw-shadow:0 20px 50px -30px rgba(15,17,21,.35);--tw-shadow-colored:0 20px 50px -30px var(--tw-shadow-color)}.shadow-\[0_20px_50px_-30px_rgba\(15\2c 17\2c 21\2c \.35\)\],.shadow-lg{box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-lg{--tw-shadow:0 10px 15px -3px rgba(0,0,0,.1),0 4px 6px -4px rgba(0,0,0,.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color),0 4px 6px -4px var(--tw-shadow-color)}.shadow-xl{--tw-shadow:0 20px 25px -5px rgba(0,0,0,.1),0 8px 10px -6px rgba(0,0,0,.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color),0 8px 10px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-black{--tw-shadow-color:#000;--tw-shadow:var(--tw-shadow-colored)}.shadow-black\/60{--tw-shadow-color:rgba(0,0,0,.6);--tw-shadow:var(--tw-shadow-colored)}.shadow-black\/70{--tw-shadow-color:rgba(0,0,0,.7);--tw-shadow:var(--tw-shadow-colored)}.outline{outline-style:solid}.ring-1{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color)}.ring-1,.ring-4{box-shadow:var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow,0 0 #0000)}.ring-4{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(4px + var(--tw-ring-offset-width)) var(--tw-ring-color)}.ring-amber\/40{--tw-ring-color:rgba(229,169,60,.4)}.ring-paper{--tw-ring-opacity:1;--tw-ring-color:rgb(248 249 250/var(--tw-ring-opacity,1))}.grayscale{--tw-grayscale:grayscale(100%)}.filter,.grayscale{filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.backdrop-blur{--tw-backdrop-blur:blur(8px)}.backdrop-blur,.backdrop-blur-lg{-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.backdrop-blur-lg{--tw-backdrop-blur:blur(16px)}.backdrop-blur-xl{--tw-backdrop-blur:blur(24px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.transition{transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,-webkit-backdrop-filter;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter,-webkit-backdrop-filter;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.duration-300{transition-duration:.3s}.duration-500{transition-duration:.5s}:root{--ink:#0f1115;--panel:#1c2026;--paper:#f8f9fa;--bone:#ecedef;--amber:#e5a93c;--amber-rgb:229,169,60;--crimson:#c81e3a}html{scroll-behavior:smooth;scroll-padding-top:90px}.grid>*{min-width:0}body{background:var(--ink);color:var(--bone);-webkit-font-smoothing:antialiased}::-moz-selection{background:var(--amber);color:var(--ink)}::selection{background:var(--amber);color:var(--ink)}:focus-visible{outline:2px solid var(--amber);outline-offset:3px}h1,h2,h3{text-wrap:balance}.light{background:var(--paper);color:#111318}.light ::-moz-selection{background:var(--ink);color:var(--paper)}.light ::selection{background:var(--ink);color:var(--paper)}.light :focus-visible{outline-color:var(--amber-deep,#b07816)}.grain{background-image:url(assets/img/grain.webp);background-size:96px}.duo{filter:grayscale(.85) contrast(1.08) brightness(.9);transition:filter .7s ease,transform .9s cubic-bezier(.2,.7,.2,1)}.group:focus-visible .duo,.group:hover .duo{filter:none;transform:scale(1.04)}.ghost{color:transparent;-webkit-text-stroke:1px hsla(220,9%,93%,.08);line-height:.8;letter-spacing:-.02em;-webkit-user-select:none;-moz-user-select:none;user-select:none}.light .ghost{-webkit-text-stroke-color:rgba(15,17,21,.07)}.strings{background-image:repeating-linear-gradient(180deg,transparent 0 13px,rgba(var(--amber-rgb),.28) 13px 14px);background-size:100% 84px;background-repeat:no-repeat;height:84px}.strings-v{background-image:repeating-linear-gradient(90deg,transparent 0 22px,hsla(220,9%,93%,.05) 22px 23px)}.string-line{height:1px;background:linear-gradient(90deg,transparent,rgba(var(--amber-rgb),.55),transparent);transform-origin:center}.group:hover .string-line{animation:pluck .5s ease-out}.group:hover .string-line:nth-child(2){animation-delay:.05s}.group:hover .string-line:nth-child(3){animation-delay:.1s}@keyframes pluck{0%{transform:scaleY(1)}20%{transform:translateY(-2px) scaleY(2)}45%{transform:translateY(1.5px)}70%{transform:translateY(-.6px)}to{transform:none}}.hero-glow{background:radial-gradient(closest-side,rgba(var(--amber-rgb),.22),transparent);animation:breathe 5s ease-in-out infinite}@keyframes breathe{0%,to{opacity:.55;transform:scale(1)}50%{opacity:1;transform:scale(1.06)}}.nav-link{position:relative}.nav-link:after{content:"";position:absolute;left:0;right:0;bottom:-8px;height:2px;background:var(--amber);transform:scaleX(0);transform-origin:left;transition:transform .35s ease}.nav-link:hover:after,.nav-link[aria-current=page]:after{transform:scaleX(1)}.nav-link[aria-current=page]{color:#fff}.pulse-dot{position:relative}.pulse-dot:after{content:"";position:absolute;inset:0;border-radius:9999px;background:currentColor;animation:pulse 1.8s ease-out infinite}@keyframes pulse{0%{transform:scale(1);opacity:.7}70%,to{transform:scale(3);opacity:0}}.eq span{display:inline-block;width:3px;height:14px;background:var(--amber);margin-right:2px;transform-origin:bottom;animation:eq 1s ease-in-out infinite}.eq span:nth-child(2){animation-delay:.2s}.eq span:nth-child(3){animation-delay:.4s}.eq span:nth-child(4){animation-delay:.1s}@keyframes eq{0%,to{transform:scaleY(.3)}50%{transform:scaleY(1)}}.chip[aria-pressed=true]{background:var(--amber);border-color:var(--amber);color:var(--ink)}.field{width:100%;background:hsla(0,0%,100%,.04);border:1px solid hsla(0,0%,100%,.12);border-radius:.6rem;padding:.8rem 1rem;color:var(--bone);font-size:.95rem;outline:none;transition:border-color .2s,background .2s}.field::-moz-placeholder{color:hsla(220,9%,93%,.5)}.field::placeholder{color:hsla(220,9%,93%,.5)}.field:focus{border-color:var(--amber);background:rgba(var(--amber-rgb),.06)}.field option{background:var(--panel);color:var(--bone)}.faq summary{list-style:none;cursor:pointer}.faq summary::-webkit-details-marker{display:none}.faq .faq-icon{transition:transform .3s ease}.faq[open] .faq-icon{transform:rotate(45deg)}.price-hot{box-shadow:0 30px 60px -25px rgba(var(--amber-rgb),.55)}.modal{opacity:0;visibility:hidden;pointer-events:none;transition:opacity .3s ease,visibility 0s linear .3s}.modal.is-open{opacity:1;visibility:visible;pointer-events:auto;transition:opacity .3s ease}.modal:not(.is-open){content-visibility:hidden}.logo-tile img{opacity:.82;transition:opacity .4s,transform .4s}.logo-tile:hover img{opacity:1;transform:translateY(-2px)}#progress{transform-origin:left;transform:scaleX(var(--p,0))}@keyframes rise{0%{opacity:0;transform:translateY(28px);filter:blur(6px)}to{opacity:1;transform:none;filter:none}}.rise-group>*{animation:rise .9s cubic-bezier(.2,.7,.2,1) both}.rise-group>:nth-child(2){animation-delay:.1s}.rise-group>:nth-child(3){animation-delay:.2s}.rise-group>:nth-child(4){animation-delay:.3s}.rise-group>:nth-child(5){animation-delay:.4s}.rise-group>:nth-child(6){animation-delay:.5s}.rise-group>:nth-child(n+7){animation-delay:.6s}.rise-group>.hero-h1{animation:none}.js .hero-h1:not(.split){opacity:0}.hero-h1 .w{display:inline-block;animation:rise .8s cubic-bezier(.2,.7,.2,1) both;animation-delay:calc(.15s + var(--i)*45ms)}@keyframes curtain{0%{clip-path:inset(100% 0 0 0 round 2rem);transform:scale(1.08)}to{clip-path:inset(0 0 0 0 round 2rem);transform:none}}.hero-photo{animation:curtain 1.2s cubic-bezier(.7,0,.2,1) .25s both}@keyframes bob{0%,to{transform:translateY(0) rotate(var(--r,-3deg))}50%{transform:translateY(-8px) rotate(var(--r,-3deg))}}.float{animation:bob 5s ease-in-out infinite}.hero-strings{position:absolute;inset-inline:0;bottom:.9rem;height:50px;display:flex;flex-direction:column;justify-content:space-between;pointer-events:none;z-index:1}.hstring{height:1px;background:linear-gradient(90deg,transparent,hsla(220,9%,93%,.16) 12%,hsla(220,9%,93%,.16) 88%,transparent);transform-origin:center}.hstring:nth-child(-n+3){height:1.5px;background:linear-gradient(90deg,transparent,rgba(var(--amber-rgb),.35) 12%,rgba(var(--amber-rgb),.35) 88%,transparent)}@keyframes vibrate{0%{transform:scaleY(1)}8%{transform:translateY(-3px) scaleY(2.5)}16%{transform:translateY(2.6px) scaleY(2.2)}26%{transform:translateY(-2px) scaleY(1.8)}38%{transform:translateY(1.4px) scaleY(1.5)}52%{transform:translateY(-.8px)}68%{transform:translateY(.4px)}to{transform:none}}.hstring.pluck{animation:vibrate .9s ease-out;background-color:rgba(var(--amber-rgb),.25)}.spot{position:relative;isolation:isolate}.spot:before{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;z-index:-1;opacity:0;transition:opacity .4s;background:radial-gradient(420px circle at var(--mx,50%) var(--my,50%),rgba(var(--amber-rgb),.13),transparent 45%)}.spot:hover:before{opacity:1}.light .spot:before{background:radial-gradient(420px circle at var(--mx,50%) var(--my,50%),rgba(var(--amber-rgb),.16),transparent 45%)}.shine{position:relative;overflow:hidden}.shine:after{content:"";position:absolute;inset:-2px;pointer-events:none;background:linear-gradient(105deg,transparent 35%,hsla(0,0%,100%,.55) 50%,transparent 65%);transform:translateX(-120%);transition:transform .8s cubic-bezier(.2,.7,.2,1)}.shine:hover:after{transform:translateX(120%)}.magnetic{transition:transform .35s cubic-bezier(.2,.7,.2,1),background-color .2s,color .2s,border-color .2s;transform:translate(var(--tx,0),var(--ty,0))}.tilt{transition:transform .5s cubic-bezier(.2,.7,.2,1);transform:perspective(900px) rotateX(var(--rx,0)) rotateY(var(--ry,0));transform-style:preserve-3d}.play-ring{position:relative}.play-ring:before{content:"";position:absolute;inset:0;border-radius:9999px;border:2px solid var(--amber);animation:ring 2.2s ease-out infinite}@keyframes ring{0%{transform:scale(1);opacity:.8}80%,to{transform:scale(1.7);opacity:0}}@property --angle{syntax:"<angle>";initial-value:0deg;inherits:false}.border-spin{position:relative}.border-spin:after{content:"";position:absolute;inset:-2px;border-radius:inherit;padding:2px;pointer-events:none;background:conic-gradient(from var(--angle),transparent 0 60%,var(--amber) 75%,#fff3 82%,transparent 90%);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;animation:spin-angle 4s linear infinite}@keyframes spin-angle{to{--angle:360deg}}.ghost{transform:translateX(var(--gx,0));will-change:transform}.tl-fill{position:absolute;left:-2px;top:0;width:2px;height:100%;background:linear-gradient(var(--amber),var(--amber-deep,#8f5e0e));transform-origin:top;transform:scaleY(var(--p,0))}.draw-line{background:linear-gradient(var(--amber),var(--amber)) no-repeat 0 92% /0 .09em;transition:background-size 1.1s cubic-bezier(.7,0,.2,1) .7s}.draw-line.is-drawn,.is-drawn .draw-line{background-size:100% .09em}@media (prefers-reduced-motion:reduce){.border-spin:after,.eq span,.float,.group:hover .string-line,.hero-glow,.hero-h1 .w,.hero-photo,.hstring.pluck,.play-ring:before,.pulse-dot:after,.rise-group>*{animation:none!important}.ghost,.magnetic,.tilt{transform:none!important}.js .hero-h1:not(.split){opacity:1}.shine:after{display:none}.draw-line{transition:none;background-size:100% .09em}#progress{display:none}html{scroll-behavior:auto}}.hp{position:absolute!important;left:-9999px!important;width:1px;height:1px;overflow:hidden}.hover\:-translate-y-1:hover{--tw-translate-y:-0.25rem}.hover\:-translate-y-1:hover,.hover\:scale-105:hover{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.hover\:scale-105:hover{--tw-scale-x:1.05;--tw-scale-y:1.05}.hover\:border-\[\#25D366\]:hover{--tw-border-opacity:1;border-color:rgb(37 211 102/var(--tw-border-opacity,1))}.hover\:border-amber:hover{--tw-border-opacity:1;border-color:rgb(229 169 60/var(--tw-border-opacity,1))}.hover\:border-amber\/50:hover{border-color:rgba(229,169,60,.5)}.hover\:border-crimson:hover{--tw-border-opacity:1;border-color:rgb(200 30 58/var(--tw-border-opacity,1))}.hover\:border-ink:hover{--tw-border-opacity:1;border-color:rgb(15 17 21/var(--tw-border-opacity,1))}.hover\:bg-amber:hover{--tw-bg-opacity:1;background-color:rgb(229 169 60/var(--tw-bg-opacity,1))}.hover\:bg-ink:hover{--tw-bg-opacity:1;background-color:rgb(15 17 21/var(--tw-bg-opacity,1))}.hover\:bg-white:hover{--tw-bg-opacity:1;background-color:rgb(255 255 255/var(--tw-bg-opacity,1))}.hover\:text-\[\#25D366\]:hover{--tw-text-opacity:1;color:rgb(37 211 102/var(--tw-text-opacity,1))}.hover\:text-amber:hover{--tw-text-opacity:1;color:rgb(229 169 60/var(--tw-text-opacity,1))}.hover\:text-ink:hover{--tw-text-opacity:1;color:rgb(15 17 21/var(--tw-text-opacity,1))}.hover\:text-paper:hover{--tw-text-opacity:1;color:rgb(248 249 250/var(--tw-text-opacity,1))}.hover\:text-white:hover{--tw-text-opacity:1;color:rgb(255 255 255/var(--tw-text-opacity,1))}.hover\:underline:hover{text-decoration-line:underline}.hover\:shadow-\[0_25px_50px_-30px_rgba\(15\2c 17\2c 21\2c \.45\)\]:hover{--tw-shadow:0 25px 50px -30px rgba(15,17,21,.45);--tw-shadow-colored:0 25px 50px -30px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.focus\:not-sr-only:focus{position:static;width:auto;height:auto;padding:0;margin:0;overflow:visible;clip:auto;white-space:normal}.focus\:fixed:focus{position:fixed}.focus\:left-4:focus{left:1rem}.focus\:top-4:focus{top:1rem}.focus\:z-\[100\]:focus{z-index:100}.focus\:rounded-full:focus{border-radius:9999px}.focus\:bg-amber:focus{--tw-bg-opacity:1;background-color:rgb(229 169 60/var(--tw-bg-opacity,1))}.focus\:px-4:focus{padding-left:1rem;padding-right:1rem}.focus\:py-2:focus{padding-top:.5rem;padding-bottom:.5rem}.focus\:text-ink:focus{--tw-text-opacity:1;color:rgb(15 17 21/var(--tw-text-opacity,1))}.group:hover .group-hover\:translate-x-1{--tw-translate-x:0.25rem}.group:hover .group-hover\:translate-x-1,.group:hover .group-hover\:translate-y-0{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.group:hover .group-hover\:translate-y-0{--tw-translate-y:0px}.group:hover .group-hover\:rotate-0{--tw-rotate:0deg}.group:hover .group-hover\:rotate-0,.group:hover .group-hover\:scale-110{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.group:hover .group-hover\:scale-110{--tw-scale-x:1.1;--tw-scale-y:1.1}.group:hover .group-hover\:bg-amber{--tw-bg-opacity:1;background-color:rgb(229 169 60/var(--tw-bg-opacity,1))}.group:hover .group-hover\:text-\[\#25D366\]{--tw-text-opacity:1;color:rgb(37 211 102/var(--tw-text-opacity,1))}.group:hover .group-hover\:text-amber{--tw-text-opacity:1;color:rgb(229 169 60/var(--tw-text-opacity,1))}.group:hover .group-hover\:text-ink{--tw-text-opacity:1;color:rgb(15 17 21/var(--tw-text-opacity,1))}.group:hover .group-hover\:opacity-100{opacity:1}.aria-\[current\=page\]\:text-amber[aria-current=page]{--tw-text-opacity:1;color:rgb(229 169 60/var(--tw-text-opacity,1))}@media (min-width:640px){.sm\:-left-8{left:-2rem}.sm\:-right-4{right:-1rem}.sm\:bottom-6{bottom:1.5rem}.sm\:left-6{left:1.5rem}.sm\:left-auto{left:auto}.sm\:right-auto{right:auto}.sm\:col-span-2{grid-column:span 2/span 2}.sm\:block{display:block}.sm\:flex{display:flex}.sm\:h-20{height:5rem}.sm\:w-\[62\%\]{width:62%}.sm\:w-auto{width:auto}.sm\:auto-rows-\[200px\]{grid-auto-rows:200px}.sm\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.sm\:grid-cols-4{grid-template-columns:repeat(4,minmax(0,1fr))}.sm\:flex-row{flex-direction:row}.sm\:flex-wrap{flex-wrap:wrap}.sm\:items-center{align-items:center}.sm\:gap-4{gap:1rem}.sm\:bg-gradient-to-r{background-image:linear-gradient(to right,var(--tw-gradient-stops))}.sm\:from-ink{--tw-gradient-from:#0f1115 var(--tw-gradient-from-position);--tw-gradient-to:rgba(15,17,21,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.sm\:via-ink\/90{--tw-gradient-to:rgba(15,17,21,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),rgba(15,17,21,.9) var(--tw-gradient-via-position),var(--tw-gradient-to)}.sm\:to-ink\/10{--tw-gradient-to:rgba(15,17,21,.1) var(--tw-gradient-to-position)}.sm\:p-12{padding:3rem}.sm\:p-8{padding:2rem}.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}.sm\:py-20{padding-top:5rem;padding-bottom:5rem}.sm\:py-24{padding-top:6rem;padding-bottom:6rem}.sm\:py-28{padding-top:7rem;padding-bottom:7rem}.sm\:pb-20{padding-bottom:5rem}.sm\:pt-32{padding-top:8rem}.sm\:text-2xl{font-size:1.5rem;line-height:2rem}.sm\:text-5xl{font-size:3rem;line-height:1}.sm\:text-6xl{font-size:3.75rem;line-height:1}.sm\:text-\[140px\]{font-size:140px}.sm\:text-base{font-size:1rem;line-height:1.5rem}.sm\:text-lg{font-size:1.125rem;line-height:1.75rem}}@media (min-width:768px){.md\:col-span-3{grid-column:span 3/span 3}.md\:col-span-4{grid-column:span 4/span 4}.md\:col-span-5{grid-column:span 5/span 5}.md\:col-span-8{grid-column:span 8/span 8}.md\:grid-cols-12{grid-template-columns:repeat(12,minmax(0,1fr))}.md\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.md\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}.md\:grid-cols-4{grid-template-columns:repeat(4,minmax(0,1fr))}.md\:flex-row{flex-direction:row}.md\:items-end{align-items:flex-end}}@media (min-width:1024px){.lg\:sticky{position:sticky}.lg\:top-28{top:7rem}.lg\:order-1{order:1}.lg\:order-2{order:2}.lg\:col-span-4{grid-column:span 4/span 4}.lg\:col-span-5{grid-column:span 5/span 5}.lg\:col-span-6{grid-column:span 6/span 6}.lg\:col-span-7{grid-column:span 7/span 7}.lg\:col-span-8{grid-column:span 8/span 8}.lg\:mt-14{margin-top:3.5rem}.lg\:flex{display:flex}.lg\:hidden{display:none}.lg\:aspect-square{aspect-ratio:1/1}.lg\:min-h-\[100svh\]{min-height:100svh}.lg\:max-w-none{max-width:none}.lg\:max-w-sm{max-width:24rem}.lg\:grid-cols-12{grid-template-columns:repeat(12,minmax(0,1fr))}.lg\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.lg\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}.lg\:grid-cols-4{grid-template-columns:repeat(4,minmax(0,1fr))}.lg\:items-center{align-items:center}.lg\:divide-x>:not([hidden])~:not([hidden]){--tw-divide-x-reverse:0;border-right-width:calc(1px*var(--tw-divide-x-reverse));border-left-width:calc(1px*(1 - var(--tw-divide-x-reverse)))}.lg\:px-6{padding-left:1.5rem;padding-right:1.5rem}.lg\:px-8{padding-left:2rem;padding-right:2rem}.lg\:pb-24{padding-bottom:6rem}.lg\:first\:pl-0:first-child{padding-left:0}}@media (min-width:1280px){.xl\:gap-7{gap:1.75rem}.xl\:text-7xl{font-size:4.5rem;line-height:1}}.\[\&_a\]\:font-semibold a{font-weight:600}.\[\&_a\]\:text-ink a{--tw-text-opacity:1;color:rgb(15 17 21/var(--tw-text-opacity,1))}.\[\&_a\]\:underline a{text-decoration-line:underline}.\[\&_a\]\:decoration-amber a{text-decoration-color:#e5a93c}.\[\&_a\]\:decoration-2 a{text-decoration-thickness:2px}.\[\&_a\]\:underline-offset-4 a{text-underline-offset:4px}.\[\&_h2\]\:font-display h2{font-family:Plus Jakarta Sans,Inter,system-ui,sans-serif}.\[\&_h2\]\:text-2xl h2{font-size:1.5rem;line-height:2rem}.\[\&_h2\]\:font-bold h2{font-weight:700}.\[\&_h2\]\:tracking-tight h2{letter-spacing:-.025em}.\[\&_h2\]\:text-ink h2{--tw-text-opacity:1;color:rgb(15 17 21/var(--tw-text-opacity,1))}.\[\&_li\]\:mt-2 li{margin-top:.5rem}.\[\&_strong\]\:text-ink strong{--tw-text-opacity:1;color:rgb(15 17 21/var(--tw-text-opacity,1))}.\[\&_ul\]\:list-disc ul{list-style-type:disc}.\[\&_ul\]\:pl-5 ul{padding-left:1.25rem}</style>
+</head>
+<body class="grain font-sans text-bone bg-ink overflow-x-hidden" data-root="" data-page="home">
+
+  <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-full focus:bg-amber focus:px-4 focus:py-2 focus:text-ink">Skip to content</a>
+
+  <!-- ==================== SPRITE DE ÍCONES ==================== -->
+  <!-- Heroicons (outline 24) + ícones de marca (Simple Icons) -->
+  <svg xmlns="http://www.w3.org/2000/svg" class="hidden">
+    <defs>
+      <symbol id="h-play" viewBox="0 0 24 24"><path fill="currentColor" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z"/></symbol>
+      <symbol id="h-map-pin" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"/></symbol>
+      <symbol id="h-clock" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></symbol>
+      <symbol id="h-calendar" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5"/></symbol>
+      <symbol id="h-envelope" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"/></symbol>
+      <symbol id="h-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"/></symbol>
+      <symbol id="h-arrow-up-right" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25"/></symbol>
+      <symbol id="h-arrow-right" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></symbol>
+      <symbol id="h-arrow-up" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M4.5 10.5 12 3m0 0 7.5 7.5M12 3v18"/></symbol>
+      <symbol id="h-chevron-left" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5"/></symbol>
+      <symbol id="h-chevron-right" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5"/></symbol>
+      <symbol id="h-x-mark" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"/></symbol>
+      <symbol id="h-bars" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/></symbol>
+      <symbol id="h-plus" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"/></symbol>
+      <symbol id="h-check" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></symbol>
+      <symbol id="h-star" viewBox="0 0 24 24"><path fill="currentColor" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"/></symbol>
+      <symbol id="h-note" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="m9 9 10.5-3m0 6.553v3.75a2.25 2.25 0 0 1-1.632 2.163l-1.32.377a1.803 1.803 0 1 1-.99-3.467l2.31-.66a2.25 2.25 0 0 0 1.632-2.163Zm0 0V2.25L9 5.25v10.303m0 0v3.75a2.25 2.25 0 0 1-1.632 2.163l-1.32.377a1.803 1.803 0 0 1-.99-3.467l2.31-.66A2.25 2.25 0 0 0 9 15.553Z"/></symbol>
+      <symbol id="h-mic" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M12 18.75a6 6 0 0 0 6-6v-1.5m-6 7.5a6 6 0 0 1-6-6v-1.5m6 7.5v3.75m-3.75 0h7.5M12 15.75a3 3 0 0 1-3-3V4.5a3 3 0 1 1 6 0v8.25a3 3 0 0 1-3 3Z"/></symbol>
+      <symbol id="h-academic" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5"/></symbol>
+      <symbol id="h-shield" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z"/></symbol>
+      <symbol id="h-users" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 0 0 2.625.372 9.337 9.337 0 0 0 4.121-.952 4.125 4.125 0 0 0-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 0 1 8.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0 1 11.964-3.07M12 6.375a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0Zm8.25 2.25a2.625 2.625 0 1 1-5.25 0 2.625 2.625 0 0 1 5.25 0Z"/></symbol>
+      <symbol id="h-desktop" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M9 17.25v1.007a3 3 0 0 1-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0 1 15 18.257V17.25m6-12V15a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 15V5.25m18 0A2.25 2.25 0 0 0 18.75 3H5.25A2.25 2.25 0 0 0 3 5.25m18 0V12a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 12V5.25"/></symbol>
+      <symbol id="h-tablet" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5h3m-6.75 2.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-15a2.25 2.25 0 0 0-2.25-2.25H6.75A2.25 2.25 0 0 0 4.5 4.5v15a2.25 2.25 0 0 0 2.25 2.25Z"/></symbol>
+      <symbol id="h-document" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z"/></symbol>
+      <symbol id="h-download" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3"/></symbol>
+      <symbol id="h-bolt" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="m3.75 13.5 10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75Z"/></symbol>
+      <symbol id="h-globe" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418"/></symbol>
+      <symbol id="h-language" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="m10.5 21 5.25-11.25L21 21m-9-3h7.5M3 5.621a48.474 48.474 0 0 1 6-.371m0 0c1.12 0 2.233.038 3.334.114M9 5.25V3m3.334 2.364C11.176 10.658 7.69 15.08 3 17.502m9.334-12.138c.896.061 1.785.147 2.666.257m-4.589 8.495a18.023 18.023 0 0 1-3.827-5.802"/></symbol>
+      <symbol id="h-sparkles" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09Z"/></symbol>
+      <symbol id="h-trophy" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M16.5 18.75h-9m9 0a3 3 0 0 1 3 3h-15a3 3 0 0 1 3-3m9 0v-3.375c0-.621-.503-1.125-1.125-1.125h-.871M7.5 18.75v-3.375c0-.621.504-1.125 1.125-1.125h.872m5.007 0H9.497m5.007 0a7.454 7.454 0 0 1-.982-3.172M9.497 14.25a7.454 7.454 0 0 0 .981-3.172M5.25 4.236c-.982.143-1.954.317-2.916.52A6.003 6.003 0 0 0 7.73 9.728M5.25 4.236V4.5c0 2.108.966 3.99 2.48 5.228M5.25 4.236V2.721C7.456 2.41 9.71 2.25 12 2.25c2.291 0 4.545.16 6.75.47v1.516M7.73 9.728a6.726 6.726 0 0 0 2.748 1.35m8.272-6.842V4.5c0 2.108-.966 3.99-2.48 5.228m2.48-5.492a46.32 46.32 0 0 1 2.916.52 6.003 6.003 0 0 1-5.395 4.972m0 0a6.726 6.726 0 0 1-2.749 1.35m0 0a6.772 6.772 0 0 1-3.044 0"/></symbol>
+
+      <symbol id="b-whatsapp" viewBox="0 0 24 24"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></symbol>
+      <symbol id="b-youtube" viewBox="0 0 24 24"><path fill="currentColor" d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></symbol>
+      <symbol id="b-instagram" viewBox="0 0 24 24"><path fill="currentColor" d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"/></symbol>
+      <symbol id="b-facebook" viewBox="0 0 24 24"><path fill="currentColor" d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"/></symbol>
+    </defs>
+  </svg>
+
+
+  <!-- Progresso de leitura -->
+  <div id="progress" class="pointer-events-none fixed inset-x-0 top-0 z-[60] h-[2px] bg-gradient-to-r from-amber-deep via-amber to-[#ffd98a]" aria-hidden="true"></div>
+
+  <!-- ==================== HEADER ==================== -->
+  <header id="header" class="fixed inset-x-0 top-0 z-50 transition-all duration-500">
+    <div class="mx-auto flex h-20 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
+      <a href="./" class="group flex items-center gap-3" aria-label="Emiliano Bonanomi — home">
+        <span class="grid h-10 w-10 shrink-0 place-items-center rounded-full border border-amber/60 font-display text-sm font-extrabold tracking-tight text-amber transition group-hover:bg-amber group-hover:text-ink">EB</span>
+        <span class="leading-none">
+          <span class="block font-display text-[15px] font-bold tracking-tight text-white sm:text-base">Emiliano Bonanomi</span>
+          <span class="mt-1 block font-mono text-[9px] uppercase tracking-[.28em] text-bone/55">EmisFearGuitar</span>
+        </span>
+      </a>
+
+      <nav class="hidden items-center gap-6 lg:flex xl:gap-7" aria-label="Main">
+        <a href="./" data-nav="home" aria-current="page" class="nav-link text-[13px] font-medium text-bone/70 transition hover:text-white">Home</a>
+        <a href="guitar-lessons/" data-nav="lessons" class="nav-link text-[13px] font-medium text-bone/70 transition hover:text-white">Guitar Lessons</a>
+        <a href="live-session/" data-nav="live" class="nav-link text-[13px] font-medium text-bone/70 transition hover:text-white">Live &amp; Session</a>
+        <a href="guitar-tabs/" data-nav="tabs" class="nav-link text-[13px] font-medium text-bone/70 transition hover:text-white">Free Tabs</a>
+        <a href="about/" data-nav="about" class="nav-link text-[13px] font-medium text-bone/70 transition hover:text-white">About</a>
+        <a href="contact/" data-nav="contact" class="nav-link text-[13px] font-medium text-bone/70 transition hover:text-white">Contact</a>
+      </nav>
+
+      <div class="flex items-center gap-2">
+        <a href="contact/?enquiry=taster" data-track="header-book" class="hidden items-center gap-2 rounded-full bg-amber px-5 py-2.5 text-xs font-bold uppercase tracking-[.14em] text-ink transition hover:bg-white sm:flex">Book a Lesson</a>
+        <button id="menuOpen" class="grid h-10 w-10 place-items-center rounded-full border border-white/15 lg:hidden" aria-label="Open menu"><svg class="h-5 w-5"><use href="#h-bars"/></svg></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Menu mobile -->
+  <div id="mobileMenu" class="modal fixed inset-0 z-[70] flex flex-col bg-ink/95 backdrop-blur-xl lg:hidden" role="dialog" aria-modal="true" aria-label="Menu">
+    <div class="flex h-20 items-center justify-between px-4">
+      <span class="font-display text-base font-bold">Emiliano Bonanomi</span>
+      <button id="menuClose" class="grid h-10 w-10 place-items-center rounded-full border border-white/15" aria-label="Close menu"><svg class="h-5 w-5"><use href="#h-x-mark"/></svg></button>
+    </div>
+    <nav class="flex flex-1 flex-col justify-center gap-3 px-8" aria-label="Mobile">
+      <a href="./" data-nav="home" aria-current="page" class="font-display text-3xl font-bold tracking-tight hover:text-amber aria-[current=page]:text-amber">Home</a>
+      <a href="guitar-lessons/" data-nav="lessons" class="font-display text-3xl font-bold tracking-tight hover:text-amber aria-[current=page]:text-amber">Guitar Lessons</a>
+      <a href="live-session/" data-nav="live" class="font-display text-3xl font-bold tracking-tight hover:text-amber aria-[current=page]:text-amber">Live &amp; Session</a>
+      <a href="guitar-tabs/" data-nav="tabs" class="font-display text-3xl font-bold tracking-tight hover:text-amber aria-[current=page]:text-amber">Free Tabs</a>
+      <a href="about/" data-nav="about" class="font-display text-3xl font-bold tracking-tight hover:text-amber aria-[current=page]:text-amber">About</a>
+      <a href="contact/" data-nav="contact" class="font-display text-3xl font-bold tracking-tight hover:text-amber aria-[current=page]:text-amber">Contact</a>
+      <a href="contact/?enquiry=taster" class="mt-6 flex items-center justify-center gap-2 rounded-full bg-amber px-6 py-4 text-sm font-bold uppercase tracking-[.14em] text-ink">Book a Taster Lesson</a>
+    </nav>
+    <div class="flex gap-3 px-8 pb-10">
+      <a href="https://wa.me/447565016969?text=Hi%20Emiliano%2C%20I'd%20like%20to%20enquire%20about%20guitar%20lessons%20in%20Camden." target="_blank" rel="noopener" aria-label="WhatsApp" class="grid h-11 w-11 place-items-center rounded-full border border-white/15"><svg class="h-5 w-5"><use href="#b-whatsapp"/></svg></a>
+      <a href="https://www.instagram.com/emisfearguitar" target="_blank" rel="noopener" aria-label="Instagram" class="grid h-11 w-11 place-items-center rounded-full border border-white/15"><svg class="h-5 w-5"><use href="#b-instagram"/></svg></a>
+      <a href="https://www.youtube.com/@EmisFearGuitar" target="_blank" rel="noopener" aria-label="YouTube" class="grid h-11 w-11 place-items-center rounded-full border border-white/15"><svg class="h-5 w-5"><use href="#b-youtube"/></svg></a>
+      <a href="https://www.facebook.com/EmisFearGuitar/" target="_blank" rel="noopener" aria-label="Facebook" class="grid h-11 w-11 place-items-center rounded-full border border-white/15"><svg class="h-5 w-5"><use href="#b-facebook"/></svg></a>
+      <a href="mailto:emisfear@gmail.com" aria-label="Email" class="grid h-11 w-11 place-items-center rounded-full border border-white/15"><svg class="h-5 w-5"><use href="#h-envelope"/></svg></a>
+    </div>
+  </div>
+
+  <main id="main">
+<!-- ==================== HERO (6.1) ==================== -->
+    <section class="relative overflow-hidden pt-28 pb-16 sm:pt-32 lg:flex lg:min-h-[100svh] lg:items-center lg:pb-24">
+      <div class="strings-v pointer-events-none absolute inset-0" aria-hidden="true"></div>
+      <div class="pointer-events-none absolute -left-40 top-1/3 h-[520px] w-[520px] bg-[radial-gradient(closest-side,rgba(200,30,58,.12),transparent)]"></div>
+
+      <div class="relative mx-auto grid w-full max-w-7xl items-center gap-14 px-4 sm:px-6 lg:grid-cols-12 lg:px-8">
+        <div class="rise-group lg:col-span-7">
+          <p class="inline-flex items-center gap-3 rounded-full border border-white/10 bg-black/40 px-4 py-1.5 font-mono text-[10px] uppercase tracking-[.24em] text-bone/80">
+            <span class="eq flex h-3.5 items-end" aria-hidden="true"><span></span><span></span><span></span><span></span></span>
+            London Session Guitarist &amp; Guildhall-Qualified Educator
+          </p>
+          <h1 class="hero-h1 mt-7 font-display text-[2.6rem] font-extrabold leading-[1.02] tracking-tight text-white sm:text-6xl xl:text-7xl">Bringing Music to Life <span class="text-amber">—</span> On Stage, in the Studio, and in the Classroom.</h1>
+          <p class="mt-7 max-w-2xl text-base leading-relaxed text-bone/70 sm:text-lg">Hi, I’m Emiliano Bonanomi. From West End and regional musical theatre pits to high-energy festival stages and tailored 1-to-1 guitar tuition in Camden &amp; Euston (NW1), I combine traditional musicianship with modern technology to deliver exceptional musical results.</p>
+          <div class="mt-9 flex flex-col gap-3 sm:flex-row">
+            <a href="guitar-lessons/" data-track="hero-lessons" class="flex items-center justify-center gap-2 rounded-full bg-amber px-7 py-4 text-sm font-bold uppercase tracking-[.12em] text-ink shadow-[0_10px_30px_-10px_rgba(229,169,60,.8)] transition hover:bg-white"><svg class="h-5 w-5"><use href="#h-academic"/></svg> Book a Guitar Lesson</a>
+            <a href="live-session/" data-track="hero-live" class="flex items-center justify-center gap-2 rounded-full border border-white/20 bg-black/30 px-7 py-4 text-sm font-bold uppercase tracking-[.12em] transition hover:border-amber hover:text-amber"><svg class="h-5 w-5"><use href="#h-mic"/></svg> Hire for Live &amp; Session Work</a>
+          </div>
+          <p class="mt-6 flex flex-wrap items-center gap-x-5 gap-y-2 text-xs text-bone/55">
+            <span class="flex items-center gap-1.5"><svg class="h-4 w-4 text-amber"><use href="#h-map-pin"/></svg> Camden · Euston · Online</span>
+            <span class="flex items-center gap-1.5"><svg class="h-4 w-4 text-amber"><use href="#h-language"/></svg> English · Italiano · Español</span>
+          </p>
+        </div>
+
+        <div class="relative mx-auto w-full max-w-md lg:col-span-5 lg:max-w-none">
+          <div class="hero-glow pointer-events-none absolute -inset-10"></div>
+          <div class="absolute -right-3 -top-3 hidden h-full w-full rounded-[2rem] border border-amber/40 sm:block"></div>
+          <figure class="hero-photo relative overflow-hidden rounded-[2rem] shadow-2xl shadow-black/70">
+            <img src="assets/img/photos/live-blue.webp" srcset="assets/img/photos/live-blue-480.webp 480w, assets/img/photos/live-blue.webp 1178w" sizes="(min-width: 1024px) 40vw, 92vw" width="1178" height="1168" alt="Emiliano Bonanomi playing a white Stratocaster on stage under blue and purple lights" fetchpriority="high" class="aspect-[4/5] w-full object-cover object-[35%_50%]">
+            <span class="absolute inset-0 bg-gradient-to-t from-ink/80 via-transparent to-transparent"></span>
+            <figcaption class="absolute right-4 top-4 flex items-center gap-2 rounded-full bg-black/60 px-3 py-1.5 font-mono text-[10px] uppercase tracking-[.2em] backdrop-blur"><span class="pulse-dot h-2 w-2 rounded-full bg-crimson text-crimson"></span> Live in London</figcaption>
+          </figure>
+          <div style="--r:-3deg" class="float absolute -bottom-6 -left-2 rounded-xl bg-amber px-5 py-3 text-ink shadow-xl sm:-left-8">
+            <p class="font-mono text-[9px] font-bold uppercase tracking-[.25em]">On stage for</p>
+            <p class="font-display text-3xl font-extrabold leading-none"><span data-count="15">15</span>+ years</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== CREDIBILITY BAR (briefing 6.1 / "Trust First") ==================== -->
+    <section aria-label="Qualifications and safeguarding" class="relative z-20 border-y border-white/5 bg-panel/80">
+      <ul class="mx-auto grid max-w-7xl grid-cols-2 divide-white/5 px-4 sm:px-6 lg:grid-cols-4 lg:divide-x lg:px-8">
+        <li class="flex items-center gap-3 py-5 lg:px-6 lg:first:pl-0">
+          <span class="grid h-10 w-10 shrink-0 place-items-center rounded-lg bg-amber/15 text-amber"><svg class="h-5 w-5"><use href="#h-academic"/></svg></span>
+          <span class="min-w-0 text-[13px] leading-snug"><strong class="block font-semibold text-white">PGCert (Distinction)</strong><span class="text-bone/60">Guildhall School</span></span>
+        </li>
+        <li class="flex items-center gap-3 py-5 lg:px-6">
+          <span class="grid h-10 w-10 shrink-0 place-items-center rounded-lg bg-amber/15 text-amber"><svg class="h-5 w-5"><use href="#h-note"/></svg></span>
+          <span class="min-w-0 text-[13px] leading-snug"><strong class="block font-semibold text-white">MA Music Performance</strong><span class="text-bone/60">ICMP / UEL</span></span>
+        </li>
+        <li class="flex items-center gap-3 py-5 lg:px-6">
+          <span class="grid h-10 w-10 shrink-0 place-items-center rounded-lg bg-amber/15 text-amber"><svg class="h-5 w-5"><use href="#h-sparkles"/></svg></span>
+          <span class="min-w-0 text-[13px] leading-snug"><strong class="block font-semibold text-white">Yamaha Certified Tutor</strong><span class="text-bone/60">&amp; IB Music Examiner</span></span>
+        </li>
+        <li class="flex items-center gap-3 py-5 lg:px-6">
+          <span class="grid h-10 w-10 shrink-0 place-items-center rounded-lg bg-amber/15 text-amber"><svg class="h-5 w-5"><use href="#h-shield"/></svg></span>
+          <span class="min-w-0 text-[13px] leading-snug"><strong class="block font-semibold text-white">Enhanced DBS</strong><span class="text-bone/60">&amp; £10m Public Liability</span></span>
+        </li>
+      </ul>
+    </section>
+
+
+    <!-- ==================== SERVICES (3 cards) ==================== -->
+    <section class="relative py-24 sm:py-28">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <header class="relative mb-14 text-center" data-aos="fade-up">
+          <span class="ghost pointer-events-none absolute inset-x-0 -top-8 font-display text-[18vw] font-extrabold sm:text-[140px]" aria-hidden="true">Together</span>
+          <p class="relative font-mono text-[11px] uppercase tracking-mega text-amber">Lessons · Theatre · Session</p>
+          <h2 class="relative mt-3 font-display text-4xl font-extrabold tracking-tight sm:text-5xl">How We Can Work Together</h2>
+        </header>
+
+        <div class="grid gap-6 md:grid-cols-3">
+          <article class="group relative flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-panel/60 transition hover:-translate-y-1 hover:border-amber/50" data-aos="fade-up">
+            <div class="relative aspect-[4/3] overflow-hidden">
+              <img src="assets/img/photos/studio-room-480.webp" width="480" height="640" alt="Emiliano's home studio near Euston with guitars on the wall and blue ambient light" class="duo h-full w-full object-cover object-[50%_60%]" loading="lazy" decoding="async">
+              <span class="absolute left-4 top-4 rounded-full bg-amber px-3 py-1 font-mono text-[9px] font-bold uppercase tracking-widest text-ink">Camden · Euston · Online</span>
+            </div>
+            <div class="flex flex-1 flex-col p-6">
+              <h3 class="font-display text-2xl font-bold tracking-tight">Guitar Lessons</h3>
+              <p class="mt-3 flex-1 text-sm leading-relaxed text-bone/65">Tailored 1-to-1 and small-group tuition in electric, acoustic, and classical guitar. Suitable for ages 6 to adult, complete beginners to advanced players, Graded Exams (RSL, Trinity, ABRSM, LCM), and GCSE/A-Level preparation.</p>
+              <a href="guitar-lessons/" class="mt-6 inline-flex items-center gap-2 text-sm font-bold text-amber">Explore Guitar Lessons <svg class="h-4 w-4 transition group-hover:translate-x-1"><use href="#h-arrow-right"/></svg></a>
+            </div>
+          </article>
+          <article class="group relative flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-panel/60 transition hover:-translate-y-1 hover:border-amber/50" data-aos="fade-up" data-aos-delay="100">
+            <div class="relative aspect-[4/3] overflow-hidden">
+              <img src="assets/img/photos/rent-cast-480.webp" width="480" height="853" alt="Emiliano with the cast and band of a production of Rent" class="duo h-full w-full object-cover object-[50%_35%]" loading="lazy" decoding="async">
+              <span class="absolute left-4 top-4 rounded-full bg-crimson px-3 py-1 font-mono text-[9px] font-bold uppercase tracking-widest text-white">Theatre</span>
+            </div>
+            <div class="flex flex-1 flex-col p-6">
+              <h3 class="font-display text-2xl font-bold tracking-tight">Musical Theatre &amp; Pit Bands</h3>
+              <p class="mt-3 flex-1 text-sm leading-relaxed text-bone/65">Reliable, versatile guitarist for theatre productions across London and the UK. Confident sight-reader across electric, acoustic, and classical instruments, fully equipped with professional digital modelling gear for silent stages.</p>
+              <a href="live-session/#theatre" class="mt-6 inline-flex items-center gap-2 text-sm font-bold text-amber">View Theatre Credits <svg class="h-4 w-4 transition group-hover:translate-x-1"><use href="#h-arrow-right"/></svg></a>
+            </div>
+          </article>
+          <article class="group relative flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-panel/60 transition hover:-translate-y-1 hover:border-amber/50" data-aos="fade-up" data-aos-delay="200">
+            <div class="relative aspect-[4/3] overflow-hidden">
+              <img src="assets/img/photos/live-green-480.webp" width="480" height="571" alt="Emiliano playing a seafoam Stratocaster with a function band and singer" class="duo h-full w-full object-cover object-[40%_40%]" loading="lazy" decoding="async">
+              <span class="absolute left-4 top-4 rounded-full bg-black/70 px-3 py-1 font-mono text-[9px] font-bold uppercase tracking-widest">Weddings · Events · Studio</span>
+            </div>
+            <div class="flex flex-1 flex-col p-6">
+              <h3 class="font-display text-2xl font-bold tracking-tight">Function Bands &amp; Session Guitar</h3>
+              <p class="mt-3 flex-1 text-sm leading-relaxed text-bone/65">Available as a resident or short-notice dep guitarist for weddings, corporate events, and studio sessions. Covering Pop, Funk, Soul, Rock, Motown, and Blues with over 15 years of professional live experience.</p>
+              <a href="contact/?enquiry=live" class="mt-6 inline-flex items-center gap-2 text-sm font-bold text-amber">Check Availability <svg class="h-4 w-4 transition group-hover:translate-x-1"><use href="#h-arrow-right"/></svg></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== MEET EMILIANO (resumo) ==================== -->
+    <section class="relative overflow-hidden border-t border-white/5 bg-panel/40 py-24 sm:py-28">
+      <div class="mx-auto grid max-w-7xl items-center gap-14 px-4 sm:px-6 lg:grid-cols-12 lg:px-8">
+        <div class="relative mx-auto w-full max-w-sm lg:col-span-5 lg:max-w-none" data-aos="fade-right">
+          <figure class="group relative overflow-hidden rounded-2xl">
+            <img src="assets/img/photos/portrait-blazer-480.webp" srcset="assets/img/photos/portrait-blazer-480.webp 480w, assets/img/photos/portrait-blazer.webp 1100w" sizes="(min-width: 1024px) 38vw, 90vw" width="1100" height="1466" alt="Portrait of Emiliano Bonanomi in a black sequin blazer holding a Stratocaster" class="duo aspect-[4/5] w-full object-cover object-top" loading="lazy" decoding="async">
+          </figure>
+          <div style="--r:2deg" class="float absolute -bottom-5 right-4 rounded-xl border border-white/10 bg-ink/90 px-4 py-3 backdrop-blur">
+            <p class="flex items-center gap-1 text-amber" aria-label="5 out of 5 stars"><svg class="h-4 w-4"><use href="#h-star"/></svg><svg class="h-4 w-4"><use href="#h-star"/></svg><svg class="h-4 w-4"><use href="#h-star"/></svg><svg class="h-4 w-4"><use href="#h-star"/></svg><svg class="h-4 w-4"><use href="#h-star"/></svg></p>
+            <p class="mt-1 text-xs text-bone/70"><strong class="text-white">5.0</strong> from 13 reviews · Encore Musicians</p>
+          </div>
+        </div>
+        <div class="lg:col-span-7" data-aos="fade-left">
+          <p class="font-mono text-[11px] uppercase tracking-mega text-amber">Meet Emiliano</p>
+          <h2 class="mt-3 font-display text-4xl font-extrabold tracking-tight sm:text-5xl">An educator who still plays the gig every week.</h2>
+          <div class="mt-6 space-y-4 leading-relaxed text-bone/70">
+            <p>Conservatoire training in Italy, a postgraduate qualification with Distinction from the Guildhall School in London, and fifteen years of real stage experience — from theatre pits to festival stages.</p>
+            <p>That combination shapes everything: structured, encouraging lessons for students of every age, and reliable, well-prepared musicianship for the productions and bands I play with.</p>
+          </div>
+          <div class="mt-10 grid grid-cols-2 gap-3 sm:grid-cols-4">
+            <div class="rounded-xl border border-white/10 bg-ink/60 p-4 text-center"><p class="font-display text-3xl font-extrabold text-amber"><span data-count="15">15</span>+</p><p class="mt-1 font-mono text-[9px] uppercase tracking-widest text-bone/55">Years live</p></div>
+            <div class="rounded-xl border border-white/10 bg-ink/60 p-4 text-center"><p class="font-display text-3xl font-extrabold text-amber">1–8</p><p class="mt-1 font-mono text-[9px] uppercase tracking-widest text-bone/55">Exam grades</p></div>
+            <div class="rounded-xl border border-white/10 bg-ink/60 p-4 text-center"><p class="font-display text-3xl font-extrabold text-amber"><span data-count="6">6</span>+</p><p class="mt-1 font-mono text-[9px] uppercase tracking-widest text-bone/55">Ages taught</p></div>
+            <div class="rounded-xl border border-white/10 bg-ink/60 p-4 text-center"><p class="font-display text-3xl font-extrabold text-amber"><span data-count="3">3</span></p><p class="mt-1 font-mono text-[9px] uppercase tracking-widest text-bone/55">Languages</p></div>
+          </div>
+          <a href="about/" class="mt-10 inline-flex items-center gap-2 rounded-full border border-white/20 px-6 py-3 text-sm font-bold uppercase tracking-[.12em] transition hover:border-amber hover:text-amber">Read the full story <svg class="h-4 w-4"><use href="#h-arrow-right"/></svg></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== WATCH & LISTEN + COLLABORATIONS ==================== -->
+    <section class="relative py-24 sm:py-28">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <header class="relative mb-12 flex flex-col items-start justify-between gap-6 md:flex-row md:items-end" data-aos="fade-up">
+          <div>
+            <p class="font-mono text-[11px] uppercase tracking-mega text-amber">Watch &amp; Listen</p>
+            <h2 class="mt-3 font-display text-4xl font-extrabold tracking-tight sm:text-5xl">From the pit, the stage &amp; the studio</h2>
+            <p class="mt-4 max-w-2xl text-bone/65">A selection of live theatre pit performances, function gigs, and studio guitar arrangements.</p>
+          </div>
+          <a href="https://www.youtube.com/@EmisFearGuitar" target="_blank" rel="noopener" class="flex shrink-0 items-center gap-2 rounded-full border border-white/15 px-5 py-2.5 text-xs font-bold uppercase tracking-[.12em] transition hover:border-amber hover:text-amber"><svg class="h-4 w-4"><use href="#b-youtube"/></svg> YouTube channel</a>
+        </header>
+
+        <!-- Vídeos em destaque: lista FEATURED_HOME no main.js -->
+        <div id="homeVideos" data-videos="home" class="grid gap-5 md:grid-cols-3"></div>
+
+        <div class="mt-24" data-aos="fade-up">
+          <h3 class="text-center font-mono text-[11px] uppercase tracking-mega text-bone/55">Proud to Collaborate With</h3>
+          <!-- Logos dos parceiros (site atual). Pedir versões em alta definição/vetor ao cliente (briefing seção 12) -->
+          <ul class="mt-8 flex flex-wrap items-center justify-center gap-3 sm:gap-4">
+            <li class="logo-tile"><img src="assets/img/logos/vivid.webp" width="238" height="160" alt="Vivid Music Ltd" class="h-16 w-auto rounded-xl bg-white/[.03] sm:h-20" loading="lazy" decoding="async"></li>
+            <li class="logo-tile"><img src="assets/img/logos/tsc.webp" width="160" height="160" alt="The Supreme Collective" class="h-16 w-auto rounded-xl sm:h-20" loading="lazy" decoding="async"></li>
+            <li class="logo-tile"><img src="assets/img/logos/sedos.webp" width="160" height="160" alt="Sedos" class="h-16 w-auto rounded-xl sm:h-20" loading="lazy" decoding="async"></li>
+            <li class="logo-tile"><img src="assets/img/logos/uni-derby.webp" width="160" height="160" alt="University of Derby" class="h-16 w-auto rounded-xl sm:h-20" loading="lazy" decoding="async"></li>
+            <li class="logo-tile"><img src="assets/img/logos/nkoda.webp" width="306" height="160" alt="nkoda" class="h-16 w-auto rounded-xl sm:h-20" loading="lazy" decoding="async"></li>
+            <li class="logo-tile"><img src="assets/img/logos/mu.webp" width="252" height="160" alt="Musicians' Union" class="h-16 w-auto rounded-xl sm:h-20" loading="lazy" decoding="async"></li>
+          </ul>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== FREE TABS LEAD MAGNET (banner) ==================== -->
+    <section class="relative overflow-hidden py-20 sm:py-24">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="group relative grid items-center gap-10 overflow-hidden rounded-3xl border border-amber/30 bg-gradient-to-br from-panel via-ink to-panel p-8 sm:p-12 lg:grid-cols-12" data-aos="fade-up">
+          <div class="pointer-events-none absolute -right-24 -top-24 h-[420px] w-[420px] bg-[radial-gradient(closest-side,rgba(229,169,60,.18),transparent)]"></div>
+          <!-- seis cordas -->
+          <div class="pointer-events-none absolute inset-x-0 bottom-8 space-y-[11px] opacity-60" aria-hidden="true"><div class="string-line"></div><div class="string-line"></div><div class="string-line"></div></div>
+          <div class="relative lg:col-span-7">
+            <p class="font-mono text-[11px] uppercase tracking-mega text-amber">Free download</p>
+            <h2 class="mt-3 font-display text-4xl font-extrabold tracking-tight sm:text-5xl">Download Free Guitar Tabs &amp; Arrangements</h2>
+            <p class="mt-5 max-w-xl leading-relaxed text-bone/70">Get the official transcriptions and backing notes for my guitar arrangements and solos delivered straight to your inbox, plus practical tips on live music tech.</p>
+            <a href="guitar-tabs/" data-track="tabs-banner" class="mt-8 inline-flex items-center gap-2 rounded-full bg-amber px-7 py-3.5 text-sm font-bold uppercase tracking-[.12em] text-ink transition hover:bg-white"><svg class="h-4 w-4"><use href="#h-download"/></svg> Send Me the Free Tabs</a>
+          </div>
+          <div class="relative mx-auto w-full max-w-xs lg:col-span-5 lg:max-w-sm">
+            <div class="absolute inset-0 translate-x-4 translate-y-4 rounded-xl border border-amber/40"></div>
+            <img src="assets/img/photos/tab-preview-480.webp" width="480" height="663" alt="First page of Emiliano's electric guitar arrangement of Bach's Prelude in G Major, in tab and standard notation" class="relative w-full -rotate-2 rounded-xl shadow-2xl shadow-black/70 transition duration-500 group-hover:rotate-0" loading="lazy" decoding="async">
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ==================== TESTIMONIALS + CONTACT CTA ==================== -->
+    <!-- Depoimentos do site atual (iniciais, sem foto de menores — briefing seção 12) -->
+    <section class="light relative overflow-hidden py-24 sm:py-28">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <header class="relative mb-14 text-center" data-aos="fade-up">
+          <span class="ghost pointer-events-none absolute inset-x-0 -top-8 font-display text-[18vw] font-extrabold sm:text-[140px]" aria-hidden="true">Kind words</span>
+          <p class="relative font-mono text-[11px] uppercase tracking-mega text-amber-deep">From parents in Camden &amp; Euston</p>
+          <h2 class="relative mt-3 font-display text-4xl font-extrabold tracking-tight text-ink sm:text-5xl">What families say</h2>
+        </header>
+        <div class="grid gap-6 md:grid-cols-2">
+          <!-- Depoimentos encontrados no site atual. Novos: só com iniciais e bairro ("A., Parent — Camden") -->
+          <figure class="relative rounded-2xl border border-ink/10 bg-white p-8 shadow-[0_20px_50px_-30px_rgba(15,17,21,.35)]" data-aos="fade-up">
+            <span class="absolute right-6 top-2 font-display text-8xl font-extrabold leading-none text-amber/25" aria-hidden="true">“</span>
+            <p class="flex gap-1 text-amber" aria-label="5 out of 5 stars"><svg class="h-4 w-4"><use href="#h-star"/></svg><svg class="h-4 w-4"><use href="#h-star"/></svg><svg class="h-4 w-4"><use href="#h-star"/></svg><svg class="h-4 w-4"><use href="#h-star"/></svg><svg class="h-4 w-4"><use href="#h-star"/></svg></p>
+            <blockquote class="mt-5 font-display text-xl font-semibold leading-snug tracking-tight text-ink">“Emiliano helped our son progress from complete beginner to confident performer in just one year. His lessons are well-structured, friendly, and inspiring.”</blockquote>
+            <figcaption class="mt-6 text-sm text-slate"><strong class="text-ink">A.</strong> · Parent, Camden</figcaption>
+          </figure>
+          <figure class="relative rounded-2xl border border-ink/10 bg-white p-8 shadow-[0_20px_50px_-30px_rgba(15,17,21,.35)]" data-aos="fade-up" data-aos-delay="100">
+            <span class="absolute right-6 top-2 font-display text-8xl font-extrabold leading-none text-amber/25" aria-hidden="true">“</span>
+            <p class="flex gap-1 text-amber" aria-label="5 out of 5 stars"><svg class="h-4 w-4"><use href="#h-star"/></svg><svg class="h-4 w-4"><use href="#h-star"/></svg><svg class="h-4 w-4"><use href="#h-star"/></svg><svg class="h-4 w-4"><use href="#h-star"/></svg><svg class="h-4 w-4"><use href="#h-star"/></svg></p>
+            <blockquote class="mt-5 font-display text-xl font-semibold leading-snug tracking-tight text-ink">“Extremely professional, always punctual and positive. My daughter looks forward to every lesson!”</blockquote>
+            <figcaption class="mt-6 text-sm text-slate"><strong class="text-ink">J.</strong> · Parent, Euston</figcaption>
+          </figure>
+
+        </div>
+        <div class="mt-16 flex flex-col items-center justify-center gap-3 sm:flex-row" data-aos="fade-up">
+          <a href="contact/?enquiry=taster" data-track="home-cta-taster" class="flex w-full items-center justify-center gap-2 rounded-full bg-ink px-7 py-4 text-sm font-bold uppercase tracking-[.12em] text-paper transition hover:bg-amber hover:text-ink sm:w-auto"><svg class="h-4 w-4"><use href="#h-calendar"/></svg> Book a Taster Lesson</a>
+          <a href="contact/?enquiry=live" class="flex w-full items-center justify-center gap-2 rounded-full border border-ink/20 px-7 py-4 text-sm font-bold uppercase tracking-[.12em] text-ink transition hover:border-ink sm:w-auto">Enquire about live work</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="relative border-t border-white/5 bg-ink pt-20">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="grid gap-12 md:grid-cols-12">
+        <div class="md:col-span-5">
+          <p class="font-display text-3xl font-extrabold tracking-tight">Emiliano Bonanomi</p>
+          <p class="mt-1 font-mono text-[10px] uppercase tracking-[.3em] text-amber">EmisFearGuitar</p>
+          <p class="mt-5 max-w-sm text-sm leading-relaxed text-bone/65">London session guitarist, musical theatre pit musician and Guildhall-qualified guitar educator. Lessons in Camden, Euston &amp; online.</p>
+          <div class="mt-6 flex flex-wrap gap-2">
+            <a href="https://www.youtube.com/@EmisFearGuitar" target="_blank" rel="noopener" aria-label="YouTube" class="grid h-10 w-10 place-items-center rounded-full border border-white/10 text-bone/70 transition hover:border-amber hover:text-white"><svg class="h-4 w-4"><use href="#b-youtube"/></svg></a>
+            <a href="https://www.instagram.com/emisfearguitar" target="_blank" rel="noopener" aria-label="Instagram" class="grid h-10 w-10 place-items-center rounded-full border border-white/10 text-bone/70 transition hover:border-amber hover:text-white"><svg class="h-4 w-4"><use href="#b-instagram"/></svg></a>
+            <a href="https://www.facebook.com/EmisFearGuitar/" target="_blank" rel="noopener" aria-label="Facebook" class="grid h-10 w-10 place-items-center rounded-full border border-white/10 text-bone/70 transition hover:border-amber hover:text-white"><svg class="h-4 w-4"><use href="#b-facebook"/></svg></a>
+            <a href="https://wa.me/447565016969?text=Hi%20Emiliano%2C%20I'd%20like%20to%20enquire%20about%20guitar%20lessons%20in%20Camden." target="_blank" rel="noopener" aria-label="WhatsApp" class="grid h-10 w-10 place-items-center rounded-full border border-white/10 text-bone/70 transition hover:border-amber hover:text-white"><svg class="h-4 w-4"><use href="#b-whatsapp"/></svg></a>
+            <a href="mailto:emisfear@gmail.com" aria-label="Email" class="grid h-10 w-10 place-items-center rounded-full border border-white/10 text-bone/70 transition hover:border-amber hover:text-white"><svg class="h-4 w-4"><use href="#h-envelope"/></svg></a>
+          </div>
+        </div>
+
+        <div class="md:col-span-3">
+          <p class="font-mono text-[11px] uppercase tracking-[.3em] text-amber">Explore</p>
+          <ul class="mt-5 space-y-2.5 text-sm text-bone/65">
+            <li><a href="guitar-lessons/" class="hover:text-white">Guitar Lessons</a></li>
+            <li><a href="live-session/" class="hover:text-white">Live &amp; Session</a></li>
+            <li><a href="guitar-tabs/" class="hover:text-white">Free Guitar Tabs</a></li>
+            <li><a href="about/" class="hover:text-white">About</a></li>
+            <li><a href="contact/" class="hover:text-white">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- NAP padronizado (SEO local): mesmo formato nos diretórios (MusicTeacher.com, Encore Musicians) -->
+        <div class="md:col-span-4">
+          <p class="font-mono text-[11px] uppercase tracking-[.3em] text-amber">Get in touch</p>
+          <ul class="mt-5 space-y-3 text-sm text-bone/65">
+            <li class="flex items-start gap-2.5"><svg class="mt-0.5 h-4 w-4 shrink-0 text-amber"><use href="#h-map-pin"/></svg><span>Euston / Camden, London NW1<br><span class="text-bone/45">&amp; online worldwide</span></span></li>
+            <li class="flex items-start gap-2.5"><svg class="mt-0.5 h-4 w-4 shrink-0 text-amber"><use href="#h-phone"/></svg><a href="tel:+447565016969" data-track="tel" class="hover:text-white">+44 7565 016969</a></li>
+            <li class="flex items-start gap-2.5"><svg class="mt-0.5 h-4 w-4 shrink-0 text-amber"><use href="#h-envelope"/></svg><a href="mailto:emisfear@gmail.com" data-track="email" class="break-all hover:text-white">emisfear@gmail.com</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mt-16 flex flex-col items-center justify-between gap-3 border-t border-white/5 py-8 text-xs text-bone/55 sm:flex-row">
+        <p>© <span id="year">2026</span> Emiliano Bonanomi — EmisFearGuitar. All rights reserved.</p>
+        <p class="flex items-center gap-4"><a href="privacy/" class="transition hover:text-amber">Privacy Policy</a><button type="button" data-consent-open class="transition hover:text-amber">Cookie settings</button></p>
+        <p>Website by <a href="https://wscodev.vercel.app/" target="_blank" rel="noopener" class="font-semibold text-bone/70 transition hover:text-amber">Wendel Silva</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp (RF03): mensagem inicial pré-preenchida, número no formato internacional +44 -->
+  <a href="https://wa.me/447565016969?text=Hi%20Emiliano%2C%20I'd%20like%20to%20enquire%20about%20guitar%20lessons%20in%20Camden." target="_blank" rel="noopener" data-track="whatsapp-float" class="fixed bottom-5 right-5 z-40 grid h-14 w-14 place-items-center rounded-full bg-[#25D366] text-white shadow-[0_12px_30px_-8px_rgba(37,211,102,.7)] transition hover:scale-105" aria-label="Chat on WhatsApp"><svg class="h-7 w-7"><use href="#b-whatsapp"/></svg></a>
+  <!-- Voltar ao topo -->
+  <a href="#main" id="toTop" class="fixed bottom-[5.5rem] right-[1.6rem] z-40 grid h-11 w-11 translate-y-4 place-items-center rounded-full border border-amber/60 bg-ink/90 text-amber opacity-0 transition hover:bg-amber hover:text-ink" aria-label="Back to top"><svg class="h-4 w-4"><use href="#h-arrow-up"/></svg></a>
+
+  <!-- Modal do player do YouTube -->
+  <div id="videoModal" class="modal fixed inset-0 z-[80] grid place-items-center bg-black/90 p-4 backdrop-blur" role="dialog" aria-modal="true" aria-label="Video player">
+    <button data-close class="absolute right-4 top-4 z-10 grid h-11 w-11 place-items-center rounded-full border border-white/20 bg-black/60 hover:border-amber" aria-label="Close"><svg class="h-5 w-5"><use href="#h-x-mark"/></svg></button>
+    <div class="w-full max-w-5xl">
+      <div id="videoFrame" class="aspect-video w-full overflow-hidden rounded-xl bg-black shadow-2xl"></div>
+      <p id="videoCaption" class="mt-4 text-center font-mono text-[11px] uppercase tracking-[.2em] text-bone/70"></p>
+    </div>
+  </div>
+
+  <!-- Lightbox da galeria -->
+  <div id="lightbox" class="modal fixed inset-0 z-[80] grid place-items-center bg-black/95 p-4" role="dialog" aria-modal="true" aria-label="Photo">
+    <button data-close class="absolute right-4 top-4 grid h-11 w-11 place-items-center rounded-full border border-white/20 hover:border-amber" aria-label="Close"><svg class="h-5 w-5"><use href="#h-x-mark"/></svg></button>
+    <button data-lb="prev" class="absolute left-3 top-1/2 grid h-11 w-11 -translate-y-1/2 place-items-center rounded-full border border-white/20 bg-black/50 hover:border-amber" aria-label="Previous"><svg class="h-5 w-5"><use href="#h-chevron-left"/></svg></button>
+    <img id="lbImg" alt="" class="max-h-[85vh] max-w-full rounded-lg object-contain">
+    <button data-lb="next" class="absolute right-3 top-1/2 grid h-11 w-11 -translate-y-1/2 place-items-center rounded-full border border-white/20 bg-black/50 hover:border-amber" aria-label="Next"><svg class="h-5 w-5"><use href="#h-chevron-right"/></svg></button>
+    <p id="lbCap" class="absolute bottom-5 left-0 right-0 text-center font-mono text-[11px] uppercase tracking-[.3em] text-bone/60"></p>
+  </div>
+
+  <!-- Aviso de cookies (UK GDPR / PECR): o site não usa cookies de rastreamento; o YouTube (terceiro)
+       só carrega quando a pessoa clica para assistir. A escolha fica salva no navegador. -->
+  <div id="consentBar" class="fixed inset-x-3 bottom-3 z-[90] hidden max-w-xl rounded-2xl border border-white/10 bg-panel/95 p-5 shadow-2xl shadow-black backdrop-blur sm:bottom-6 sm:left-6 sm:right-auto" role="dialog" aria-live="polite" aria-label="Cookies">
+    <p class="font-display text-lg font-bold">Your privacy</p>
+    <p class="mt-2 text-sm leading-relaxed text-bone/70">This website doesn't use tracking or advertising cookies. Videos are played by YouTube, which may set its own cookies — they only load when you click play. Learn more in the <a href="privacy/" class="text-amber underline">Privacy Policy</a>.</p>
+    <div class="mt-4 flex flex-col gap-2 sm:flex-row sm:flex-wrap">
+      <button type="button" data-consent="all" class="w-full rounded-full bg-amber px-5 py-2.5 text-xs font-bold uppercase tracking-[.14em] text-ink transition hover:bg-white sm:w-auto">Allow YouTube videos</button>
+      <button type="button" data-consent="essential" class="w-full rounded-full border border-white/15 px-5 py-2.5 text-xs font-bold uppercase tracking-[.14em] transition hover:border-amber sm:w-auto">Essential only</button>
+    </div>
+  </div>
+
+  <script src="assets/vendor/aos.js" defer></script>
+  <script src="assets/js/main.js?v=2" defer></script>
+</body>
+</html>

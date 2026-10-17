@@ -1,0 +1,35 @@
+          <!-- Formulário segmentado (RF01). Sem servidor: monta a mensagem e abre o app de e-mail (para emisfear@gmail.com)
+               ou o WhatsApp — nada é guardado pelo site. Para receber direto na caixa de entrada, configure FORM_ENDPOINT no main.js
+               (ex.: Formspree). Anti-spam: campo-armadilha (honeypot) + tempo mínimo de preenchimento.
+               Os botões com data-enquiry (preços, cards) e o endereço ?enquiry=... já escolhem o assunto -->
+          <form id="enquiryForm" class="relative rounded-2xl border border-white/10 bg-panel/90 p-6 sm:p-8" novalidate>
+            <h3 class="font-display text-2xl font-bold tracking-tight">Send an enquiry</h3>
+            <p class="mt-1 text-sm text-bone/65">I'll get back to you within 24 hours.</p>
+            <div class="mt-6 grid gap-4 sm:grid-cols-2">
+              <label class="block"><span class="mb-1.5 block font-mono text-[10px] uppercase tracking-widest text-bone/65">First name *</span><input name="first" required autocomplete="given-name" class="field" placeholder="First name"></label>
+              <label class="block"><span class="mb-1.5 block font-mono text-[10px] uppercase tracking-widest text-bone/65">Last name</span><input name="last" autocomplete="family-name" class="field" placeholder="Last name"></label>
+              <label class="block"><span class="mb-1.5 block font-mono text-[10px] uppercase tracking-widest text-bone/65">Email *</span><input name="email" required type="email" autocomplete="email" class="field" placeholder="you@example.com"></label>
+              <label class="block"><span class="mb-1.5 block font-mono text-[10px] uppercase tracking-widest text-bone/65">Phone / WhatsApp</span><input name="phone" type="tel" autocomplete="tel" class="field" placeholder="+44 7…"></label>
+              <label class="block sm:col-span-2"><span class="mb-1.5 block font-mono text-[10px] uppercase tracking-widest text-bone/65">What are you enquiring about? *</span>
+                <select name="enquiry" required class="field">
+                  <option value="">Select…</option>
+                  <option value="taster">Book a £20 Taster Lesson (20 mins)</option>
+                  <option value="block">10-Lesson Block Booking</option>
+                  <option value="single">Single Guitar Lesson (In-Person or Online)</option>
+                  <option value="live">Musical Theatre / Function Band / Dep Enquiry</option>
+                  <option value="studio">Studio Session / Collaboration / Other</option>
+                </select>
+              </label>
+              <label class="block sm:col-span-2"><span class="mb-1.5 block font-mono text-[10px] uppercase tracking-widest text-bone/65">Message *</span><textarea name="message" required rows="4" class="field resize-none" placeholder="Student's age and level, in-person or online, preferred days… — or production, date, venue and repertoire."></textarea></label>
+              <label class="hp" aria-hidden="true">Website <input name="website" tabindex="-1" autocomplete="off"></label>
+            </div>
+            <label class="mt-5 flex items-start gap-3 text-xs leading-relaxed text-bone/65">
+              <input type="checkbox" name="consent" required class="mt-0.5 h-4 w-4 shrink-0 accent-[#E5A93C]">
+              <span>I have read the <a href="{{root}}privacy/" target="_blank" class="text-amber underline">Privacy Policy</a> and agree that my details are used only to reply to this enquiry. If the student is under 18, I am their parent or guardian. *</span>
+            </label>
+            <p id="formMsg" class="mt-4 hidden text-sm text-amber" role="alert"></p>
+            <div class="mt-6 grid gap-3 sm:grid-cols-2">
+              <button type="submit" data-via="email" class="flex items-center justify-center gap-2 rounded-full bg-amber px-6 py-3.5 text-sm font-bold uppercase tracking-[.12em] text-ink shadow-[0_10px_30px_-10px_rgba(229,169,60,.8)] transition hover:bg-white"><svg class="h-4 w-4"><use href="#h-envelope"/></svg> Send Message</button>
+              <button type="submit" data-via="whatsapp" class="flex items-center justify-center gap-2 rounded-full border border-white/15 px-6 py-3.5 text-sm font-bold uppercase tracking-[.12em] transition hover:border-[#25D366] hover:text-[#25D366]"><svg class="h-4 w-4"><use href="#b-whatsapp"/></svg> Send via WhatsApp</button>
+            </div>
+          </form>

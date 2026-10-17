@@ -1,0 +1,223 @@
+@import "./fonts.css";
+@import "./aos.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ==========================================================
+   Emiliano Bonanomi (EmisFearGuitar) — estilos complementares ao Tailwind
+   (mesma base do site de AFTERAll)
+   ========================================================== */
+
+:root {
+  --ink: #0F1115;
+  --panel: #1C2026;
+  --paper: #F8F9FA;
+  --bone: #ECEDEF;
+  --amber: #E5A93C;     /* acabamento dourado das guitarras / luz de palco */
+  --amber-rgb: 229, 169, 60;
+  --crimson: #C81E3A;   /* teatro musical (detalhes) */
+}
+
+html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+/* Itens de grid/flex podem encolher: nenhum conteúdo longo empurra a coluna para fora da tela */
+.grid > * { min-width: 0; }
+body { background: var(--ink); color: var(--bone); -webkit-font-smoothing: antialiased; }
+::selection { background: var(--amber); color: var(--ink); }
+:focus-visible { outline: 2px solid var(--amber); outline-offset: 3px; }
+h1, h2, h3 { text-wrap: balance; }
+
+/* Seções claras (aulas, preços, FAQ): leitura confortável para pais e alunos */
+.light { background: var(--paper); color: #111318; }
+.light ::selection { background: var(--ink); color: var(--paper); }
+.light :focus-visible { outline-color: var(--amber-deep, #B07816); }
+
+/* Grão de filme: textura estática no fundo das seções escuras */
+.grain { background-image: url("../img/grain.webp"); background-size: 96px; }
+
+/* Fotos que ganham cor e zoom no hover */
+.duo { filter: grayscale(.85) contrast(1.08) brightness(.9); transition: filter .7s ease, transform .9s cubic-bezier(.2,.7,.2,1); }
+.group:hover .duo, .group:focus-visible .duo { filter: none; transform: scale(1.04); }
+
+/* Título fantasma vazado atrás dos títulos de seção */
+.ghost {
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(236, 237, 239, .08);
+  line-height: .8;
+  letter-spacing: -.02em;
+  user-select: none;
+}
+.light .ghost { -webkit-text-stroke-color: rgba(15, 17, 21, .07); }
+
+/* Seis cordas: assinatura visual (divisores e fundo do hero). Vibram no hover do bloco */
+.strings {
+  background-image: repeating-linear-gradient(180deg, transparent 0 13px, rgba(var(--amber-rgb), .28) 13px 14px);
+  background-size: 100% 84px; background-repeat: no-repeat; height: 84px;
+}
+.strings-v { /* versão vertical (fundo do hero) */
+  background-image: repeating-linear-gradient(90deg, transparent 0 22px, rgba(236,237,239,.05) 22px 23px);
+}
+.string-line { height: 1px; background: linear-gradient(90deg, transparent, rgba(var(--amber-rgb), .55), transparent); transform-origin: center; }
+.group:hover .string-line { animation: pluck .5s ease-out; }
+.group:hover .string-line:nth-child(2) { animation-delay: .05s; }
+.group:hover .string-line:nth-child(3) { animation-delay: .1s; }
+@keyframes pluck { 0% { transform: scaleY(1); } 20% { transform: translateY(-2px) scaleY(2); } 45% { transform: translateY(1.5px); } 70% { transform: translateY(-.6px); } 100% { transform: none; } }
+
+/* Hero: brilho âmbar atrás da foto */
+.hero-glow { background: radial-gradient(closest-side, rgba(var(--amber-rgb), .22), transparent); animation: breathe 5s ease-in-out infinite; }
+@keyframes breathe { 0%, 100% { opacity: .55; transform: scale(1); } 50% { opacity: 1; transform: scale(1.06); } }
+
+/* Navegação */
+.nav-link { position: relative; }
+.nav-link::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: -8px; height: 2px;
+  background: var(--amber); transform: scaleX(0); transform-origin: left; transition: transform .35s ease;
+}
+.nav-link:hover::after, .nav-link[aria-current="page"]::after { transform: scaleX(1); }
+.nav-link[aria-current="page"] { color: #fff; }
+
+/* Ponto "ao vivo" pulsando */
+.pulse-dot { position: relative; }
+.pulse-dot::after { content: ""; position: absolute; inset: 0; border-radius: 9999px; background: currentColor; animation: pulse 1.8s ease-out infinite; }
+@keyframes pulse { 0% { transform: scale(1); opacity: .7; } 70%, 100% { transform: scale(3); opacity: 0; } }
+
+/* Equalizador decorativo */
+.eq span { display: inline-block; width: 3px; height: 14px; background: var(--amber); margin-right: 2px; transform-origin: bottom; animation: eq 1s ease-in-out infinite; }
+.eq span:nth-child(2) { animation-delay: .2s; }
+.eq span:nth-child(3) { animation-delay: .4s; }
+.eq span:nth-child(4) { animation-delay: .1s; }
+@keyframes eq { 0%, 100% { transform: scaleY(.3); } 50% { transform: scaleY(1); } }
+
+/* Filtros de vídeos */
+.chip[aria-pressed="true"] { background: var(--amber); border-color: var(--amber); color: var(--ink); }
+
+/* Campos de formulário (seções escuras) */
+.field {
+  width: 100%; background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.12);
+  border-radius: .6rem; padding: .8rem 1rem; color: var(--bone); font-size: .95rem; outline: none;
+  transition: border-color .2s, background .2s;
+}
+.field::placeholder { color: rgba(236,237,239,.5); }
+.field:focus { border-color: var(--amber); background: rgba(var(--amber-rgb), .06); }
+.field option { background: var(--panel); color: var(--bone); }
+
+/* FAQ (details/summary nativo: funciona sem JS) */
+.faq summary { list-style: none; cursor: pointer; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq .faq-icon { transition: transform .3s ease; }
+.faq[open] .faq-icon { transform: rotate(45deg); }
+
+/* Card de preço em destaque */
+.price-hot { box-shadow: 0 30px 60px -25px rgba(var(--amber-rgb), .55); }
+
+/* Modais (vídeo, galeria e menu) */
+.modal { opacity: 0; visibility: hidden; pointer-events: none; transition: opacity .3s ease, visibility 0s linear .3s; }
+.modal.is-open { opacity: 1; visibility: visible; pointer-events: auto; transition: opacity .3s ease; }
+.modal:not(.is-open) { content-visibility: hidden; }
+
+/* Logos de parceiros: mesma altura, realce no hover */
+.logo-tile img { opacity: .82; transition: opacity .4s, transform .4s; }
+.logo-tile:hover img { opacity: 1; transform: translateY(-2px); }
+
+/* ==========================================================
+   Animações (todas desligadas com "reduzir movimento" — ver o fim do arquivo)
+   ========================================================== */
+
+/* Barra de progresso de leitura no topo (largura via --p no main.js) */
+#progress { transform-origin: left; transform: scaleX(var(--p, 0)); }
+
+/* Entrada do hero: os filhos de .rise-group sobem em sequência ao abrir a página */
+@keyframes rise { from { opacity: 0; transform: translateY(28px); filter: blur(6px); } to { opacity: 1; transform: none; filter: none; } }
+.rise-group > * { animation: rise .9s cubic-bezier(.2,.7,.2,1) both; }
+.rise-group > :nth-child(2) { animation-delay: .1s; }
+.rise-group > :nth-child(3) { animation-delay: .2s; }
+.rise-group > :nth-child(4) { animation-delay: .3s; }
+.rise-group > :nth-child(5) { animation-delay: .4s; }
+.rise-group > :nth-child(6) { animation-delay: .5s; }
+.rise-group > :nth-child(n+7) { animation-delay: .6s; }
+/* Título do hero palavra por palavra (o main.js envolve cada palavra em .w). Fica oculto só enquanto o JS não separou
+   as palavras (classe .js no <html>, posta no <head>); sem JS o título aparece normalmente */
+.rise-group > .hero-h1 { animation: none; }
+.js .hero-h1:not(.split) { opacity: 0; }
+.hero-h1 .w { display: inline-block; animation: rise .8s cubic-bezier(.2,.7,.2,1) both; animation-delay: calc(.15s + var(--i) * .045s); }
+/* Foto do hero: revelada de baixo para cima como uma cortina de palco */
+@keyframes curtain { from { clip-path: inset(100% 0 0 0 round 2rem); transform: scale(1.08); } to { clip-path: inset(0 0 0 0 round 2rem); transform: none; } }
+.hero-photo { animation: curtain 1.2s cubic-bezier(.7,0,.2,1) .25s both; }
+
+/* Selos flutuando de leve */
+@keyframes bob { 0%, 100% { transform: translateY(0) rotate(var(--r, -3deg)); } 50% { transform: translateY(-8px) rotate(var(--r, -3deg)); } }
+.float { animation: bob 5s ease-in-out infinite; }
+
+/* Seis cordas no rodapé do hero: vibram quando o cursor passa (ou em sequência ao abrir a página) */
+.hero-strings { position: absolute; inset-inline: 0; bottom: .9rem; height: 50px; display: flex; flex-direction: column; justify-content: space-between; pointer-events: none; z-index: 1; }
+.hstring { height: 1px; background: linear-gradient(90deg, transparent, rgba(236,237,239,.16) 12%, rgba(236,237,239,.16) 88%, transparent); transform-origin: center; }
+.hstring:nth-child(-n+3) { height: 1.5px; background: linear-gradient(90deg, transparent, rgba(var(--amber-rgb),.35) 12%, rgba(var(--amber-rgb),.35) 88%, transparent); }
+@keyframes vibrate {
+  0% { transform: scaleY(1); } 8% { transform: translateY(-3px) scaleY(2.5); } 16% { transform: translateY(2.6px) scaleY(2.2); }
+  26% { transform: translateY(-2px) scaleY(1.8); } 38% { transform: translateY(1.4px) scaleY(1.5); } 52% { transform: translateY(-.8px); }
+  68% { transform: translateY(.4px); } 100% { transform: none; }
+}
+.hstring.pluck { animation: vibrate .9s ease-out; background-color: rgba(var(--amber-rgb), .25); }
+
+/* Cards com holofote: um brilho âmbar segue o cursor (--mx/--my no main.js) */
+.spot { position: relative; isolation: isolate; }
+.spot::before {
+  content: ""; position: absolute; inset: 0; border-radius: inherit; pointer-events: none; z-index: -1; opacity: 0; transition: opacity .4s;
+  background: radial-gradient(420px circle at var(--mx, 50%) var(--my, 50%), rgba(var(--amber-rgb), .13), transparent 45%);
+}
+.spot:hover::before { opacity: 1; }
+.light .spot::before { background: radial-gradient(420px circle at var(--mx, 50%) var(--my, 50%), rgba(var(--amber-rgb), .16), transparent 45%); }
+
+/* Brilho que atravessa os botões âmbar no hover */
+.shine { position: relative; overflow: hidden; }
+.shine::after {
+  content: ""; position: absolute; inset: -2px; pointer-events: none;
+  background: linear-gradient(105deg, transparent 35%, rgba(255,255,255,.55) 50%, transparent 65%);
+  transform: translateX(-120%); transition: transform .8s cubic-bezier(.2,.7,.2,1);
+}
+.shine:hover::after { transform: translateX(120%); }
+
+/* Botões magnéticos e fotos com inclinação 3D (valores via main.js) */
+.magnetic { transition: transform .35s cubic-bezier(.2,.7,.2,1), background-color .2s, color .2s, border-color .2s; transform: translate(var(--tx, 0), var(--ty, 0)); }
+.tilt { transition: transform .5s cubic-bezier(.2,.7,.2,1); transform: perspective(900px) rotateX(var(--rx, 0)) rotateY(var(--ry, 0)); transform-style: preserve-3d; }
+
+/* Botão de play: anel pulsando nos cards de vídeo */
+.play-ring { position: relative; }
+.play-ring::before { content: ""; position: absolute; inset: 0; border-radius: 9999px; border: 2px solid var(--amber); animation: ring 2.2s ease-out infinite; }
+@keyframes ring { 0% { transform: scale(1); opacity: .8; } 80%, 100% { transform: scale(1.7); opacity: 0; } }
+
+/* Card "Most popular": borda âmbar girando */
+@property --angle { syntax: '<angle>'; initial-value: 0deg; inherits: false; }
+.border-spin { position: relative; }
+.border-spin::after {
+  content: ""; position: absolute; inset: -2px; border-radius: inherit; padding: 2px; pointer-events: none;
+  background: conic-gradient(from var(--angle), transparent 0 60%, var(--amber) 75%, #fff3 82%, transparent 90%);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask-composite: exclude;
+  animation: spin-angle 4s linear infinite;
+}
+@keyframes spin-angle { to { --angle: 360deg; } }
+
+/* Títulos fantasma deslizam na horizontal com o scroll (--gx no main.js) */
+.ghost { transform: translateX(var(--gx, 0)); will-change: transform; }
+
+/* Linha do tempo (About): a linha âmbar se desenha conforme o scroll (--p no main.js) */
+.tl-fill { position: absolute; left: -2px; top: 0; width: 2px; height: 100%; background: linear-gradient(var(--amber), var(--amber-deep, #8F5E0E)); transform-origin: top; transform: scaleY(var(--p, 0)); }
+
+/* Sublinhado âmbar que se desenha nos destaques de título */
+.draw-line { background: linear-gradient(var(--amber), var(--amber)) no-repeat 0 92% / 0 .09em; transition: background-size 1.1s cubic-bezier(.7,0,.2,1) .7s; }
+.is-drawn .draw-line, .draw-line.is-drawn { background-size: 100% .09em; }
+
+@media (prefers-reduced-motion: reduce) {
+  .pulse-dot::after, .eq span, .hero-glow, .group:hover .string-line, .rise-group > *, .hero-h1 .w, .hero-photo,
+  .float, .hstring.pluck, .play-ring::before, .border-spin::after { animation: none !important; }
+  .ghost, .magnetic, .tilt { transform: none !important; }
+  .js .hero-h1:not(.split) { opacity: 1; }
+  .shine::after { display: none; }
+  .draw-line { transition: none; background-size: 100% .09em; }
+  #progress { display: none; }
+  html { scroll-behavior: auto; }
+}
+
+/* Formulários: campo-armadilha anti-spam (honeypot) — fora da tela para pessoas, visível para robôs */
+.hp { position: absolute !important; left: -9999px !important; width: 1px; height: 1px; overflow: hidden; }
