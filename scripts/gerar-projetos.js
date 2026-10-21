@@ -143,7 +143,7 @@ const page = (p, i) => {
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500&family=Manrope:wght@400;500;600;700&family=${p.fonte.google}&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/style.css?v=6">
   <script>(function(r){r.classList.add('js');try{if(sessionStorage.getItem('ws-curtain'))r.classList.add('from-nav')}catch(e){}})(document.documentElement)</script>
 
   <script type="application/ld+json">
@@ -204,7 +204,7 @@ ${ICONES}
       <header class="cs-hero" data-tone="light">
         <div class="wrap">
           <a class="cs-back" href="../index.html#projetos"><svg class="ico" aria-hidden="true"><use href="#i-right"/></svg>Todos os projetos</a>
-          <h1 class="cs-title">${p.nome.map((l) => `<span class="ln">${esc(l)}</span>`).join('')}</h1>
+          <h1 class="cs-title">${p.nome.map((l) => `<span class="ln"><span class="ln__in">${esc(l)}</span></span>`).join('')}</h1>
           <p class="cs-lead">${esc(p.lead)}</p>
           <dl class="cs-meta">
             <div><dt>Segmento</dt><dd>${esc(p.segmento)}</dd></div>
@@ -260,24 +260,32 @@ ${ICONES}
           </section>
 
           <section class="cs-scroll" aria-labelledby="pagina-${p.slug}">
-            <div class="cs-scroll__head">
-              <h2 id="pagina-${p.slug}">A página inteira</h2>
-              <p>Role a página: a tela acompanha o seu movimento, do topo ao rodapé, no computador e no celular.</p>
-            </div>
-            <div class="cs-scroll__stage">
-              <div class="browser">
-                <div class="browser__bar" aria-hidden="true"><i></i><i></i><i></i><span>${esc(p.slug)}</span></div>
-                <div class="browser__view" data-autoscroll><img src="../assets/img/projetos/${p.img}-pagina.webp" alt="Página completa do site ${esc(nomeTexto(p))} no computador" width="1200" loading="lazy"></div>
+            <div class="cs-scroll__pin">
+              <div class="cs-scroll__head">
+                <h2 id="pagina-${p.slug}">A página inteira</h2>
+                <p>Continue rolando: a tela fica parada e o site passa por dentro dela, do topo ao rodapé.</p>
+                <div class="cs-switch" role="group" aria-label="Ver o site no">
+                  <button type="button" data-device="desktop" aria-pressed="false"><svg class="ico" aria-hidden="true"><use href="#i-desktop"/></svg>Computador</button>
+                  <button type="button" data-device="phone" aria-pressed="true"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg>Celular</button>
+                </div>
               </div>
-              <div class="cs-scroll__phone">
-                <div class="phone" data-autoscroll><img src="../assets/img/projetos/${p.img}-celular.webp" alt="Site ${esc(nomeTexto(p))} no celular" width="780" loading="lazy"></div>
+              <div class="cs-scroll__stage" data-view="phone">
+                <div class="browser cs-scroll__desktop">
+                  <div class="browser__bar" aria-hidden="true"><i></i><i></i><i></i><span>${esc(p.slug)}</span><b class="cs-scroll__pct">0%</b></div>
+                  <div class="browser__view" data-autoscroll tabindex="0" aria-label="Página completa no computador"><img src="../assets/img/projetos/${p.img}-pagina.webp" alt="Página completa do site ${esc(nomeTexto(p))} no computador" width="1200"></div>
+                </div>
+                <div class="cs-scroll__phone">
+                  <div class="phone" data-autoscroll tabindex="0" aria-label="Página completa no celular"><img src="../assets/img/projetos/${p.img}-celular.webp" alt="Site ${esc(nomeTexto(p))} no celular" width="780"></div>
+                </div>
               </div>
+              <div class="cs-scroll__progress" aria-hidden="true"><span></span></div>
             </div>
           </section>
 
           <a class="cs-next" href="${next.slug}.html">
             <span class="cs-next__label">Próximo projeto</span>
             <span class="cs-next__row"><span class="cs-next__title">${esc(nomeTexto(next))}</span><span class="cs-next__arrow" aria-hidden="true"><svg class="ico"><use href="#i-arrow"/></svg></span></span>
+            <span class="cs-next__peek" aria-hidden="true"><img src="../assets/img/projetos/${next.img}-capa.webp" alt="" width="1440" height="900" loading="lazy"></span>
           </a>
         </div>
       </div>
@@ -328,7 +336,7 @@ ${ICONES}
   <script src="../assets/vendor/gsap.min.js" defer></script>
   <script src="../assets/vendor/ScrollTrigger.min.js" defer></script>
   <script src="../assets/vendor/lenis.min.js" defer></script>
-  <script src="../assets/js/main.js" defer></script>
+  <script src="../assets/js/main.js?v=6" defer></script>
 </body>
 </html>
 `;

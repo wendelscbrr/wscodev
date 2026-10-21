@@ -296,8 +296,14 @@ Lista de nomes à esquerda (marcador de filete que cresce de 8px para 12px no se
 ### Retrato recortado (assinatura)
 Foto sem fundo, nas cores originais, apoiada na base do topo claro e centrada na coluna direita (90% da altura do topo; 74% entre 961px e 1180px). A linha cinza em degrau passa por trás. Ao lado, um número solto em Urbanist ("100%") com legenda curta em cinza e um filete fino, como o "47.2% Reality" da referência. Ao rolar, o retrato se aproxima levemente a partir da base. No cartão de chamada, a mesma foto se apoia na base à direita sobre uma luz radial suave.
 
+### Sites em cascata (seção "Sobre")
+Três capturas reais em cascata, como uma pilha descendo: META Modular em cima à esquerda, Dra. Amanda Carvalho no meio deslocada para a direita e Voltz embaixo à esquerda, cada uma por cima da anterior. Ao entrar na tela, elas chegam uma depois da outra, pela esquerda, pela direita e pela esquerda de novo. Depois balançam devagar e, ao rolar, a de baixo sobe mais rápido. Sob o mouse, o site vem para a frente com uma etiqueta-pílula com o nome e os outros escurecem; cada um é link para o estudo de caso.
+
+### Página inteira (estudos de caso)
+O palco com o navegador e o celular fica fixo na tela enquanto o leitor rola, e o site passa por dentro das molduras do topo ao rodapé, com porcentagem na barra do navegador e uma linha de progresso azul. No celular e tablet, um seletor em pílula alterna entre Computador e Celular (Celular primeiro). Com movimento reduzido, as molduras viram áreas roláveis.
+
 ### Motion
-Uma só curva para tudo: `cubic-bezier(.16, 1, .3, 1)`. Entradas sobem 20px e aparecem em 0,8s; hovers entre 0,25s e 0,4s; rolagem suave com Lenis; a órbita se desenha em 1,6s ao carregar. Cortina preta entre páginas. Com movimento reduzido, tudo aparece sem animação.
+Uma só curva para tudo: `cubic-bezier(.16, 1, .3, 1)` (expo.out no GSAP). Momento de abertura: as linhas do título sobem por trás de uma máscara, a linha em degrau e a órbita se desenham, o retrato sobe e o "100%" conta a partir de zero. Títulos de seção repetem a máscara linha a linha; textos de apoio sobem 20px em 0,8s; listas de cartões entram em cascata (0,08s). Etapas entram alternando os lados sobre a onda, que se desenha com a rolagem; o cartão de chamada se abre ao entrar; as letras do "WSCODEV" do rodapé sobem uma a uma. Troca de projeto: a imagem abre como cortina da direita e o texto sobe em sequência. Cartões ganham uma luz suave que segue o cursor (só tom); a imagem do projeto mostra uma bolha azul "Ver estudo de caso" que acompanha o mouse; botões principais têm leve atração magnética. Hovers entre 0,25s e 0,4s; rolagem suave com Lenis; cortina preta entre páginas. Com movimento reduzido, tudo aparece sem animação.
 
 ## Do's and Don'ts
 

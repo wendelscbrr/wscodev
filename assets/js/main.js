@@ -180,23 +180,33 @@
   filters.forEach((f) => f.addEventListener('click', () => {
     const cat = f.dataset.filter;
     filters.forEach((x) => { const on = x === f; x.classList.toggle('is-on', on); x.setAttribute('aria-pressed', on); });
+    let n = 0;
     $$('.service').forEach((s) => {
       const show = cat === 'todos' || s.dataset.cat === cat;
       s.hidden = !show;
+      s.style.opacity = '';
       s.classList.remove('is-shown');
-      if (show) { void s.offsetWidth; s.classList.add('is-shown'); }
+      if (show) { s.style.setProperty('--sd', `${n++ * 0.05}s`); void s.offsetWidth; s.classList.add('is-shown'); }
     });
   }));
 
   /* ---------- projetos: abas ---------- */
   const tabs = $$('.works__tab');
+  // troca de projeto: a imagem abre como uma cortina e o texto sobe em sequência
+  const playPanel = (panel) => {
+    if (!hasGsap || reduced) return;
+    gsap.fromTo($('.work__media', panel), { clipPath: 'inset(0 0 0 100%)' }, { clipPath: 'inset(0 0 0 0%)', duration: 0.9, ease: 'expo.out', clearProps: 'clipPath' });
+    gsap.fromTo($('.work__media img', panel), { scale: 1.12 }, { scale: 1.02, duration: 1.2, ease: 'expo.out', clearProps: 'scale,transform' });
+    gsap.fromTo($$('.work__text > *', panel), { opacity: 0, y: 18 }, { opacity: 1, y: 0, duration: 0.7, ease: 'expo.out', stagger: 0.06, delay: 0.1, clearProps: 'opacity,transform' });
+  };
   const selectTab = (tab, focus) => {
     tabs.forEach((t) => {
       const on = t === tab;
+      const was = t.getAttribute('aria-selected') === 'true';
       t.setAttribute('aria-selected', on);
       t.tabIndex = on ? 0 : -1;
       const panel = document.getElementById(t.getAttribute('aria-controls'));
-      if (panel) { panel.hidden = !on; panel.classList.toggle('is-on', on); }
+      if (panel) { panel.hidden = !on; panel.classList.toggle('is-on', on); if (on && !was) playPanel(panel); }
     });
     if (focus) tab.focus();
     if (matchMedia('(max-width: 960px)').matches) {
@@ -215,47 +225,199 @@
   });
 
   /* ---------- entradas ao rolar ---------- */
+  const motion = hasGsap && !reduced;
+  // títulos de seção: cada linha sobe por trás de uma máscara
+  const splitLines = (el) => {
+    el.innerHTML = el.innerHTML.split(/<br\s*\/?>/i).map((h, i) => `<span class="tl" style="--i:${i}"><span class="tl__in">${h.trim()}</span></span>`).join('');
+    el.classList.add('split');
+  };
   if (!reduced && 'IntersectionObserver' in window) {
-    // um momento só: títulos de seção e as etapas do processo
-    const targets = $$('.section-head, .about__text .title, .process__intro, .step, .contact__intro .title, .cta__body .title, .cs-block h2, .cs-scroll__head');
+    const titles = $$('main .section .title, .cs-block h2, .cs-scroll__head h2');
+    titles.forEach(splitLines);
+    const fades = $$('.section-head__text, .about__text > :not(.title), .process__intro > :not(.title), .contact__intro > p, .cta__side > p, .filters, .cs-text > p, .cs-scroll__head p, .cs-switch, .type-specimen');
     const groups = new Map();
-    targets.forEach((el) => {
+    fades.forEach((el) => {
       el.classList.add('reveal');
       const i = groups.get(el.parentElement) || 0;
       groups.set(el.parentElement, i + 1);
-      el.style.setProperty('--d', `${Math.min(i, 5) * 0.07}s`);
+      el.style.setProperty('--d', `${0.15 + Math.min(i, 5) * 0.07}s`);
     });
     const io = new IntersectionObserver((entries) => entries.forEach((e) => {
       if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); }
     }), { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
-    targets.forEach((el) => io.observe(el));
+    [...titles, ...fades].forEach((el) => io.observe(el));
+
+    // serviços: a primeira aparição da grade entra em cascata
+    const grid = $('.service-grid');
+    if (grid) {
+      const first = $$('.service:not([hidden])', grid);
+      first.forEach((s) => { s.style.opacity = '0'; });
+      const gio = new IntersectionObserver(([e]) => {
+        if (!e.isIntersecting) return;
+        first.forEach((s, i) => { s.style.opacity = ''; s.style.setProperty('--sd', `${i * 0.07}s`); s.classList.add('is-shown'); });
+        gio.disconnect();
+      }, { threshold: 0.12 });
+      gio.observe(grid);
+    }
   }
 
-  /* ---------- topo: título e órbita ---------- */
-  if ($('.hero') && hasGsap && !reduced) {
-    gsap.timeline({ delay: cameFromNav ? 0.5 : 0.1 })
-      .from('.hero__index, .hero__title .line, .hero__lead, .hero__actions, .hero__proof', { opacity: 0, y: 24, duration: 1, ease: 'expo.out', stagger: 0.08 })
-      .from('.hero__media', { opacity: 0, scale: 0.97, duration: 1.2, ease: 'expo.out' }, 0.1)
-      .fromTo('.orbit ellipse', { strokeDashoffset: 1400 }, { strokeDashoffset: 0, duration: 1.6, ease: 'power2.inOut' }, 0.5);
+  // listas que aparecem como listas: cartões em cascata
+  if (motion) {
+    ['.help__track > li', '.contact-rows > li', '.cta__chips > li', '.cs-list > li', '.swatches > li', '.footer__top > *'].forEach((sel) => {
+      const items = $$(sel);
+      if (!items.length) return;
+      gsap.set(items, { opacity: 0, y: 34 });
+      ScrollTrigger.batch(items, {
+        start: 'top 92%', once: true,
+        onEnter: (batch) => gsap.to(batch, { opacity: 1, y: 0, duration: 1, ease: 'expo.out', stagger: 0.08, overwrite: true, clearProps: 'transform' }),
+      });
+    });
+  }
+
+  /* ---------- topo: o momento de abertura ---------- */
+  if ($('.hero') && motion) {
+    const lines = $$('.hero__title .line');
+    lines.forEach((l) => { l.innerHTML = `<span class="tl__in">${l.innerHTML}</span>`; });
+    gsap.set(lines, { clipPath: 'inset(0 -50% 0 -50%)' });
+    const count = $('[data-count]');
+    const counter = { v: 0 };
+    if (count) count.textContent = '0';
+    gsap.timeline({ delay: cameFromNav ? 0.5 : 0.15 })
+      .from('.hero__title .tl__in', { yPercent: 112, duration: 1.3, ease: 'expo.out', stagger: 0.12, onComplete: () => gsap.set(lines, { clearProps: 'clipPath' }) }, 0)
+      .from('.hero__index', { opacity: 0, y: 12, duration: 0.8, ease: 'expo.out' }, 0.25)
+      .from('.hero__lead, .hero__actions, .hero__proof', { opacity: 0, y: 24, duration: 1, ease: 'expo.out', stagger: 0.09 }, 0.4)
+      .fromTo('.faces span', { opacity: 0, x: -14 }, { opacity: 1, x: 0, duration: 0.7, ease: 'expo.out', stagger: 0.06, clearProps: 'opacity,transform' }, 0.75)
+      .from('.hero__media picture', { yPercent: 10, opacity: 0, duration: 1.5, ease: 'expo.out' }, 0.1)
+      .fromTo('.hero__track path', { strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: 1.8, ease: 'power3.inOut' }, 0.15)
+      .fromTo('.orbit ellipse', { strokeDashoffset: 1400 }, { strokeDashoffset: 0, duration: 1.6, ease: 'power2.inOut' }, 0.6)
+      .from('.hero__chip', { opacity: 0, x: -18, duration: 1, ease: 'expo.out' }, 0.8)
+      .to(counter, { v: Number(count?.dataset.count || 100), duration: 1.6, ease: 'power3.out', onUpdate: () => { if (count) count.textContent = Math.round(counter.v); } }, 0.8);
+    // ao rolar: o texto sobe um pouco mais rápido que o retrato
+    gsap.to('.hero__copy', { y: -60, ease: 'none', scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true } });
   }
   // retrato do topo: leve aproximação ao rolar
-  if ($('.hero__photo') && hasGsap && !reduced) {
+  if ($('.hero__photo') && motion) {
     gsap.fromTo('.hero__photo', { scale: 1 }, { scale: 1.08, ease: 'none', scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true } });
   }
 
-  /* ---------- estudos de caso: página inteira rolando dentro da moldura ---------- */
-  if (hasGsap && !reduced) {
-    $$('[data-autoscroll]').forEach((view) => {
-      const img = $('img', view);
-      const run = () => {
-        gsap.to(img, {
-          y: () => -Math.max(0, img.offsetHeight - view.clientHeight), ease: 'none',
-          scrollTrigger: { trigger: view.closest('section'), start: 'top 70%', end: 'bottom 60%', scrub: 1, invalidateOnRefresh: true },
-        });
-        ScrollTrigger.refresh();
-      };
-      img.complete ? run() : img.addEventListener('load', run, { once: true });
+  /* ---------- sobre: três sites em cascata, entrando um depois do outro ---------- */
+  const stack = $('.stack');
+  if (stack && motion) {
+    const items = $$('.stack__item', stack);
+    // cada site entra pelo lado em que fica na cascata: esquerda, direita, esquerda
+    gsap.set(items, { opacity: 0, x: (i) => (i % 2 ? 90 : -90), rotate: (i) => (i % 2 ? 3 : -3) });
+    const sio = new IntersectionObserver(([e]) => {
+      if (!e.isIntersecting) return;
+      gsap.to(items, { opacity: 1, x: 0, rotate: 0, duration: 1.4, ease: 'expo.out', stagger: 0.28 });
+      sio.disconnect();
+    }, { threshold: 0.2 });
+    sio.observe(stack);
+    // ao rolar, o de baixo sobe mais rápido e a cascata se abre e fecha
+    items.forEach((it, i) => {
+      gsap.fromTo(it, { y: 30 + i * 30 }, { y: -(30 + i * 30), ease: 'none', scrollTrigger: { trigger: stack, start: 'top bottom', end: 'bottom top', scrub: true } });
     });
+  }
+
+  /* ---------- luz que segue o cursor nos cartões ---------- */
+  if (matchMedia('(hover: hover)').matches) {
+    $$('.need, .service, .step, .contact-row').forEach((el) => el.classList.add('spot'));
+    document.addEventListener('pointermove', (e) => {
+      const el = e.target.closest?.('.spot');
+      if (!el) return;
+      const r = el.getBoundingClientRect();
+      el.style.setProperty('--mx', `${e.clientX - r.left}px`);
+      el.style.setProperty('--my', `${e.clientY - r.top}px`);
+    }, { passive: true });
+
+    // projetos: bolha "Ver estudo de caso" que acompanha o cursor
+    $$('.work__media').forEach((m) => {
+      m.insertAdjacentHTML('beforeend', '<span class="work__cursor" aria-hidden="true">Ver estudo de caso</span>');
+      const bub = $('.work__cursor', m);
+      let tx = 0, ty = 0, cx = 0, cy = 0, raf = 0;
+      const loop = () => {
+        cx += (tx - cx) * 0.18; cy += (ty - cy) * 0.18;
+        bub.style.setProperty('--cx', `${cx}px`); bub.style.setProperty('--cy', `${cy}px`);
+        raf = Math.abs(tx - cx) + Math.abs(ty - cy) > 0.3 ? requestAnimationFrame(loop) : 0;
+      };
+      const at = (e) => { const r = m.getBoundingClientRect(); tx = e.clientX - r.left; ty = e.clientY - r.top; };
+      m.addEventListener('pointerenter', (e) => { at(e); cx = tx; cy = ty; loop(); });
+      m.addEventListener('pointermove', (e) => { at(e); if (!raf) raf = requestAnimationFrame(loop); });
+    });
+
+    // botões principais com leve atração magnética
+    if (motion) {
+      $$('.hero__actions .btn, .cta__side .btn, .process__intro .btn, .cs-next__arrow').forEach((b) => {
+        const xTo = gsap.quickTo(b, 'x', { duration: 0.6, ease: 'expo.out' });
+        const yTo = gsap.quickTo(b, 'y', { duration: 0.6, ease: 'expo.out' });
+        b.addEventListener('pointermove', (e) => {
+          const r = b.getBoundingClientRect();
+          xTo((e.clientX - r.left - r.width / 2) * 0.22); yTo((e.clientY - r.top - r.height / 2) * 0.32);
+        });
+        b.addEventListener('pointerleave', () => { xTo(0); yTo(0); });
+      });
+    }
+  }
+
+  /* ---------- como funciona: a onda se desenha e as etapas entram dos lados ---------- */
+  if ($('.process') && motion) {
+    gsap.fromTo('.process__wave path', { strokeDashoffset: 1 }, { strokeDashoffset: 0, ease: 'none', scrollTrigger: { trigger: '.process', start: 'top 75%', end: 'bottom 70%', scrub: 1 } });
+    $$('.step').forEach((s, i) => {
+      gsap.timeline({ scrollTrigger: { trigger: s, start: 'top 90%', once: true } })
+        .from(s, { opacity: 0, x: i % 2 ? 60 : -60, duration: 1.1, ease: 'expo.out', clearProps: 'transform' })
+        .from($('.step__num', s), { scale: 0.4, rotate: -90, opacity: 0, duration: 0.9, ease: 'expo.out' }, 0.15);
+    });
+  }
+
+  /* ---------- chamada: o cartão se abre e o retrato sobe ---------- */
+  if ($('.cta__card') && motion) {
+    gsap.fromTo('.cta__card', { clipPath: 'inset(8% 6% 8% 6% round 16px)' }, { clipPath: 'inset(0% 0% 0% 0% round 16px)', ease: 'none', scrollTrigger: { trigger: '.cta', start: 'top 95%', end: 'top 35%', scrub: true } });
+    gsap.fromTo('.cta__bg', { yPercent: 14 }, { yPercent: 0, ease: 'none', scrollTrigger: { trigger: '.cta', start: 'top bottom', end: 'center center', scrub: true } });
+  }
+
+  /* ---------- rodapé: as letras do nome sobem ---------- */
+  const mark = $('.footer__mark');
+  if (mark) {
+    mark.innerHTML = [...mark.textContent.trim()].map((c) => `<span class="fm">${c}</span>`).join('');
+    if (motion) gsap.from($$('.fm', mark), { yPercent: 105, duration: 1.2, ease: 'expo.out', stagger: 0.05, scrollTrigger: { trigger: mark, start: 'top 98%', once: true } });
+  }
+
+  /* ---------- estudos de caso: abertura ---------- */
+  if ($('.cs-hero') && motion) {
+    gsap.timeline({ delay: cameFromNav ? 0.5 : 0.1 })
+      .from('.cs-back', { opacity: 0, x: -14, duration: 0.8, ease: 'expo.out' }, 0)
+      .from('.cs-title .ln__in', { yPercent: 112, duration: 1.3, ease: 'expo.out', stagger: 0.12 }, 0.05)
+      .from('.cs-lead', { opacity: 0, y: 22, duration: 1, ease: 'expo.out' }, 0.35)
+      .from('.cs-meta > div', { opacity: 0, y: 16, duration: 0.9, ease: 'expo.out', stagger: 0.06 }, 0.45)
+      .from('.cs-cover .browser', { opacity: 0, y: 70, duration: 1.5, ease: 'expo.out' }, 0.3);
+    gsap.fromTo('.cs-cover .browser', { scale: 0.93 }, { scale: 1, ease: 'none', scrollTrigger: { trigger: '.cs-cover', start: 'top 90%', end: 'top 15%', scrub: true } });
+    gsap.fromTo('.cs-cover img', { scale: 1.1 }, { scale: 1, ease: 'none', scrollTrigger: { trigger: '.cs-cover', start: 'top 90%', end: 'bottom top', scrub: true } });
+  }
+
+  /* ---------- estudos de caso: a tela fica parada e a página passa por dentro ---------- */
+  const csScroll = $('.cs-scroll');
+  if (csScroll) {
+    const csStage = $('.cs-scroll__stage', csScroll);
+    const devBtns = $$('.cs-switch button', csScroll);
+    devBtns.forEach((b) => b.addEventListener('click', () => {
+      csStage.dataset.view = b.dataset.device;
+      devBtns.forEach((x) => x.setAttribute('aria-pressed', x === b));
+    }));
+    if (motion) {
+      csScroll.classList.add('is-pinned');
+      const views = $$('[data-autoscroll]', csScroll);
+      const pct = $('.cs-scroll__pct', csScroll);
+      const travel = (v) => Math.max(0, $('img', v).offsetHeight - v.clientHeight);
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: csScroll, pin: $('.cs-scroll__pin', csScroll), start: 'top top', scrub: 0.8, anticipatePin: 1, invalidateOnRefresh: true,
+          end: () => `+=${Math.min(4200, Math.max(1400, Math.max(...views.map(travel)) * 0.6))}`,
+          onUpdate: (st) => { if (pct) pct.textContent = `${Math.round(st.progress * 100)}%`; },
+        },
+      });
+      views.forEach((v) => tl.fromTo($('img', v), { y: 0 }, { y: () => -travel(v), ease: 'none' }, 0));
+      tl.fromTo($('.cs-scroll__progress span', csScroll), { scaleX: 0 }, { scaleX: 1, ease: 'none' }, 0);
+      views.forEach((v) => { const img = $('img', v); if (!img.complete) img.addEventListener('load', () => ScrollTrigger.refresh(), { once: true }); });
+    }
   }
 
   /* ---------- formulário → WhatsApp (sem perder o que foi digitado) ---------- */

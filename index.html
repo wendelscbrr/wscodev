@@ -24,7 +24,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="preload" as="image" href="assets/img/recorte.webp" media="(min-width: 641px)">
   <link rel="preload" as="image" href="assets/img/recorte-m.webp" media="(max-width: 640px)">
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/style.css?v=6">
   <script>(function(r){r.classList.add('js');try{if(sessionStorage.getItem('ws-curtain'))r.classList.add('from-nav')}catch(e){}})(document.documentElement)</script>
 
   <script type="application/ld+json">
@@ -127,7 +127,7 @@
 
     <!-- ============ TOPO ============ -->
     <section class="hero" id="inicio" data-tone="light" aria-labelledby="hero-title">
-      <svg class="hero__track" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true"><path d="M0 92 H560 L640 22 H1440"/></svg>
+      <svg class="hero__track" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M0 92 H560 L640 22 H1440"/></svg>
 
       <div class="hero__copy">
         <h1 class="hero__title" id="hero-title">
@@ -162,7 +162,7 @@
           <source srcset="assets/img/recorte-m.webp" media="(max-width: 640px)">
           <img class="hero__photo" src="assets/img/recorte.webp" alt="Retrato de quem faz os sites da Wscodev, sorrindo, de camiseta clara" width="840" height="919" fetchpriority="high">
         </picture>
-        <p class="hero__chip"><b>100%</b><span>sob medida, sem template</span></p>
+        <p class="hero__chip"><b><span data-count="100">100</span>%</b><span>sob medida, sem template</span></p>
       </div>
     </section>
 
@@ -240,9 +240,20 @@
     <!-- ============ SOBRE ============ -->
     <section class="section about" id="sobre" data-tone="dark" aria-labelledby="sobre-title">
       <div class="wrap about__grid">
-        <figure class="about__media">
-          <img src="assets/img/sobre-projetos.webp" alt="Três sites feitos pela Wscodev: META Modular, Dra. Amanda Carvalho e Voltz" width="720" height="1000" loading="lazy">
-        </figure>
+        <div class="about__media stack" role="group" aria-label="Três sites feitos pela Wscodev">
+          <a class="stack__item s-meta" href="projetos/meta-modular.html" aria-label="META Modular, ver estudo de caso">
+            <span class="stack__card"><img src="assets/img/projetos/meta-capa.webp" alt="" width="1440" height="900" loading="lazy"></span>
+            <span class="stack__label" aria-hidden="true">META Modular</span>
+          </a>
+          <a class="stack__item s-amanda" href="projetos/dra-amanda-carvalho.html" aria-label="Dra. Amanda Carvalho, ver estudo de caso">
+            <span class="stack__card"><img src="assets/img/projetos/amanda-capa.webp" alt="" width="1440" height="900" loading="lazy"></span>
+            <span class="stack__label" aria-hidden="true">Dra. Amanda Carvalho</span>
+          </a>
+          <a class="stack__item s-voltz" href="projetos/voltz.html" aria-label="Voltz, ver estudo de caso">
+            <span class="stack__card"><img src="assets/img/projetos/voltz-capa.webp" alt="" width="1440" height="900" loading="lazy"></span>
+            <span class="stack__label" aria-hidden="true">Voltz</span>
+          </a>
+        </div>
         <div class="about__text">
           <h2 class="title" id="sobre-title">Quem faz<br>o seu site</h2>
           <ul class="tags tags--lg" aria-label="Diferenciais">
@@ -525,7 +536,7 @@
 
     <!-- ============ COMO FUNCIONA ============ -->
     <section class="section process" id="processo" data-tone="dark" aria-labelledby="processo-title">
-      <svg class="process__wave" viewBox="0 0 1440 400" preserveAspectRatio="none" aria-hidden="true"><path d="M0 300 C 260 230, 420 360, 720 290 S 1180 120, 1440 170"/></svg>
+      <svg class="process__wave" viewBox="0 0 1440 400" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M0 300 C 260 230, 420 360, 720 290 S 1180 120, 1440 170"/></svg>
       <div class="wrap process__grid">
         <div class="process__intro">
           <h2 class="title" id="processo-title">Como<br>funciona</h2>
@@ -679,6 +690,6 @@
   <script src="assets/vendor/gsap.min.js" defer></script>
   <script src="assets/vendor/ScrollTrigger.min.js" defer></script>
   <script src="assets/vendor/lenis.min.js" defer></script>
-  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/main.js?v=6" defer></script>
 </body>
 </html>
