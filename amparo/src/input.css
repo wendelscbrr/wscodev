@@ -1,0 +1,151 @@
+@import "./fonts.css";
+@import "./aos.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ==========================================================
+   Amparo — estilos complementares ao Tailwind
+   Mesmo estilo do site de Flagship (projeto de referência):
+   cinema, papel envelhecido e luz âmbar
+   ========================================================== */
+
+:root {
+  --ink: #0f0d0c;
+  --panel: #171412;
+  --bone: #ece4d6;
+  --amber: #e0a458;
+  --amber-rgb: 224, 164, 88;
+  --amber-deep: #a8722f;
+  --wine: #7a1a2e;
+  --wine-rgb: 122, 26, 46;
+}
+
+html { scroll-behavior: smooth; scroll-padding-top: 84px; }
+/* Itens de grid/flex podem encolher: nenhum conteúdo longo empurra a coluna para fora da tela */
+.grid > * { min-width: 0; }
+body { background: var(--ink); color: var(--bone); -webkit-font-smoothing: antialiased; }
+::selection { background: var(--amber); color: var(--ink); }
+:focus-visible { outline: 2px solid var(--amber); outline-offset: 3px; }
+
+/* Grão de filme: textura estática no fundo da página */
+.grain { background-image: url("../img/grain.webp"); background-size: 96px; }
+/* Fotos em tom de filme antigo que ganham cor no hover */
+.duo { filter: grayscale(.85) sepia(.25) contrast(1.08) brightness(.9); transition: filter .7s ease, transform .9s cubic-bezier(.2,.7,.2,1); }
+.group:hover .duo, .group:focus-visible .duo { filter: grayscale(0) sepia(0) contrast(1.03) brightness(1); transform: scale(1.04); }
+
+/* Título fantasma vazado atrás dos títulos de seção */
+.ghost {
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(236, 228, 214, .09);
+  letter-spacing: .02em;
+  line-height: .8;
+  user-select: none;
+}
+
+/* Wordmark: caixa alta espaçada */
+.wordmark { letter-spacing: .05em; }
+
+/* Hero: foto com leve deriva (Ken Burns) e luz âmbar respirando */
+.hero-title { text-shadow: 0 10px 60px rgba(0,0,0,.65); }
+.hero-img { animation: drift 28s ease-in-out infinite alternate; transform-origin: 50% 40%; }
+@keyframes drift { from { transform: scale(1.02); } to { transform: scale(1.1) translate3d(-1.5%, -1%, 0); } }
+.hero-glow { background: radial-gradient(closest-side, rgba(var(--amber-rgb), .18), transparent); animation: breathe 6s ease-in-out infinite; }
+@keyframes breathe { 0%, 100% { opacity: .5; transform: scale(1); } 50% { opacity: 1; transform: scale(1.08); } }
+/* Barras de cinema (letterbox) no topo e na base do hero */
+.letterbox::before, .letterbox::after { content: ""; position: absolute; left: 0; right: 0; height: 3.5vh; background: #000; z-index: 5; }
+.letterbox::before { top: 0; }
+.letterbox::after { bottom: 0; }
+
+/* Fita (marquee) */
+.tape { box-shadow: 0 18px 40px -10px rgba(0,0,0,.8); }
+.marquee { display: flex; width: max-content; animation: marquee 42s linear infinite; }
+.marquee.reverse { animation-direction: reverse; animation-duration: 50s; }
+@keyframes marquee { to { transform: translateX(-50%); } }
+
+/* Navegação */
+.nav-link { position: relative; }
+.nav-link::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: -8px; height: 1px;
+  background: var(--amber); transform: scaleX(0); transform-origin: left; transition: transform .35s ease;
+}
+.nav-link:hover::after, .nav-link.is-active::after { transform: scaleX(1); }
+.nav-link.is-active { color: #fff; }
+
+/* Indicador de scroll */
+.scroll-dot { animation: scrolldot 1.8s ease-in-out infinite; }
+@keyframes scrolldot { 0% { transform: translateY(0); opacity: 1; } 70% { transform: translateY(12px); opacity: 0; } 100% { opacity: 0; } }
+
+/* Ponto "ao vivo" pulsando */
+.pulse-dot { position: relative; }
+.pulse-dot::after { content: ""; position: absolute; inset: 0; border-radius: 9999px; background: currentColor; animation: pulse 1.8s ease-out infinite; }
+@keyframes pulse { 0% { transform: scale(1); opacity: .7; } 70%, 100% { transform: scale(3); opacity: 0; } }
+
+/* Equalizador decorativo */
+.eq span { display: inline-block; width: 3px; height: 14px; background: var(--amber); margin-right: 2px; transform-origin: bottom; animation: eq 1s ease-in-out infinite; }
+.eq span:nth-child(2) { animation-delay: .2s; }
+.eq span:nth-child(3) { animation-delay: .4s; }
+.eq span:nth-child(4) { animation-delay: .1s; }
+@keyframes eq { 0%, 100% { transform: scaleY(.3); } 50% { transform: scaleY(1); } }
+
+/* Filtros (repertório) */
+.chip[aria-pressed="true"] { background: var(--amber); border-color: var(--amber); color: var(--ink); }
+
+/* Campos do formulário */
+.field {
+  width: 100%; background: rgba(255,255,255,.03); border: 1px solid rgba(255,255,255,.1);
+  border-radius: .5rem; padding: .8rem 1rem; color: var(--bone); font-size: .9rem; outline: none;
+  transition: border-color .2s, background .2s;
+}
+.field::placeholder { color: rgba(236,228,214,.55); }
+.field:focus { border-color: var(--amber); background: rgba(var(--amber-rgb), .06); }
+.field option { background: var(--panel); }
+.field[type="date"] { color-scheme: dark; }
+
+/* Modais (vídeo, galeria e menu) */
+.modal { opacity: 0; visibility: hidden; pointer-events: none; transition: opacity .3s ease, visibility 0s linear .3s; }
+.modal.is-open { opacity: 1; visibility: visible; pointer-events: auto; transition: opacity .3s ease; }
+.modal:not(.is-open) { content-visibility: hidden; } /* fechado: nem entra no layout */
+
+/* Cartão picotado (ingresso): picote entre o canhoto e o corpo */
+.ticket { position: relative; }
+.ticket::before, .ticket::after {
+  content: ""; position: absolute; width: 28px; height: 28px; border-radius: 9999px; background: var(--ink);
+  left: var(--cut, 70%); transform: translateX(-50%); z-index: 2;
+}
+.ticket::before { top: -14px; }
+.ticket::after { bottom: -14px; }
+.ticket-cut { position: absolute; top: 14px; bottom: 14px; left: var(--cut, 70%); border-left: 2px dashed rgba(15,13,12,.3); }
+/* No desktop o canhoto fica à direita (coluna de 300 px): o picote acompanha */
+@media (min-width: 1024px) { [data-ticket] { --cut: calc(100% - 300px) !important; } }
+
+/* Momentos da boda: linha que se preenche com o scroll (--p vem do main.js) */
+.flight-line { background: linear-gradient(to bottom, var(--amber) var(--p, 100%), rgba(236,228,214,.12) var(--p, 100%)); }
+
+/* Repertório: nome "aceso" da esquerda para a direita conforme o scroll (--p vem do main.js) */
+.stage-fill {
+  color: transparent; -webkit-text-stroke: 1px rgba(236,228,214,.38);
+  background: linear-gradient(90deg, var(--fillc, var(--bone)) var(--p, 100%), transparent var(--p, 100%));
+  -webkit-background-clip: text; background-clip: text;
+}
+.group:hover .stage-fill { --fillc: var(--amber); -webkit-text-stroke-color: var(--amber); }
+
+/* Perguntas frequentes (details/summary) */
+.faq summary { list-style: none; cursor: pointer; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq .faq-icon { transition: transform .3s ease; }
+.faq[open] .faq-icon { transform: rotate(45deg); }
+.faq[open] summary { color: var(--amber); }
+
+/* Botão flutuante do WhatsApp: anel pulsando discretamente */
+.wa-ring::after { content: ""; position: absolute; inset: 0; border-radius: 9999px; border: 2px solid var(--amber); animation: ring 2.6s ease-out infinite; }
+@keyframes ring { 0% { transform: scale(1); opacity: .8; } 80%, 100% { transform: scale(1.45); opacity: 0; } }
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee, .scroll-dot, .pulse-dot::after, .eq span, .hero-glow, .hero-img, .wa-ring::after { animation: none !important; }
+  html { scroll-behavior: auto; }
+}
+
+/* Formulário: campo-armadilha anti-spam (honeypot) — fora da tela para pessoas, visível para robôs */
+.hp { position: absolute !important; left: -9999px !important; width: 1px; height: 1px; overflow: hidden; }

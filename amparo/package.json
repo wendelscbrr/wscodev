@@ -1,0 +1,14 @@
+{
+  "name": "amparo-pianista",
+  "private": true,
+  "description": "Site de Amparo — Pianista para bodas y eventos. Código-fonte do CSS (Tailwind) e utilitários de build",
+  "scripts": {
+    "dev": "node scripts/serve.mjs",
+    "build": "npm run build:css && node scripts/inline-css.mjs",
+    "build:css": "tailwindcss -c tailwind.config.js -i src/input.css -o build/style.css --minify",
+    "watch:css": "tailwindcss -c tailwind.config.js -i src/input.css -o build/style.css --watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "3.4.16"
+  }
+}
