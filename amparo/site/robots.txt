@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /amparo/site/assets/press/Propuesta_
 
 Sitemap: https://wscodev.vercel.app/amparo/site/sitemap.xml
