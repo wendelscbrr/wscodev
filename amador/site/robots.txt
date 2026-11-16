@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /amador/site/api/
+
+Sitemap: https://wscodev.vercel.app/amador/site/sitemap.xml

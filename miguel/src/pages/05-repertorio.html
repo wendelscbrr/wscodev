@@ -1,0 +1,104 @@
+<!--meta
+title: Repertorio y vídeos | Miguel Ángel, pianista en Málaga
+description: Escucha a Miguel Ángel al piano: piezas clásicas, canciones actuales adaptadas y actuaciones en distintos espacios de Málaga. Consulta si puede tocar tu canción.
+path: repertorio/
+nav: repertorio
+priority: 0.8
+-->
+    <!-- ==================== CABEÇALHO DA PÁGINA ==================== -->
+    <section class="page-hero dark" aria-labelledby="page-title">
+      <div class="wrap">
+        <span class="ghost" aria-hidden="true">Escucha</span>
+        <ol class="crumbs" aria-label="Ruta de navegación"><li><a href="{{R}}">Inicio</a></li><li aria-current="page">Repertorio y vídeos</li></ol>
+        <div class="rise">
+          <p class="eyebrow">Repertorio y vídeos</p>
+          <h1 id="page-title" class="display">Escucha el piano <em>en directo</em></h1>
+          <p class="lead">Aquí puedes escuchar cómo suenan las piezas clásicas y las adaptaciones de canciones modernas al piano. Si ya tienes una canción pensada para tu evento, dime el título, el intérprete y en qué momento te gustaría escucharla.</p>
+          <div class="btn-row">
+            <a href="{{R}}contacto/?cancion=1#consulta" class="btn btn--solid" data-track="repertorio-hero-cancion"><svg class="i"><use href="#h-note"/></svg> Consultar una canción</a>
+            <a href="#actuaciones" class="btn btn--line"><svg class="i"><use href="#h-play"/></svg> Ver actuaciones</a>
+          </div>
+        </div>
+      </div>
+      <div class="keys" aria-hidden="true"></div>
+    </section>
+
+    <!-- ==================== ACTUACIONES SELECCIONADAS ==================== -->
+    <!-- Vídeos e legendas em ACTUACIONES (main.js). O primeiro item é o destaque.
+         Briefing: abrir com um vídeo curto de execução ao vivo, com som audível e título que identifique o contexto -->
+    <section id="actuaciones" class="section" aria-labelledby="actuaciones-title">
+      <div class="wrap">
+        <header class="sh" data-reveal>
+          <p class="eyebrow">Portafolio</p>
+          <h2 id="actuaciones-title" class="h2">Actuaciones <em>seleccionadas</em></h2>
+          <p class="lead">Estos registros reúnen conciertos privados, actuaciones culturales y sesiones de piano en distintos espacios. Cada vídeo indica el contexto de la actuación para que puedas explorar el tipo de música que buscas.</p>
+        </header>
+        <div data-video-featured data-reveal></div>
+        <div class="vgrid mt-l" data-acts="grid" data-skip="1"></div>
+        <p class="mt-l center"><a href="{{IG}}" target="_blank" rel="noopener" class="link-arrow" data-track="repertorio-instagram"><svg class="i"><use href="#b-instagram"/></svg> Más vídeos en Instagram <svg class="i"><use href="#h-arrow-up-right"/></svg></a></p>
+      </div>
+    </section>
+
+    <!-- ==================== ESTILOS DO REPERTÓRIO ==================== -->
+    <!-- Briefing: a lista de músicas pode começar com clássicos e adaptações modernas, usando títulos e compositores
+         aprovados por Miguel. Quando ele aprovar a lista, ela pode entrar aqui (ver REPERTORIO no main.js) -->
+    <section class="section alt" aria-labelledby="estilos-title">
+      <div class="wrap">
+        <header class="sh center" data-reveal>
+          <span class="ghost" aria-hidden="true">Repertorio</span>
+          <p class="eyebrow">Repertorio</p>
+          <h2 id="estilos-title" class="h2">Del repertorio clásico <em>a las canciones actuales</em></h2>
+          <p class="lead">En mi repertorio conviven piezas clásicas y temas modernos adaptados al piano.</p>
+        </header>
+        <div class="cards cards--3">
+          <article class="card" data-reveal>
+            <div class="card__body">
+              <span class="card__num">01</span>
+              <h3 class="h3">Piezas clásicas</h3>
+              <p>El punto de partida de mi formación y de mi forma de tocar.</p>
+            </div>
+          </article>
+          <article class="card" data-reveal style="--d:.1s">
+            <div class="card__body">
+              <span class="card__num">02</span>
+              <h3 class="h3">Canciones actuales al piano</h3>
+              <p>Al preparar una versión de una canción actual, recurro a recursos de la música clásica para trasladarla al piano.</p>
+            </div>
+          </article>
+          <article class="card" data-reveal style="--d:.2s">
+            <div class="card__body">
+              <span class="card__num">03</span>
+              <h3 class="h3">Vuestra canción</h3>
+              <p>Envíame el título y, si tienes una versión de referencia, añade el enlace. Te confirmaré si puedo prepararla para la fecha del evento.</p>
+              <a href="{{R}}contacto/?cancion=1#consulta" class="link-arrow" data-track="repertorio-card-cancion">Consultar una canción <svg class="i"><use href="#h-arrow-right"/></svg></a>
+            </div>
+          </article>
+        </div>
+        <ul class="acts mt-xl" data-rep-list hidden></ul>
+      </div>
+    </section>
+
+    <!-- ==================== CONSULTAR UMA CANÇÃO ==================== -->
+    <section class="section" aria-labelledby="cancion-title">
+      <div class="wrap">
+        <article class="ticket" data-reveal>
+          <div class="ticket__main">
+            <p class="eyebrow">A petición</p>
+            <h2 id="cancion-title" class="h2">¿Tienes una canción <em>para tu evento?</em></h2>
+            <p class="lead">Dime el título, el intérprete y en qué momento te gustaría escucharla. Si tienes una versión de referencia, añade el enlace.</p>
+            <dl>
+              <div><dt>Título</dt><dd>La canción</dd></div>
+              <div><dt>Intérprete</dt><dd>Versión de referencia</dd></div>
+              <div><dt>Momento</dt><dd>Entrada · Cóctel · …</dd></div>
+            </dl>
+          </div>
+          <div class="ticket__stub">
+            <p class="serif">Tu canción, <em>al piano</em></p>
+            <div class="btn-row">
+              <a href="{{R}}contacto/?cancion=1#consulta" class="btn btn--ivory" data-track="repertorio-cta-cancion"><svg class="i"><use href="#h-note"/></svg> Consultar una canción</a>
+              <a href="{{WA}}" data-wa="" data-wa-extra="Canción: [título] — [intérprete]" target="_blank" rel="noopener" class="btn btn--line" data-track="repertorio-cta-whatsapp"><svg class="i"><use href="#b-whatsapp"/></svg> WhatsApp</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>

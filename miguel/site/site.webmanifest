@@ -1,0 +1,14 @@
+{
+  "name": "Miguel Ángel | Pianista",
+  "short_name": "Miguel Ángel",
+  "description": "Piano en directo para bodas, cócteles y eventos privados en Málaga.",
+  "lang": "es",
+  "start_url": "./",
+  "display": "browser",
+  "background_color": "#1f1e1c",
+  "theme_color": "#1f1e1c",
+  "icons": [
+    { "src": "assets/img/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "assets/img/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}

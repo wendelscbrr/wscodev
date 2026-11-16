@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <script>if (!/\/$|\.html$/.test(location.pathname)) location.replace(location.pathname + '/' + location.search + location.hash);</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AMADOR • Violinist — Violinista en Barcelona / Violinist in Barcelona</title>
+  <meta name="description" content="David Amador, violinista para bodas y eventos en Barcelona, Madrid y otros destinos de España. Wedding and event violinist in Spain.">
+  <link rel="canonical" href="https://wscodev.vercel.app/amador/site/es/">
+  <link rel="alternate" hreflang="es" href="https://wscodev.vercel.app/amador/site/es/">
+  <link rel="alternate" hreflang="en" href="https://wscodev.vercel.app/amador/site/en/">
+  <link rel="alternate" hreflang="x-default" href="https://wscodev.vercel.app/amador/site/">
+  <meta name="theme-color" content="#0e0b0a">
+  <link rel="icon" href="favicon.ico" sizes="48x48">
+  <link rel="stylesheet" href="assets/css/style.css?v=1">
+  <!-- Idioma do navegador: espanhol (e catalão, galego, basco) → /es/, os demais → /en/. Escolha manual fica salva -->
+  <script>
+    (function () {
+      var pick; try { pick = localStorage.getItem('amador-lang'); } catch (e) {}
+      if (!pick) { var l = (navigator.language || 'es').toLowerCase(); pick = /^(es|ca|gl|eu)/.test(l) ? 'es' : 'en'; }
+      location.replace(pick + '/');
+    })();
+  </script>
+</head>
+<body class="grain grid min-h-screen place-items-center bg-ink px-6 text-center font-sans text-bone">
+  <main>
+    <p class="font-display text-6xl uppercase wordmark">Amador <span class="text-varnish">•</span></p>
+    <p class="signature text-3xl text-bone/80">Violinist</p>
+    <div class="mt-10 flex flex-col gap-3 sm:flex-row">
+      <a href="es/" hreflang="es" lang="es" class="rounded-full bg-varnish px-7 py-3.5 text-xs font-semibold uppercase tracking-[.2em] text-ink">Español</a>
+      <a href="en/" hreflang="en" lang="en" class="rounded-full border border-white/20 px-7 py-3.5 text-xs font-semibold uppercase tracking-[.2em]">English</a>
+    </div>
+  </main>
+</body>
+</html>

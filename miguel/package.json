@@ -1,0 +1,9 @@
+{
+  "name": "miguel-pianista",
+  "private": true,
+  "description": "Site de Miguel Ángel | Pianista — piano em directo para bodas e eventos em Málaga",
+  "scripts": {
+    "build": "perl scripts/build.pl",
+    "dev": "node scripts/serve.mjs"
+  }
+}

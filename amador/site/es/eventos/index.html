@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="utf-8">
+  <!-- Garante a barra final (/bodas → /bodas/) para os caminhos relativos funcionarem -->
+  <script>if (!/\/$|\.html$/.test(location.pathname)) location.replace(location.pathname + '/' + location.search + location.hash);</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Violinista para hoteles y eventos de empresa | AMADOR • Violinist</title>
+  <meta name="description" content="Violín en directo para recepciones, cenas de gala, presentaciones de producto y encuentros profesionales en Barcelona, Madrid y otros destinos de España.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="theme-color" content="#0e0b0a">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="canonical" href="https://wscodev.vercel.app/amador/site/es/eventos/">
+  <!-- hreflang recíproco ES/EN (briefing R07) -->
+  <link rel="alternate" hreflang="es" href="https://wscodev.vercel.app/amador/site/es/eventos/">
+  <link rel="alternate" hreflang="en" href="https://wscodev.vercel.app/amador/site/en/events/">
+  <link rel="alternate" hreflang="x-default" href="https://wscodev.vercel.app/amador/site/es/eventos/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:locale:alternate" content="en_GB">
+  <meta property="og:site_name" content="AMADOR • Violinist">
+  <meta property="og:url" content="https://wscodev.vercel.app/amador/site/es/eventos/">
+  <meta property="og:title" content="Violinista para hoteles y eventos de empresa | AMADOR • Violinist">
+  <meta property="og:description" content="Violín en directo para recepciones, cenas de gala, presentaciones de producto y encuentros profesionales en Barcelona, Madrid y otros destinos de España.">
+  <meta property="og:image" content="https://wscodev.vercel.app/amador/site/assets/img/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="David Amador tocando el violín en Montjuïc, Barcelona">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="../../favicon.ico" sizes="48x48">
+  <link rel="icon" href="../../assets/img/icon-192.png" type="image/png" sizes="192x192">
+  <link rel="apple-touch-icon" href="../../assets/img/apple-touch-icon.png">
+  <link rel="manifest" href="../../site.webmanifest">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"https://wscodev.vercel.app/amador/site/#david","name":"David Amador","alternateName":"AMADOR • Violinist","jobTitle":"Violinist","url":"https://wscodev.vercel.app/amador/site/","image":"https://wscodev.vercel.app/amador/site/assets/img/photos/about.webp","telephone":"+34 647 697 892","email":"amadorviolinist@gmail.com","sameAs":["https://www.instagram.com/amadorviolin/","https://www.youtube.com/@amadorviolin"],"alumniOf":{"@type":"CollegeOrUniversity","name":"Conservatori Superior de Música del Liceu"}},{"@type":"Service","@id":"https://wscodev.vercel.app/amador/site/#service-es","name":"Violín en directo para bodas y eventos","provider":{"@id":"https://wscodev.vercel.app/amador/site/#david"},"areaServed":[{"@type":"City","name":"Barcelona"},{"@type":"City","name":"Madrid"},{"@type":"Country","name":"Spain"}]}]}</script>
+
+  <link rel="preload" href="../../assets/fonts/anton-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../../assets/fonts/inter-400-700-latin.woff2" as="font" type="font/woff2" crossorigin>
+
+  <!-- Tailwind compilado (fonte em ../src/input.css — rode "npm run build") -->
+  <link rel="stylesheet" href="../../assets/css/style.css?v=1">
+</head>
+<body class="grain overflow-x-hidden bg-ink font-sans text-bone" data-page="events">
+  <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-full focus:bg-varnish focus:px-5 focus:py-3 focus:text-ink">Saltar al contenido</a>
+
+  <svg xmlns="http://www.w3.org/2000/svg" class="hidden">
+    <defs>
+      <symbol id="h-play" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z"/></symbol>
+      <symbol id="h-map-pin" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"/></symbol>
+      <symbol id="h-calendar" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5"/></symbol>
+      <symbol id="h-envelope" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"/></symbol>
+      <symbol id="h-arrow-up-right" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25"/></symbol>
+      <symbol id="h-arrow-up" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M4.5 10.5 12 3m0 0 7.5 7.5M12 3v18"/></symbol>
+      <symbol id="h-arrow-right" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></symbol>
+      <symbol id="h-chevron-left" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5"/></symbol>
+      <symbol id="h-chevron-right" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5"/></symbol>
+      <symbol id="h-x-mark" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"/></symbol>
+      <symbol id="h-bars" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/></symbol>
+      <symbol id="h-note" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="m9 9 10.5-3m0 6.553v3.75a2.25 2.25 0 0 1-1.632 2.163l-1.32.377a1.803 1.803 0 1 1-.99-3.467l2.31-.66a2.25 2.25 0 0 0 1.632-2.163Zm0 0V2.25L9 5.25v10.303m0 0v3.75a2.25 2.25 0 0 1-1.632 2.163l-1.32.377a1.803 1.803 0 0 1-.99-3.467l2.31-.66A2.25 2.25 0 0 0 9 15.553Z"/></symbol>
+      <symbol id="h-heart" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"/></symbol>
+      <symbol id="h-users" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 0 0 2.625.372 9.337 9.337 0 0 0 4.121-.952 4.125 4.125 0 0 0-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 0 1 8.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0 1 11.964-3.07M12 6.375a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0Zm8.25 2.25a2.625 2.625 0 1 1-5.25 0 2.625 2.625 0 0 1 5.25 0Z"/></symbol>
+      <symbol id="h-building" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21"/></symbol>
+      <symbol id="h-glass" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M8 3h8l-.6 6.2A3.4 3.4 0 0 1 12 12.3a3.4 3.4 0 0 1-3.4-3.1L8 3Zm4 9.3V20m-3.5 1h7"/></symbol>
+      <symbol id="h-sparkles" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09Z"/></symbol>
+      <symbol id="h-globe" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418"/></symbol>
+      <symbol id="h-academic" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5"/></symbol>
+      <symbol id="h-plus" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"/></symbol>
+      <symbol id="h-check" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></symbol>
+      <symbol id="b-whatsapp" viewBox="0 0 24 24"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></symbol>
+      <symbol id="b-instagram" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></symbol>
+      <symbol id="b-youtube" viewBox="0 0 24 24"><path fill="currentColor" d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></symbol>
+    </defs>
+  </svg>
+
+  <!-- ==================== HEADER ==================== -->
+  <header id="header" class="fixed inset-x-0 top-0 z-50 transition-all duration-500">
+    <div class="mx-auto flex h-20 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
+      <a href="../../es/" class="flex items-baseline gap-2 leading-none" aria-label="AMADOR • Violinist — Inicio">
+        <span class="wordmark font-display text-2xl uppercase">Amador</span><span class="h-1.5 w-1.5 -translate-y-1 rounded-full bg-varnish"></span><span class="signature hidden text-xl text-bone/80 sm:inline">Violinist</span>
+      </a>
+      <nav class="hidden items-center gap-6 xl:flex" aria-label="Principal">
+        <a href="../../es/bodas/" class="nav-link font-mono text-[11px] uppercase tracking-[.2em] text-bone/70 transition hover:text-white">Bodas</a>
+        <a href="../../es/eventos/" aria-current="page" class="nav-link font-mono text-[11px] uppercase tracking-[.2em] text-bone/70 transition hover:text-white">Eventos</a>
+        <a href="../../es/sobre-david/" class="nav-link font-mono text-[11px] uppercase tracking-[.2em] text-bone/70 transition hover:text-white">Sobre David</a>
+        <a href="../../es/videos-repertorio/" class="nav-link font-mono text-[11px] uppercase tracking-[.2em] text-bone/70 transition hover:text-white">Vídeos y repertorio</a>
+        <a href="../../es/contacto/" class="nav-link font-mono text-[11px] uppercase tracking-[.2em] text-bone/70 transition hover:text-white">Contacto</a>
+      </nav>
+      <div class="flex items-center gap-2">
+        <a href="../../en/events/" hreflang="en" lang="en" data-track="lang-en" class="grid h-9 min-w-9 place-items-center rounded-full border border-white/15 px-2.5 font-mono text-[11px] font-bold tracking-widest text-bone/80 transition hover:border-varnish hover:text-white" aria-label="English">EN</a>
+        <a href="https://wa.me/34647697892?text=Hola%2C%20David.%20Me%20gustar%C3%ADa%20consultar%20disponibilidad%20para%20un%20evento%20el%20%5Bfecha%5D%20en%20%5Bciudad%5D.%20Es%20%5Btipo%20de%20evento%5D%20y%20me%20interesa%20contar%20con%20viol%C3%ADn%20en%20%5Bmomento%5D." target="_blank" rel="noopener" data-track="header-whatsapp" class="hidden items-center gap-2 rounded-full bg-varnish px-5 py-2.5 text-[11px] font-semibold uppercase tracking-[.2em] text-ink transition hover:bg-white md:flex"><svg class="h-4 w-4" aria-hidden="true"><use href="#b-whatsapp"/></svg> Consultar fecha</a>
+        <button id="menuOpen" type="button" class="grid h-10 w-10 place-items-center rounded-full border border-white/15 xl:hidden" aria-label="Abrir menú" aria-controls="mobileMenu" aria-expanded="false"><svg class="h-5 w-5" aria-hidden="true"><use href="#h-bars"/></svg></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Menu mobile -->
+  <div id="mobileMenu" class="modal fixed inset-0 z-[70] flex flex-col bg-ink/95 backdrop-blur-xl xl:hidden" role="dialog" aria-modal="true" aria-label="Menú">
+    <div class="flex h-20 items-center justify-between px-4 sm:px-6">
+      <span class="wordmark font-display text-2xl uppercase">Amador <span class="signature text-xl text-varnish">Violinist</span></span>
+      <button id="menuClose" type="button" class="grid h-10 w-10 place-items-center rounded-full border border-white/15" aria-label="Cerrar menú"><svg class="h-5 w-5" aria-hidden="true"><use href="#h-x-mark"/></svg></button>
+    </div>
+    <nav class="flex flex-1 flex-col justify-center gap-3 px-8" aria-label="Menú">
+      <a href="../../es/" class="flex items-baseline gap-4 font-display text-3xl uppercase tracking-wide hover:text-varnish sm:text-5xl "><span class="font-mono text-[11px] text-bone/40">01</span>Inicio</a>
+      <a href="../../es/bodas/" class="flex items-baseline gap-4 font-display text-3xl uppercase tracking-wide hover:text-varnish sm:text-5xl "><span class="font-mono text-[11px] text-bone/40">02</span>Bodas</a>
+      <a href="../../es/eventos/" aria-current="page" class="flex items-baseline gap-4 font-display text-3xl uppercase tracking-wide hover:text-varnish sm:text-5xl text-varnish"><span class="font-mono text-[11px] text-bone/40">03</span>Eventos</a>
+      <a href="../../es/sobre-david/" class="flex items-baseline gap-4 font-display text-3xl uppercase tracking-wide hover:text-varnish sm:text-5xl "><span class="font-mono text-[11px] text-bone/40">04</span>Sobre David</a>
+      <a href="../../es/videos-repertorio/" class="flex items-baseline gap-4 font-display text-3xl uppercase tracking-wide hover:text-varnish sm:text-5xl "><span class="font-mono text-[11px] text-bone/40">05</span>Vídeos y repertorio</a>
+      <a href="../../es/contacto/" class="flex items-baseline gap-4 font-display text-3xl uppercase tracking-wide hover:text-varnish sm:text-5xl "><span class="font-mono text-[11px] text-bone/40">06</span>Contacto</a>
+    </nav>
+    <div class="flex flex-wrap gap-3 px-8 pb-10">
+      <a href="https://wa.me/34647697892?text=Hola%2C%20David.%20Me%20gustar%C3%ADa%20consultar%20disponibilidad%20para%20un%20evento%20el%20%5Bfecha%5D%20en%20%5Bciudad%5D.%20Es%20%5Btipo%20de%20evento%5D%20y%20me%20interesa%20contar%20con%20viol%C3%ADn%20en%20%5Bmomento%5D." target="_blank" rel="noopener" data-track="menu-whatsapp" class="flex flex-1 items-center justify-center gap-2 rounded-full bg-varnish px-5 py-3 text-[11px] font-semibold uppercase tracking-[.2em] text-ink"><svg class="h-4 w-4" aria-hidden="true"><use href="#b-whatsapp"/></svg> WhatsApp</a>
+      <a href="../../en/events/" hreflang="en" lang="en" class="grid h-11 place-items-center rounded-full border border-white/15 px-4 font-mono text-[11px] font-bold tracking-widest">English</a>
+    </div>
+  </div>
+
+  <main id="main" class="overflow-x-clip">
+
+
+    <section class="letterbox relative flex min-h-[78svh] items-end overflow-hidden pb-20 pt-32">
+      <picture>
+        <source media="(max-width: 767px)" srcset="../../assets/img/photos/eventos-hotel.webp" width="600" height="800">
+        <img src="../../assets/img/photos/eventos-wide.webp" width="1280" height="720" alt="" fetchpriority="high" class="hero-img absolute inset-0 h-full w-full object-cover" style="object-position:50% 40%">
+      </picture>
+      <div class="absolute inset-0 bg-ink/60"></div>
+      <div class="absolute inset-0 bg-gradient-to-br from-oxblood/40 via-transparent to-varnish/10 mix-blend-multiply"></div>
+      <div class="absolute inset-x-0 bottom-0 h-64 bg-gradient-to-t from-ink to-transparent"></div>
+      <div class="relative z-10 mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+        <p class="flex items-center gap-3 font-mono text-[11px] uppercase tracking-mega text-varnish"><span class="h-px w-10 bg-varnish/60"></span>Hoteles y empresas</p>
+        <h1 class="hero-title mt-5 max-w-4xl font-display text-5xl uppercase leading-[.92] sm:text-7xl lg:text-8xl">Violín en directo para hoteles y <span class="signature text-varnish">eventos de empresa</span></h1>
+        <p class="mt-6 max-w-2xl text-base leading-relaxed text-bone/80 sm:text-lg">Toco en recepciones, cenas de gala, presentaciones de producto y encuentros profesionales. Contadme cómo será el espacio y qué papel queréis que tenga la música.</p>
+        <div class="mt-9 flex flex-col gap-3 sm:flex-row"><a href="../../es/contacto/?type=corporate#consulta" data-track="eventos-hero" class="inline-flex items-center justify-center gap-2 rounded-full px-7 py-3.5 text-xs font-semibold uppercase tracking-[.2em] transition bg-varnish text-ink shadow-[0_10px_30px_-10px_rgba(212,137,74,.8)] hover:bg-white "><svg class="h-4 w-4" aria-hidden="true"><use href="#h-building"/></svg> Solicitar una propuesta</a><a href="mailto:amadorviolinist@gmail.com" data-track="eventos-hero-email" class="inline-flex items-center justify-center gap-2 rounded-full px-7 py-3.5 text-xs font-semibold uppercase tracking-[.2em] transition border border-white/20 hover:border-varnish hover:text-varnish "><svg class="h-4 w-4" aria-hidden="true"><use href="#h-envelope"/></svg> Email</a></div>
+      </div>
+    </section>
+
+    <!-- Ocasiões -->
+    <section class="relative py-14">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <p class="text-center font-mono text-[11px] uppercase tracking-mega text-varnish">Ocasiones</p>
+        <ul class="mt-6 grid grid-cols-2 border-y border-white/10 lg:grid-cols-4" data-aos="fade-up">
+          <li class="flex items-center gap-3 border-white/10 px-4 py-6 font-display text-xl uppercase leading-tight sm:text-2xl border-r lg:border-r"><span class="font-mono text-[10px] text-varnish">01</span>Recepciones</li><li class="flex items-center gap-3 border-white/10 px-4 py-6 font-display text-xl uppercase leading-tight sm:text-2xl  lg:border-r"><span class="font-mono text-[10px] text-varnish">02</span>Cenas de gala</li><li class="flex items-center gap-3 border-white/10 px-4 py-6 font-display text-xl uppercase leading-tight sm:text-2xl border-r lg:border-r"><span class="font-mono text-[10px] text-varnish">03</span>Presentaciones de producto</li><li class="flex items-center gap-3 border-white/10 px-4 py-6 font-display text-xl uppercase leading-tight sm:text-2xl  "><span class="font-mono text-[10px] text-varnish">04</span>Encuentros profesionales</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Formatos -->
+    <section class="relative py-20 sm:py-24">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        
+        <header class="relative mb-14 text-center" data-aos="fade-up">
+          <span class="ghost pointer-events-none absolute -top-6 left-1/2 -translate-x-1/2 whitespace-nowrap font-display text-[18vw] uppercase sm:-top-10 sm:text-[140px]" aria-hidden="true">Formatos</span>
+          <p class="relative font-mono text-[11px] uppercase tracking-mega text-varnish">Formatos</p>
+          <h2 class="relative mt-3 font-display text-5xl uppercase leading-[.95] sm:text-6xl">¿Qué papel tendrá <span class="signature text-varnish">la música?</span></h2>
+          <p class="relative mx-auto mt-6 max-w-2xl leading-relaxed text-bone/70">Podemos hablar de una actuación durante la bienvenida, de música durante la cena o de una intervención dentro del programa.</p>
+        </header>
+        <div class="grid gap-6 md:grid-cols-3">
+          
+          <article class="group rounded-2xl border border-white/10 bg-panel/60 p-7 transition hover:border-varnish/50" data-aos="fade-up" data-aos-delay="0">
+            <span class="grid h-12 w-12 place-items-center rounded-full border border-varnish/50 text-varnish"><svg class="h-5 w-5" aria-hidden="true"><use href="#h-glass"/></svg></span>
+            <h3 class="mt-6 font-display text-3xl uppercase leading-none">Bienvenida</h3>
+            <p class="mt-3 text-sm leading-relaxed text-bone/70">Violín en directo mientras llegan los invitados y empieza la recepción.</p>
+            <div class="string-rule mt-7"></div>
+          </article>
+          <article class="group rounded-2xl border border-white/10 bg-panel/60 p-7 transition hover:border-varnish/50" data-aos="fade-up" data-aos-delay="100">
+            <span class="grid h-12 w-12 place-items-center rounded-full border border-varnish/50 text-varnish"><svg class="h-5 w-5" aria-hidden="true"><use href="#h-note"/></svg></span>
+            <h3 class="mt-6 font-display text-3xl uppercase leading-none">Música durante la cena</h3>
+            <p class="mt-3 text-sm leading-relaxed text-bone/70">Un acompañamiento que se adapta al ritmo del servicio y de la sala.</p>
+            <div class="string-rule mt-7"></div>
+          </article>
+          <article class="group rounded-2xl border border-white/10 bg-panel/60 p-7 transition hover:border-varnish/50" data-aos="fade-up" data-aos-delay="200">
+            <span class="grid h-12 w-12 place-items-center rounded-full border border-varnish/50 text-varnish"><svg class="h-5 w-5" aria-hidden="true"><use href="#h-sparkles"/></svg></span>
+            <h3 class="mt-6 font-display text-3xl uppercase leading-none">Intervención en el programa</h3>
+            <p class="mt-3 text-sm leading-relaxed text-bone/70">Una actuación dentro del guion del evento, en el momento que decidáis.</p>
+            <div class="string-rule mt-7"></div>
+          </article>
+        </div>
+
+        <!-- Ensemble: cartão picotado (componente "ingresso" da referência) -->
+        <!-- Informação do ensemble: briefing [6] Schubertiades. A CONFIRMAR: formação, nº de músicos e vídeo do ensemble -->
+        <article class="ticket mt-14 grid overflow-hidden rounded-2xl bg-bone text-ink lg:grid-cols-[1fr_320px]" style="--cut:200%" data-ticket data-aos="fade-up">
+          <span class="ticket-cut hidden lg:block" aria-hidden="true"></span>
+          <div class="grid gap-6 p-6 sm:grid-cols-[180px_1fr] sm:p-8">
+            <div class="overflow-hidden rounded-xl"><img src="../../assets/img/photos/violin-detalle.webp" width="720" height="720" alt="" class="h-full min-h-[180px] w-full object-cover" loading="lazy"></div>
+            <div class="min-w-0">
+              <p class="flex flex-wrap items-center gap-3 font-mono text-[10px] uppercase tracking-[.25em] text-ink/60"><span class="rounded-full bg-ink px-3 py-1 text-varnish">Varios músicos</span> <svg class="h-4 w-4" aria-hidden="true"><use href="#h-users"/></svg></p>
+              <h2 class="mt-4 font-display text-4xl uppercase leading-none sm:text-5xl">Amador Violin Ensemble</h2>
+              <p class="mt-4 max-w-xl text-sm leading-relaxed text-ink/75">Si buscáis una actuación con varios músicos, consultad la disponibilidad y la formación del ensemble para vuestra fecha.</p>
+              <dl class="mt-6 grid grid-cols-3 gap-4 border-t border-ink/15 pt-5 font-mono text-[10px] uppercase tracking-widest">
+                <div><dt class="text-ink/55">Formato</dt><dd class="mt-1 text-xs font-bold">Ensemble</dd></div><div><dt class="text-ink/55">Formación</dt><dd class="mt-1 text-xs font-bold">Según la fecha</dd></div><div><dt class="text-ink/55">Consulta</dt><dd class="mt-1 text-xs font-bold">Con antelación</dd></div>
+              </dl>
+            </div>
+          </div>
+          <div class="flex flex-col justify-center gap-4 border-t-2 border-dashed border-ink/20 p-6 sm:p-8 lg:border-t-0">
+            <p class="font-mono text-[10px] uppercase tracking-[.2em] text-ink/60">Formación a medida</p>
+            <p class="font-display text-2xl uppercase leading-tight">Consultad disponibilidad del ensemble</p>
+            <a href="../../es/contacto/?type=ensemble#consulta" data-track="eventos-ensemble" class="inline-flex items-center justify-center gap-2 rounded-full bg-ink px-5 py-3 text-[11px] font-semibold uppercase tracking-[.2em] text-bone transition hover:bg-oxblood"><svg class="h-4 w-4" aria-hidden="true"><use href="#h-users"/></svg> Consultar el ensemble</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Para planners e espaços (briefing: formatos, montagem, contato para alinhar a programação) -->
+    <!-- A CONFIRMAR com o David: requisitos técnicos (som, tomada, espaço), duração dos sets e condições de deslocamento -->
+    <section class="relative border-t border-white/5 bg-panel/40 py-24 sm:py-28">
+      <div class="mx-auto grid max-w-6xl items-center gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
+        <div class="group relative overflow-hidden rounded-2xl" data-aos="fade-right">
+          <img src="../../assets/img/photos/eventos-hotel.webp" width="600" height="800" alt="David Amador tocando el violín en un interior junto a la ventana" class="duo aspect-[4/5] w-full object-cover" loading="lazy">
+        </div>
+        <div data-aos="fade-left">
+          <p class="font-mono text-[11px] uppercase tracking-[.3em] text-varnish">Para producción, planners y espacios</p>
+          <h2 class="mt-3 font-display text-5xl uppercase leading-[.95]">Lo que necesito <span class="signature text-varnish">saber</span></h2>
+          <ul class="mt-7 space-y-3 text-bone/80"><li class="flex items-start gap-2.5"><svg class="mt-0.5 h-4 w-4 shrink-0 text-varnish" aria-hidden="true"><use href="#h-check"/></svg> <span>Fecha, horario y ciudad</span></li><li class="flex items-start gap-2.5"><svg class="mt-0.5 h-4 w-4 shrink-0 text-varnish" aria-hidden="true"><use href="#h-check"/></svg> <span>Espacio: interior o exterior</span></li><li class="flex items-start gap-2.5"><svg class="mt-0.5 h-4 w-4 shrink-0 text-varnish" aria-hidden="true"><use href="#h-check"/></svg> <span>Papel de la música en el programa</span></li><li class="flex items-start gap-2.5"><svg class="mt-0.5 h-4 w-4 shrink-0 text-varnish" aria-hidden="true"><use href="#h-check"/></svg> <span>Número aproximado de invitados</span></li><li class="flex items-start gap-2.5"><svg class="mt-0.5 h-4 w-4 shrink-0 text-varnish" aria-hidden="true"><use href="#h-check"/></svg> <span>Contacto de la persona responsable</span></li></ul>
+          <p class="mt-6 max-w-md text-sm leading-relaxed text-bone/65">Con esos datos os indicaré el formato y lo que necesito en el espacio para la actuación.</p>
+          <div class="mt-8"><a href="../../es/contacto/?type=corporate#consulta" data-track="eventos-plan" class="inline-flex items-center justify-center gap-2 rounded-full px-7 py-3.5 text-xs font-semibold uppercase tracking-[.2em] transition bg-varnish text-ink shadow-[0_10px_30px_-10px_rgba(212,137,74,.8)] hover:bg-white "><svg class="h-4 w-4" aria-hidden="true"><use href="#h-arrow-right"/></svg> Solicitar una propuesta</a></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="relative py-24 sm:py-28">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        
+        <header class="relative mb-14 text-center" data-aos="fade-up">
+          <span class="ghost pointer-events-none absolute -top-6 left-1/2 -translate-x-1/2 whitespace-nowrap font-display text-[18vw] uppercase sm:-top-10 sm:text-[140px]" aria-hidden="true">Eventos</span>
+          <p class="relative font-mono text-[11px] uppercase tracking-mega text-varnish">En directo</p>
+          <h2 class="relative mt-3 font-display text-5xl uppercase leading-[.95] sm:text-6xl">Para recepciones <span class="signature text-varnish">y cenas</span></h2>
+          
+        </header>
+        <div class="grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-4">
+          
+          <button type="button" data-video="RIA_TDf-ov0" data-title="Palladio" data-sub="Karl Jenkins" data-cats="clasica" aria-label="Reproducir: Palladio — Karl Jenkins" class="group block text-left" data-aos="fade-up" data-aos-delay="0">
+            <span class="relative block aspect-[4/5] overflow-hidden rounded-xl border border-white/10 bg-panel">
+              <img src="../../assets/img/videos/RIA_TDf-ov0.webp" width="960" height="540" alt="" class="duo absolute inset-0 h-full w-full object-cover" loading="lazy" decoding="async">
+              <span class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent"></span>
+              <span class="absolute left-3 top-3 rounded-full bg-black/70 px-2.5 py-1 font-mono text-[9px] uppercase tracking-widest">Clásica</span>
+              <span class="absolute bottom-3 right-3 grid h-11 w-11 place-items-center rounded-full border border-white/30 bg-black/60 transition duration-300 group-hover:scale-110 group-hover:border-varnish group-hover:bg-varnish group-hover:text-ink"><svg class="ml-0.5 h-4 w-4" aria-hidden="true"><use href="#h-play"/></svg></span>
+              <span class="absolute bottom-3 left-3 right-16 hidden font-mono sm:block text-[9px] uppercase tracking-widest text-bone/70">Ceremonia · Violín solo</span>
+            </span>
+            <span class="mt-4 block font-display text-xl uppercase leading-tight transition group-hover:text-varnish">Palladio</span>
+            <span class="mt-1 block font-mono text-[10px] uppercase tracking-[.2em] text-bone/55">Karl Jenkins · Barcelona</span>
+          </button>
+          <button type="button" data-video="M_tJdHg9GeM" data-title="Caruso" data-sub="Lucio Dalla" data-cats="romantica" aria-label="Reproducir: Caruso — Lucio Dalla" class="group block text-left" data-aos="fade-up" data-aos-delay="80">
+            <span class="relative block aspect-[4/5] overflow-hidden rounded-xl border border-white/10 bg-panel">
+              <img src="../../assets/img/videos/M_tJdHg9GeM.webp" width="960" height="540" alt="" class="duo absolute inset-0 h-full w-full object-cover" loading="lazy" decoding="async">
+              <span class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent"></span>
+              <span class="absolute left-3 top-3 rounded-full bg-black/70 px-2.5 py-1 font-mono text-[9px] uppercase tracking-widest">Romántica</span>
+              <span class="absolute bottom-3 right-3 grid h-11 w-11 place-items-center rounded-full border border-white/30 bg-black/60 transition duration-300 group-hover:scale-110 group-hover:border-varnish group-hover:bg-varnish group-hover:text-ink"><svg class="ml-0.5 h-4 w-4" aria-hidden="true"><use href="#h-play"/></svg></span>
+              <span class="absolute bottom-3 left-3 right-16 hidden font-mono sm:block text-[9px] uppercase tracking-widest text-bone/70">Banquete · Violín solo</span>
+            </span>
+            <span class="mt-4 block font-display text-xl uppercase leading-tight transition group-hover:text-varnish">Caruso</span>
+            <span class="mt-1 block font-mono text-[10px] uppercase tracking-[.2em] text-bone/55">Lucio Dalla</span>
+          </button>
+          <button type="button" data-video="T3UoqGRTbqc" data-title="Don’t Stop Me Now" data-sub="Queen" data-cats="coctel" aria-label="Reproducir: Don’t Stop Me Now — Queen" class="group block text-left" data-aos="fade-up" data-aos-delay="160">
+            <span class="relative block aspect-[4/5] overflow-hidden rounded-xl border border-white/10 bg-panel">
+              <img src="../../assets/img/videos/T3UoqGRTbqc.webp" width="960" height="540" alt="" class="duo absolute inset-0 h-full w-full object-cover" loading="lazy" decoding="async">
+              <span class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent"></span>
+              <span class="absolute left-3 top-3 rounded-full bg-black/70 px-2.5 py-1 font-mono text-[9px] uppercase tracking-widest">Cóctel</span>
+              <span class="absolute bottom-3 right-3 grid h-11 w-11 place-items-center rounded-full border border-white/30 bg-black/60 transition duration-300 group-hover:scale-110 group-hover:border-varnish group-hover:bg-varnish group-hover:text-ink"><svg class="ml-0.5 h-4 w-4" aria-hidden="true"><use href="#h-play"/></svg></span>
+              <span class="absolute bottom-3 left-3 right-16 hidden font-mono sm:block text-[9px] uppercase tracking-widest text-bone/70">Fiesta · Violín solo</span>
+            </span>
+            <span class="mt-4 block font-display text-xl uppercase leading-tight transition group-hover:text-varnish">Don’t Stop Me Now</span>
+            <span class="mt-1 block font-mono text-[10px] uppercase tracking-[.2em] text-bone/55">Queen</span>
+          </button>
+          <button type="button" data-video="IrDNlSTihJU" data-title="Felicità" data-sub="Al Bano &amp; Romina Power" data-cats="coctel" aria-label="Reproducir: Felicità — Al Bano &amp; Romina Power" class="group block text-left" data-aos="fade-up" data-aos-delay="240">
+            <span class="relative block aspect-[4/5] overflow-hidden rounded-xl border border-white/10 bg-panel">
+              <img src="../../assets/img/videos/IrDNlSTihJU.webp" width="960" height="540" alt="" class="duo absolute inset-0 h-full w-full object-cover" loading="lazy" decoding="async">
+              <span class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent"></span>
+              <span class="absolute left-3 top-3 rounded-full bg-black/70 px-2.5 py-1 font-mono text-[9px] uppercase tracking-widest">Cóctel</span>
+              <span class="absolute bottom-3 right-3 grid h-11 w-11 place-items-center rounded-full border border-white/30 bg-black/60 transition duration-300 group-hover:scale-110 group-hover:border-varnish group-hover:bg-varnish group-hover:text-ink"><svg class="ml-0.5 h-4 w-4" aria-hidden="true"><use href="#h-play"/></svg></span>
+              <span class="absolute bottom-3 left-3 right-16 hidden font-mono sm:block text-[9px] uppercase tracking-widest text-bone/70">Cóctel · Violín solo</span>
+            </span>
+            <span class="mt-4 block font-display text-xl uppercase leading-tight transition group-hover:text-varnish">Felicità</span>
+            <span class="mt-1 block font-mono text-[10px] uppercase tracking-[.2em] text-bone/55">Al Bano &amp; Romina Power</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== CHAMADA FINAL ==================== -->
+    <section class="relative overflow-hidden py-24 sm:py-32">
+      <img src="../../assets/img/photos/contacto.webp" width="1280" height="720" alt="" class="absolute inset-0 h-full w-full object-cover opacity-25" loading="lazy" aria-hidden="true">
+      <div class="absolute inset-0 bg-gradient-to-b from-ink via-ink/70 to-ink"></div>
+      <div class="relative mx-auto max-w-4xl px-4 text-center sm:px-6" data-aos="fade-up">
+        <p class="font-mono text-[11px] uppercase tracking-mega text-varnish">Solicitar una propuesta</p>
+        <h2 class="mt-4 font-display text-5xl uppercase leading-[.95] sm:text-7xl">Hablemos de <span class="signature text-varnish">vuestro evento</span></h2>
+        <p class="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-bone/75">Contadme el espacio, la fecha y el programa, y prepararé una propuesta.</p>
+        <div class="mt-10 flex flex-col justify-center gap-3 sm:flex-row">
+          <a href="../../es/contacto/#consulta" data-track="eventos-cierre" class="inline-flex items-center justify-center gap-2 rounded-full px-7 py-3.5 text-xs font-semibold uppercase tracking-[.2em] transition bg-varnish text-ink shadow-[0_10px_30px_-10px_rgba(212,137,74,.8)] hover:bg-white "><svg class="h-4 w-4" aria-hidden="true"><use href="#h-calendar"/></svg> Solicitar una propuesta</a>
+          <a href="https://wa.me/34647697892?text=Hola%2C%20David.%20Me%20gustar%C3%ADa%20consultar%20disponibilidad%20para%20un%20evento%20el%20%5Bfecha%5D%20en%20%5Bciudad%5D.%20Es%20%5Btipo%20de%20evento%5D%20y%20me%20interesa%20contar%20con%20viol%C3%ADn%20en%20%5Bmomento%5D." target="_blank" rel="noopener" data-track="eventos-cierre-whatsapp" class="inline-flex items-center justify-center gap-2 rounded-full px-7 py-3.5 text-xs font-semibold uppercase tracking-[.2em] transition border border-white/20 hover:border-varnish hover:text-varnish "><svg class="h-4 w-4" aria-hidden="true"><use href="#b-whatsapp"/></svg> WhatsApp</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== RODAPÉ (briefing: Instagram, WhatsApp, e-mail e páginas legais) ==================== -->
+  <!-- Aviso legal (LSSI): criar quando o David enviar titular, NIF e endereço — o briefing pede para validar com os responsáveis -->
+  <footer class="relative border-t border-white/5 pt-20">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="grid gap-12 md:grid-cols-[1.4fr_1fr_1fr]">
+        <div class="max-w-sm">
+          <p class="font-display text-5xl uppercase leading-none wordmark">Amador <span class="text-varnish">•</span></p>
+          <p class="signature mt-1 text-3xl text-bone/80">Violinist</p>
+          <p class="mt-5 text-sm leading-relaxed text-bone/70">Violín en directo para bodas y eventos en Barcelona, Madrid y otros destinos de España.</p>
+          <div class="mt-6 flex flex-wrap gap-2">
+            <a href="https://wa.me/34647697892" target="_blank" rel="noopener" aria-label="WhatsApp" class="grid h-10 w-10 place-items-center rounded-full border border-white/15 text-bone/75 transition hover:border-varnish hover:text-varnish"><svg class="h-4 w-4" aria-hidden="true"><use href="#b-whatsapp"/></svg></a>
+            <a href="https://www.instagram.com/amadorviolin/" target="_blank" rel="noopener" aria-label="Instagram" class="grid h-10 w-10 place-items-center rounded-full border border-white/15 text-bone/75 transition hover:border-varnish hover:text-varnish"><svg class="h-4 w-4" aria-hidden="true"><use href="#b-instagram"/></svg></a>
+            <a href="https://www.youtube.com/@amadorviolin" target="_blank" rel="noopener" aria-label="YouTube" class="grid h-10 w-10 place-items-center rounded-full border border-white/15 text-bone/75 transition hover:border-varnish hover:text-varnish"><svg class="h-4 w-4" aria-hidden="true"><use href="#b-youtube"/></svg></a>
+            <a href="mailto:amadorviolinist@gmail.com" aria-label="Email" class="grid h-10 w-10 place-items-center rounded-full border border-white/15 text-bone/75 transition hover:border-varnish hover:text-varnish"><svg class="h-4 w-4" aria-hidden="true"><use href="#h-envelope"/></svg></a>
+          </div>
+        </div>
+        <div>
+          <p class="font-mono text-[11px] uppercase tracking-[.3em] text-varnish">Páginas</p>
+          <ul class="mt-5 space-y-2.5 text-sm text-bone/65">
+            <li><a href="../../es/" class="hover:text-white">Inicio</a></li>
+            <li><a href="../../es/bodas/" class="hover:text-white">Bodas</a></li>
+            <li><a href="../../es/eventos/" class="hover:text-white">Eventos</a></li>
+            <li><a href="../../es/sobre-david/" class="hover:text-white">Sobre David</a></li>
+            <li><a href="../../es/videos-repertorio/" class="hover:text-white">Vídeos y repertorio</a></li>
+            <li><a href="../../es/contacto/" class="hover:text-white">Contacto</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="font-mono text-[11px] uppercase tracking-[.3em] text-varnish">Contacto</p>
+          <ul class="mt-5 space-y-3 text-sm text-bone/65">
+            <li class="flex items-start gap-2.5"><svg class="mt-0.5 h-4 w-4 shrink-0 text-varnish" aria-hidden="true"><use href="#b-whatsapp"/></svg><a href="https://wa.me/34647697892" target="_blank" rel="noopener" data-track="footer-whatsapp" class="hover:text-white">+34 647 697 892</a></li>
+            <li class="flex items-start gap-2.5"><svg class="mt-0.5 h-4 w-4 shrink-0 text-varnish" aria-hidden="true"><use href="#h-envelope"/></svg><a href="mailto:amadorviolinist@gmail.com" data-track="footer-email" class="break-all hover:text-white">amadorviolinist@gmail.com</a></li>
+            <li class="flex items-start gap-2.5"><svg class="mt-0.5 h-4 w-4 shrink-0 text-varnish" aria-hidden="true"><use href="#b-instagram"/></svg><a href="https://www.instagram.com/amadorviolin/" target="_blank" rel="noopener" class="hover:text-white">@amadorviolin</a></li>
+            <li class="flex items-start gap-2.5"><svg class="mt-0.5 h-4 w-4 shrink-0 text-varnish" aria-hidden="true"><use href="#h-map-pin"/></svg>Barcelona · Madrid · España</li>
+          </ul>
+        </div>
+      </div>
+      <div class="mt-16 flex flex-col gap-4 border-t border-white/5 py-8 font-mono text-[10px] uppercase tracking-[.2em] text-bone/50 md:flex-row md:items-center md:justify-between">
+        <p>© <span id="year">2026</span> AMADOR • Violinist — David Amador</p>
+        <p class="flex flex-wrap items-center gap-4"><a href="../../es/privacidad/" class="transition hover:text-varnish">Privacidad</a><button type="button" data-consent-open class="uppercase tracking-[.2em] transition hover:text-varnish">Preferencias de privacidad</button></p>
+        <p>Web por <a href="https://wscodev.vercel.app/" target="_blank" rel="noopener" class="font-semibold text-bone/70 transition hover:text-varnish">Wendel Silva</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp flutuante + voltar ao topo -->
+  <a href="https://wa.me/34647697892?text=Hola%2C%20David.%20Me%20gustar%C3%ADa%20consultar%20disponibilidad%20para%20un%20evento%20el%20%5Bfecha%5D%20en%20%5Bciudad%5D.%20Es%20%5Btipo%20de%20evento%5D%20y%20me%20interesa%20contar%20con%20viol%C3%ADn%20en%20%5Bmomento%5D." target="_blank" rel="noopener" data-track="float-whatsapp" id="waFloat" class="wa-ring pointer-events-none fixed bottom-5 right-5 z-40 grid h-14 w-14 translate-y-4 place-items-center rounded-full bg-varnish text-ink opacity-0 shadow-2xl transition duration-300 hover:bg-white" aria-label="Escribir a David por WhatsApp"><svg class="h-7 w-7" aria-hidden="true"><use href="#b-whatsapp"/></svg></a>
+  <a href="#main" id="toTop" class="pointer-events-none fixed bottom-24 right-6 z-40 grid h-11 w-11 translate-y-4 place-items-center rounded-full border border-white/15 bg-ink/80 opacity-0 backdrop-blur transition duration-300 hover:border-varnish" aria-label="Volver arriba"><svg class="h-4 w-4" aria-hidden="true"><use href="#h-arrow-up"/></svg></a>
+
+  <!-- Modal de vídeo (YouTube em modo de privacidade mejorada, carregado só no clique) -->
+  <div id="videoModal" class="modal fixed inset-0 z-[80] flex items-center justify-center bg-black/90 p-4 backdrop-blur" role="dialog" aria-modal="true" aria-label="Vídeo">
+    <button type="button" data-close class="absolute right-4 top-4 grid h-11 w-11 place-items-center rounded-full border border-white/20 bg-black/60 transition hover:border-varnish" aria-label="Cerrar"><svg class="h-5 w-5" aria-hidden="true"><use href="#h-x-mark"/></svg></button>
+    <div id="videoBox" class="flex w-full max-w-5xl flex-col items-center">
+      <div id="videoFrame" class="aspect-video w-full overflow-hidden rounded-xl bg-panel"></div>
+      <p id="videoCaption" class="mt-4 text-center font-mono text-[11px] uppercase tracking-[.2em] text-bone/70"></p>
+    </div>
+  </div>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="modal fixed inset-0 z-[80] flex items-center justify-center bg-black/95 p-4" role="dialog" aria-modal="true" aria-label="Fotografía">
+    <button type="button" data-close class="absolute right-4 top-4 grid h-11 w-11 place-items-center rounded-full border border-white/20 bg-black/60" aria-label="Cerrar"><svg class="h-5 w-5" aria-hidden="true"><use href="#h-x-mark"/></svg></button>
+    <button type="button" data-lb="prev" class="absolute left-3 top-1/2 grid h-11 w-11 -translate-y-1/2 place-items-center rounded-full border border-white/20 bg-black/60" aria-label="Anterior"><svg class="h-5 w-5" aria-hidden="true"><use href="#h-chevron-left"/></svg></button>
+    <img id="lbImg" alt="" class="max-h-[85vh] max-w-full rounded-lg object-contain">
+    <button type="button" data-lb="next" class="absolute right-3 top-1/2 grid h-11 w-11 -translate-y-1/2 place-items-center rounded-full border border-white/20 bg-black/60" aria-label="Siguiente"><svg class="h-5 w-5" aria-hidden="true"><use href="#h-chevron-right"/></svg></button>
+    <p id="lbCap" class="absolute bottom-5 left-0 right-0 text-center font-mono text-[11px] uppercase tracking-[.2em] text-bone/70"></p>
+  </div>
+
+  <!-- Privacidade: sem cookies próprios; YouTube só carrega com a ação da pessoa (orientação da AEPD — briefing) -->
+  <div id="consentBar" class="fixed inset-x-3 bottom-3 z-[90] hidden max-w-lg rounded-2xl border border-white/10 bg-panel/95 p-5 shadow-2xl backdrop-blur sm:left-5 sm:right-auto" role="dialog" aria-live="polite" aria-label="Tu privacidad">
+    <p class="font-display text-lg uppercase tracking-wide">Tu privacidad</p>
+    <p class="mt-2 text-sm leading-relaxed text-bone/75">Esta web no utiliza cookies propias ni de análisis. Los vídeos se reproducen desde YouTube (modo de privacidad mejorada), que puede usar sus propias cookies, y solo se cargan cuando pulsas para verlos. Más información en la <a href="../../es/privacidad/" class="text-varnish underline">Política de privacidad</a>.</p>
+    <div class="mt-4 flex flex-col gap-2 sm:flex-row sm:flex-wrap">
+      <button type="button" data-consent="all" class="rounded-full bg-varnish px-5 py-2.5 text-[11px] font-semibold uppercase tracking-[.2em] text-ink transition hover:bg-white">Permitir vídeos de YouTube</button>
+      <button type="button" data-consent="essential" class="rounded-full border border-white/20 px-5 py-2.5 text-[11px] font-semibold uppercase tracking-[.2em] transition hover:border-varnish">Solo esenciales</button>
+    </div>
+  </div>
+
+  <script src="../../assets/vendor/aos.js" defer></script>
+  <script src="../../assets/js/main.js?v=1" defer></script>
+</body>
+</html>
