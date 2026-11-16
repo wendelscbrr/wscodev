@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://wscodev.vercel.app/miguel/site/sitemap.xml
+Sitemap: https://wscodev.com/miguel/site/sitemap.xml

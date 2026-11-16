@@ -1,9 +1,14 @@
 {
   "name": "miguel-pianista",
   "private": true,
-  "description": "Site de Miguel Ángel | Pianista — piano em directo para bodas e eventos em Málaga",
+  "description": "Site de Miguel Ángel — Pianista para bodas e eventos em Málaga. Código-fonte do CSS (Tailwind) e utilitários de build",
   "scripts": {
-    "build": "perl scripts/build.pl",
-    "dev": "node scripts/serve.mjs"
+    "dev": "node scripts/serve.mjs",
+    "build": "npm run build:css && node scripts/inline-css.mjs",
+    "build:css": "tailwindcss -c tailwind.config.js -i src/input.css -o build/style.css --minify",
+    "watch:css": "tailwindcss -c tailwind.config.js -i src/input.css -o build/style.css --watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "3.4.16"
   }
 }
