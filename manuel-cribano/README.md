@@ -1,54 +1,57 @@
-# Site · Manuel Cribaño · El Niño de Peñaflor
+# Manuel Cribaño · El Niño de Peñaflor — site
 
-Site multipágina em espanhol (es-ES), feito a partir do briefing de 16/11/2026 e com a mesma base visual e técnica do site de Amparo (`../proposta pianista/amparo`). A paleta foi trocada para vermelho cravo e dourado albero, e foi acrescentado o itálico Playfair para dar o tom de "cante".
+Usa a mesma base do projeto **amparo**, como o site do Miguel:
 
-## Estrutura
+- página única;
+- Tailwind 3.4.16 compilado e colocado inline no HTML;
+- paleta e fontes do Amparo (Anton, Inter e Space Mono, servidas localmente);
+- AOS para as animações;
+- conteúdo em arrays no `site/assets/js/main.js`.
 
-```
-site/                      ← pasta publicada (estática)
-  index.html               /                 Inicio
-  biografia/               /biografia        Biografía + Prensa y materiales (#prensa)
-  actuaciones/             /actuaciones
-  musica-y-videos/         /musica-y-videos
-  agenda/                  /agenda
-  contacto/                /contacto
-  privacidad.html
-  assets/js/data.js        ← CONTEÚDO EDITÁVEL: agenda, vídeos, gravações, e-mail, endpoint do formulário
-  assets/js/main.js        interações (agenda automática, player do YouTube, formulário, consentimento)
-src/pages/*.html           fonte de cada página (meta de SEO no topo de cada arquivo)
-src/partials/              head, header (menu) e footer comuns
-src/input.css              estilos complementares ao Tailwind
-build.ps1                  monta as páginas + compila o CSS + gera sitemap.xml
-tools/serve.ps1            servidor local (http://localhost:8080)
-tools/tailwindcss.exe      Tailwind CLI standalone v3.4.16 (não precisa de Node)
-raw/                       imagens originais (não publicar)
-```
+Os textos seguem o briefing de 16/11/2026, e o conteúdo foi completado com o canal oficial do YouTube e o Instagram do artista.
 
-## Como editar
+Endereço publicado: https://wscodev.com/manuel-cribano/site/
 
-- **Datas, vídeos, discos e contato:** edite só `site/assets/js/data.js`. Não é preciso rodar o build. As datas futuras aparecem em ordem e as passadas vão sozinhas para o arquivo. Quando não há datas futuras, a página mostra o aviso de ausência de datas.
-- **Textos das páginas, menu e rodapé:** edite `src/pages/` ou `src/partials/` e rode o build:
+## Seções
 
-```powershell
-powershell -ExecutionPolicy Bypass -File build.ps1          # build completo
-powershell -ExecutionPolicy Bypass -File tools\serve.ps1    # testar em http://localhost:8080
-```
+Inicio · Biografía · Actuaciones · Cantes · Música y vídeos (15 vídeos, singles e fotos) · Agenda · Prensa · FAQ · Contacto
 
-> Não edite os `.html` dentro de `site/`, porque o build sobrescreve esses arquivos.
+## Como editar o conteúdo
 
-## Antes de publicar
+O conteúdo fica nos arrays do `main.js`. Nenhuma dessas edições precisa de build:
 
-1. **Domínio:** troque `$SITE` em `build.ps1`, o endereço em `site/robots.txt` e as URLs do JSON-LD em `src/pages/index.html`. Depois, rode o build.
-2. **Formulário:** cole em `formEndpoint` (`data.js`) o endereço do serviço que recebe os pedidos (por exemplo, Formspree). Teste um envio real e um envio com erro. A mensagem de sucesso só aparece quando o servidor confirma o envio. Sem endpoint, o formulário abre o programa de e-mail da pessoa com a mensagem já preparada.
-3. **Política de privacidade:** o texto atual é um rascunho e precisa ser revisado com o responsável.
+- **Cantes:** `CANTES`.
+- **Trajetória:** `MOMENTOS`.
+- **Vídeos:** `VIDEOS`. A capa de cada vídeo é `assets/img/videos/<id>.jpg`, em 400x500.
+- **Singles:** `GRABACIONES`.
+- **Fotos:** `GALERIA`.
+- **Agenda:** `EVENTOS`. As datas futuras aparecem sozinhas em "Próximas actuaciones" e as passadas vão para o arquivo.
 
-## Pendências com o artista (briefing)
+## Build
 
-- Confirmar se a caixa **isacripla@gmail.com** está ativa e se ele aprova publicá-la. Ela está em `data.js`, no rodapé e na página de contato. Confirmar também se há WhatsApp e quem responde às consultas.
-- **Fotos oficiais autorizadas, com crédito.** Por enquanto, o site usa quadros dos vídeos do próprio canal (`assets/img/photos`, `assets/img/videos`). Para trocá-las, substitua os arquivos mantendo os mesmos nomes.
-- **Capas dos discos autorizadas.** Coloque cada uma em `assets/img/covers/` e preencha `capa` em `data.js`. Sem capa, o site desenha um disco no lugar.
-- **Formatos de recital:** formação, duração, território, cachê e rider técnico. Quando aprovados, criar uma ficha por formato em `actuaciones`.
-- **Agenda futura** e links oficiais de ingressos.
-- Antes de citar outros marcos na biografia, validar os discos «A mi padre» e «Con su permiso», os resultados de TV e o prêmio em Hornachos.
-- **Dossiê artístico em PDF:** o botão "Descargar dossier artístico" entra na seção `#prensa` quando o arquivo existir.
-- Links da Amazon Music: o briefing traz `music.amazon.in` e `music.amazon.com`. Avaliar se há versões em `.es`.
+Rode o build depois de mudar classes ou textos no HTML. Ele compila `src/input.css` e coloca o CSS dentro de `<style id="site-css">` em `index.html` e `privacidad.html`.
+
+- **Com Node:** `npm run build`. Para servir em localhost: `npm run dev`.
+- **Sem Node:** `powershell -ExecutionPolicy Bypass -File build.ps1`. Ele usa `tools/tailwindcss.exe`, o CLI standalone oficial v3.4.16, que não vai para o Git. Para servir em localhost: `tools/serve.ps1`.
+
+## Formulário
+
+Envia para `manuelsellamacopla@gmail.com` via FormSubmit (`FORM_ENDPOINT` no `main.js`).
+
+1. No primeiro envio, chega um e-mail de ativação e Manuel precisa clicar em **Activate Form**.
+2. Depois, troque o e-mail na URL do `FORM_ENDPOINT` pelo código aleatório que o FormSubmit mostra.
+
+A mensagem de sucesso só aparece com a confirmação do servidor.
+
+## Pendências com o artista
+
+- **E-mail:** o site usa o e-mail da bio do Instagram ("Abierta Contratación"). O briefing citava isacripla@gmail.com, que aparece na descrição do YouTube. Confirmar qual fica.
+- **Instagram:** a página pública do perfil não mostra os códigos dos reels. Para incorporar reels específicos, pegar os links (`instagram.com/reel/…`) com o artista.
+- **Datas tiradas do Instagram:**
+  - Riogordo: só o mês (nov/2026), sem o dia.
+  - Fuente Palmera e Aguilar de la Frontera: sem data.
+  - Confirmar as datas e preencher `fecha` em `EVENTOS`.
+- **Agenda futura:** pedir as próximas datas ao artista, com os links dos organizadores.
+- **Fotos e formatos:** fotos oficiais com crédito. Por enquanto, as imagens são quadros dos vídeos do canal. Também faltam formatos de recital, cachê e rider técnico.
+- **Biografia:** validar os discos «A mi padre» e «Con su permiso», os resultados de TV e o prêmio em Hornachos antes de citá-los.
+- **Privacidade:** revisar `privacidad.html` com o responsável.
