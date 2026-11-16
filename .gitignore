@@ -12,3 +12,6 @@ Thumbs.db
 
 # Vídeo do hero do site Forró em Milão (hospedado no próprio site)
 !forroemmilao/site/assets/video/*.mp4
+
+# Tailwind CLI standalone (40 MB) — baixar de novo conforme o README do projeto
+*/tools/tailwindcss.exe

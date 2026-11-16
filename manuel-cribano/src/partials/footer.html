@@ -1,0 +1,77 @@
+
+  <!-- ==================== PIE DE PÁGINA ==================== -->
+  <footer class="relative border-t border-white/5 pt-20">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="grid gap-12 md:grid-cols-12">
+        <div class="md:col-span-5">
+          <p class="wordmark font-display text-5xl uppercase leading-none">Manuel Cribaño</p>
+          <p class="mt-2 font-serif text-xl italic text-albero">El Niño de Peñaflor</p>
+          <!-- Biografia curta do briefing (versão para rodapé e imprensa) -->
+          <p class="mt-5 max-w-md text-sm leading-relaxed text-bone/70">Manuel Cribaño Plaza, conocido como El Niño de Peñaflor, es cantaor de flamenco y copla. Natural de Peñaflor (Sevilla), empezó a cantar fandangos de niño y ha llevado su cante a peñas, festivales y programas de Canal Sur.</p>
+          <div class="mt-6 flex flex-wrap gap-2">
+            <a href="https://www.youtube.com/channel/UCxmcFiyQAkpSCjx8dxdPVCA" target="_blank" rel="noopener" aria-label="YouTube" class="grid h-11 w-11 place-items-center rounded-full border border-white/10 text-bone/70 transition hover:border-clavel hover:text-white"><svg class="h-4 w-4" aria-hidden="true"><use href="#b-youtube"/></svg></a>
+            <a href="https://www.instagram.com/manuel_cribano/" target="_blank" rel="noopener" aria-label="Instagram" class="grid h-11 w-11 place-items-center rounded-full border border-white/10 text-bone/70 transition hover:border-clavel hover:text-white"><svg class="h-4 w-4" aria-hidden="true"><use href="#b-instagram"/></svg></a>
+            <a href="https://www.threads.com/@manuel_cribano" target="_blank" rel="noopener" aria-label="Threads" class="grid h-11 w-11 place-items-center rounded-full border border-white/10 text-bone/70 transition hover:border-clavel hover:text-white"><svg class="h-4 w-4" aria-hidden="true"><use href="#b-threads"/></svg></a>
+          </div>
+        </div>
+
+        <div class="md:col-span-3">
+          <p class="font-mono text-[11px] uppercase tracking-[.3em] text-albero">Navegación</p>
+          <ul class="mt-5 grid grid-cols-2 gap-x-8 gap-y-2.5 text-sm text-bone/65 md:grid-cols-1">
+            <li><a href="{{home}}" class="hover:text-white">Inicio</a></li>
+            <li><a href="{{root}}biografia/" class="hover:text-white">Biografía</a></li>
+            <li><a href="{{root}}actuaciones/" class="hover:text-white">Actuaciones</a></li>
+            <li><a href="{{root}}musica-y-videos/" class="hover:text-white">Música y vídeos</a></li>
+            <li><a href="{{root}}agenda/" class="hover:text-white">Agenda</a></li>
+            <li><a href="{{root}}biografia/#prensa" class="hover:text-white">Prensa</a></li>
+            <li><a href="{{root}}contacto/" class="hover:text-white">Contacto</a></li>
+          </ul>
+        </div>
+
+        <div class="md:col-span-4">
+          <p class="font-mono text-[11px] uppercase tracking-[.3em] text-albero">Contratación</p>
+          <ul class="mt-5 space-y-3 text-sm text-bone/65">
+            <li class="flex items-start gap-2.5"><svg class="mt-0.5 h-4 w-4 shrink-0 text-clavel" aria-hidden="true"><use href="#h-envelope"/></svg><a href="mailto:isacripla@gmail.com" data-email class="break-all hover:text-white">isacripla@gmail.com</a></li>
+            <li class="flex items-start gap-2.5"><svg class="mt-0.5 h-4 w-4 shrink-0 text-clavel" aria-hidden="true"><use href="#b-instagram"/></svg><a href="https://www.instagram.com/manuel_cribano/" target="_blank" rel="noopener" class="hover:text-white">@manuel_cribano</a></li>
+            <li class="flex items-start gap-2.5"><svg class="mt-0.5 h-4 w-4 shrink-0 text-clavel" aria-hidden="true"><use href="#h-map-pin"/></svg>Peñaflor · Sevilla</li>
+          </ul>
+          <a href="{{root}}contacto/" data-track="footer-disponibilidad" class="mt-6 inline-flex items-center gap-2 rounded-full border border-clavel/70 px-5 py-3 text-[11px] font-semibold uppercase tracking-[.18em] transition hover:bg-clavel-deep hover:text-bone">Consultar disponibilidad <svg class="h-4 w-4" aria-hidden="true"><use href="#h-arrow-right"/></svg></a>
+        </div>
+      </div>
+
+      <div class="mt-16 flex flex-col items-center justify-between gap-3 border-t border-white/5 py-8 text-xs text-bone/60 sm:flex-row">
+        <p>© <span id="year">2026</span> Manuel Cribaño Plaza · El Niño de Peñaflor</p>
+        <p class="flex items-center gap-4"><a href="{{root}}privacidad.html" class="transition hover:text-clavel">Política de privacidad</a><button type="button" data-consent-open class="transition hover:text-clavel">Preferencias de privacidad</button></p>
+        <p>Web por <a href="https://wscodev.vercel.app/" target="_blank" rel="noopener" class="font-semibold text-bone/75 transition hover:text-clavel">Wendel Silva</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Contratação sempre à mão no celular + voltar ao topo (o main.js esconde o primeiro na página de contato) -->
+  <a href="{{root}}contacto/" data-track="float-disponibilidad" id="ctaFloat" class="fixed bottom-5 right-5 z-40 flex translate-y-4 items-center gap-2 rounded-full bg-clavel-deep px-5 py-3.5 text-[11px] font-semibold uppercase tracking-[.16em] text-bone opacity-0 shadow-[0_12px_30px_-8px_rgba(163,18,42,.8)] transition hover:bg-bone hover:text-ink" aria-label="Consultar disponibilidad"><svg class="h-4 w-4" aria-hidden="true"><use href="#h-calendar"/></svg><span class="hidden sm:inline">Disponibilidad</span></a>
+  <a href="#main" id="toTop" class="fixed bottom-[5.5rem] right-6 z-40 grid h-11 w-11 translate-y-4 place-items-center rounded-full border border-clavel/60 bg-ink/90 text-clavel opacity-0 transition hover:bg-clavel-deep hover:text-bone" aria-label="Volver arriba"><svg class="h-4 w-4" aria-hidden="true"><use href="#h-arrow-up"/></svg></a>
+
+  <!-- Modal de vídeo (YouTube em modo de privacidade reforçada, só carrega ao clicar) -->
+  <div id="videoModal" class="modal fixed inset-0 z-[80] grid place-items-center bg-black/90 p-4 backdrop-blur" role="dialog" aria-modal="true" aria-labelledby="videoCaption">
+    <button type="button" data-close class="absolute right-4 top-4 z-10 grid h-11 w-11 place-items-center rounded-full border border-white/20 bg-black/60 hover:border-clavel" aria-label="Cerrar vídeo"><svg class="h-5 w-5" aria-hidden="true"><use href="#h-x-mark"/></svg></button>
+    <div class="w-full max-w-5xl">
+      <div id="videoFrame" class="aspect-video w-full overflow-hidden rounded-xl bg-panel shadow-2xl"></div>
+      <p id="videoCaption" class="mt-4 text-center font-mono text-[11px] uppercase tracking-[.25em] text-bone/70"></p>
+    </div>
+  </div>
+
+  <!-- Aviso de privacidade: sem cookies próprios; o player do YouTube só carrega com autorização -->
+  <div id="consentBar" class="fixed inset-x-3 bottom-3 z-[90] hidden max-w-xl rounded-2xl border border-white/10 bg-panel/95 p-5 shadow-2xl shadow-black backdrop-blur sm:bottom-6 sm:left-6 sm:right-auto" role="region" aria-label="Privacidad">
+    <p class="font-display text-lg uppercase tracking-wide">Tu privacidad</p>
+    <p class="mt-2 text-sm leading-relaxed text-bone/75">Esta web no utiliza cookies propias ni de seguimiento. Los vídeos se reproducen desde YouTube, que puede usar sus propias cookies, y solo se cargan cuando pulsas para verlos. Más información en la <a href="{{root}}privacidad.html" class="text-clavel underline">Política de privacidad</a>.</p>
+    <div class="mt-4 flex flex-col gap-2 sm:flex-row sm:flex-wrap">
+      <button type="button" data-consent="all" class="w-full rounded-full bg-clavel-deep px-5 py-2.5 text-[11px] font-semibold uppercase tracking-[.18em] text-bone transition hover:bg-bone hover:text-ink sm:w-auto">Permitir vídeos de YouTube</button>
+      <button type="button" data-consent="essential" class="w-full rounded-full border border-white/15 px-5 py-2.5 text-[11px] font-semibold uppercase tracking-[.18em] transition hover:border-clavel sm:w-auto">Solo esenciales</button>
+    </div>
+  </div>
+
+  <script src="{{root}}assets/js/aos.js" defer></script>
+  <script src="{{root}}assets/js/data.js?v={{v}}" defer></script>
+  <script src="{{root}}assets/js/main.js?v={{v}}" defer></script>
+</body>
+</html>

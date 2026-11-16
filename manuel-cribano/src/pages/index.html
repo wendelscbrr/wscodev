@@ -1,0 +1,193 @@
+<!--@meta
+key = inicio
+route =
+title = Manuel Cribaño · El Niño de Peñaflor · Flamenco y copla
+description = Conoce a Manuel Cribaño, cantaor de Peñaflor (Sevilla). Escucha sus grabaciones, mira sus actuaciones y consulta su disponibilidad.
+@-->
+<!--@head
+<link rel="preload" as="image" href="assets/img/photos/hero-mobile.jpg" media="(max-width: 767px)" fetchpriority="high">
+  <link rel="preload" as="image" href="assets/img/photos/hero.jpg" media="(min-width: 768px)" fetchpriority="high">
+  <!-- Dados estruturados: só fatos do briefing (nome civil e artístico, origem, canais oficiais) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      { "@type": "WebSite", "@id": "https://wscodev.com/manuel-cribano/site/#website", "url": "https://wscodev.com/manuel-cribano/site/", "name": "Manuel Cribaño · El Niño de Peñaflor", "inLanguage": "es-ES" },
+      {
+        "@type": "Person", "@id": "https://wscodev.com/manuel-cribano/site/#manuel",
+        "name": "Manuel Cribaño Plaza", "alternateName": ["Manuel Cribaño", "El Niño de Peñaflor"],
+        "jobTitle": "Cantaor de flamenco y copla", "birthPlace": { "@type": "Place", "name": "Peñaflor, Sevilla" },
+        "url": "https://wscodev.com/manuel-cribano/site/", "image": "https://wscodev.com/manuel-cribano/site/assets/img/og-image.jpg",
+        "sameAs": ["https://www.youtube.com/channel/UCxmcFiyQAkpSCjx8dxdPVCA", "https://www.instagram.com/manuel_cribano/", "https://www.threads.com/@manuel_cribano"]
+      }
+    ]
+  }
+  </script>
+@-->
+  <main id="main" class="overflow-x-clip">
+    <!-- ==================== HERO ==================== -->
+    <!-- Fundo: quadro do videoclipe oficial «Marianas» (canal do artista). Trocar pelo retrato oficial quando o artista enviar -->
+    <section class="letterbox relative flex min-h-[100svh] items-center justify-center overflow-hidden pt-20">
+      <picture>
+        <source media="(max-width: 767px)" srcset="assets/img/photos/hero-mobile.jpg" width="480" height="720">
+        <img src="assets/img/photos/hero.jpg" width="1280" height="720" alt="" fetchpriority="high" class="hero-img absolute inset-0 h-full w-full object-cover object-[50%_30%]">
+      </picture>
+      <div class="absolute inset-0 bg-ink/60"></div>
+      <div class="absolute inset-0 bg-gradient-to-br from-clavel-deep/40 via-transparent to-albero/10 mix-blend-multiply"></div>
+      <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(14,11,10,.2)_0%,rgba(14,11,10,.75)_60%,#0e0b0a_100%)]"></div>
+      <div class="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-ink to-transparent"></div>
+      <div class="hero-glow pointer-events-none absolute left-1/2 top-1/2 h-[620px] w-[620px] -translate-x-1/2 -translate-y-1/2"></div>
+
+      <div class="relative z-10 mx-auto w-full max-w-5xl px-4 py-16 text-center">
+        <div class="mb-6 inline-flex items-center gap-2 rounded-full border border-white/15 bg-black/50 px-4 py-1.5">
+          <span class="eq flex h-3.5 items-end" aria-hidden="true"><span></span><span></span><span></span><span></span></span>
+          <span class="font-mono text-[10px] uppercase tracking-[.3em] text-bone/85">Cantaor de flamenco y copla</span>
+        </div>
+
+        <h1 class="hero-title">
+          <span class="wordmark block font-display text-[17vw] uppercase leading-[.85] sm:text-[120px] lg:text-[150px]">Manuel Cribaño</span>
+          <span class="sr-only"> · </span>
+          <span class="mt-3 block font-serif text-3xl italic text-albero sm:text-5xl">El Niño de Peñaflor</span>
+        </h1>
+
+        <p class="mt-6 flex items-center justify-center gap-3 font-mono text-[10px] uppercase tracking-[.2em] text-bone/80 sm:gap-4 sm:text-[11px] sm:tracking-mega">
+          <span class="h-px w-8 bg-bone/30 sm:w-16" aria-hidden="true"></span> Cantaor de flamenco y copla de Peñaflor, Sevilla. <span class="h-px w-8 bg-bone/30 sm:w-16" aria-hidden="true"></span>
+        </p>
+        <p class="mx-auto mt-5 max-w-xl text-base leading-relaxed text-bone/85 sm:text-lg"><span class="font-serif italic">«</span>Empecé a cantar fandangos en mi pueblo. Aquí puedes escuchar mi música, ver actuaciones en directo y consultar las próximas fechas.<span class="font-serif italic">»</span></p>
+
+        <div class="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
+          <a href="contacto/" data-track="hero-disponibilidad" class="flex items-center justify-center gap-2 rounded-full bg-clavel-deep px-7 py-3.5 text-xs font-semibold uppercase tracking-[.2em] text-bone shadow-[0_10px_30px_-10px_rgba(163,18,42,.9)] transition hover:bg-bone hover:text-ink"><svg class="h-4 w-4" aria-hidden="true"><use href="#h-calendar"/></svg> Consultar disponibilidad</a>
+          <a href="actuaciones/" data-track="hero-actuaciones" class="flex items-center justify-center gap-2 rounded-full border border-white/25 px-7 py-3.5 text-xs font-semibold uppercase tracking-[.2em] transition hover:border-clavel hover:text-clavel"><svg class="h-4 w-4" aria-hidden="true"><use href="#h-mic"/></svg> Ver actuaciones</a>
+        </div>
+
+        <!-- Vídeo em destaque (briefing): Marianas -->
+        <div class="mx-auto mt-10 flex max-w-2xl flex-col items-center gap-4 rounded-2xl border border-white/10 bg-black/70 p-4 text-left backdrop-blur sm:flex-row sm:p-5">
+          <img src="assets/img/videos/marianas.jpg" width="960" height="540" alt="" class="aspect-video w-full shrink-0 rounded-md object-cover sm:w-28">
+          <div class="min-w-0 flex-1">
+            <p class="flex items-center gap-2 font-mono text-[10px] uppercase tracking-[.3em] text-clavel"><span class="pulse-dot h-2 w-2 rounded-full bg-clavel text-clavel" aria-hidden="true"></span> Vídeo destacado</p>
+            <p class="mt-1 font-display text-2xl uppercase tracking-wide">Marianas — Videoclip</p>
+            <p class="text-xs leading-relaxed text-bone/70">Con Javi Santiago a la guitarra y Tamara Vargas en los coros.</p>
+          </div>
+          <button type="button" data-yt="-bFQLDr8fyU" data-title="Marianas — Videoclip oficial" data-track="hero-video" class="flex w-full shrink-0 items-center justify-center gap-2 rounded-full border border-clavel/70 px-5 py-2.5 text-[11px] font-semibold uppercase tracking-[.18em] text-bone transition hover:bg-clavel-deep sm:w-auto"><svg class="h-4 w-4" aria-hidden="true"><use href="#h-play"/></svg> Ver el videoclip</button>
+        </div>
+
+        <a href="#presentacion" class="mt-10 hidden flex-col items-center gap-2 text-bone/65 hover:text-bone md:inline-flex" aria-label="Ir a la presentación">
+          <span class="flex h-9 w-5 justify-center rounded-full border border-current pt-1.5"><span class="scroll-dot h-2 w-1 rounded-full bg-current"></span></span>
+          <span class="font-mono text-[9px] uppercase tracking-[.3em]">Scroll</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ==================== FITAS (textos em data.js → marquee) ==================== -->
+    <div class="relative z-20 -mt-6 h-40 overflow-hidden" aria-hidden="true">
+      <div class="tape absolute left-[-5%] top-14 w-[110%] -rotate-[2deg] border-y border-white/5 bg-panel py-3 opacity-80">
+        <div class="marquee reverse font-display text-2xl uppercase tracking-[.2em] text-bone/45" data-marquee></div>
+      </div>
+      <div class="tape absolute left-[-5%] top-16 w-[110%] rotate-[1.5deg] bg-clavel-deep py-3">
+        <div class="marquee font-display text-2xl uppercase tracking-[.2em] text-bone" data-marquee></div>
+      </div>
+    </div>
+
+    <!-- ==================== PRESENTACIÓN (bio curta do briefing) ==================== -->
+    <section id="presentacion" class="relative overflow-hidden py-20 sm:py-24">
+      <div class="mx-auto grid max-w-6xl items-center gap-14 px-4 sm:px-6 lg:grid-cols-12 lg:px-8">
+        <figure class="group relative mx-auto w-full max-w-sm lg:col-span-5" data-aos="fade-right">
+          <div class="absolute -right-3 -top-3 hidden h-full w-full rounded-2xl border border-clavel/40 sm:block" aria-hidden="true"></div>
+          <div class="relative overflow-hidden rounded-2xl">
+            <img src="assets/img/photos/retrato.jpg" width="600" height="680" alt="Manuel Cribaño cantando con las manos alzadas en el videoclip de «Marianas»" class="duo aspect-[4/5] h-auto w-full object-cover object-[50%_25%]" loading="lazy">
+          </div>
+          <figcaption class="absolute -bottom-5 -left-2 -rotate-3 rounded-md bg-bone px-4 py-2 text-ink shadow-xl sm:-left-6">
+            <span class="block font-mono text-[9px] font-bold uppercase tracking-[.3em] text-clavel-deep">Peñaflor · Sevilla</span>
+            <span class="block font-serif text-2xl italic leading-none">El Niño de Peñaflor</span>
+          </figcaption>
+        </figure>
+        <div class="lg:col-span-7" data-aos="fade-left" data-aos-delay="100">
+          <p class="font-mono text-[11px] uppercase tracking-mega text-clavel">Biografía</p>
+          <h2 class="mt-3 font-display text-4xl uppercase leading-[1.05] sm:text-5xl">De los fandangos de su pueblo <span class="font-serif normal-case italic text-albero">a las peñas y Canal Sur</span></h2>
+          <p class="mt-6 max-w-2xl text-lg leading-relaxed text-bone/80">Manuel Cribaño Plaza, conocido como El Niño de Peñaflor, es cantaor de flamenco y copla. Natural de Peñaflor (Sevilla), empezó a cantar fandangos de niño y ha llevado su cante a peñas, festivales y programas de Canal Sur.</p>
+
+          <ul class="mt-8 grid gap-3 sm:grid-cols-3">
+            <li class="rounded-xl border border-white/10 bg-panel/60 p-4"><svg class="h-5 w-5 text-clavel" aria-hidden="true"><use href="#h-mic"/></svg><span class="mt-3 block font-display text-xl uppercase leading-tight">Peñas y festivales</span><span class="mt-1 block text-xs leading-relaxed text-bone/60">Circuito Andaluz de Peñas 2026</span></li>
+            <li class="rounded-xl border border-white/10 bg-panel/60 p-4"><svg class="h-5 w-5 text-clavel" aria-hidden="true"><use href="#h-trophy"/></svg><span class="mt-3 block font-display text-xl uppercase leading-tight">2.º puesto · 2019</span><span class="mt-1 block text-xs leading-relaxed text-bone/60">Concurso de fandangos, Chipiona</span></li>
+            <li class="rounded-xl border border-white/10 bg-panel/60 p-4"><svg class="h-5 w-5 text-clavel" aria-hidden="true"><use href="#h-tv"/></svg><span class="mt-3 block font-display text-xl uppercase leading-tight">Canal Sur</span><span class="mt-1 block text-xs leading-relaxed text-bone/60">Se llama copla · Tierra de talento</span></li>
+          </ul>
+
+          <a href="biografia/" class="mt-8 inline-flex items-center gap-3 rounded-full border border-white/20 px-6 py-3 text-xs font-semibold uppercase tracking-[.22em] transition hover:border-clavel hover:text-clavel">Leer la biografía <svg class="h-4 w-4" aria-hidden="true"><use href="#h-arrow-right"/></svg></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== VÍDEO EM DESTAQUE ==================== -->
+    <section class="relative border-t border-white/5 bg-panel/40 py-24 sm:py-28">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <header class="relative mb-12 text-center" data-aos="fade-up">
+          <span class="ghost pointer-events-none absolute inset-x-0 -top-6 font-display text-[18vw] uppercase sm:text-[150px]" aria-hidden="true">Marianas</span>
+          <p class="relative font-mono text-[11px] uppercase tracking-mega text-clavel">Música y vídeos</p>
+          <h2 class="relative mt-2 font-display text-5xl uppercase sm:text-6xl">Escucha su cante</h2>
+        </header>
+        <div id="featuredVideo" data-aos="fade-up"></div>
+
+        <div class="mt-20 flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-end" data-aos="fade-up">
+          <div>
+            <p class="font-mono text-[11px] uppercase tracking-[.3em] text-albero">Grabaciones</p>
+            <h3 class="mt-2 font-display text-4xl uppercase sm:text-5xl">Últimos lanzamientos</h3>
+          </div>
+          <a href="musica-y-videos/" class="flex items-center gap-2 text-xs uppercase tracking-[.16em] text-bone/70 transition hover:text-clavel">Toda la música y los vídeos <svg class="h-4 w-4" aria-hidden="true"><use href="#h-arrow-right"/></svg></a>
+        </div>
+        <div id="recGrid" class="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4"></div>
+      </div>
+    </section>
+
+    <!-- ==================== ACTUACIONES (resumo) ==================== -->
+    <section class="relative overflow-hidden py-24 sm:py-28">
+      <div class="pointer-events-none absolute -left-60 top-0 h-[700px] w-[700px] bg-[radial-gradient(closest-side,rgba(229,72,77,.1),transparent)]" aria-hidden="true"></div>
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <header class="relative mb-14 text-center" data-aos="fade-up">
+          <span class="ghost pointer-events-none absolute inset-x-0 -top-6 font-display text-[16vw] uppercase sm:text-[150px]" aria-hidden="true">En directo</span>
+          <p class="relative font-mono text-[11px] uppercase tracking-mega text-clavel">Actuaciones</p>
+          <h2 class="relative mt-2 font-display text-5xl uppercase sm:text-6xl">Cante flamenco y copla en directo</h2>
+        </header>
+        <div class="grid gap-6 md:grid-cols-2">
+          <a href="actuaciones/#flamenco" class="group relative flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-panel/60 p-7 transition hover:border-clavel/60 sm:p-9" data-aos="fade-up">
+            <span class="font-display text-6xl leading-none text-clavel">01</span>
+            <span class="mt-6 font-mono text-[10px] uppercase tracking-[.3em] text-albero">Con guitarra</span>
+            <span class="mt-2 font-display text-4xl uppercase leading-tight">Recital flamenco</span>
+            <span class="mt-4 leading-relaxed text-bone/70">Fandangos, tangos, soleás, malagueñas, colombianas y otros cantes, en peñas y festivales.</span>
+            <span class="mt-8 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[.2em] transition group-hover:text-clavel">Conocer el recital <svg class="h-4 w-4" aria-hidden="true"><use href="#h-arrow-right"/></svg></span>
+          </a>
+          <a href="actuaciones/#copla" class="group relative flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-panel/60 p-7 transition hover:border-clavel/60 sm:p-9" data-aos="fade-up" data-aos-delay="100">
+            <span class="font-display text-6xl leading-none text-clavel">02</span>
+            <span class="mt-6 font-mono text-[10px] uppercase tracking-[.3em] text-albero">Desde «Se llama copla»</span>
+            <span class="mt-2 font-display text-4xl uppercase leading-tight">Copla</span>
+            <span class="mt-4 leading-relaxed text-bone/70">En Tierra de talento interpretó «El Cristo de los Faroles», y Canal Sur anunció «El emigrante» de Juanito Valderrama.</span>
+            <span class="mt-8 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[.2em] transition group-hover:text-clavel">Escuchar la copla <svg class="h-4 w-4" aria-hidden="true"><use href="#h-arrow-right"/></svg></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== AGENDA (próxima data ou estado vazio — data.js) ==================== -->
+    <section class="relative border-t border-white/5 bg-panel/40 py-24 sm:py-28">
+      <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+        <header class="relative mb-12 text-center" data-aos="fade-up">
+          <span class="ghost pointer-events-none absolute inset-x-0 -top-6 font-display text-[22vw] uppercase sm:text-[160px]" aria-hidden="true">Agenda</span>
+          <p class="relative font-mono text-[11px] uppercase tracking-mega text-clavel">Agenda</p>
+          <h2 class="relative mt-2 font-display text-5xl uppercase sm:text-6xl">Próximas actuaciones</h2>
+        </header>
+        <div id="agendaNext" data-aos="fade-up"></div>
+        <p class="mt-8 text-center"><a href="agenda/" class="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[.2em] text-bone/75 transition hover:text-clavel">Ver la agenda y el archivo de actuaciones <svg class="h-4 w-4" aria-hidden="true"><use href="#h-arrow-right"/></svg></a></p>
+      </div>
+    </section>
+
+    <!-- ==================== CHAMADA DE CONTATO (briefing) ==================== -->
+    <section class="relative overflow-hidden py-24 sm:py-32">
+      <img src="assets/img/photos/hero.jpg" width="1280" height="720" alt="" class="absolute inset-0 h-full w-full object-cover opacity-[.14] grayscale" loading="lazy" aria-hidden="true">
+      <div class="absolute inset-0 bg-gradient-to-b from-ink via-ink/70 to-ink" aria-hidden="true"></div>
+      <div class="relative mx-auto max-w-4xl px-4 text-center sm:px-6" data-aos="fade-up">
+        <p class="fil mx-auto max-w-xs font-mono text-[11px] uppercase tracking-mega">Contratación</p>
+        <h2 class="mt-6 font-display text-5xl uppercase leading-[1.02] sm:text-7xl">¿Estás preparando una <span class="font-serif normal-case italic text-clavel">programación flamenca?</span></h2>
+        <p class="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-bone/80">Cuéntame dónde y cuándo tendrá lugar. Así podremos hablar del recital y de lo que necesita tu evento.</p>
+        <a href="contacto/" data-track="cta-final" class="mt-10 inline-flex items-center justify-center gap-2 rounded-full bg-clavel-deep px-8 py-4 text-xs font-semibold uppercase tracking-[.2em] text-bone shadow-[0_10px_30px_-10px_rgba(163,18,42,.9)] transition hover:bg-bone hover:text-ink"><svg class="h-4 w-4" aria-hidden="true"><use href="#h-calendar"/></svg> Consultar disponibilidad</a>
+      </div>
+    </section>
+  </main>

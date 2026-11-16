@@ -1,0 +1,69 @@
+<!--@meta
+key = musica
+route = musica-y-videos/
+title = Música y vídeos de Manuel Cribaño · El Niño de Peñaflor
+description = Mira el videoclip de Marianas, escucha sus grabaciones y encuentra actuaciones completas.
+@-->
+  <main id="main" class="overflow-x-clip">
+    <!-- ==================== CABEÇALHO ==================== -->
+    <section class="page-hero letterbox relative flex items-end overflow-hidden pb-16 pt-32">
+      <img src="{{root}}assets/img/videos/marianas.jpg" width="960" height="540" alt="" class="absolute inset-0 h-full w-full object-cover object-[50%_25%] opacity-45" fetchpriority="high">
+      <div class="absolute inset-0 bg-gradient-to-t from-ink via-ink/70 to-ink/30" aria-hidden="true"></div>
+      <div class="absolute inset-0 bg-gradient-to-r from-clavel-deep/40 to-transparent mix-blend-multiply" aria-hidden="true"></div>
+      <div class="relative z-10 mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+        <p class="flex items-center gap-3 font-mono text-[11px] uppercase tracking-mega text-clavel"><span class="eq flex h-3.5 items-end" aria-hidden="true"><span></span><span></span><span></span><span></span></span> Escucha</p>
+        <h1 class="mt-3 font-display text-6xl uppercase leading-[.9] sm:text-8xl lg:text-9xl">Música <span class="font-serif normal-case italic text-albero">y</span> vídeos</h1>
+        <p class="mt-6 max-w-2xl text-lg leading-relaxed text-bone/80">Escucha las grabaciones de Manuel Cribaño y recorre su trabajo en directo, desde los fandangos hasta las actuaciones en peñas, festivales y televisión.</p>
+      </div>
+    </section>
+
+    <!-- ==================== VÍDEOS (data.js → videos) ==================== -->
+    <section id="videos" class="relative py-24 sm:py-28">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <header class="relative mb-12 flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-end" data-aos="fade-up">
+          <div>
+            <p class="font-mono text-[11px] uppercase tracking-[.3em] text-clavel">Vídeos</p>
+            <h2 class="mt-2 font-display text-5xl uppercase sm:text-6xl">Videoclip y directos</h2>
+          </div>
+          <a href="https://www.youtube.com/channel/UCxmcFiyQAkpSCjx8dxdPVCA" target="_blank" rel="noopener" data-track="videos-canal" class="inline-flex items-center gap-2 rounded-full border border-white/20 px-5 py-3 text-[11px] font-semibold uppercase tracking-[.18em] transition hover:border-clavel hover:text-clavel"><svg class="h-4 w-4" aria-hidden="true"><use href="#b-youtube"/></svg> Ir al canal de YouTube<span class="sr-only"> (se abre en otra pestaña)</span></a>
+        </header>
+        <div id="featuredVideo" class="mb-14" data-aos="fade-up"></div>
+        <div id="videoGrid" data-skip-featured class="grid gap-x-6 gap-y-12 md:grid-cols-2"></div>
+      </div>
+    </section>
+
+    <!-- ==================== GRAVAÇÕES (data.js → grabaciones) ==================== -->
+    <!-- Capas: só com autorização (assets/img/covers/). Sem capa, o site desenha um disco com o título -->
+    <section id="grabaciones" class="relative border-t border-white/5 bg-panel/40 py-24 sm:py-28">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <header class="relative mb-14 text-center" data-aos="fade-up">
+          <span class="ghost pointer-events-none absolute inset-x-0 -top-6 font-display text-[18vw] uppercase sm:text-[150px]" aria-hidden="true">Discos</span>
+          <p class="relative font-mono text-[11px] uppercase tracking-mega text-clavel">Grabaciones</p>
+          <h2 class="relative mt-2 font-display text-5xl uppercase sm:text-6xl">Escucha sus grabaciones</h2>
+          <p class="relative mx-auto mt-8 max-w-2xl text-bone/75">Los créditos del videoclip de «Marianas» están en la sección de vídeos; aquí, el single tal como aparece en las plataformas.</p>
+        </header>
+        <div id="recGrid" class="grid gap-5 sm:grid-cols-2 lg:grid-cols-4"></div>
+      </div>
+    </section>
+
+    <!-- ==================== REDES ==================== -->
+    <section class="relative py-24 sm:py-28">
+      <div class="mx-auto grid max-w-5xl gap-4 px-4 sm:grid-cols-3 sm:px-6 lg:px-8" data-aos="fade-up">
+        <a href="https://www.youtube.com/channel/UCxmcFiyQAkpSCjx8dxdPVCA" target="_blank" rel="noopener" class="group flex flex-col items-center gap-3 rounded-2xl border border-white/10 bg-panel/60 p-8 text-center transition hover:border-clavel/60">
+          <svg class="h-8 w-8 text-clavel" aria-hidden="true"><use href="#b-youtube"/></svg>
+          <span class="font-display text-2xl uppercase">YouTube</span>
+          <span class="text-sm text-bone/65">Videoclips, recitales y registros de bastidores</span>
+        </a>
+        <a href="https://www.instagram.com/manuel_cribano/" target="_blank" rel="noopener" class="group flex flex-col items-center gap-3 rounded-2xl border border-white/10 bg-panel/60 p-8 text-center transition hover:border-clavel/60">
+          <svg class="h-8 w-8 text-clavel" aria-hidden="true"><use href="#b-instagram"/></svg>
+          <span class="font-display text-2xl uppercase">Instagram</span>
+          <span class="text-sm text-bone/65">@manuel_cribano · novedades y fechas</span>
+        </a>
+        <a href="https://www.threads.com/@manuel_cribano" target="_blank" rel="noopener" class="group flex flex-col items-center gap-3 rounded-2xl border border-white/10 bg-panel/60 p-8 text-center transition hover:border-clavel/60">
+          <svg class="h-8 w-8 text-clavel" aria-hidden="true"><use href="#b-threads"/></svg>
+          <span class="font-display text-2xl uppercase">Threads</span>
+          <span class="text-sm text-bone/65">@manuel_cribano</span>
+        </a>
+      </div>
+    </section>
+  </main>
